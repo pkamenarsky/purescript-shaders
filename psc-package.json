@@ -5,8 +5,12 @@
   "depends": [
     "prelude",
     "effect",
+    "exists",
     "console",
     "unsafe-coerce",
-    "psci-support"
+    "psci-support",
+    "strings",
+    "tuples",
+    "typelevel-prelude"
   ]
 }
