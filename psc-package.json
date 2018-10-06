@@ -8,6 +8,7 @@
     "exists",
     "console",
     "unsafe-coerce",
+    "maybe",
     "psci-support",
     "strings",
     "tuples",
