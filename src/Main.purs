@@ -99,12 +99,15 @@ render :: ∀ a. Map Int Unit -> LShader a -> Effect String
 render m (LShader (_ × MkBoolean v)) = pure $ if v then "true" else "false"
 render m (LShader (_ × MkInt v)) = pure $ show v
 render m (LShader (_ × MkFloat v)) = pure $ show v
-render m (LShader (_ × MkArray v x)) = pure $ show v
+render m (LShader (_ × MkArray v x)) = pure v
 render m (LShader (_ × MkVec3 x y z)) = do
   x' <- elim m x
   y' <- elim m y
   z' <- elim m z
   pure $ "vec3(" <> x' <> ", " <> y' <> ", " <> z' <> ")"
+render m (LShader (_ × Index v i)) = do
+  v' <- elim m v
+  pure $ v' <> "[" <> show i <> "]"
 render m (LShader (_ × Plus a b)) = do
   a' <- elim m a
   b' <- elim m b
@@ -164,7 +167,7 @@ test4 = cse test2
 
 test5 = do
   m <- new
-  expr <- render m (cse test)
+  expr <- render m (cse (test3 `plusN` test3 `plusN` test3))
   log expr
 
 {-
