@@ -1,5 +1,6 @@
 module Main where
 
+import Data.Traversable
 import Data.Maybe
 import Data.Tuple
 import Effect
@@ -52,7 +53,17 @@ data ShaderF a f =
   | Dot3 (f Vec3) (f Vec3)
   | If (f Boolean) (f a) (f a)
 
+data Map k v
+
+foreign import new :: ∀ k v. Effect (Map k v)
+foreign import get_ :: ∀ k v. (v -> Maybe v) -> Maybe v -> k -> Map k v -> Effect (Maybe v)
+foreign import set :: ∀ k v. k -> v -> Map k v -> Effect Unit
+
+get :: ∀ k v. k -> Map k v -> Effect (Maybe v) 
+get = get_ Just Nothing
+
 foreign import hashObject :: ∀ a. a -> Int
+foreign import count :: Int -> Int
 foreign import logAny :: ∀ a. a -> Effect Unit
 
 newtype Shader a = Shader (ShaderF a Shader)
@@ -63,12 +74,45 @@ cse (Shader (MkBoolean v)) = LShader (Nothing × MkBoolean v)
 cse (Shader (MkInt v)) = LShader (Nothing × MkInt v)
 cse (Shader (MkFloat v)) = LShader (Nothing × MkFloat v)
 cse (Shader (MkArray v x)) = LShader (Nothing × MkArray v x)
-cse (Shader (MkVec3 x y z)) = LShader (Nothing × MkVec3 (cse x) (cse y) (cse z))
+cse (Shader h@(MkVec3 x y z)) = LShader (Just (hashObject h) × MkVec3 (cse x) (cse y) (cse z))
 cse (Shader (Index x y)) = LShader (Nothing × Index (cse x) y)
 cse (Shader h@(Plus x y)) = LShader (Just (hashObject h) × Plus (cse x) (cse y))
 cse (Shader h@(Normalize x)) = LShader (Just (hashObject h) × Normalize (cse x))
 cse (Shader h@(Dot3 x y)) = LShader (Just (hashObject h) × Dot3 (cse x) (cse y))
 cse (Shader h@(If e t f)) = LShader (Just (hashObject h) × If (cse e) (cse t) (cse f))
+
+elim :: ∀ a. Map Int Unit -> LShader a -> Effect String
+elim m expr@(LShader (Nothing × _)) = render m expr
+elim m expr@(LShader (Just var × _)) = if count var > 1
+  then do
+    rendered <- get var m
+    case rendered of
+      Nothing -> do
+        expr' <- render m expr
+        log $ "const a" <> show var <> " = " <> expr' <> ";"
+        set var unit m
+        pure $ "a" <> show var
+      Just _ -> pure $ "a" <> show var
+  else render m expr
+
+render :: ∀ a. Map Int Unit -> LShader a -> Effect String
+render m (LShader (_ × MkBoolean v)) = pure $ if v then "true" else "false"
+render m (LShader (_ × MkInt v)) = pure $ show v
+render m (LShader (_ × MkFloat v)) = pure $ show v
+render m (LShader (_ × MkArray v x)) = pure $ show v
+render m (LShader (_ × MkVec3 x y z)) = do
+  x' <- elim m x
+  y' <- elim m y
+  z' <- elim m z
+  pure $ "vec3(" <> x' <> ", " <> y' <> ", " <> z' <> ")"
+render m (LShader (_ × Plus a b)) = do
+  a' <- elim m a
+  b' <- elim m b
+  pure $ "(" <> a' <> " + " <> b' <> ")"
+render m (LShader (_ × Normalize a)) = do
+  a' <- elim m a
+  pure $ "normalize(" <> a' <> ")"
+render _ _ = undefined
 
 boolean :: Boolean -> Shader Boolean
 boolean x = Shader $ MkBoolean x
@@ -117,6 +161,11 @@ test2 = normalize (test `plus` test)
 test3 = fold plusN (Shader (MkInt 666)) (array "lights" testArray)
 
 test4 = cse test2
+
+test5 = do
+  m <- new
+  expr <- render m (cse test)
+  log expr
 
 {-
 interpret :: ∀ a. Shader a -> String
