@@ -3,24 +3,6 @@ const countMap = new Map();
 
 var hashId = 0;
 
-exports.hashObject = function(a) {
-  const v = hashMap.get(a);
-
-  if (v !== undefined) {
-    countMap.set(v, countMap.get(v) + 1);
-    return v;
-  }
-  else {
-    hashMap.set(a, hashId);
-    countMap.set(hashId, 1);
-    return hashId++;
-  }
-};
-
-exports.count = function(hashId) {
-  return countMap.get(hashId);
-};
-
 exports.logAny = function(a) {
   return function () {
     console.log(JSON.stringify(a, null, 2));

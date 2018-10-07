@@ -1,6 +1,5 @@
 module Main where
 
-import Data.Traversable
 import Data.Maybe
 import Data.Tuple
 import Effect
@@ -91,8 +90,6 @@ update k f m = do
     Just v' -> set k v' m
     Nothing -> delete k m
 
-foreign import hashObject :: ∀ a. a -> Var
-foreign import count :: Int -> Int
 foreign import logAny :: ∀ a. a -> Effect Unit
 
 newtype Shader a = Shader (ShaderF a Shader)
@@ -113,75 +110,82 @@ hash expr em cm = do
       set h' 1 cm
       pure h'
 
-cse' :: ∀ a. Map Unit Var -> Map Var Int -> Shader a -> Effect (LShader a)
-cse' em cm (Shader (MkBoolean v)) = pure $ LShader (Nothing × MkBoolean v)
-cse' em cm (Shader (MkInt v)) = pure $ LShader (Nothing × MkInt v)
-cse' em cm (Shader (MkFloat v)) = pure $ LShader (Nothing × MkFloat v)
-cse' em cm (Shader (MkArray v x)) = pure $ LShader (Nothing × MkArray v x)
-cse' em cm (Shader e@(MkVec3 x y z)) = do
-  h <- hash e em cm
-  pure $ LShader (Just h × MkVec3 (cse x) (cse y) (cse z))
-cse' em cm (Shader (Index x y)) = pure $ LShader (Nothing × Index (cse x) y)
-cse' em cm (Shader e@(Plus x y)) = do
-  h <- hash e em cm
-  pure $ LShader (Just h × Plus (cse x) (cse y))
-cse' em cm (Shader e@(Normalize x)) = do
-  h <- hash e em cm
-  pure $ LShader (Just h × Normalize (cse x))
-cse' em cm (Shader e@(Dot3 x y)) = do
-  h <- hash e em cm
-  pure $ LShader (Just h × Dot3 (cse x) (cse y))
-cse' em cm (Shader e@(If e' t f)) = do
-  h <- hash e em cm
-  pure $ LShader (Just h × If (cse e') (cse t) (cse f))
+data Fix f = Fix (f (Fix f))
+data LFix f = LFix (Var × f (LFix f))
 
-cse :: ∀ a. Shader a -> LShader a
-cse (Shader (MkBoolean v)) = LShader (Nothing × MkBoolean v)
-cse (Shader (MkInt v)) = LShader (Nothing × MkInt v)
-cse (Shader (MkFloat v)) = LShader (Nothing × MkFloat v)
-cse (Shader (MkArray v x)) = LShader (Nothing × MkArray v x)
-cse (Shader h@(MkVec3 x y z)) = LShader (Just (hashObject h) × MkVec3 (cse x) (cse y) (cse z))
-cse (Shader (Index x y)) = LShader (Nothing × Index (cse x) y)
-cse (Shader h@(Plus x y)) = LShader (Just (hashObject h) × Plus (cse x) (cse y))
-cse (Shader h@(Normalize x)) = LShader (Just (hashObject h) × Normalize (cse x))
-cse (Shader h@(Dot3 x y)) = LShader (Just (hashObject h) × Dot3 (cse x) (cse y))
-cse (Shader h@(If e t f)) = LShader (Just (hashObject h) × If (cse e) (cse t) (cse f))
+cse :: ∀ a. Map Unit Var -> Map Var Int -> Shader a -> Effect (LShader a)
+cse em cm (Shader (MkBoolean v)) = pure $ LShader (Nothing × MkBoolean v)
+cse em cm (Shader (MkInt v)) = pure $ LShader (Nothing × MkInt v)
+cse em cm (Shader (MkFloat v)) = pure $ LShader (Nothing × MkFloat v)
+cse em cm (Shader (MkArray v x)) = pure $ LShader (Nothing × MkArray v x)
+cse em cm (Shader (MkVec3 x y z)) = do
+  x' <- cse em cm x
+  y' <- cse em cm y
+  z' <- cse em cm z
+  pure $ LShader (Nothing × MkVec3 x' y' z')
+cse em cm (Shader e@(Index x y)) = do
+  h <- hash e em cm
+  x' <- cse em cm x
+  pure $ LShader (Just h × Index x' y)
+cse em cm (Shader e@(Plus x y)) = do
+  h <- hash e em cm
+  x' <- cse em cm x
+  y' <- cse em cm y
+  pure $ LShader (Just h × Plus x' y')
+cse em cm (Shader e@(Normalize x)) = do
+  h <- hash e em cm
+  x' <- cse em cm x
+  pure $ LShader (Just h × Normalize x')
+cse em cm (Shader e@(Dot3 x y)) = do
+  h <- hash e em cm
+  x' <- cse em cm x
+  y' <- cse em cm y
+  pure $ LShader (Just h × Dot3 x' y')
+cse em cm (Shader e@(If e' t f)) = do
+  h <- hash e em cm
+  e'' <- cse em cm e'
+  t' <- cse em cm t
+  f' <- cse em cm f
+  pure $ LShader (Just h × If e'' t' f')
 
-elim :: ∀ a. Typeable a => Map Var Unit -> LShader a -> Effect String
-elim m expr@(LShader (Nothing × _)) = render m expr
-elim m expr@(LShader (Just var@(Var var') × _)) = if count var' > 1
-  then do
-    rendered <- get var m
-    case rendered of
-      Nothing -> do
-        expr' <- render m expr
-        log $ typeOf (Proxy :: Proxy a) <> " a" <> show var' <> " = " <> expr' <> ";"
-        set var unit m
-        pure $ "a" <> show var'
-      Just _ -> pure $ "a" <> show var'
-  else render m expr
+elim :: ∀ a. Typeable a => Map Var Int -> Map Var Unit -> LShader a -> Effect String
+elim cm m (LShader (Nothing × expr)) = render cm m expr
+elim cm m (LShader (Just var@(Var var') × expr)) = do
+  count <- get var cm
+  case count of
+    Just count'
+      | count' > 1 -> do
+        rendered <- get var m
+        case rendered of
+          Nothing -> do
+            expr' <- render cm m expr
+            log $ "const " <> typeOf (Proxy :: Proxy a) <> " a" <> show var' <> " = " <> expr' <> ";"
+            set var unit m
+            pure $ "a" <> show var'
+          Just _ -> pure $ "a" <> show var'
+    _ -> render cm m expr
 
-render :: ∀ a. Typeable a => Map Var Unit -> LShader a -> Effect String
-render m (LShader (_ × MkBoolean v)) = pure $ if v then "true" else "false"
-render m (LShader (_ × MkInt v)) = pure $ show v
-render m (LShader (_ × MkFloat v)) = pure $ show v
-render m (LShader (_ × MkArray v x)) = pure v
-render m (LShader (_ × MkVec3 x y z)) = do
-  x' <- elim m x
-  y' <- elim m y
-  z' <- elim m z
+render :: ∀ a. Typeable a => Map Var Int -> Map Var Unit -> ShaderF a LShader -> Effect String
+render cm m (MkBoolean v) = pure $ if v then "true" else "false"
+render cm m (MkInt v) = pure $ show v
+render cm m (MkFloat v) = pure $ show v
+render cm m (MkArray v x) = pure v
+render cm m (MkVec3 x y z) = do
+  x' <- elim cm m x
+  y' <- elim cm m y
+  z' <- elim cm m z
   pure $ "vec3(" <> x' <> ", " <> y' <> ", " <> z' <> ")"
-render m (LShader (_ × Index v i)) = do
-  v' <- elim m v
+render cm m (Index v i) = do
+  v' <- elim cm m v
   pure $ v' <> "[" <> show i <> "]"
-render m (LShader (_ × Plus a b)) = do
-  a' <- elim m a
-  b' <- elim m b
+render cm m (Plus a b) = do
+  a' <- elim cm m a
+  b' <- elim cm m b
   pure $ "(" <> a' <> " + " <> b' <> ")"
-render m (LShader (_ × Normalize a)) = do
-  a' <- elim m a
+render cm m (Normalize a) = do
+  a' <- elim cm m a
   pure $ "normalize(" <> a' <> ")"
-render _ _ = undefined
+render _ _ _ = undefined
 
 boolean :: Boolean -> Shader Boolean
 boolean x = Shader $ MkBoolean x
@@ -229,15 +233,13 @@ test = vec3 (float 0.0) (float 0.0) (float 0.0) `plus` vec3 (float 0.0) (float 0
 test2 = normalize (test `plus` test)
 test3 = fold plusN (Shader (MkInt 666)) (array "lights" testArray)
 
-test4 = cse test2
-
 test5 = do
   m <- new
   em <- new
   cm <- new
-  let expr = (test3 `plusN` test3)
-  expr' <- cse' em cm expr
-  expr'' <- render m expr'
+  let expr = (test2 `plus` test2 `plus` test)
+  LShader (_ × expr') <- cse em cm expr
+  expr'' <- render cm m expr'
   log expr''
 
 {-
