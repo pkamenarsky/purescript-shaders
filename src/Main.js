@@ -54,3 +54,17 @@ exports.set = function(k) {
   };
 };
 
+exports.delete = function(k) {
+  return function(m) {
+    return function() {
+      return m.delete(k);
+    };
+  };
+};
+
+exports.size = function(m) {
+  return function() {
+    return m.size;
+  };
+};
+

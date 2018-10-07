@@ -41,6 +41,26 @@ length _ = S.length sym
 testArray :: _
 testArray = (cons 7 $ cons 6 $ cons 5 empty)
 
+data Proxy a = Proxy
+
+class Typeable a where
+  typeOf :: Proxy a -> String
+
+instance booleanT :: Typeable Boolean where
+  typeOf _ = "bool"
+
+instance intT :: Typeable Int where
+  typeOf _ = "int"
+
+instance numberT :: Typeable Number where
+  typeOf _ = "float"
+
+instance vec3T :: Typeable Vec3 where
+  typeOf _ = "vec3"
+
+instance arrayT :: Typeable a => Typeable (Array n a) where
+  typeOf _ = typeOf (Proxy :: Proxy a) <> "[]"
+
 data ShaderF a f =
     MkBoolean Boolean
   | MkInt Int
@@ -58,16 +78,62 @@ data Map k v
 foreign import new :: ∀ k v. Effect (Map k v)
 foreign import get_ :: ∀ k v. (v -> Maybe v) -> Maybe v -> k -> Map k v -> Effect (Maybe v)
 foreign import set :: ∀ k v. k -> v -> Map k v -> Effect Unit
+foreign import delete :: ∀ k v. k -> Map k v -> Effect Unit
+foreign import size :: ∀ k v. Map k v -> Effect Int
 
 get :: ∀ k v. k -> Map k v -> Effect (Maybe v) 
 get = get_ Just Nothing
 
-foreign import hashObject :: ∀ a. a -> Int
+update :: ∀ k v. k -> (Maybe v -> Maybe v) -> Map k v -> Effect Unit
+update k f m = do
+  v <- get k m
+  case f v of
+    Just v' -> set k v' m
+    Nothing -> delete k m
+
+foreign import hashObject :: ∀ a. a -> Var
 foreign import count :: Int -> Int
 foreign import logAny :: ∀ a. a -> Effect Unit
 
 newtype Shader a = Shader (ShaderF a Shader)
-newtype LShader a = LShader (Maybe Int × ShaderF a LShader)
+newtype LShader a = LShader (Maybe Var × ShaderF a LShader)
+
+newtype Var = Var Int
+
+hash :: ∀ a. a -> Map Unit Var -> Map Var Int -> Effect Var
+hash expr em cm = do
+  h <- get expr (unsafeCoerce em)
+  case h of
+    Just h' -> do
+      update h' (map (_ + 1)) cm
+      pure h'
+    Nothing -> do
+      h' <- Var <$> size em
+      set expr h' (unsafeCoerce em)
+      set h' 1 cm
+      pure h'
+
+cse' :: ∀ a. Map Unit Var -> Map Var Int -> Shader a -> Effect (LShader a)
+cse' em cm (Shader (MkBoolean v)) = pure $ LShader (Nothing × MkBoolean v)
+cse' em cm (Shader (MkInt v)) = pure $ LShader (Nothing × MkInt v)
+cse' em cm (Shader (MkFloat v)) = pure $ LShader (Nothing × MkFloat v)
+cse' em cm (Shader (MkArray v x)) = pure $ LShader (Nothing × MkArray v x)
+cse' em cm (Shader e@(MkVec3 x y z)) = do
+  h <- hash e em cm
+  pure $ LShader (Just h × MkVec3 (cse x) (cse y) (cse z))
+cse' em cm (Shader (Index x y)) = pure $ LShader (Nothing × Index (cse x) y)
+cse' em cm (Shader e@(Plus x y)) = do
+  h <- hash e em cm
+  pure $ LShader (Just h × Plus (cse x) (cse y))
+cse' em cm (Shader e@(Normalize x)) = do
+  h <- hash e em cm
+  pure $ LShader (Just h × Normalize (cse x))
+cse' em cm (Shader e@(Dot3 x y)) = do
+  h <- hash e em cm
+  pure $ LShader (Just h × Dot3 (cse x) (cse y))
+cse' em cm (Shader e@(If e' t f)) = do
+  h <- hash e em cm
+  pure $ LShader (Just h × If (cse e') (cse t) (cse f))
 
 cse :: ∀ a. Shader a -> LShader a
 cse (Shader (MkBoolean v)) = LShader (Nothing × MkBoolean v)
@@ -81,21 +147,21 @@ cse (Shader h@(Normalize x)) = LShader (Just (hashObject h) × Normalize (cse x)
 cse (Shader h@(Dot3 x y)) = LShader (Just (hashObject h) × Dot3 (cse x) (cse y))
 cse (Shader h@(If e t f)) = LShader (Just (hashObject h) × If (cse e) (cse t) (cse f))
 
-elim :: ∀ a. Map Int Unit -> LShader a -> Effect String
+elim :: ∀ a. Typeable a => Map Var Unit -> LShader a -> Effect String
 elim m expr@(LShader (Nothing × _)) = render m expr
-elim m expr@(LShader (Just var × _)) = if count var > 1
+elim m expr@(LShader (Just var@(Var var') × _)) = if count var' > 1
   then do
     rendered <- get var m
     case rendered of
       Nothing -> do
         expr' <- render m expr
-        log $ "const a" <> show var <> " = " <> expr' <> ";"
+        log $ typeOf (Proxy :: Proxy a) <> " a" <> show var' <> " = " <> expr' <> ";"
         set var unit m
-        pure $ "a" <> show var
-      Just _ -> pure $ "a" <> show var
+        pure $ "a" <> show var'
+      Just _ -> pure $ "a" <> show var'
   else render m expr
 
-render :: ∀ a. Map Int Unit -> LShader a -> Effect String
+render :: ∀ a. Typeable a => Map Var Unit -> LShader a -> Effect String
 render m (LShader (_ × MkBoolean v)) = pure $ if v then "true" else "false"
 render m (LShader (_ × MkInt v)) = pure $ show v
 render m (LShader (_ × MkFloat v)) = pure $ show v
@@ -167,8 +233,12 @@ test4 = cse test2
 
 test5 = do
   m <- new
-  expr <- render m (cse (test3 `plusN` test3 `plusN` test3))
-  log expr
+  em <- new
+  cm <- new
+  let expr = (test3 `plusN` test3)
+  expr' <- cse' em cm expr
+  expr'' <- render m expr'
+  log expr''
 
 {-
 interpret :: ∀ a. Shader a -> String
