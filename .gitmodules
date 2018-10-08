@@ -1,0 +1,3 @@
+[submodule "gen/glsl-spec"]
+	path = gen/glsl-spec
+	url = https://github.com/cbaggers/glsl-spec.git

@@ -1,5 +1,6 @@
 module Expr where
 
+import Data.Exists
 import Data.Maybe
 import Data.Tuple
 import Effect
@@ -60,13 +61,19 @@ instance vec3T :: Typeable Vec3 where
 instance arrayT :: Typeable a => Typeable (Array n a) where
   typeOf _ = typeOf (Proxy :: Proxy a) <> "[]"
 
+data Star = Star String Unit
+
+toStar :: ∀ a f. Typeable a => ExprF a f -> Star
+toStar expr = Star (typeOf (Proxy :: Proxy a)) (unsafeCoerce expr)
+
 data ExprF a f =
     MkBoolean Boolean
   | MkInt Int
   | MkFloat Number
-  | MkArray String (Array "" a)
   | MkVec3 (f Number) (f Number) (f Number)
+  | Argument String
   | Index (f (Array "" a)) Int
+  -- | BinOp String (Star f) (Star f)
   | Plus (f a) (f a)
   | Normalize (f Vec3)
   | Dot3 (f Vec3) (f Vec3)
@@ -117,16 +124,15 @@ cse :: ∀ a. Map Unit Var -> Map Var Int -> Expr a -> Effect (LExpr a)
 cse em cm (Expr (MkBoolean v)) = pure $ LExpr (Nothing × MkBoolean v)
 cse em cm (Expr (MkInt v)) = pure $ LExpr (Nothing × MkInt v)
 cse em cm (Expr (MkFloat v)) = pure $ LExpr (Nothing × MkFloat v)
-cse em cm (Expr (MkArray v x)) = pure $ LExpr (Nothing × MkArray v x)
+cse em cm (Expr (Argument a)) = pure $ LExpr (Nothing × Argument a)
 cse em cm (Expr (MkVec3 x y z)) = do
   x' <- cse em cm x
   y' <- cse em cm y
   z' <- cse em cm z
   pure $ LExpr (Nothing × MkVec3 x' y' z')
-cse em cm (Expr e@(Index x y)) = do
-  h <- hash e em cm
+cse em cm (Expr (Index x y)) = do
   x' <- cse em cm x
-  pure $ LExpr (Just h × Index x' y)
+  pure $ LExpr (Nothing × Index x' y)
 cse em cm (Expr e@(Plus x y)) = do
   h <- hash e em cm
   x' <- cse em cm x
@@ -169,7 +175,7 @@ render :: ∀ a. Typeable a => Map Var Int -> Map Var Unit -> ExprF a LExpr -> E
 render cm m (MkBoolean v) = pure $ if v then "true" else "false"
 render cm m (MkInt v) = pure $ show v
 render cm m (MkFloat v) = pure $ show v
-render cm m (MkArray v x) = pure v
+render cm m (Argument a) = pure a
 render cm m (MkVec3 x y z) = do
   x' <- elim cm m x
   y' <- elim cm m y
@@ -189,9 +195,6 @@ render _ _ _ = undefined
 
 boolean :: Boolean -> Expr Boolean
 boolean x = Expr $ MkBoolean x
-
-array :: ∀ a n. String -> Array n a -> Expr (Array n a)
-array n as = Expr $ MkArray n (unsafeCoerce as)
 
 float :: Number -> Expr Number
 float x = Expr $ MkFloat x
@@ -221,7 +224,7 @@ if_ :: ∀ a. Expr Boolean -> Expr a -> Expr a -> Expr a
 if_ e t f = Expr $ If e t f
 
 fold :: ∀ a b n. IsSymbol n => (Expr a -> Expr b -> Expr b) -> Expr b -> Expr (Array n a) -> Expr b
-fold f b as@(Expr (MkArray _ _)) = go 0 b
+fold f b as@(Expr (Argument _)) = go 0 b
   where
    sym = reflectSymbol (SProxy :: SProxy n)
    go n e
@@ -231,13 +234,13 @@ fold f b _ = undefined
 
 test = vec3 (float 0.0) (float 0.0) (float 0.0) `plus` vec3 (float 0.0) (float 0.0) (float 0.0) 
 test2 = normalize (test `plus` test)
-test3 = fold plusN (Expr (MkInt 666)) (array "lights" testArray)
+test3 = fold plusN (Expr (MkInt 666)) ((Expr $ Argument "lights") :: Expr (Array "..." Int))
 
 test5 = do
   m <- new
   em <- new
   cm <- new
-  let expr = (test2 `plus` test2 `plus` test)
+  let expr = test3 `plusN` test3
   LExpr (_ × expr') <- cse em cm expr
   expr'' <- render cm m expr'
   log expr''
@@ -258,3 +261,14 @@ interpret (If c t e) = interpret c <> " ? (" <> interpret t <> ") : (" <> interp
 main :: Effect Unit
 main = log $ interpret (if_ (boolean true) (dot3 test test) (dot3 test (test2 `plus` test2)))
 -}
+
+class A a b c | a b -> c where
+  fnc :: a -> b -> c
+
+instance a1 :: A Int Int Int where
+  fnc a b = a + b
+
+main2 = do
+  log "asd"
+  where
+    a = fnc 4 5
