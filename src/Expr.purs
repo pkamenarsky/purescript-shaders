@@ -73,7 +73,7 @@ data ExprF a f =
   | MkVec3 (f Number) (f Number) (f Number)
   | Argument String
   | Index (f (Array "" a)) Int
-  -- | BinOp String (Star f) (Star f)
+  | F F
   | Plus (f a) (f a)
   | Normalize (f Vec3)
   | Dot3 (f Vec3) (f Vec3)
