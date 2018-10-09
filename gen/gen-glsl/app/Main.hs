@@ -69,8 +69,9 @@ genInstance spec variant index =
               <> T.intercalate " " (map (\(Arg _ arg) -> "(Expr " <> capitalize arg <> ")") (args spec))
               <> " (Expr " <> capitalize (returnType spec) <> ") where" <> tr <>
   "  " <> name spec <> variant <> " " <> T.intercalate " " vars
-       <> " = F" <> T.pack (show $ length (args spec)) <> " \"" <> name spec <> "\" "
-       <> T.intercalate " " (map (\(Arg _ argType, v) -> "(Star \"" <> argType <> "\" (unsafeCoerce " <> v <> "))") (zip (args spec) vars))
+       <> " = Expr (Apply" <> " \"" <> name spec <> "\" "
+       <> "[" <> T.intercalate ", " (map (\(Arg _ argType, v) -> "Star \"" <> argType <> "\" (unsafeCoerce " <> v <> ")") (zip (args spec) vars)) <> "]"
+       <> ")"
        <> tr <> tr
   where
     vars = genVars $ length $ args spec
@@ -114,11 +115,9 @@ main = do
 
   T.writeFile "GLSL.purs" $ T.concat
    [ "module GLSL where", tr, tr
-   , "import Prelude (Unit)", tr, tr
+   , "import Expr (Expr(Expr), ExprF(Apply), Star(Star))", tr, tr
+   , "import Prim hiding (Int)", tr, tr
    , "import Unsafe.Coerce (unsafeCoerce)", tr, tr
-   , "data Star = Star String (Expr Unit)", tr
-   , tr
-   , genFs
    , tr
    , genTypes $ gatherTypes specs
    , tr
