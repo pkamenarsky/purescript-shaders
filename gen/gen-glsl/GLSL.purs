@@ -1,6 +1,8 @@
 module GLSL where
 
-import Expr (Expr(Expr), ExprF(Apply), Star(Star))
+import Data.Tuple (Tuple(Tuple))
+
+import Expr (Expr(Expr), ExprF(Apply))
 
 import Prim hiding (Int)
 
@@ -137,4352 +139,4352 @@ class Abs a b | a -> b where
   abs :: a -> b
 
 instance absInstance0 :: Abs (Expr Dvec4) (Expr Dvec4) where
-  abs a = Expr (Apply "abs" [Star "dvec4" (unsafeCoerce a)])
+  abs a = Expr (Tuple "dvec4" (Apply "abs" [Expr (Tuple "dvec4" (unsafeCoerce a))]))
 
 instance absInstance1 :: Abs (Expr Dvec3) (Expr Dvec3) where
-  abs a = Expr (Apply "abs" [Star "dvec3" (unsafeCoerce a)])
+  abs a = Expr (Tuple "dvec3" (Apply "abs" [Expr (Tuple "dvec3" (unsafeCoerce a))]))
 
 instance absInstance2 :: Abs (Expr Dvec2) (Expr Dvec2) where
-  abs a = Expr (Apply "abs" [Star "dvec2" (unsafeCoerce a)])
+  abs a = Expr (Tuple "dvec2" (Apply "abs" [Expr (Tuple "dvec2" (unsafeCoerce a))]))
 
 instance absInstance3 :: Abs (Expr Double) (Expr Double) where
-  abs a = Expr (Apply "abs" [Star "double" (unsafeCoerce a)])
+  abs a = Expr (Tuple "double" (Apply "abs" [Expr (Tuple "double" (unsafeCoerce a))]))
 
 instance absInstance4 :: Abs (Expr Ivec4) (Expr Ivec4) where
-  abs a = Expr (Apply "abs" [Star "ivec4" (unsafeCoerce a)])
+  abs a = Expr (Tuple "ivec4" (Apply "abs" [Expr (Tuple "ivec4" (unsafeCoerce a))]))
 
 instance absInstance5 :: Abs (Expr Ivec3) (Expr Ivec3) where
-  abs a = Expr (Apply "abs" [Star "ivec3" (unsafeCoerce a)])
+  abs a = Expr (Tuple "ivec3" (Apply "abs" [Expr (Tuple "ivec3" (unsafeCoerce a))]))
 
 instance absInstance6 :: Abs (Expr Ivec2) (Expr Ivec2) where
-  abs a = Expr (Apply "abs" [Star "ivec2" (unsafeCoerce a)])
+  abs a = Expr (Tuple "ivec2" (Apply "abs" [Expr (Tuple "ivec2" (unsafeCoerce a))]))
 
 instance absInstance7 :: Abs (Expr Int) (Expr Int) where
-  abs a = Expr (Apply "abs" [Star "int" (unsafeCoerce a)])
+  abs a = Expr (Tuple "int" (Apply "abs" [Expr (Tuple "int" (unsafeCoerce a))]))
 
 instance absInstance8 :: Abs (Expr Vec4) (Expr Vec4) where
-  abs a = Expr (Apply "abs" [Star "vec4" (unsafeCoerce a)])
+  abs a = Expr (Tuple "vec4" (Apply "abs" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance absInstance9 :: Abs (Expr Vec3) (Expr Vec3) where
-  abs a = Expr (Apply "abs" [Star "vec3" (unsafeCoerce a)])
+  abs a = Expr (Tuple "vec3" (Apply "abs" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance absInstance10 :: Abs (Expr Vec2) (Expr Vec2) where
-  abs a = Expr (Apply "abs" [Star "vec2" (unsafeCoerce a)])
+  abs a = Expr (Tuple "vec2" (Apply "abs" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance absInstance11 :: Abs (Expr Float) (Expr Float) where
-  abs a = Expr (Apply "abs" [Star "float" (unsafeCoerce a)])
+  abs a = Expr (Tuple "float" (Apply "abs" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Acos a b | a -> b where
   acos :: a -> b
 
 instance acosInstance0 :: Acos (Expr Vec4) (Expr Vec4) where
-  acos a = Expr (Apply "acos" [Star "vec4" (unsafeCoerce a)])
+  acos a = Expr (Tuple "vec4" (Apply "acos" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance acosInstance1 :: Acos (Expr Vec3) (Expr Vec3) where
-  acos a = Expr (Apply "acos" [Star "vec3" (unsafeCoerce a)])
+  acos a = Expr (Tuple "vec3" (Apply "acos" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance acosInstance2 :: Acos (Expr Vec2) (Expr Vec2) where
-  acos a = Expr (Apply "acos" [Star "vec2" (unsafeCoerce a)])
+  acos a = Expr (Tuple "vec2" (Apply "acos" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance acosInstance3 :: Acos (Expr Float) (Expr Float) where
-  acos a = Expr (Apply "acos" [Star "float" (unsafeCoerce a)])
+  acos a = Expr (Tuple "float" (Apply "acos" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Acosh a b | a -> b where
   acosh :: a -> b
 
 instance acoshInstance0 :: Acosh (Expr Vec4) (Expr Vec4) where
-  acosh a = Expr (Apply "acosh" [Star "vec4" (unsafeCoerce a)])
+  acosh a = Expr (Tuple "vec4" (Apply "acosh" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance acoshInstance1 :: Acosh (Expr Vec3) (Expr Vec3) where
-  acosh a = Expr (Apply "acosh" [Star "vec3" (unsafeCoerce a)])
+  acosh a = Expr (Tuple "vec3" (Apply "acosh" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance acoshInstance2 :: Acosh (Expr Vec2) (Expr Vec2) where
-  acosh a = Expr (Apply "acosh" [Star "vec2" (unsafeCoerce a)])
+  acosh a = Expr (Tuple "vec2" (Apply "acosh" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance acoshInstance3 :: Acosh (Expr Float) (Expr Float) where
-  acosh a = Expr (Apply "acosh" [Star "float" (unsafeCoerce a)])
+  acosh a = Expr (Tuple "float" (Apply "acosh" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class All a b | a -> b where
   all :: a -> b
 
 instance allInstance0 :: All (Expr Bvec4) (Expr Bool) where
-  all a = Expr (Apply "all" [Star "bvec4" (unsafeCoerce a)])
+  all a = Expr (Tuple "bool" (Apply "all" [Expr (Tuple "bvec4" (unsafeCoerce a))]))
 
 instance allInstance1 :: All (Expr Bvec3) (Expr Bool) where
-  all a = Expr (Apply "all" [Star "bvec3" (unsafeCoerce a)])
+  all a = Expr (Tuple "bool" (Apply "all" [Expr (Tuple "bvec3" (unsafeCoerce a))]))
 
 instance allInstance2 :: All (Expr Bvec2) (Expr Bool) where
-  all a = Expr (Apply "all" [Star "bvec2" (unsafeCoerce a)])
+  all a = Expr (Tuple "bool" (Apply "all" [Expr (Tuple "bvec2" (unsafeCoerce a))]))
 
 class AllInvocation a b | a -> b where
   allInvocation :: a -> b
 
 instance allInvocationInstance0 :: AllInvocation (Expr Bool) (Expr Bool) where
-  allInvocation a = Expr (Apply "allInvocation" [Star "bool" (unsafeCoerce a)])
+  allInvocation a = Expr (Tuple "bool" (Apply "allInvocation" [Expr (Tuple "bool" (unsafeCoerce a))]))
 
 class Any a b | a -> b where
   any :: a -> b
 
 instance anyInstance0 :: Any (Expr Bvec4) (Expr Bool) where
-  any a = Expr (Apply "any" [Star "bvec4" (unsafeCoerce a)])
+  any a = Expr (Tuple "bool" (Apply "any" [Expr (Tuple "bvec4" (unsafeCoerce a))]))
 
 instance anyInstance1 :: Any (Expr Bvec3) (Expr Bool) where
-  any a = Expr (Apply "any" [Star "bvec3" (unsafeCoerce a)])
+  any a = Expr (Tuple "bool" (Apply "any" [Expr (Tuple "bvec3" (unsafeCoerce a))]))
 
 instance anyInstance2 :: Any (Expr Bvec2) (Expr Bool) where
-  any a = Expr (Apply "any" [Star "bvec2" (unsafeCoerce a)])
+  any a = Expr (Tuple "bool" (Apply "any" [Expr (Tuple "bvec2" (unsafeCoerce a))]))
 
 class AnyInvocation a b | a -> b where
   anyInvocation :: a -> b
 
 instance anyInvocationInstance0 :: AnyInvocation (Expr Bool) (Expr Bool) where
-  anyInvocation a = Expr (Apply "anyInvocation" [Star "bool" (unsafeCoerce a)])
+  anyInvocation a = Expr (Tuple "bool" (Apply "anyInvocation" [Expr (Tuple "bool" (unsafeCoerce a))]))
 
 class AnyInvocationsEqual a b | a -> b where
   anyInvocationsEqual :: a -> b
 
 instance anyInvocationsEqualInstance0 :: AnyInvocationsEqual (Expr Bool) (Expr Bool) where
-  anyInvocationsEqual a = Expr (Apply "anyInvocationsEqual" [Star "bool" (unsafeCoerce a)])
+  anyInvocationsEqual a = Expr (Tuple "bool" (Apply "anyInvocationsEqual" [Expr (Tuple "bool" (unsafeCoerce a))]))
 
 class Asin a b | a -> b where
   asin :: a -> b
 
 instance asinInstance0 :: Asin (Expr Vec4) (Expr Vec4) where
-  asin a = Expr (Apply "asin" [Star "vec4" (unsafeCoerce a)])
+  asin a = Expr (Tuple "vec4" (Apply "asin" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance asinInstance1 :: Asin (Expr Vec3) (Expr Vec3) where
-  asin a = Expr (Apply "asin" [Star "vec3" (unsafeCoerce a)])
+  asin a = Expr (Tuple "vec3" (Apply "asin" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance asinInstance2 :: Asin (Expr Vec2) (Expr Vec2) where
-  asin a = Expr (Apply "asin" [Star "vec2" (unsafeCoerce a)])
+  asin a = Expr (Tuple "vec2" (Apply "asin" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance asinInstance3 :: Asin (Expr Float) (Expr Float) where
-  asin a = Expr (Apply "asin" [Star "float" (unsafeCoerce a)])
+  asin a = Expr (Tuple "float" (Apply "asin" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Asinh a b | a -> b where
   asinh :: a -> b
 
 instance asinhInstance0 :: Asinh (Expr Vec4) (Expr Vec4) where
-  asinh a = Expr (Apply "asinh" [Star "vec4" (unsafeCoerce a)])
+  asinh a = Expr (Tuple "vec4" (Apply "asinh" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance asinhInstance1 :: Asinh (Expr Vec3) (Expr Vec3) where
-  asinh a = Expr (Apply "asinh" [Star "vec3" (unsafeCoerce a)])
+  asinh a = Expr (Tuple "vec3" (Apply "asinh" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance asinhInstance2 :: Asinh (Expr Vec2) (Expr Vec2) where
-  asinh a = Expr (Apply "asinh" [Star "vec2" (unsafeCoerce a)])
+  asinh a = Expr (Tuple "vec2" (Apply "asinh" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance asinhInstance3 :: Asinh (Expr Float) (Expr Float) where
-  asinh a = Expr (Apply "asinh" [Star "float" (unsafeCoerce a)])
+  asinh a = Expr (Tuple "float" (Apply "asinh" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Atan a b | a -> b where
   atan :: a -> b
 
 instance atanInstance0 :: Atan (Expr Vec4) (Expr Vec4) where
-  atan a = Expr (Apply "atan" [Star "vec4" (unsafeCoerce a)])
+  atan a = Expr (Tuple "vec4" (Apply "atan" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance atanInstance1 :: Atan (Expr Vec3) (Expr Vec3) where
-  atan a = Expr (Apply "atan" [Star "vec3" (unsafeCoerce a)])
+  atan a = Expr (Tuple "vec3" (Apply "atan" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance atanInstance2 :: Atan (Expr Vec2) (Expr Vec2) where
-  atan a = Expr (Apply "atan" [Star "vec2" (unsafeCoerce a)])
+  atan a = Expr (Tuple "vec2" (Apply "atan" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance atanInstance3 :: Atan (Expr Float) (Expr Float) where
-  atan a = Expr (Apply "atan" [Star "float" (unsafeCoerce a)])
+  atan a = Expr (Tuple "float" (Apply "atan" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Atan2 a b c | a b -> c where
   atan2 :: a -> b -> c
 
 instance atan2Instance0 :: Atan2 (Expr Vec4) (Expr Vec4) (Expr Vec4) where
-  atan2 a b = Expr (Apply "atan" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  atan2 a b = Expr (Tuple "vec4" (Apply "atan" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance atan2Instance1 :: Atan2 (Expr Vec3) (Expr Vec3) (Expr Vec3) where
-  atan2 a b = Expr (Apply "atan" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  atan2 a b = Expr (Tuple "vec3" (Apply "atan" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance atan2Instance2 :: Atan2 (Expr Vec2) (Expr Vec2) (Expr Vec2) where
-  atan2 a b = Expr (Apply "atan" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  atan2 a b = Expr (Tuple "vec2" (Apply "atan" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance atan2Instance3 :: Atan2 (Expr Float) (Expr Float) (Expr Float) where
-  atan2 a b = Expr (Apply "atan" [Star "float" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  atan2 a b = Expr (Tuple "float" (Apply "atan" [Expr (Tuple "float" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 class Atanh a b | a -> b where
   atanh :: a -> b
 
 instance atanhInstance0 :: Atanh (Expr Vec4) (Expr Vec4) where
-  atanh a = Expr (Apply "atanh" [Star "vec4" (unsafeCoerce a)])
+  atanh a = Expr (Tuple "vec4" (Apply "atanh" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance atanhInstance1 :: Atanh (Expr Vec3) (Expr Vec3) where
-  atanh a = Expr (Apply "atanh" [Star "vec3" (unsafeCoerce a)])
+  atanh a = Expr (Tuple "vec3" (Apply "atanh" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance atanhInstance2 :: Atanh (Expr Vec2) (Expr Vec2) where
-  atanh a = Expr (Apply "atanh" [Star "vec2" (unsafeCoerce a)])
+  atanh a = Expr (Tuple "vec2" (Apply "atanh" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance atanhInstance3 :: Atanh (Expr Float) (Expr Float) where
-  atanh a = Expr (Apply "atanh" [Star "float" (unsafeCoerce a)])
+  atanh a = Expr (Tuple "float" (Apply "atanh" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class AtomicCounter a b | a -> b where
   atomicCounter :: a -> b
 
 instance atomicCounterInstance0 :: AtomicCounter (Expr Atomic_uint) (Expr Uint) where
-  atomicCounter a = Expr (Apply "atomicCounter" [Star "atomic_uint" (unsafeCoerce a)])
+  atomicCounter a = Expr (Tuple "uint" (Apply "atomicCounter" [Expr (Tuple "atomic_uint" (unsafeCoerce a))]))
 
 class BitCount a b | a -> b where
   bitCount :: a -> b
 
 instance bitCountInstance0 :: BitCount (Expr Uvec4) (Expr Ivec4) where
-  bitCount a = Expr (Apply "bitCount" [Star "uvec4" (unsafeCoerce a)])
+  bitCount a = Expr (Tuple "ivec4" (Apply "bitCount" [Expr (Tuple "uvec4" (unsafeCoerce a))]))
 
 instance bitCountInstance1 :: BitCount (Expr Ivec4) (Expr Ivec4) where
-  bitCount a = Expr (Apply "bitCount" [Star "ivec4" (unsafeCoerce a)])
+  bitCount a = Expr (Tuple "ivec4" (Apply "bitCount" [Expr (Tuple "ivec4" (unsafeCoerce a))]))
 
 instance bitCountInstance2 :: BitCount (Expr Uvec3) (Expr Ivec3) where
-  bitCount a = Expr (Apply "bitCount" [Star "uvec3" (unsafeCoerce a)])
+  bitCount a = Expr (Tuple "ivec3" (Apply "bitCount" [Expr (Tuple "uvec3" (unsafeCoerce a))]))
 
 instance bitCountInstance3 :: BitCount (Expr Ivec3) (Expr Ivec3) where
-  bitCount a = Expr (Apply "bitCount" [Star "ivec3" (unsafeCoerce a)])
+  bitCount a = Expr (Tuple "ivec3" (Apply "bitCount" [Expr (Tuple "ivec3" (unsafeCoerce a))]))
 
 instance bitCountInstance4 :: BitCount (Expr Uvec2) (Expr Ivec2) where
-  bitCount a = Expr (Apply "bitCount" [Star "uvec2" (unsafeCoerce a)])
+  bitCount a = Expr (Tuple "ivec2" (Apply "bitCount" [Expr (Tuple "uvec2" (unsafeCoerce a))]))
 
 instance bitCountInstance5 :: BitCount (Expr Ivec2) (Expr Ivec2) where
-  bitCount a = Expr (Apply "bitCount" [Star "ivec2" (unsafeCoerce a)])
+  bitCount a = Expr (Tuple "ivec2" (Apply "bitCount" [Expr (Tuple "ivec2" (unsafeCoerce a))]))
 
 instance bitCountInstance6 :: BitCount (Expr Uint) (Expr Int) where
-  bitCount a = Expr (Apply "bitCount" [Star "uint" (unsafeCoerce a)])
+  bitCount a = Expr (Tuple "int" (Apply "bitCount" [Expr (Tuple "uint" (unsafeCoerce a))]))
 
 instance bitCountInstance7 :: BitCount (Expr Int) (Expr Int) where
-  bitCount a = Expr (Apply "bitCount" [Star "int" (unsafeCoerce a)])
+  bitCount a = Expr (Tuple "int" (Apply "bitCount" [Expr (Tuple "int" (unsafeCoerce a))]))
 
 class BitfieldExtract a b c d | a b c -> d where
   bitfieldExtract :: a -> b -> c -> d
 
 instance bitfieldExtractInstance0 :: BitfieldExtract (Expr Uvec4) (Expr Int) (Expr Int) (Expr Uvec4) where
-  bitfieldExtract a b c = Expr (Apply "bitfieldExtract" [Star "uvec4" (unsafeCoerce a), Star "int" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  bitfieldExtract a b c = Expr (Tuple "uvec4" (Apply "bitfieldExtract" [Expr (Tuple "uvec4" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance bitfieldExtractInstance1 :: BitfieldExtract (Expr Uvec3) (Expr Int) (Expr Int) (Expr Uvec3) where
-  bitfieldExtract a b c = Expr (Apply "bitfieldExtract" [Star "uvec3" (unsafeCoerce a), Star "int" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  bitfieldExtract a b c = Expr (Tuple "uvec3" (Apply "bitfieldExtract" [Expr (Tuple "uvec3" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance bitfieldExtractInstance2 :: BitfieldExtract (Expr Uvec2) (Expr Int) (Expr Int) (Expr Uvec2) where
-  bitfieldExtract a b c = Expr (Apply "bitfieldExtract" [Star "uvec2" (unsafeCoerce a), Star "int" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  bitfieldExtract a b c = Expr (Tuple "uvec2" (Apply "bitfieldExtract" [Expr (Tuple "uvec2" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance bitfieldExtractInstance3 :: BitfieldExtract (Expr Uint) (Expr Int) (Expr Int) (Expr Uint) where
-  bitfieldExtract a b c = Expr (Apply "bitfieldExtract" [Star "uint" (unsafeCoerce a), Star "int" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  bitfieldExtract a b c = Expr (Tuple "uint" (Apply "bitfieldExtract" [Expr (Tuple "uint" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance bitfieldExtractInstance4 :: BitfieldExtract (Expr Ivec4) (Expr Int) (Expr Int) (Expr Ivec4) where
-  bitfieldExtract a b c = Expr (Apply "bitfieldExtract" [Star "ivec4" (unsafeCoerce a), Star "int" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  bitfieldExtract a b c = Expr (Tuple "ivec4" (Apply "bitfieldExtract" [Expr (Tuple "ivec4" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance bitfieldExtractInstance5 :: BitfieldExtract (Expr Ivec3) (Expr Int) (Expr Int) (Expr Ivec3) where
-  bitfieldExtract a b c = Expr (Apply "bitfieldExtract" [Star "ivec3" (unsafeCoerce a), Star "int" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  bitfieldExtract a b c = Expr (Tuple "ivec3" (Apply "bitfieldExtract" [Expr (Tuple "ivec3" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance bitfieldExtractInstance6 :: BitfieldExtract (Expr Ivec2) (Expr Int) (Expr Int) (Expr Ivec2) where
-  bitfieldExtract a b c = Expr (Apply "bitfieldExtract" [Star "ivec2" (unsafeCoerce a), Star "int" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  bitfieldExtract a b c = Expr (Tuple "ivec2" (Apply "bitfieldExtract" [Expr (Tuple "ivec2" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance bitfieldExtractInstance7 :: BitfieldExtract (Expr Int) (Expr Int) (Expr Int) (Expr Int) where
-  bitfieldExtract a b c = Expr (Apply "bitfieldExtract" [Star "int" (unsafeCoerce a), Star "int" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  bitfieldExtract a b c = Expr (Tuple "int" (Apply "bitfieldExtract" [Expr (Tuple "int" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 class BitfieldInsert a b c d e | a b c d -> e where
   bitfieldInsert :: a -> b -> c -> d -> e
 
 instance bitfieldInsertInstance0 :: BitfieldInsert (Expr Uvec4) (Expr Uvec4) (Expr Int) (Expr Int) (Expr Uvec4) where
-  bitfieldInsert a b c d = Expr (Apply "bitfieldInsert" [Star "uvec4" (unsafeCoerce a), Star "uvec4" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  bitfieldInsert a b c d = Expr (Tuple "uvec4" (Apply "bitfieldInsert" [Expr (Tuple "uvec4" (unsafeCoerce a)), Expr (Tuple "uvec4" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance bitfieldInsertInstance1 :: BitfieldInsert (Expr Uvec3) (Expr Uvec3) (Expr Int) (Expr Int) (Expr Uvec3) where
-  bitfieldInsert a b c d = Expr (Apply "bitfieldInsert" [Star "uvec3" (unsafeCoerce a), Star "uvec3" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  bitfieldInsert a b c d = Expr (Tuple "uvec3" (Apply "bitfieldInsert" [Expr (Tuple "uvec3" (unsafeCoerce a)), Expr (Tuple "uvec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance bitfieldInsertInstance2 :: BitfieldInsert (Expr Uvec2) (Expr Uvec2) (Expr Int) (Expr Int) (Expr Uvec2) where
-  bitfieldInsert a b c d = Expr (Apply "bitfieldInsert" [Star "uvec2" (unsafeCoerce a), Star "uvec2" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  bitfieldInsert a b c d = Expr (Tuple "uvec2" (Apply "bitfieldInsert" [Expr (Tuple "uvec2" (unsafeCoerce a)), Expr (Tuple "uvec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance bitfieldInsertInstance3 :: BitfieldInsert (Expr Uint) (Expr Uint) (Expr Int) (Expr Int) (Expr Uint) where
-  bitfieldInsert a b c d = Expr (Apply "bitfieldInsert" [Star "uint" (unsafeCoerce a), Star "uint" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  bitfieldInsert a b c d = Expr (Tuple "uint" (Apply "bitfieldInsert" [Expr (Tuple "uint" (unsafeCoerce a)), Expr (Tuple "uint" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance bitfieldInsertInstance4 :: BitfieldInsert (Expr Ivec4) (Expr Ivec4) (Expr Int) (Expr Int) (Expr Ivec4) where
-  bitfieldInsert a b c d = Expr (Apply "bitfieldInsert" [Star "ivec4" (unsafeCoerce a), Star "ivec4" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  bitfieldInsert a b c d = Expr (Tuple "ivec4" (Apply "bitfieldInsert" [Expr (Tuple "ivec4" (unsafeCoerce a)), Expr (Tuple "ivec4" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance bitfieldInsertInstance5 :: BitfieldInsert (Expr Ivec3) (Expr Ivec3) (Expr Int) (Expr Int) (Expr Ivec3) where
-  bitfieldInsert a b c d = Expr (Apply "bitfieldInsert" [Star "ivec3" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  bitfieldInsert a b c d = Expr (Tuple "ivec3" (Apply "bitfieldInsert" [Expr (Tuple "ivec3" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance bitfieldInsertInstance6 :: BitfieldInsert (Expr Ivec2) (Expr Ivec2) (Expr Int) (Expr Int) (Expr Ivec2) where
-  bitfieldInsert a b c d = Expr (Apply "bitfieldInsert" [Star "ivec2" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  bitfieldInsert a b c d = Expr (Tuple "ivec2" (Apply "bitfieldInsert" [Expr (Tuple "ivec2" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance bitfieldInsertInstance7 :: BitfieldInsert (Expr Int) (Expr Int) (Expr Int) (Expr Int) (Expr Int) where
-  bitfieldInsert a b c d = Expr (Apply "bitfieldInsert" [Star "int" (unsafeCoerce a), Star "int" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  bitfieldInsert a b c d = Expr (Tuple "int" (Apply "bitfieldInsert" [Expr (Tuple "int" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 class BitfieldReverse a b | a -> b where
   bitfieldReverse :: a -> b
 
 instance bitfieldReverseInstance0 :: BitfieldReverse (Expr Uvec4) (Expr Uvec4) where
-  bitfieldReverse a = Expr (Apply "bitfieldReverse" [Star "uvec4" (unsafeCoerce a)])
+  bitfieldReverse a = Expr (Tuple "uvec4" (Apply "bitfieldReverse" [Expr (Tuple "uvec4" (unsafeCoerce a))]))
 
 instance bitfieldReverseInstance1 :: BitfieldReverse (Expr Uvec3) (Expr Uvec3) where
-  bitfieldReverse a = Expr (Apply "bitfieldReverse" [Star "uvec3" (unsafeCoerce a)])
+  bitfieldReverse a = Expr (Tuple "uvec3" (Apply "bitfieldReverse" [Expr (Tuple "uvec3" (unsafeCoerce a))]))
 
 instance bitfieldReverseInstance2 :: BitfieldReverse (Expr Uvec2) (Expr Uvec2) where
-  bitfieldReverse a = Expr (Apply "bitfieldReverse" [Star "uvec2" (unsafeCoerce a)])
+  bitfieldReverse a = Expr (Tuple "uvec2" (Apply "bitfieldReverse" [Expr (Tuple "uvec2" (unsafeCoerce a))]))
 
 instance bitfieldReverseInstance3 :: BitfieldReverse (Expr Uint) (Expr Uint) where
-  bitfieldReverse a = Expr (Apply "bitfieldReverse" [Star "uint" (unsafeCoerce a)])
+  bitfieldReverse a = Expr (Tuple "uint" (Apply "bitfieldReverse" [Expr (Tuple "uint" (unsafeCoerce a))]))
 
 instance bitfieldReverseInstance4 :: BitfieldReverse (Expr Ivec4) (Expr Ivec4) where
-  bitfieldReverse a = Expr (Apply "bitfieldReverse" [Star "ivec4" (unsafeCoerce a)])
+  bitfieldReverse a = Expr (Tuple "ivec4" (Apply "bitfieldReverse" [Expr (Tuple "ivec4" (unsafeCoerce a))]))
 
 instance bitfieldReverseInstance5 :: BitfieldReverse (Expr Ivec3) (Expr Ivec3) where
-  bitfieldReverse a = Expr (Apply "bitfieldReverse" [Star "ivec3" (unsafeCoerce a)])
+  bitfieldReverse a = Expr (Tuple "ivec3" (Apply "bitfieldReverse" [Expr (Tuple "ivec3" (unsafeCoerce a))]))
 
 instance bitfieldReverseInstance6 :: BitfieldReverse (Expr Ivec2) (Expr Ivec2) where
-  bitfieldReverse a = Expr (Apply "bitfieldReverse" [Star "ivec2" (unsafeCoerce a)])
+  bitfieldReverse a = Expr (Tuple "ivec2" (Apply "bitfieldReverse" [Expr (Tuple "ivec2" (unsafeCoerce a))]))
 
 instance bitfieldReverseInstance7 :: BitfieldReverse (Expr Int) (Expr Int) where
-  bitfieldReverse a = Expr (Apply "bitfieldReverse" [Star "int" (unsafeCoerce a)])
+  bitfieldReverse a = Expr (Tuple "int" (Apply "bitfieldReverse" [Expr (Tuple "int" (unsafeCoerce a))]))
 
 class Ceil a b | a -> b where
   ceil :: a -> b
 
 instance ceilInstance0 :: Ceil (Expr Dvec4) (Expr Dvec4) where
-  ceil a = Expr (Apply "ceil" [Star "dvec4" (unsafeCoerce a)])
+  ceil a = Expr (Tuple "dvec4" (Apply "ceil" [Expr (Tuple "dvec4" (unsafeCoerce a))]))
 
 instance ceilInstance1 :: Ceil (Expr Vec4) (Expr Vec4) where
-  ceil a = Expr (Apply "ceil" [Star "vec4" (unsafeCoerce a)])
+  ceil a = Expr (Tuple "vec4" (Apply "ceil" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance ceilInstance2 :: Ceil (Expr Dvec3) (Expr Dvec3) where
-  ceil a = Expr (Apply "ceil" [Star "dvec3" (unsafeCoerce a)])
+  ceil a = Expr (Tuple "dvec3" (Apply "ceil" [Expr (Tuple "dvec3" (unsafeCoerce a))]))
 
 instance ceilInstance3 :: Ceil (Expr Vec3) (Expr Vec3) where
-  ceil a = Expr (Apply "ceil" [Star "vec3" (unsafeCoerce a)])
+  ceil a = Expr (Tuple "vec3" (Apply "ceil" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance ceilInstance4 :: Ceil (Expr Dvec2) (Expr Dvec2) where
-  ceil a = Expr (Apply "ceil" [Star "dvec2" (unsafeCoerce a)])
+  ceil a = Expr (Tuple "dvec2" (Apply "ceil" [Expr (Tuple "dvec2" (unsafeCoerce a))]))
 
 instance ceilInstance5 :: Ceil (Expr Vec2) (Expr Vec2) where
-  ceil a = Expr (Apply "ceil" [Star "vec2" (unsafeCoerce a)])
+  ceil a = Expr (Tuple "vec2" (Apply "ceil" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance ceilInstance6 :: Ceil (Expr Double) (Expr Double) where
-  ceil a = Expr (Apply "ceil" [Star "double" (unsafeCoerce a)])
+  ceil a = Expr (Tuple "double" (Apply "ceil" [Expr (Tuple "double" (unsafeCoerce a))]))
 
 instance ceilInstance7 :: Ceil (Expr Float) (Expr Float) where
-  ceil a = Expr (Apply "ceil" [Star "float" (unsafeCoerce a)])
+  ceil a = Expr (Tuple "float" (Apply "ceil" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Clamp a b c d | a b c -> d where
   clamp :: a -> b -> c -> d
 
 instance clampInstance0 :: Clamp (Expr Vec4) (Expr Vec4) (Expr Vec4) (Expr Vec4) where
-  clamp a b c = Expr (Apply "clamp" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec4" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "vec4" (Apply "clamp" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec4" (unsafeCoerce c))]))
 
 instance clampInstance1 :: Clamp (Expr Vec4) (Expr Float) (Expr Float) (Expr Vec4) where
-  clamp a b c = Expr (Apply "clamp" [Star "vec4" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "vec4" (Apply "clamp" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance clampInstance2 :: Clamp (Expr Vec3) (Expr Vec3) (Expr Vec3) (Expr Vec3) where
-  clamp a b c = Expr (Apply "clamp" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec3" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "vec3" (Apply "clamp" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c))]))
 
 instance clampInstance3 :: Clamp (Expr Vec3) (Expr Float) (Expr Float) (Expr Vec3) where
-  clamp a b c = Expr (Apply "clamp" [Star "vec3" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "vec3" (Apply "clamp" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance clampInstance4 :: Clamp (Expr Vec2) (Expr Vec2) (Expr Vec2) (Expr Vec2) where
-  clamp a b c = Expr (Apply "clamp" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "vec2" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "vec2" (Apply "clamp" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c))]))
 
 instance clampInstance5 :: Clamp (Expr Vec2) (Expr Float) (Expr Float) (Expr Vec2) where
-  clamp a b c = Expr (Apply "clamp" [Star "vec2" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "vec2" (Apply "clamp" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance clampInstance6 :: Clamp (Expr Uvec4) (Expr Uvec4) (Expr Uvec4) (Expr Uvec4) where
-  clamp a b c = Expr (Apply "clamp" [Star "uvec4" (unsafeCoerce a), Star "uvec4" (unsafeCoerce b), Star "uvec4" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "uvec4" (Apply "clamp" [Expr (Tuple "uvec4" (unsafeCoerce a)), Expr (Tuple "uvec4" (unsafeCoerce b)), Expr (Tuple "uvec4" (unsafeCoerce c))]))
 
 instance clampInstance7 :: Clamp (Expr Uvec4) (Expr Uint) (Expr Uint) (Expr Uvec4) where
-  clamp a b c = Expr (Apply "clamp" [Star "uvec4" (unsafeCoerce a), Star "uint" (unsafeCoerce b), Star "uint" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "uvec4" (Apply "clamp" [Expr (Tuple "uvec4" (unsafeCoerce a)), Expr (Tuple "uint" (unsafeCoerce b)), Expr (Tuple "uint" (unsafeCoerce c))]))
 
 instance clampInstance8 :: Clamp (Expr Uvec3) (Expr Uvec3) (Expr Uvec3) (Expr Uvec3) where
-  clamp a b c = Expr (Apply "clamp" [Star "uvec3" (unsafeCoerce a), Star "uvec3" (unsafeCoerce b), Star "uvec3" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "uvec3" (Apply "clamp" [Expr (Tuple "uvec3" (unsafeCoerce a)), Expr (Tuple "uvec3" (unsafeCoerce b)), Expr (Tuple "uvec3" (unsafeCoerce c))]))
 
 instance clampInstance9 :: Clamp (Expr Uvec3) (Expr Uint) (Expr Uint) (Expr Uvec3) where
-  clamp a b c = Expr (Apply "clamp" [Star "uvec3" (unsafeCoerce a), Star "uint" (unsafeCoerce b), Star "uint" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "uvec3" (Apply "clamp" [Expr (Tuple "uvec3" (unsafeCoerce a)), Expr (Tuple "uint" (unsafeCoerce b)), Expr (Tuple "uint" (unsafeCoerce c))]))
 
 instance clampInstance10 :: Clamp (Expr Uvec2) (Expr Uvec2) (Expr Uvec2) (Expr Uvec2) where
-  clamp a b c = Expr (Apply "clamp" [Star "uvec2" (unsafeCoerce a), Star "uvec2" (unsafeCoerce b), Star "uvec2" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "uvec2" (Apply "clamp" [Expr (Tuple "uvec2" (unsafeCoerce a)), Expr (Tuple "uvec2" (unsafeCoerce b)), Expr (Tuple "uvec2" (unsafeCoerce c))]))
 
 instance clampInstance11 :: Clamp (Expr Uvec2) (Expr Uint) (Expr Uint) (Expr Uvec2) where
-  clamp a b c = Expr (Apply "clamp" [Star "uvec2" (unsafeCoerce a), Star "uint" (unsafeCoerce b), Star "uint" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "uvec2" (Apply "clamp" [Expr (Tuple "uvec2" (unsafeCoerce a)), Expr (Tuple "uint" (unsafeCoerce b)), Expr (Tuple "uint" (unsafeCoerce c))]))
 
 instance clampInstance12 :: Clamp (Expr Uint) (Expr Uint) (Expr Uint) (Expr Uint) where
-  clamp a b c = Expr (Apply "clamp" [Star "uint" (unsafeCoerce a), Star "uint" (unsafeCoerce b), Star "uint" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "uint" (Apply "clamp" [Expr (Tuple "uint" (unsafeCoerce a)), Expr (Tuple "uint" (unsafeCoerce b)), Expr (Tuple "uint" (unsafeCoerce c))]))
 
 instance clampInstance13 :: Clamp (Expr Ivec4) (Expr Ivec4) (Expr Ivec4) (Expr Ivec4) where
-  clamp a b c = Expr (Apply "clamp" [Star "ivec4" (unsafeCoerce a), Star "ivec4" (unsafeCoerce b), Star "ivec4" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "ivec4" (Apply "clamp" [Expr (Tuple "ivec4" (unsafeCoerce a)), Expr (Tuple "ivec4" (unsafeCoerce b)), Expr (Tuple "ivec4" (unsafeCoerce c))]))
 
 instance clampInstance14 :: Clamp (Expr Ivec4) (Expr Int) (Expr Int) (Expr Ivec4) where
-  clamp a b c = Expr (Apply "clamp" [Star "ivec4" (unsafeCoerce a), Star "int" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "ivec4" (Apply "clamp" [Expr (Tuple "ivec4" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance clampInstance15 :: Clamp (Expr Ivec3) (Expr Ivec3) (Expr Ivec3) (Expr Ivec3) where
-  clamp a b c = Expr (Apply "clamp" [Star "ivec3" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b), Star "ivec3" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "ivec3" (Apply "clamp" [Expr (Tuple "ivec3" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b)), Expr (Tuple "ivec3" (unsafeCoerce c))]))
 
 instance clampInstance16 :: Clamp (Expr Ivec3) (Expr Int) (Expr Int) (Expr Ivec3) where
-  clamp a b c = Expr (Apply "clamp" [Star "ivec3" (unsafeCoerce a), Star "int" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "ivec3" (Apply "clamp" [Expr (Tuple "ivec3" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance clampInstance17 :: Clamp (Expr Ivec2) (Expr Ivec2) (Expr Ivec2) (Expr Ivec2) where
-  clamp a b c = Expr (Apply "clamp" [Star "ivec2" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "ivec2" (Apply "clamp" [Expr (Tuple "ivec2" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance clampInstance18 :: Clamp (Expr Ivec2) (Expr Int) (Expr Int) (Expr Ivec2) where
-  clamp a b c = Expr (Apply "clamp" [Star "ivec2" (unsafeCoerce a), Star "int" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "ivec2" (Apply "clamp" [Expr (Tuple "ivec2" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance clampInstance19 :: Clamp (Expr Int) (Expr Int) (Expr Int) (Expr Int) where
-  clamp a b c = Expr (Apply "clamp" [Star "int" (unsafeCoerce a), Star "int" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "int" (Apply "clamp" [Expr (Tuple "int" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance clampInstance20 :: Clamp (Expr Float) (Expr Float) (Expr Float) (Expr Float) where
-  clamp a b c = Expr (Apply "clamp" [Star "float" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "float" (Apply "clamp" [Expr (Tuple "float" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance clampInstance21 :: Clamp (Expr Dvec4) (Expr Dvec4) (Expr Dvec4) (Expr Dvec4) where
-  clamp a b c = Expr (Apply "clamp" [Star "dvec4" (unsafeCoerce a), Star "dvec4" (unsafeCoerce b), Star "dvec4" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "dvec4" (Apply "clamp" [Expr (Tuple "dvec4" (unsafeCoerce a)), Expr (Tuple "dvec4" (unsafeCoerce b)), Expr (Tuple "dvec4" (unsafeCoerce c))]))
 
 instance clampInstance22 :: Clamp (Expr Dvec4) (Expr Double) (Expr Double) (Expr Dvec4) where
-  clamp a b c = Expr (Apply "clamp" [Star "dvec4" (unsafeCoerce a), Star "double" (unsafeCoerce b), Star "double" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "dvec4" (Apply "clamp" [Expr (Tuple "dvec4" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b)), Expr (Tuple "double" (unsafeCoerce c))]))
 
 instance clampInstance23 :: Clamp (Expr Dvec3) (Expr Dvec3) (Expr Dvec3) (Expr Dvec3) where
-  clamp a b c = Expr (Apply "clamp" [Star "dvec3" (unsafeCoerce a), Star "dvec3" (unsafeCoerce b), Star "dvec3" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "dvec3" (Apply "clamp" [Expr (Tuple "dvec3" (unsafeCoerce a)), Expr (Tuple "dvec3" (unsafeCoerce b)), Expr (Tuple "dvec3" (unsafeCoerce c))]))
 
 instance clampInstance24 :: Clamp (Expr Dvec3) (Expr Double) (Expr Double) (Expr Dvec3) where
-  clamp a b c = Expr (Apply "clamp" [Star "dvec3" (unsafeCoerce a), Star "double" (unsafeCoerce b), Star "double" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "dvec3" (Apply "clamp" [Expr (Tuple "dvec3" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b)), Expr (Tuple "double" (unsafeCoerce c))]))
 
 instance clampInstance25 :: Clamp (Expr Dvec2) (Expr Dvec2) (Expr Dvec2) (Expr Dvec2) where
-  clamp a b c = Expr (Apply "clamp" [Star "dvec2" (unsafeCoerce a), Star "dvec2" (unsafeCoerce b), Star "dvec2" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "dvec2" (Apply "clamp" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "dvec2" (unsafeCoerce b)), Expr (Tuple "dvec2" (unsafeCoerce c))]))
 
 instance clampInstance26 :: Clamp (Expr Dvec2) (Expr Double) (Expr Double) (Expr Dvec2) where
-  clamp a b c = Expr (Apply "clamp" [Star "dvec2" (unsafeCoerce a), Star "double" (unsafeCoerce b), Star "double" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "dvec2" (Apply "clamp" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b)), Expr (Tuple "double" (unsafeCoerce c))]))
 
 instance clampInstance27 :: Clamp (Expr Double) (Expr Double) (Expr Double) (Expr Double) where
-  clamp a b c = Expr (Apply "clamp" [Star "double" (unsafeCoerce a), Star "double" (unsafeCoerce b), Star "double" (unsafeCoerce c)])
+  clamp a b c = Expr (Tuple "double" (Apply "clamp" [Expr (Tuple "double" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b)), Expr (Tuple "double" (unsafeCoerce c))]))
 
 class Cos a b | a -> b where
   cos :: a -> b
 
 instance cosInstance0 :: Cos (Expr Vec4) (Expr Vec4) where
-  cos a = Expr (Apply "cos" [Star "vec4" (unsafeCoerce a)])
+  cos a = Expr (Tuple "vec4" (Apply "cos" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance cosInstance1 :: Cos (Expr Vec3) (Expr Vec3) where
-  cos a = Expr (Apply "cos" [Star "vec3" (unsafeCoerce a)])
+  cos a = Expr (Tuple "vec3" (Apply "cos" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance cosInstance2 :: Cos (Expr Vec2) (Expr Vec2) where
-  cos a = Expr (Apply "cos" [Star "vec2" (unsafeCoerce a)])
+  cos a = Expr (Tuple "vec2" (Apply "cos" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance cosInstance3 :: Cos (Expr Float) (Expr Float) where
-  cos a = Expr (Apply "cos" [Star "float" (unsafeCoerce a)])
+  cos a = Expr (Tuple "float" (Apply "cos" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Cosh a b | a -> b where
   cosh :: a -> b
 
 instance coshInstance0 :: Cosh (Expr Vec4) (Expr Vec4) where
-  cosh a = Expr (Apply "cosh" [Star "vec4" (unsafeCoerce a)])
+  cosh a = Expr (Tuple "vec4" (Apply "cosh" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance coshInstance1 :: Cosh (Expr Vec3) (Expr Vec3) where
-  cosh a = Expr (Apply "cosh" [Star "vec3" (unsafeCoerce a)])
+  cosh a = Expr (Tuple "vec3" (Apply "cosh" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance coshInstance2 :: Cosh (Expr Vec2) (Expr Vec2) where
-  cosh a = Expr (Apply "cosh" [Star "vec2" (unsafeCoerce a)])
+  cosh a = Expr (Tuple "vec2" (Apply "cosh" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance coshInstance3 :: Cosh (Expr Float) (Expr Float) where
-  cosh a = Expr (Apply "cosh" [Star "float" (unsafeCoerce a)])
+  cosh a = Expr (Tuple "float" (Apply "cosh" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Cross a b c | a b -> c where
   cross :: a -> b -> c
 
 instance crossInstance0 :: Cross (Expr Vec3) (Expr Vec3) (Expr Vec3) where
-  cross a b = Expr (Apply "cross" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  cross a b = Expr (Tuple "vec3" (Apply "cross" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance crossInstance1 :: Cross (Expr Dvec3) (Expr Dvec3) (Expr Dvec3) where
-  cross a b = Expr (Apply "cross" [Star "dvec3" (unsafeCoerce a), Star "dvec3" (unsafeCoerce b)])
+  cross a b = Expr (Tuple "dvec3" (Apply "cross" [Expr (Tuple "dvec3" (unsafeCoerce a)), Expr (Tuple "dvec3" (unsafeCoerce b))]))
 
 class DFdx a b | a -> b where
   dFdx :: a -> b
 
 instance dFdxInstance0 :: DFdx (Expr Vec4) (Expr Vec4) where
-  dFdx a = Expr (Apply "dFdx" [Star "vec4" (unsafeCoerce a)])
+  dFdx a = Expr (Tuple "vec4" (Apply "dFdx" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance dFdxInstance1 :: DFdx (Expr Vec3) (Expr Vec3) where
-  dFdx a = Expr (Apply "dFdx" [Star "vec3" (unsafeCoerce a)])
+  dFdx a = Expr (Tuple "vec3" (Apply "dFdx" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance dFdxInstance2 :: DFdx (Expr Vec2) (Expr Vec2) where
-  dFdx a = Expr (Apply "dFdx" [Star "vec2" (unsafeCoerce a)])
+  dFdx a = Expr (Tuple "vec2" (Apply "dFdx" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance dFdxInstance3 :: DFdx (Expr Float) (Expr Float) where
-  dFdx a = Expr (Apply "dFdx" [Star "float" (unsafeCoerce a)])
+  dFdx a = Expr (Tuple "float" (Apply "dFdx" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class DFdxCoarse a b | a -> b where
   dFdxCoarse :: a -> b
 
 instance dFdxCoarseInstance0 :: DFdxCoarse (Expr Vec4) (Expr Vec4) where
-  dFdxCoarse a = Expr (Apply "dFdxCoarse" [Star "vec4" (unsafeCoerce a)])
+  dFdxCoarse a = Expr (Tuple "vec4" (Apply "dFdxCoarse" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance dFdxCoarseInstance1 :: DFdxCoarse (Expr Vec3) (Expr Vec3) where
-  dFdxCoarse a = Expr (Apply "dFdxCoarse" [Star "vec3" (unsafeCoerce a)])
+  dFdxCoarse a = Expr (Tuple "vec3" (Apply "dFdxCoarse" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance dFdxCoarseInstance2 :: DFdxCoarse (Expr Vec2) (Expr Vec2) where
-  dFdxCoarse a = Expr (Apply "dFdxCoarse" [Star "vec2" (unsafeCoerce a)])
+  dFdxCoarse a = Expr (Tuple "vec2" (Apply "dFdxCoarse" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance dFdxCoarseInstance3 :: DFdxCoarse (Expr Float) (Expr Float) where
-  dFdxCoarse a = Expr (Apply "dFdxCoarse" [Star "float" (unsafeCoerce a)])
+  dFdxCoarse a = Expr (Tuple "float" (Apply "dFdxCoarse" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class DFdxFine a b | a -> b where
   dFdxFine :: a -> b
 
 instance dFdxFineInstance0 :: DFdxFine (Expr Vec4) (Expr Vec4) where
-  dFdxFine a = Expr (Apply "dFdxFine" [Star "vec4" (unsafeCoerce a)])
+  dFdxFine a = Expr (Tuple "vec4" (Apply "dFdxFine" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance dFdxFineInstance1 :: DFdxFine (Expr Vec3) (Expr Vec3) where
-  dFdxFine a = Expr (Apply "dFdxFine" [Star "vec3" (unsafeCoerce a)])
+  dFdxFine a = Expr (Tuple "vec3" (Apply "dFdxFine" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance dFdxFineInstance2 :: DFdxFine (Expr Vec2) (Expr Vec2) where
-  dFdxFine a = Expr (Apply "dFdxFine" [Star "vec2" (unsafeCoerce a)])
+  dFdxFine a = Expr (Tuple "vec2" (Apply "dFdxFine" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance dFdxFineInstance3 :: DFdxFine (Expr Float) (Expr Float) where
-  dFdxFine a = Expr (Apply "dFdxFine" [Star "float" (unsafeCoerce a)])
+  dFdxFine a = Expr (Tuple "float" (Apply "dFdxFine" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class DFdy a b | a -> b where
   dFdy :: a -> b
 
 instance dFdyInstance0 :: DFdy (Expr Vec4) (Expr Vec4) where
-  dFdy a = Expr (Apply "dFdy" [Star "vec4" (unsafeCoerce a)])
+  dFdy a = Expr (Tuple "vec4" (Apply "dFdy" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance dFdyInstance1 :: DFdy (Expr Vec3) (Expr Vec3) where
-  dFdy a = Expr (Apply "dFdy" [Star "vec3" (unsafeCoerce a)])
+  dFdy a = Expr (Tuple "vec3" (Apply "dFdy" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance dFdyInstance2 :: DFdy (Expr Vec2) (Expr Vec2) where
-  dFdy a = Expr (Apply "dFdy" [Star "vec2" (unsafeCoerce a)])
+  dFdy a = Expr (Tuple "vec2" (Apply "dFdy" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance dFdyInstance3 :: DFdy (Expr Float) (Expr Float) where
-  dFdy a = Expr (Apply "dFdy" [Star "float" (unsafeCoerce a)])
+  dFdy a = Expr (Tuple "float" (Apply "dFdy" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class DFdyCoarse a b | a -> b where
   dFdyCoarse :: a -> b
 
 instance dFdyCoarseInstance0 :: DFdyCoarse (Expr Vec4) (Expr Vec4) where
-  dFdyCoarse a = Expr (Apply "dFdyCoarse" [Star "vec4" (unsafeCoerce a)])
+  dFdyCoarse a = Expr (Tuple "vec4" (Apply "dFdyCoarse" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance dFdyCoarseInstance1 :: DFdyCoarse (Expr Vec3) (Expr Vec3) where
-  dFdyCoarse a = Expr (Apply "dFdyCoarse" [Star "vec3" (unsafeCoerce a)])
+  dFdyCoarse a = Expr (Tuple "vec3" (Apply "dFdyCoarse" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance dFdyCoarseInstance2 :: DFdyCoarse (Expr Vec2) (Expr Vec2) where
-  dFdyCoarse a = Expr (Apply "dFdyCoarse" [Star "vec2" (unsafeCoerce a)])
+  dFdyCoarse a = Expr (Tuple "vec2" (Apply "dFdyCoarse" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance dFdyCoarseInstance3 :: DFdyCoarse (Expr Float) (Expr Float) where
-  dFdyCoarse a = Expr (Apply "dFdyCoarse" [Star "float" (unsafeCoerce a)])
+  dFdyCoarse a = Expr (Tuple "float" (Apply "dFdyCoarse" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class DFdyFine a b | a -> b where
   dFdyFine :: a -> b
 
 instance dFdyFineInstance0 :: DFdyFine (Expr Vec4) (Expr Vec4) where
-  dFdyFine a = Expr (Apply "dFdyFine" [Star "vec4" (unsafeCoerce a)])
+  dFdyFine a = Expr (Tuple "vec4" (Apply "dFdyFine" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance dFdyFineInstance1 :: DFdyFine (Expr Vec3) (Expr Vec3) where
-  dFdyFine a = Expr (Apply "dFdyFine" [Star "vec3" (unsafeCoerce a)])
+  dFdyFine a = Expr (Tuple "vec3" (Apply "dFdyFine" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance dFdyFineInstance2 :: DFdyFine (Expr Vec2) (Expr Vec2) where
-  dFdyFine a = Expr (Apply "dFdyFine" [Star "vec2" (unsafeCoerce a)])
+  dFdyFine a = Expr (Tuple "vec2" (Apply "dFdyFine" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance dFdyFineInstance3 :: DFdyFine (Expr Float) (Expr Float) where
-  dFdyFine a = Expr (Apply "dFdyFine" [Star "float" (unsafeCoerce a)])
+  dFdyFine a = Expr (Tuple "float" (Apply "dFdyFine" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Degrees a b | a -> b where
   degrees :: a -> b
 
 instance degreesInstance0 :: Degrees (Expr Vec4) (Expr Vec4) where
-  degrees a = Expr (Apply "degrees" [Star "vec4" (unsafeCoerce a)])
+  degrees a = Expr (Tuple "vec4" (Apply "degrees" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance degreesInstance1 :: Degrees (Expr Vec3) (Expr Vec3) where
-  degrees a = Expr (Apply "degrees" [Star "vec3" (unsafeCoerce a)])
+  degrees a = Expr (Tuple "vec3" (Apply "degrees" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance degreesInstance2 :: Degrees (Expr Vec2) (Expr Vec2) where
-  degrees a = Expr (Apply "degrees" [Star "vec2" (unsafeCoerce a)])
+  degrees a = Expr (Tuple "vec2" (Apply "degrees" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance degreesInstance3 :: Degrees (Expr Float) (Expr Float) where
-  degrees a = Expr (Apply "degrees" [Star "float" (unsafeCoerce a)])
+  degrees a = Expr (Tuple "float" (Apply "degrees" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Determinant a b | a -> b where
   determinant :: a -> b
 
 instance determinantInstance0 :: Determinant (Expr Mat4) (Expr Float) where
-  determinant a = Expr (Apply "determinant" [Star "mat4" (unsafeCoerce a)])
+  determinant a = Expr (Tuple "float" (Apply "determinant" [Expr (Tuple "mat4" (unsafeCoerce a))]))
 
 instance determinantInstance1 :: Determinant (Expr Mat3) (Expr Float) where
-  determinant a = Expr (Apply "determinant" [Star "mat3" (unsafeCoerce a)])
+  determinant a = Expr (Tuple "float" (Apply "determinant" [Expr (Tuple "mat3" (unsafeCoerce a))]))
 
 instance determinantInstance2 :: Determinant (Expr Mat2) (Expr Float) where
-  determinant a = Expr (Apply "determinant" [Star "mat2" (unsafeCoerce a)])
+  determinant a = Expr (Tuple "float" (Apply "determinant" [Expr (Tuple "mat2" (unsafeCoerce a))]))
 
 instance determinantInstance3 :: Determinant (Expr Dmat4) (Expr Double) where
-  determinant a = Expr (Apply "determinant" [Star "dmat4" (unsafeCoerce a)])
+  determinant a = Expr (Tuple "double" (Apply "determinant" [Expr (Tuple "dmat4" (unsafeCoerce a))]))
 
 instance determinantInstance4 :: Determinant (Expr Dmat3) (Expr Double) where
-  determinant a = Expr (Apply "determinant" [Star "dmat3" (unsafeCoerce a)])
+  determinant a = Expr (Tuple "double" (Apply "determinant" [Expr (Tuple "dmat3" (unsafeCoerce a))]))
 
 instance determinantInstance5 :: Determinant (Expr Dmat2) (Expr Double) where
-  determinant a = Expr (Apply "determinant" [Star "dmat2" (unsafeCoerce a)])
+  determinant a = Expr (Tuple "double" (Apply "determinant" [Expr (Tuple "dmat2" (unsafeCoerce a))]))
 
 class Distance a b c | a b -> c where
   distance :: a -> b -> c
 
 instance distanceInstance0 :: Distance (Expr Vec4) (Expr Vec4) (Expr Float) where
-  distance a b = Expr (Apply "distance" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  distance a b = Expr (Tuple "float" (Apply "distance" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance distanceInstance1 :: Distance (Expr Vec3) (Expr Vec3) (Expr Float) where
-  distance a b = Expr (Apply "distance" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  distance a b = Expr (Tuple "float" (Apply "distance" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance distanceInstance2 :: Distance (Expr Vec2) (Expr Vec2) (Expr Float) where
-  distance a b = Expr (Apply "distance" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  distance a b = Expr (Tuple "float" (Apply "distance" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance distanceInstance3 :: Distance (Expr Float) (Expr Float) (Expr Float) where
-  distance a b = Expr (Apply "distance" [Star "float" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  distance a b = Expr (Tuple "float" (Apply "distance" [Expr (Tuple "float" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance distanceInstance4 :: Distance (Expr Dvec2) (Expr Dvec2) (Expr Double) where
-  distance a b = Expr (Apply "distance" [Star "dvec2" (unsafeCoerce a), Star "dvec2" (unsafeCoerce b)])
+  distance a b = Expr (Tuple "double" (Apply "distance" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "dvec2" (unsafeCoerce b))]))
 
 instance distanceInstance5 :: Distance (Expr Double) (Expr Double) (Expr Double) where
-  distance a b = Expr (Apply "distance" [Star "double" (unsafeCoerce a), Star "double" (unsafeCoerce b)])
+  distance a b = Expr (Tuple "double" (Apply "distance" [Expr (Tuple "double" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b))]))
 
 class Dot a b c | a b -> c where
   dot :: a -> b -> c
 
 instance dotInstance0 :: Dot (Expr Vec4) (Expr Vec4) (Expr Float) where
-  dot a b = Expr (Apply "dot" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  dot a b = Expr (Tuple "float" (Apply "dot" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance dotInstance1 :: Dot (Expr Vec3) (Expr Vec3) (Expr Float) where
-  dot a b = Expr (Apply "dot" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  dot a b = Expr (Tuple "float" (Apply "dot" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance dotInstance2 :: Dot (Expr Vec2) (Expr Vec2) (Expr Float) where
-  dot a b = Expr (Apply "dot" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  dot a b = Expr (Tuple "float" (Apply "dot" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance dotInstance3 :: Dot (Expr Float) (Expr Float) (Expr Float) where
-  dot a b = Expr (Apply "dot" [Star "float" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  dot a b = Expr (Tuple "float" (Apply "dot" [Expr (Tuple "float" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance dotInstance4 :: Dot (Expr Dvec2) (Expr Dvec2) (Expr Double) where
-  dot a b = Expr (Apply "dot" [Star "dvec2" (unsafeCoerce a), Star "dvec2" (unsafeCoerce b)])
+  dot a b = Expr (Tuple "double" (Apply "dot" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "dvec2" (unsafeCoerce b))]))
 
 instance dotInstance5 :: Dot (Expr Double) (Expr Double) (Expr Double) where
-  dot a b = Expr (Apply "dot" [Star "double" (unsafeCoerce a), Star "double" (unsafeCoerce b)])
+  dot a b = Expr (Tuple "double" (Apply "dot" [Expr (Tuple "double" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b))]))
 
 class Equal a b c | a b -> c where
   equal :: a -> b -> c
 
 instance equalInstance0 :: Equal (Expr Vec4) (Expr Vec4) (Expr Bvec4) where
-  equal a b = Expr (Apply "equal" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  equal a b = Expr (Tuple "bvec4" (Apply "equal" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance equalInstance1 :: Equal (Expr Uvec4) (Expr Uvec4) (Expr Bvec4) where
-  equal a b = Expr (Apply "equal" [Star "uvec4" (unsafeCoerce a), Star "uvec4" (unsafeCoerce b)])
+  equal a b = Expr (Tuple "bvec4" (Apply "equal" [Expr (Tuple "uvec4" (unsafeCoerce a)), Expr (Tuple "uvec4" (unsafeCoerce b))]))
 
 instance equalInstance2 :: Equal (Expr Ivec4) (Expr Ivec4) (Expr Bvec4) where
-  equal a b = Expr (Apply "equal" [Star "ivec4" (unsafeCoerce a), Star "ivec4" (unsafeCoerce b)])
+  equal a b = Expr (Tuple "bvec4" (Apply "equal" [Expr (Tuple "ivec4" (unsafeCoerce a)), Expr (Tuple "ivec4" (unsafeCoerce b))]))
 
 instance equalInstance3 :: Equal (Expr Vec3) (Expr Vec3) (Expr Bvec3) where
-  equal a b = Expr (Apply "equal" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  equal a b = Expr (Tuple "bvec3" (Apply "equal" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance equalInstance4 :: Equal (Expr Uvec3) (Expr Uvec3) (Expr Bvec3) where
-  equal a b = Expr (Apply "equal" [Star "uvec3" (unsafeCoerce a), Star "uvec3" (unsafeCoerce b)])
+  equal a b = Expr (Tuple "bvec3" (Apply "equal" [Expr (Tuple "uvec3" (unsafeCoerce a)), Expr (Tuple "uvec3" (unsafeCoerce b))]))
 
 instance equalInstance5 :: Equal (Expr Ivec3) (Expr Ivec3) (Expr Bvec3) where
-  equal a b = Expr (Apply "equal" [Star "ivec3" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  equal a b = Expr (Tuple "bvec3" (Apply "equal" [Expr (Tuple "ivec3" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance equalInstance6 :: Equal (Expr Vec2) (Expr Vec2) (Expr Bvec2) where
-  equal a b = Expr (Apply "equal" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  equal a b = Expr (Tuple "bvec2" (Apply "equal" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance equalInstance7 :: Equal (Expr Uvec2) (Expr Uvec2) (Expr Bvec2) where
-  equal a b = Expr (Apply "equal" [Star "uvec2" (unsafeCoerce a), Star "uvec2" (unsafeCoerce b)])
+  equal a b = Expr (Tuple "bvec2" (Apply "equal" [Expr (Tuple "uvec2" (unsafeCoerce a)), Expr (Tuple "uvec2" (unsafeCoerce b))]))
 
 instance equalInstance8 :: Equal (Expr Ivec2) (Expr Ivec2) (Expr Bvec2) where
-  equal a b = Expr (Apply "equal" [Star "ivec2" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  equal a b = Expr (Tuple "bvec2" (Apply "equal" [Expr (Tuple "ivec2" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 class Exp a b | a -> b where
   exp :: a -> b
 
 instance expInstance0 :: Exp (Expr Vec4) (Expr Vec4) where
-  exp a = Expr (Apply "exp" [Star "vec4" (unsafeCoerce a)])
+  exp a = Expr (Tuple "vec4" (Apply "exp" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance expInstance1 :: Exp (Expr Vec3) (Expr Vec3) where
-  exp a = Expr (Apply "exp" [Star "vec3" (unsafeCoerce a)])
+  exp a = Expr (Tuple "vec3" (Apply "exp" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance expInstance2 :: Exp (Expr Vec2) (Expr Vec2) where
-  exp a = Expr (Apply "exp" [Star "vec2" (unsafeCoerce a)])
+  exp a = Expr (Tuple "vec2" (Apply "exp" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance expInstance3 :: Exp (Expr Float) (Expr Float) where
-  exp a = Expr (Apply "exp" [Star "float" (unsafeCoerce a)])
+  exp a = Expr (Tuple "float" (Apply "exp" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Exp2 a b | a -> b where
   exp2 :: a -> b
 
 instance exp2Instance0 :: Exp2 (Expr Vec4) (Expr Vec4) where
-  exp2 a = Expr (Apply "exp2" [Star "vec4" (unsafeCoerce a)])
+  exp2 a = Expr (Tuple "vec4" (Apply "exp2" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance exp2Instance1 :: Exp2 (Expr Vec3) (Expr Vec3) where
-  exp2 a = Expr (Apply "exp2" [Star "vec3" (unsafeCoerce a)])
+  exp2 a = Expr (Tuple "vec3" (Apply "exp2" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance exp2Instance2 :: Exp2 (Expr Vec2) (Expr Vec2) where
-  exp2 a = Expr (Apply "exp2" [Star "vec2" (unsafeCoerce a)])
+  exp2 a = Expr (Tuple "vec2" (Apply "exp2" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance exp2Instance3 :: Exp2 (Expr Float) (Expr Float) where
-  exp2 a = Expr (Apply "exp2" [Star "float" (unsafeCoerce a)])
+  exp2 a = Expr (Tuple "float" (Apply "exp2" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Faceforward a b c d | a b c -> d where
   faceforward :: a -> b -> c -> d
 
 instance faceforwardInstance0 :: Faceforward (Expr Vec4) (Expr Vec4) (Expr Vec4) (Expr Vec4) where
-  faceforward a b c = Expr (Apply "faceforward" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec4" (unsafeCoerce c)])
+  faceforward a b c = Expr (Tuple "vec4" (Apply "faceforward" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec4" (unsafeCoerce c))]))
 
 instance faceforwardInstance1 :: Faceforward (Expr Vec3) (Expr Vec3) (Expr Vec3) (Expr Vec3) where
-  faceforward a b c = Expr (Apply "faceforward" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec3" (unsafeCoerce c)])
+  faceforward a b c = Expr (Tuple "vec3" (Apply "faceforward" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c))]))
 
 instance faceforwardInstance2 :: Faceforward (Expr Vec2) (Expr Vec2) (Expr Vec2) (Expr Vec2) where
-  faceforward a b c = Expr (Apply "faceforward" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "vec2" (unsafeCoerce c)])
+  faceforward a b c = Expr (Tuple "vec2" (Apply "faceforward" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c))]))
 
 instance faceforwardInstance3 :: Faceforward (Expr Float) (Expr Float) (Expr Float) (Expr Float) where
-  faceforward a b c = Expr (Apply "faceforward" [Star "float" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  faceforward a b c = Expr (Tuple "float" (Apply "faceforward" [Expr (Tuple "float" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance faceforwardInstance4 :: Faceforward (Expr Dvec2) (Expr Dvec2) (Expr Dvec2) (Expr Dvec2) where
-  faceforward a b c = Expr (Apply "faceforward" [Star "dvec2" (unsafeCoerce a), Star "dvec2" (unsafeCoerce b), Star "dvec2" (unsafeCoerce c)])
+  faceforward a b c = Expr (Tuple "dvec2" (Apply "faceforward" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "dvec2" (unsafeCoerce b)), Expr (Tuple "dvec2" (unsafeCoerce c))]))
 
 instance faceforwardInstance5 :: Faceforward (Expr Double) (Expr Double) (Expr Double) (Expr Double) where
-  faceforward a b c = Expr (Apply "faceforward" [Star "double" (unsafeCoerce a), Star "double" (unsafeCoerce b), Star "double" (unsafeCoerce c)])
+  faceforward a b c = Expr (Tuple "double" (Apply "faceforward" [Expr (Tuple "double" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b)), Expr (Tuple "double" (unsafeCoerce c))]))
 
 class FindLSB a b | a -> b where
   findLSB :: a -> b
 
 instance findLSBInstance0 :: FindLSB (Expr Uvec4) (Expr Ivec4) where
-  findLSB a = Expr (Apply "findLSB" [Star "uvec4" (unsafeCoerce a)])
+  findLSB a = Expr (Tuple "ivec4" (Apply "findLSB" [Expr (Tuple "uvec4" (unsafeCoerce a))]))
 
 instance findLSBInstance1 :: FindLSB (Expr Ivec4) (Expr Ivec4) where
-  findLSB a = Expr (Apply "findLSB" [Star "ivec4" (unsafeCoerce a)])
+  findLSB a = Expr (Tuple "ivec4" (Apply "findLSB" [Expr (Tuple "ivec4" (unsafeCoerce a))]))
 
 instance findLSBInstance2 :: FindLSB (Expr Uvec3) (Expr Ivec3) where
-  findLSB a = Expr (Apply "findLSB" [Star "uvec3" (unsafeCoerce a)])
+  findLSB a = Expr (Tuple "ivec3" (Apply "findLSB" [Expr (Tuple "uvec3" (unsafeCoerce a))]))
 
 instance findLSBInstance3 :: FindLSB (Expr Ivec3) (Expr Ivec3) where
-  findLSB a = Expr (Apply "findLSB" [Star "ivec3" (unsafeCoerce a)])
+  findLSB a = Expr (Tuple "ivec3" (Apply "findLSB" [Expr (Tuple "ivec3" (unsafeCoerce a))]))
 
 instance findLSBInstance4 :: FindLSB (Expr Uvec2) (Expr Ivec2) where
-  findLSB a = Expr (Apply "findLSB" [Star "uvec2" (unsafeCoerce a)])
+  findLSB a = Expr (Tuple "ivec2" (Apply "findLSB" [Expr (Tuple "uvec2" (unsafeCoerce a))]))
 
 instance findLSBInstance5 :: FindLSB (Expr Ivec2) (Expr Ivec2) where
-  findLSB a = Expr (Apply "findLSB" [Star "ivec2" (unsafeCoerce a)])
+  findLSB a = Expr (Tuple "ivec2" (Apply "findLSB" [Expr (Tuple "ivec2" (unsafeCoerce a))]))
 
 instance findLSBInstance6 :: FindLSB (Expr Uint) (Expr Int) where
-  findLSB a = Expr (Apply "findLSB" [Star "uint" (unsafeCoerce a)])
+  findLSB a = Expr (Tuple "int" (Apply "findLSB" [Expr (Tuple "uint" (unsafeCoerce a))]))
 
 instance findLSBInstance7 :: FindLSB (Expr Int) (Expr Int) where
-  findLSB a = Expr (Apply "findLSB" [Star "int" (unsafeCoerce a)])
+  findLSB a = Expr (Tuple "int" (Apply "findLSB" [Expr (Tuple "int" (unsafeCoerce a))]))
 
 class FindMSB a b | a -> b where
   findMSB :: a -> b
 
 instance findMSBInstance0 :: FindMSB (Expr Uvec4) (Expr Ivec4) where
-  findMSB a = Expr (Apply "findMSB" [Star "uvec4" (unsafeCoerce a)])
+  findMSB a = Expr (Tuple "ivec4" (Apply "findMSB" [Expr (Tuple "uvec4" (unsafeCoerce a))]))
 
 instance findMSBInstance1 :: FindMSB (Expr Ivec4) (Expr Ivec4) where
-  findMSB a = Expr (Apply "findMSB" [Star "ivec4" (unsafeCoerce a)])
+  findMSB a = Expr (Tuple "ivec4" (Apply "findMSB" [Expr (Tuple "ivec4" (unsafeCoerce a))]))
 
 instance findMSBInstance2 :: FindMSB (Expr Uvec3) (Expr Ivec3) where
-  findMSB a = Expr (Apply "findMSB" [Star "uvec3" (unsafeCoerce a)])
+  findMSB a = Expr (Tuple "ivec3" (Apply "findMSB" [Expr (Tuple "uvec3" (unsafeCoerce a))]))
 
 instance findMSBInstance3 :: FindMSB (Expr Ivec3) (Expr Ivec3) where
-  findMSB a = Expr (Apply "findMSB" [Star "ivec3" (unsafeCoerce a)])
+  findMSB a = Expr (Tuple "ivec3" (Apply "findMSB" [Expr (Tuple "ivec3" (unsafeCoerce a))]))
 
 instance findMSBInstance4 :: FindMSB (Expr Uvec2) (Expr Ivec2) where
-  findMSB a = Expr (Apply "findMSB" [Star "uvec2" (unsafeCoerce a)])
+  findMSB a = Expr (Tuple "ivec2" (Apply "findMSB" [Expr (Tuple "uvec2" (unsafeCoerce a))]))
 
 instance findMSBInstance5 :: FindMSB (Expr Ivec2) (Expr Ivec2) where
-  findMSB a = Expr (Apply "findMSB" [Star "ivec2" (unsafeCoerce a)])
+  findMSB a = Expr (Tuple "ivec2" (Apply "findMSB" [Expr (Tuple "ivec2" (unsafeCoerce a))]))
 
 instance findMSBInstance6 :: FindMSB (Expr Uint) (Expr Int) where
-  findMSB a = Expr (Apply "findMSB" [Star "uint" (unsafeCoerce a)])
+  findMSB a = Expr (Tuple "int" (Apply "findMSB" [Expr (Tuple "uint" (unsafeCoerce a))]))
 
 instance findMSBInstance7 :: FindMSB (Expr Int) (Expr Int) where
-  findMSB a = Expr (Apply "findMSB" [Star "int" (unsafeCoerce a)])
+  findMSB a = Expr (Tuple "int" (Apply "findMSB" [Expr (Tuple "int" (unsafeCoerce a))]))
 
 class FloatBitsToInt a b | a -> b where
   floatBitsToInt :: a -> b
 
 instance floatBitsToIntInstance0 :: FloatBitsToInt (Expr Vec4) (Expr Ivec4) where
-  floatBitsToInt a = Expr (Apply "floatBitsToInt" [Star "vec4" (unsafeCoerce a)])
+  floatBitsToInt a = Expr (Tuple "ivec4" (Apply "floatBitsToInt" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance floatBitsToIntInstance1 :: FloatBitsToInt (Expr Vec3) (Expr Ivec3) where
-  floatBitsToInt a = Expr (Apply "floatBitsToInt" [Star "vec3" (unsafeCoerce a)])
+  floatBitsToInt a = Expr (Tuple "ivec3" (Apply "floatBitsToInt" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance floatBitsToIntInstance2 :: FloatBitsToInt (Expr Vec2) (Expr Ivec2) where
-  floatBitsToInt a = Expr (Apply "floatBitsToInt" [Star "vec2" (unsafeCoerce a)])
+  floatBitsToInt a = Expr (Tuple "ivec2" (Apply "floatBitsToInt" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance floatBitsToIntInstance3 :: FloatBitsToInt (Expr Float) (Expr Int) where
-  floatBitsToInt a = Expr (Apply "floatBitsToInt" [Star "float" (unsafeCoerce a)])
+  floatBitsToInt a = Expr (Tuple "int" (Apply "floatBitsToInt" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class FloatBitsToUint a b | a -> b where
   floatBitsToUint :: a -> b
 
 instance floatBitsToUintInstance0 :: FloatBitsToUint (Expr Vec4) (Expr Uvec4) where
-  floatBitsToUint a = Expr (Apply "floatBitsToUint" [Star "vec4" (unsafeCoerce a)])
+  floatBitsToUint a = Expr (Tuple "uvec4" (Apply "floatBitsToUint" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance floatBitsToUintInstance1 :: FloatBitsToUint (Expr Vec3) (Expr Uvec3) where
-  floatBitsToUint a = Expr (Apply "floatBitsToUint" [Star "vec3" (unsafeCoerce a)])
+  floatBitsToUint a = Expr (Tuple "uvec3" (Apply "floatBitsToUint" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance floatBitsToUintInstance2 :: FloatBitsToUint (Expr Vec2) (Expr Uvec2) where
-  floatBitsToUint a = Expr (Apply "floatBitsToUint" [Star "vec2" (unsafeCoerce a)])
+  floatBitsToUint a = Expr (Tuple "uvec2" (Apply "floatBitsToUint" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance floatBitsToUintInstance3 :: FloatBitsToUint (Expr Float) (Expr Uint) where
-  floatBitsToUint a = Expr (Apply "floatBitsToUint" [Star "float" (unsafeCoerce a)])
+  floatBitsToUint a = Expr (Tuple "uint" (Apply "floatBitsToUint" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Floor a b | a -> b where
   floor :: a -> b
 
 instance floorInstance0 :: Floor (Expr Dvec4) (Expr Dvec4) where
-  floor a = Expr (Apply "floor" [Star "dvec4" (unsafeCoerce a)])
+  floor a = Expr (Tuple "dvec4" (Apply "floor" [Expr (Tuple "dvec4" (unsafeCoerce a))]))
 
 instance floorInstance1 :: Floor (Expr Vec4) (Expr Vec4) where
-  floor a = Expr (Apply "floor" [Star "vec4" (unsafeCoerce a)])
+  floor a = Expr (Tuple "vec4" (Apply "floor" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance floorInstance2 :: Floor (Expr Dvec3) (Expr Dvec3) where
-  floor a = Expr (Apply "floor" [Star "dvec3" (unsafeCoerce a)])
+  floor a = Expr (Tuple "dvec3" (Apply "floor" [Expr (Tuple "dvec3" (unsafeCoerce a))]))
 
 instance floorInstance3 :: Floor (Expr Vec3) (Expr Vec3) where
-  floor a = Expr (Apply "floor" [Star "vec3" (unsafeCoerce a)])
+  floor a = Expr (Tuple "vec3" (Apply "floor" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance floorInstance4 :: Floor (Expr Dvec2) (Expr Dvec2) where
-  floor a = Expr (Apply "floor" [Star "dvec2" (unsafeCoerce a)])
+  floor a = Expr (Tuple "dvec2" (Apply "floor" [Expr (Tuple "dvec2" (unsafeCoerce a))]))
 
 instance floorInstance5 :: Floor (Expr Vec2) (Expr Vec2) where
-  floor a = Expr (Apply "floor" [Star "vec2" (unsafeCoerce a)])
+  floor a = Expr (Tuple "vec2" (Apply "floor" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance floorInstance6 :: Floor (Expr Double) (Expr Double) where
-  floor a = Expr (Apply "floor" [Star "double" (unsafeCoerce a)])
+  floor a = Expr (Tuple "double" (Apply "floor" [Expr (Tuple "double" (unsafeCoerce a))]))
 
 instance floorInstance7 :: Floor (Expr Float) (Expr Float) where
-  floor a = Expr (Apply "floor" [Star "float" (unsafeCoerce a)])
+  floor a = Expr (Tuple "float" (Apply "floor" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Fma a b c d | a b c -> d where
   fma :: a -> b -> c -> d
 
 instance fmaInstance0 :: Fma (Expr Vec4) (Expr Vec4) (Expr Vec4) (Expr Vec4) where
-  fma a b c = Expr (Apply "fma" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec4" (unsafeCoerce c)])
+  fma a b c = Expr (Tuple "vec4" (Apply "fma" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec4" (unsafeCoerce c))]))
 
 instance fmaInstance1 :: Fma (Expr Vec3) (Expr Vec3) (Expr Vec3) (Expr Vec3) where
-  fma a b c = Expr (Apply "fma" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec3" (unsafeCoerce c)])
+  fma a b c = Expr (Tuple "vec3" (Apply "fma" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c))]))
 
 instance fmaInstance2 :: Fma (Expr Vec2) (Expr Vec2) (Expr Vec2) (Expr Vec2) where
-  fma a b c = Expr (Apply "fma" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "vec2" (unsafeCoerce c)])
+  fma a b c = Expr (Tuple "vec2" (Apply "fma" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c))]))
 
 instance fmaInstance3 :: Fma (Expr Float) (Expr Float) (Expr Float) (Expr Float) where
-  fma a b c = Expr (Apply "fma" [Star "float" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  fma a b c = Expr (Tuple "float" (Apply "fma" [Expr (Tuple "float" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance fmaInstance4 :: Fma (Expr Dvec2) (Expr Dvec2) (Expr Dvec2) (Expr Dvec2) where
-  fma a b c = Expr (Apply "fma" [Star "dvec2" (unsafeCoerce a), Star "dvec2" (unsafeCoerce b), Star "dvec2" (unsafeCoerce c)])
+  fma a b c = Expr (Tuple "dvec2" (Apply "fma" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "dvec2" (unsafeCoerce b)), Expr (Tuple "dvec2" (unsafeCoerce c))]))
 
 instance fmaInstance5 :: Fma (Expr Double) (Expr Double) (Expr Double) (Expr Double) where
-  fma a b c = Expr (Apply "fma" [Star "double" (unsafeCoerce a), Star "double" (unsafeCoerce b), Star "double" (unsafeCoerce c)])
+  fma a b c = Expr (Tuple "double" (Apply "fma" [Expr (Tuple "double" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b)), Expr (Tuple "double" (unsafeCoerce c))]))
 
 class Fract a b | a -> b where
   fract :: a -> b
 
 instance fractInstance0 :: Fract (Expr Dvec4) (Expr Dvec4) where
-  fract a = Expr (Apply "fract" [Star "dvec4" (unsafeCoerce a)])
+  fract a = Expr (Tuple "dvec4" (Apply "fract" [Expr (Tuple "dvec4" (unsafeCoerce a))]))
 
 instance fractInstance1 :: Fract (Expr Vec4) (Expr Vec4) where
-  fract a = Expr (Apply "fract" [Star "vec4" (unsafeCoerce a)])
+  fract a = Expr (Tuple "vec4" (Apply "fract" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance fractInstance2 :: Fract (Expr Dvec3) (Expr Dvec3) where
-  fract a = Expr (Apply "fract" [Star "dvec3" (unsafeCoerce a)])
+  fract a = Expr (Tuple "dvec3" (Apply "fract" [Expr (Tuple "dvec3" (unsafeCoerce a))]))
 
 instance fractInstance3 :: Fract (Expr Vec3) (Expr Vec3) where
-  fract a = Expr (Apply "fract" [Star "vec3" (unsafeCoerce a)])
+  fract a = Expr (Tuple "vec3" (Apply "fract" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance fractInstance4 :: Fract (Expr Dvec2) (Expr Dvec2) where
-  fract a = Expr (Apply "fract" [Star "dvec2" (unsafeCoerce a)])
+  fract a = Expr (Tuple "dvec2" (Apply "fract" [Expr (Tuple "dvec2" (unsafeCoerce a))]))
 
 instance fractInstance5 :: Fract (Expr Vec2) (Expr Vec2) where
-  fract a = Expr (Apply "fract" [Star "vec2" (unsafeCoerce a)])
+  fract a = Expr (Tuple "vec2" (Apply "fract" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance fractInstance6 :: Fract (Expr Double) (Expr Double) where
-  fract a = Expr (Apply "fract" [Star "double" (unsafeCoerce a)])
+  fract a = Expr (Tuple "double" (Apply "fract" [Expr (Tuple "double" (unsafeCoerce a))]))
 
 instance fractInstance7 :: Fract (Expr Float) (Expr Float) where
-  fract a = Expr (Apply "fract" [Star "float" (unsafeCoerce a)])
+  fract a = Expr (Tuple "float" (Apply "fract" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Frexp a b c | a b -> c where
   frexp :: a -> b -> c
 
 instance frexpInstance0 :: Frexp (Expr Vec4) (Expr Ivec4) (Expr Vec4) where
-  frexp a b = Expr (Apply "frexp" [Star "vec4" (unsafeCoerce a), Star "ivec4" (unsafeCoerce b)])
+  frexp a b = Expr (Tuple "vec4" (Apply "frexp" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "ivec4" (unsafeCoerce b))]))
 
 instance frexpInstance1 :: Frexp (Expr Vec3) (Expr Ivec3) (Expr Vec3) where
-  frexp a b = Expr (Apply "frexp" [Star "vec3" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  frexp a b = Expr (Tuple "vec3" (Apply "frexp" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance frexpInstance2 :: Frexp (Expr Vec2) (Expr Ivec2) (Expr Vec2) where
-  frexp a b = Expr (Apply "frexp" [Star "vec2" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  frexp a b = Expr (Tuple "vec2" (Apply "frexp" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 instance frexpInstance3 :: Frexp (Expr Float) (Expr Int) (Expr Float) where
-  frexp a b = Expr (Apply "frexp" [Star "float" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  frexp a b = Expr (Tuple "float" (Apply "frexp" [Expr (Tuple "float" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance frexpInstance4 :: Frexp (Expr Dvec4) (Expr Ivec4) (Expr Dvec4) where
-  frexp a b = Expr (Apply "frexp" [Star "dvec4" (unsafeCoerce a), Star "ivec4" (unsafeCoerce b)])
+  frexp a b = Expr (Tuple "dvec4" (Apply "frexp" [Expr (Tuple "dvec4" (unsafeCoerce a)), Expr (Tuple "ivec4" (unsafeCoerce b))]))
 
 instance frexpInstance5 :: Frexp (Expr Dvec3) (Expr Ivec3) (Expr Dvec3) where
-  frexp a b = Expr (Apply "frexp" [Star "dvec3" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  frexp a b = Expr (Tuple "dvec3" (Apply "frexp" [Expr (Tuple "dvec3" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance frexpInstance6 :: Frexp (Expr Dvec2) (Expr Ivec2) (Expr Dvec2) where
-  frexp a b = Expr (Apply "frexp" [Star "dvec2" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  frexp a b = Expr (Tuple "dvec2" (Apply "frexp" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 instance frexpInstance7 :: Frexp (Expr Double) (Expr Int) (Expr Double) where
-  frexp a b = Expr (Apply "frexp" [Star "double" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  frexp a b = Expr (Tuple "double" (Apply "frexp" [Expr (Tuple "double" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 class Fwidth a b | a -> b where
   fwidth :: a -> b
 
 instance fwidthInstance0 :: Fwidth (Expr Vec4) (Expr Vec4) where
-  fwidth a = Expr (Apply "fwidth" [Star "vec4" (unsafeCoerce a)])
+  fwidth a = Expr (Tuple "vec4" (Apply "fwidth" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance fwidthInstance1 :: Fwidth (Expr Vec3) (Expr Vec3) where
-  fwidth a = Expr (Apply "fwidth" [Star "vec3" (unsafeCoerce a)])
+  fwidth a = Expr (Tuple "vec3" (Apply "fwidth" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance fwidthInstance2 :: Fwidth (Expr Vec2) (Expr Vec2) where
-  fwidth a = Expr (Apply "fwidth" [Star "vec2" (unsafeCoerce a)])
+  fwidth a = Expr (Tuple "vec2" (Apply "fwidth" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance fwidthInstance3 :: Fwidth (Expr Float) (Expr Float) where
-  fwidth a = Expr (Apply "fwidth" [Star "float" (unsafeCoerce a)])
+  fwidth a = Expr (Tuple "float" (Apply "fwidth" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class FwidthCoarse a b | a -> b where
   fwidthCoarse :: a -> b
 
 instance fwidthCoarseInstance0 :: FwidthCoarse (Expr Vec4) (Expr Vec4) where
-  fwidthCoarse a = Expr (Apply "fwidthCoarse" [Star "vec4" (unsafeCoerce a)])
+  fwidthCoarse a = Expr (Tuple "vec4" (Apply "fwidthCoarse" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance fwidthCoarseInstance1 :: FwidthCoarse (Expr Vec3) (Expr Vec3) where
-  fwidthCoarse a = Expr (Apply "fwidthCoarse" [Star "vec3" (unsafeCoerce a)])
+  fwidthCoarse a = Expr (Tuple "vec3" (Apply "fwidthCoarse" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance fwidthCoarseInstance2 :: FwidthCoarse (Expr Vec2) (Expr Vec2) where
-  fwidthCoarse a = Expr (Apply "fwidthCoarse" [Star "vec2" (unsafeCoerce a)])
+  fwidthCoarse a = Expr (Tuple "vec2" (Apply "fwidthCoarse" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance fwidthCoarseInstance3 :: FwidthCoarse (Expr Float) (Expr Float) where
-  fwidthCoarse a = Expr (Apply "fwidthCoarse" [Star "float" (unsafeCoerce a)])
+  fwidthCoarse a = Expr (Tuple "float" (Apply "fwidthCoarse" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class FwidthFine a b | a -> b where
   fwidthFine :: a -> b
 
 instance fwidthFineInstance0 :: FwidthFine (Expr Vec4) (Expr Vec4) where
-  fwidthFine a = Expr (Apply "fwidthFine" [Star "vec4" (unsafeCoerce a)])
+  fwidthFine a = Expr (Tuple "vec4" (Apply "fwidthFine" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance fwidthFineInstance1 :: FwidthFine (Expr Vec3) (Expr Vec3) where
-  fwidthFine a = Expr (Apply "fwidthFine" [Star "vec3" (unsafeCoerce a)])
+  fwidthFine a = Expr (Tuple "vec3" (Apply "fwidthFine" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance fwidthFineInstance2 :: FwidthFine (Expr Vec2) (Expr Vec2) where
-  fwidthFine a = Expr (Apply "fwidthFine" [Star "vec2" (unsafeCoerce a)])
+  fwidthFine a = Expr (Tuple "vec2" (Apply "fwidthFine" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance fwidthFineInstance3 :: FwidthFine (Expr Float) (Expr Float) where
-  fwidthFine a = Expr (Apply "fwidthFine" [Star "float" (unsafeCoerce a)])
+  fwidthFine a = Expr (Tuple "float" (Apply "fwidthFine" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class GreaterThan a b c | a b -> c where
   greaterThan :: a -> b -> c
 
 instance greaterThanInstance0 :: GreaterThan (Expr Vec4) (Expr Vec4) (Expr Bvec4) where
-  greaterThan a b = Expr (Apply "greaterThan" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  greaterThan a b = Expr (Tuple "bvec4" (Apply "greaterThan" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance greaterThanInstance1 :: GreaterThan (Expr Uvec4) (Expr Uvec4) (Expr Bvec4) where
-  greaterThan a b = Expr (Apply "greaterThan" [Star "uvec4" (unsafeCoerce a), Star "uvec4" (unsafeCoerce b)])
+  greaterThan a b = Expr (Tuple "bvec4" (Apply "greaterThan" [Expr (Tuple "uvec4" (unsafeCoerce a)), Expr (Tuple "uvec4" (unsafeCoerce b))]))
 
 instance greaterThanInstance2 :: GreaterThan (Expr Ivec4) (Expr Ivec4) (Expr Bvec4) where
-  greaterThan a b = Expr (Apply "greaterThan" [Star "ivec4" (unsafeCoerce a), Star "ivec4" (unsafeCoerce b)])
+  greaterThan a b = Expr (Tuple "bvec4" (Apply "greaterThan" [Expr (Tuple "ivec4" (unsafeCoerce a)), Expr (Tuple "ivec4" (unsafeCoerce b))]))
 
 instance greaterThanInstance3 :: GreaterThan (Expr Vec3) (Expr Vec3) (Expr Bvec3) where
-  greaterThan a b = Expr (Apply "greaterThan" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  greaterThan a b = Expr (Tuple "bvec3" (Apply "greaterThan" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance greaterThanInstance4 :: GreaterThan (Expr Uvec3) (Expr Uvec3) (Expr Bvec3) where
-  greaterThan a b = Expr (Apply "greaterThan" [Star "uvec3" (unsafeCoerce a), Star "uvec3" (unsafeCoerce b)])
+  greaterThan a b = Expr (Tuple "bvec3" (Apply "greaterThan" [Expr (Tuple "uvec3" (unsafeCoerce a)), Expr (Tuple "uvec3" (unsafeCoerce b))]))
 
 instance greaterThanInstance5 :: GreaterThan (Expr Ivec3) (Expr Ivec3) (Expr Bvec3) where
-  greaterThan a b = Expr (Apply "greaterThan" [Star "ivec3" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  greaterThan a b = Expr (Tuple "bvec3" (Apply "greaterThan" [Expr (Tuple "ivec3" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance greaterThanInstance6 :: GreaterThan (Expr Vec2) (Expr Vec2) (Expr Bvec2) where
-  greaterThan a b = Expr (Apply "greaterThan" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  greaterThan a b = Expr (Tuple "bvec2" (Apply "greaterThan" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance greaterThanInstance7 :: GreaterThan (Expr Uvec2) (Expr Uvec2) (Expr Bvec2) where
-  greaterThan a b = Expr (Apply "greaterThan" [Star "uvec2" (unsafeCoerce a), Star "uvec2" (unsafeCoerce b)])
+  greaterThan a b = Expr (Tuple "bvec2" (Apply "greaterThan" [Expr (Tuple "uvec2" (unsafeCoerce a)), Expr (Tuple "uvec2" (unsafeCoerce b))]))
 
 instance greaterThanInstance8 :: GreaterThan (Expr Ivec2) (Expr Ivec2) (Expr Bvec2) where
-  greaterThan a b = Expr (Apply "greaterThan" [Star "ivec2" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  greaterThan a b = Expr (Tuple "bvec2" (Apply "greaterThan" [Expr (Tuple "ivec2" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 class GreaterThanEqual a b c | a b -> c where
   greaterThanEqual :: a -> b -> c
 
 instance greaterThanEqualInstance0 :: GreaterThanEqual (Expr Vec4) (Expr Vec4) (Expr Bvec4) where
-  greaterThanEqual a b = Expr (Apply "greaterThanEqual" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  greaterThanEqual a b = Expr (Tuple "bvec4" (Apply "greaterThanEqual" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance greaterThanEqualInstance1 :: GreaterThanEqual (Expr Uvec4) (Expr Uvec4) (Expr Bvec4) where
-  greaterThanEqual a b = Expr (Apply "greaterThanEqual" [Star "uvec4" (unsafeCoerce a), Star "uvec4" (unsafeCoerce b)])
+  greaterThanEqual a b = Expr (Tuple "bvec4" (Apply "greaterThanEqual" [Expr (Tuple "uvec4" (unsafeCoerce a)), Expr (Tuple "uvec4" (unsafeCoerce b))]))
 
 instance greaterThanEqualInstance2 :: GreaterThanEqual (Expr Ivec4) (Expr Ivec4) (Expr Bvec4) where
-  greaterThanEqual a b = Expr (Apply "greaterThanEqual" [Star "ivec4" (unsafeCoerce a), Star "ivec4" (unsafeCoerce b)])
+  greaterThanEqual a b = Expr (Tuple "bvec4" (Apply "greaterThanEqual" [Expr (Tuple "ivec4" (unsafeCoerce a)), Expr (Tuple "ivec4" (unsafeCoerce b))]))
 
 instance greaterThanEqualInstance3 :: GreaterThanEqual (Expr Vec3) (Expr Vec3) (Expr Bvec3) where
-  greaterThanEqual a b = Expr (Apply "greaterThanEqual" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  greaterThanEqual a b = Expr (Tuple "bvec3" (Apply "greaterThanEqual" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance greaterThanEqualInstance4 :: GreaterThanEqual (Expr Uvec3) (Expr Uvec3) (Expr Bvec3) where
-  greaterThanEqual a b = Expr (Apply "greaterThanEqual" [Star "uvec3" (unsafeCoerce a), Star "uvec3" (unsafeCoerce b)])
+  greaterThanEqual a b = Expr (Tuple "bvec3" (Apply "greaterThanEqual" [Expr (Tuple "uvec3" (unsafeCoerce a)), Expr (Tuple "uvec3" (unsafeCoerce b))]))
 
 instance greaterThanEqualInstance5 :: GreaterThanEqual (Expr Ivec3) (Expr Ivec3) (Expr Bvec3) where
-  greaterThanEqual a b = Expr (Apply "greaterThanEqual" [Star "ivec3" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  greaterThanEqual a b = Expr (Tuple "bvec3" (Apply "greaterThanEqual" [Expr (Tuple "ivec3" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance greaterThanEqualInstance6 :: GreaterThanEqual (Expr Vec2) (Expr Vec2) (Expr Bvec2) where
-  greaterThanEqual a b = Expr (Apply "greaterThanEqual" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  greaterThanEqual a b = Expr (Tuple "bvec2" (Apply "greaterThanEqual" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance greaterThanEqualInstance7 :: GreaterThanEqual (Expr Uvec2) (Expr Uvec2) (Expr Bvec2) where
-  greaterThanEqual a b = Expr (Apply "greaterThanEqual" [Star "uvec2" (unsafeCoerce a), Star "uvec2" (unsafeCoerce b)])
+  greaterThanEqual a b = Expr (Tuple "bvec2" (Apply "greaterThanEqual" [Expr (Tuple "uvec2" (unsafeCoerce a)), Expr (Tuple "uvec2" (unsafeCoerce b))]))
 
 instance greaterThanEqualInstance8 :: GreaterThanEqual (Expr Ivec2) (Expr Ivec2) (Expr Bvec2) where
-  greaterThanEqual a b = Expr (Apply "greaterThanEqual" [Star "ivec2" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  greaterThanEqual a b = Expr (Tuple "bvec2" (Apply "greaterThanEqual" [Expr (Tuple "ivec2" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 class ImageLoad a b c | a b -> c where
   imageLoad :: a -> b -> c
 
 instance imageLoadInstance0 :: ImageLoad (Expr ImageCubeArray) (Expr Ivec3) (Expr Vec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "imageCubeArray" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "vec4" (Apply "imageLoad" [Expr (Tuple "imageCubeArray" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance imageLoadInstance1 :: ImageLoad (Expr ImageCube) (Expr Ivec3) (Expr Vec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "imageCube" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "vec4" (Apply "imageLoad" [Expr (Tuple "imageCube" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance imageLoadInstance2 :: ImageLoad (Expr Image3D) (Expr Ivec3) (Expr Vec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "image3D" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "vec4" (Apply "imageLoad" [Expr (Tuple "image3D" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance imageLoadInstance3 :: ImageLoad (Expr Image2DRect) (Expr Ivec2) (Expr Vec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "image2DRect" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "vec4" (Apply "imageLoad" [Expr (Tuple "image2DRect" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 instance imageLoadInstance4 :: ImageLoad (Expr Image2DArray) (Expr Ivec3) (Expr Vec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "image2DArray" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "vec4" (Apply "imageLoad" [Expr (Tuple "image2DArray" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance imageLoadInstance5 :: ImageLoad (Expr Image2D) (Expr Ivec2) (Expr Vec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "image2D" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "vec4" (Apply "imageLoad" [Expr (Tuple "image2D" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 instance imageLoadInstance6 :: ImageLoad (Expr Image1DArray) (Expr Ivec2) (Expr Vec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "image1DArray" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "vec4" (Apply "imageLoad" [Expr (Tuple "image1DArray" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 instance imageLoadInstance7 :: ImageLoad (Expr Image1D) (Expr Int) (Expr Vec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "image1D" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "vec4" (Apply "imageLoad" [Expr (Tuple "image1D" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance imageLoadInstance8 :: ImageLoad (Expr BufferImage) (Expr Int) (Expr Vec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "bufferImage" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "vec4" (Apply "imageLoad" [Expr (Tuple "bufferImage" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance imageLoadInstance9 :: ImageLoad (Expr UimageCubeArray) (Expr Ivec3) (Expr Uvec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "uimageCubeArray" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "uvec4" (Apply "imageLoad" [Expr (Tuple "uimageCubeArray" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance imageLoadInstance10 :: ImageLoad (Expr UimageCube) (Expr Ivec3) (Expr Uvec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "uimageCube" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "uvec4" (Apply "imageLoad" [Expr (Tuple "uimageCube" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance imageLoadInstance11 :: ImageLoad (Expr Uimage3D) (Expr Ivec3) (Expr Uvec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "uimage3D" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "uvec4" (Apply "imageLoad" [Expr (Tuple "uimage3D" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance imageLoadInstance12 :: ImageLoad (Expr Uimage2DRect) (Expr Ivec2) (Expr Uvec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "uimage2DRect" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "uvec4" (Apply "imageLoad" [Expr (Tuple "uimage2DRect" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 instance imageLoadInstance13 :: ImageLoad (Expr Uimage2DArray) (Expr Ivec3) (Expr Uvec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "uimage2DArray" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "uvec4" (Apply "imageLoad" [Expr (Tuple "uimage2DArray" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance imageLoadInstance14 :: ImageLoad (Expr Uimage2D) (Expr Ivec2) (Expr Uvec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "uimage2D" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "uvec4" (Apply "imageLoad" [Expr (Tuple "uimage2D" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 instance imageLoadInstance15 :: ImageLoad (Expr Uimage1DArray) (Expr Ivec2) (Expr Uvec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "uimage1DArray" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "uvec4" (Apply "imageLoad" [Expr (Tuple "uimage1DArray" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 instance imageLoadInstance16 :: ImageLoad (Expr Uimage1D) (Expr Int) (Expr Uvec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "uimage1D" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "uvec4" (Apply "imageLoad" [Expr (Tuple "uimage1D" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance imageLoadInstance17 :: ImageLoad (Expr UbufferImage) (Expr Int) (Expr Uvec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "ubufferImage" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "uvec4" (Apply "imageLoad" [Expr (Tuple "ubufferImage" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance imageLoadInstance18 :: ImageLoad (Expr IimageCubeArray) (Expr Ivec3) (Expr Ivec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "iimageCubeArray" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "ivec4" (Apply "imageLoad" [Expr (Tuple "iimageCubeArray" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance imageLoadInstance19 :: ImageLoad (Expr IimageCube) (Expr Ivec3) (Expr Ivec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "iimageCube" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "ivec4" (Apply "imageLoad" [Expr (Tuple "iimageCube" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance imageLoadInstance20 :: ImageLoad (Expr Iimage3D) (Expr Ivec3) (Expr Ivec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "iimage3D" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "ivec4" (Apply "imageLoad" [Expr (Tuple "iimage3D" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance imageLoadInstance21 :: ImageLoad (Expr Iimage2DRect) (Expr Ivec2) (Expr Ivec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "iimage2DRect" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "ivec4" (Apply "imageLoad" [Expr (Tuple "iimage2DRect" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 instance imageLoadInstance22 :: ImageLoad (Expr Iimage2DArray) (Expr Ivec3) (Expr Ivec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "iimage2DArray" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "ivec4" (Apply "imageLoad" [Expr (Tuple "iimage2DArray" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance imageLoadInstance23 :: ImageLoad (Expr Iimage2D) (Expr Ivec2) (Expr Ivec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "iimage2D" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "ivec4" (Apply "imageLoad" [Expr (Tuple "iimage2D" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 instance imageLoadInstance24 :: ImageLoad (Expr Iimage1DArray) (Expr Ivec2) (Expr Ivec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "iimage1DArray" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "ivec4" (Apply "imageLoad" [Expr (Tuple "iimage1DArray" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 instance imageLoadInstance25 :: ImageLoad (Expr Iimage1D) (Expr Int) (Expr Ivec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "iimage1D" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "ivec4" (Apply "imageLoad" [Expr (Tuple "iimage1D" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance imageLoadInstance26 :: ImageLoad (Expr IbufferImage) (Expr Int) (Expr Ivec4) where
-  imageLoad a b = Expr (Apply "imageLoad" [Star "ibufferImage" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  imageLoad a b = Expr (Tuple "ivec4" (Apply "imageLoad" [Expr (Tuple "ibufferImage" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 class ImageLoad2 a b c d | a b c -> d where
   imageLoad2 :: a -> b -> c -> d
 
 instance imageLoad2Instance0 :: ImageLoad2 (Expr Image2DMSArray) (Expr Ivec3) (Expr Int) (Expr Vec4) where
-  imageLoad2 a b c = Expr (Apply "imageLoad" [Star "image2DMSArray" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  imageLoad2 a b c = Expr (Tuple "vec4" (Apply "imageLoad" [Expr (Tuple "image2DMSArray" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance imageLoad2Instance1 :: ImageLoad2 (Expr Image2DMS) (Expr Ivec2) (Expr Int) (Expr Vec4) where
-  imageLoad2 a b c = Expr (Apply "imageLoad" [Star "image2DMS" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  imageLoad2 a b c = Expr (Tuple "vec4" (Apply "imageLoad" [Expr (Tuple "image2DMS" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance imageLoad2Instance2 :: ImageLoad2 (Expr Uimage2DMSArray) (Expr Ivec3) (Expr Int) (Expr Uvec4) where
-  imageLoad2 a b c = Expr (Apply "imageLoad" [Star "uimage2DMSArray" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  imageLoad2 a b c = Expr (Tuple "uvec4" (Apply "imageLoad" [Expr (Tuple "uimage2DMSArray" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance imageLoad2Instance3 :: ImageLoad2 (Expr Uimage2DMS) (Expr Ivec2) (Expr Int) (Expr Uvec4) where
-  imageLoad2 a b c = Expr (Apply "imageLoad" [Star "uimage2DMS" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  imageLoad2 a b c = Expr (Tuple "uvec4" (Apply "imageLoad" [Expr (Tuple "uimage2DMS" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance imageLoad2Instance4 :: ImageLoad2 (Expr Iimage2DMSArray) (Expr Ivec3) (Expr Int) (Expr Ivec4) where
-  imageLoad2 a b c = Expr (Apply "imageLoad" [Star "iimage2DMSArray" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  imageLoad2 a b c = Expr (Tuple "ivec4" (Apply "imageLoad" [Expr (Tuple "iimage2DMSArray" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance imageLoad2Instance5 :: ImageLoad2 (Expr Iimage2DMS) (Expr Ivec2) (Expr Int) (Expr Ivec4) where
-  imageLoad2 a b c = Expr (Apply "imageLoad" [Star "iimage2DMS" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  imageLoad2 a b c = Expr (Tuple "ivec4" (Apply "imageLoad" [Expr (Tuple "iimage2DMS" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 class ImageSamples a b | a -> b where
   imageSamples :: a -> b
 
 instance imageSamplesInstance0 :: ImageSamples (Expr Uimage2DMSArray) (Expr Int) where
-  imageSamples a = Expr (Apply "imageSamples" [Star "uimage2DMSArray" (unsafeCoerce a)])
+  imageSamples a = Expr (Tuple "int" (Apply "imageSamples" [Expr (Tuple "uimage2DMSArray" (unsafeCoerce a))]))
 
 instance imageSamplesInstance1 :: ImageSamples (Expr Uimage2DMS) (Expr Int) where
-  imageSamples a = Expr (Apply "imageSamples" [Star "uimage2DMS" (unsafeCoerce a)])
+  imageSamples a = Expr (Tuple "int" (Apply "imageSamples" [Expr (Tuple "uimage2DMS" (unsafeCoerce a))]))
 
 instance imageSamplesInstance2 :: ImageSamples (Expr Image2DMSArray) (Expr Int) where
-  imageSamples a = Expr (Apply "imageSamples" [Star "image2DMSArray" (unsafeCoerce a)])
+  imageSamples a = Expr (Tuple "int" (Apply "imageSamples" [Expr (Tuple "image2DMSArray" (unsafeCoerce a))]))
 
 instance imageSamplesInstance3 :: ImageSamples (Expr Image2DMS) (Expr Int) where
-  imageSamples a = Expr (Apply "imageSamples" [Star "image2DMS" (unsafeCoerce a)])
+  imageSamples a = Expr (Tuple "int" (Apply "imageSamples" [Expr (Tuple "image2DMS" (unsafeCoerce a))]))
 
 instance imageSamplesInstance4 :: ImageSamples (Expr Iimage2DMSArray) (Expr Int) where
-  imageSamples a = Expr (Apply "imageSamples" [Star "iimage2DMSArray" (unsafeCoerce a)])
+  imageSamples a = Expr (Tuple "int" (Apply "imageSamples" [Expr (Tuple "iimage2DMSArray" (unsafeCoerce a))]))
 
 instance imageSamplesInstance5 :: ImageSamples (Expr Iimage2DMS) (Expr Int) where
-  imageSamples a = Expr (Apply "imageSamples" [Star "iimage2DMS" (unsafeCoerce a)])
+  imageSamples a = Expr (Tuple "int" (Apply "imageSamples" [Expr (Tuple "iimage2DMS" (unsafeCoerce a))]))
 
 class ImageSize a b | a -> b where
   imageSize :: a -> b
 
 instance imageSizeInstance0 :: ImageSize (Expr UimageCubeArray) (Expr Ivec3) where
-  imageSize a = Expr (Apply "imageSize" [Star "uimageCubeArray" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec3" (Apply "imageSize" [Expr (Tuple "uimageCubeArray" (unsafeCoerce a))]))
 
 instance imageSizeInstance1 :: ImageSize (Expr Uimage3D) (Expr Ivec3) where
-  imageSize a = Expr (Apply "imageSize" [Star "uimage3D" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec3" (Apply "imageSize" [Expr (Tuple "uimage3D" (unsafeCoerce a))]))
 
 instance imageSizeInstance2 :: ImageSize (Expr Uimage2DMSArray) (Expr Ivec3) where
-  imageSize a = Expr (Apply "imageSize" [Star "uimage2DMSArray" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec3" (Apply "imageSize" [Expr (Tuple "uimage2DMSArray" (unsafeCoerce a))]))
 
 instance imageSizeInstance3 :: ImageSize (Expr Uimage2DArray) (Expr Ivec3) where
-  imageSize a = Expr (Apply "imageSize" [Star "uimage2DArray" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec3" (Apply "imageSize" [Expr (Tuple "uimage2DArray" (unsafeCoerce a))]))
 
 instance imageSizeInstance4 :: ImageSize (Expr ImageCubeArray) (Expr Ivec3) where
-  imageSize a = Expr (Apply "imageSize" [Star "imageCubeArray" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec3" (Apply "imageSize" [Expr (Tuple "imageCubeArray" (unsafeCoerce a))]))
 
 instance imageSizeInstance5 :: ImageSize (Expr Image3D) (Expr Ivec3) where
-  imageSize a = Expr (Apply "imageSize" [Star "image3D" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec3" (Apply "imageSize" [Expr (Tuple "image3D" (unsafeCoerce a))]))
 
 instance imageSizeInstance6 :: ImageSize (Expr Image2DMSArray) (Expr Ivec3) where
-  imageSize a = Expr (Apply "imageSize" [Star "image2DMSArray" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec3" (Apply "imageSize" [Expr (Tuple "image2DMSArray" (unsafeCoerce a))]))
 
 instance imageSizeInstance7 :: ImageSize (Expr Image2DArray) (Expr Ivec3) where
-  imageSize a = Expr (Apply "imageSize" [Star "image2DArray" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec3" (Apply "imageSize" [Expr (Tuple "image2DArray" (unsafeCoerce a))]))
 
 instance imageSizeInstance8 :: ImageSize (Expr IimageCubeArray) (Expr Ivec3) where
-  imageSize a = Expr (Apply "imageSize" [Star "iimageCubeArray" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec3" (Apply "imageSize" [Expr (Tuple "iimageCubeArray" (unsafeCoerce a))]))
 
 instance imageSizeInstance9 :: ImageSize (Expr Iimage3D) (Expr Ivec3) where
-  imageSize a = Expr (Apply "imageSize" [Star "iimage3D" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec3" (Apply "imageSize" [Expr (Tuple "iimage3D" (unsafeCoerce a))]))
 
 instance imageSizeInstance10 :: ImageSize (Expr Iimage2DMSArray) (Expr Ivec3) where
-  imageSize a = Expr (Apply "imageSize" [Star "iimage2DMSArray" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec3" (Apply "imageSize" [Expr (Tuple "iimage2DMSArray" (unsafeCoerce a))]))
 
 instance imageSizeInstance11 :: ImageSize (Expr Iimage2DArray) (Expr Ivec3) where
-  imageSize a = Expr (Apply "imageSize" [Star "iimage2DArray" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec3" (Apply "imageSize" [Expr (Tuple "iimage2DArray" (unsafeCoerce a))]))
 
 instance imageSizeInstance12 :: ImageSize (Expr UimageRect) (Expr Ivec2) where
-  imageSize a = Expr (Apply "imageSize" [Star "uimageRect" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec2" (Apply "imageSize" [Expr (Tuple "uimageRect" (unsafeCoerce a))]))
 
 instance imageSizeInstance13 :: ImageSize (Expr UimageCube) (Expr Ivec2) where
-  imageSize a = Expr (Apply "imageSize" [Star "uimageCube" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec2" (Apply "imageSize" [Expr (Tuple "uimageCube" (unsafeCoerce a))]))
 
 instance imageSizeInstance14 :: ImageSize (Expr Uimage2DMS) (Expr Ivec2) where
-  imageSize a = Expr (Apply "imageSize" [Star "uimage2DMS" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec2" (Apply "imageSize" [Expr (Tuple "uimage2DMS" (unsafeCoerce a))]))
 
 instance imageSizeInstance15 :: ImageSize (Expr Uimage2D) (Expr Ivec2) where
-  imageSize a = Expr (Apply "imageSize" [Star "uimage2D" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec2" (Apply "imageSize" [Expr (Tuple "uimage2D" (unsafeCoerce a))]))
 
 instance imageSizeInstance16 :: ImageSize (Expr Uimage1DArray) (Expr Ivec2) where
-  imageSize a = Expr (Apply "imageSize" [Star "uimage1DArray" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec2" (Apply "imageSize" [Expr (Tuple "uimage1DArray" (unsafeCoerce a))]))
 
 instance imageSizeInstance17 :: ImageSize (Expr ImageRect) (Expr Ivec2) where
-  imageSize a = Expr (Apply "imageSize" [Star "imageRect" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec2" (Apply "imageSize" [Expr (Tuple "imageRect" (unsafeCoerce a))]))
 
 instance imageSizeInstance18 :: ImageSize (Expr ImageCube) (Expr Ivec2) where
-  imageSize a = Expr (Apply "imageSize" [Star "imageCube" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec2" (Apply "imageSize" [Expr (Tuple "imageCube" (unsafeCoerce a))]))
 
 instance imageSizeInstance19 :: ImageSize (Expr Image2DMS) (Expr Ivec2) where
-  imageSize a = Expr (Apply "imageSize" [Star "image2DMS" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec2" (Apply "imageSize" [Expr (Tuple "image2DMS" (unsafeCoerce a))]))
 
 instance imageSizeInstance20 :: ImageSize (Expr Image2D) (Expr Ivec2) where
-  imageSize a = Expr (Apply "imageSize" [Star "image2D" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec2" (Apply "imageSize" [Expr (Tuple "image2D" (unsafeCoerce a))]))
 
 instance imageSizeInstance21 :: ImageSize (Expr Image1DArray) (Expr Ivec2) where
-  imageSize a = Expr (Apply "imageSize" [Star "image1DArray" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec2" (Apply "imageSize" [Expr (Tuple "image1DArray" (unsafeCoerce a))]))
 
 instance imageSizeInstance22 :: ImageSize (Expr IimageRect) (Expr Ivec2) where
-  imageSize a = Expr (Apply "imageSize" [Star "iimageRect" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec2" (Apply "imageSize" [Expr (Tuple "iimageRect" (unsafeCoerce a))]))
 
 instance imageSizeInstance23 :: ImageSize (Expr IimageCube) (Expr Ivec2) where
-  imageSize a = Expr (Apply "imageSize" [Star "iimageCube" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec2" (Apply "imageSize" [Expr (Tuple "iimageCube" (unsafeCoerce a))]))
 
 instance imageSizeInstance24 :: ImageSize (Expr Iimage2DMS) (Expr Ivec2) where
-  imageSize a = Expr (Apply "imageSize" [Star "iimage2DMS" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec2" (Apply "imageSize" [Expr (Tuple "iimage2DMS" (unsafeCoerce a))]))
 
 instance imageSizeInstance25 :: ImageSize (Expr Iimage2D) (Expr Ivec2) where
-  imageSize a = Expr (Apply "imageSize" [Star "iimage2D" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec2" (Apply "imageSize" [Expr (Tuple "iimage2D" (unsafeCoerce a))]))
 
 instance imageSizeInstance26 :: ImageSize (Expr Iimage1DArray) (Expr Ivec2) where
-  imageSize a = Expr (Apply "imageSize" [Star "iimage1DArray" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "ivec2" (Apply "imageSize" [Expr (Tuple "iimage1DArray" (unsafeCoerce a))]))
 
 instance imageSizeInstance27 :: ImageSize (Expr UimageBuffer) (Expr Int) where
-  imageSize a = Expr (Apply "imageSize" [Star "uimageBuffer" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "int" (Apply "imageSize" [Expr (Tuple "uimageBuffer" (unsafeCoerce a))]))
 
 instance imageSizeInstance28 :: ImageSize (Expr Uimage1D) (Expr Int) where
-  imageSize a = Expr (Apply "imageSize" [Star "uimage1D" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "int" (Apply "imageSize" [Expr (Tuple "uimage1D" (unsafeCoerce a))]))
 
 instance imageSizeInstance29 :: ImageSize (Expr ImageBuffer) (Expr Int) where
-  imageSize a = Expr (Apply "imageSize" [Star "imageBuffer" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "int" (Apply "imageSize" [Expr (Tuple "imageBuffer" (unsafeCoerce a))]))
 
 instance imageSizeInstance30 :: ImageSize (Expr Image1D) (Expr Int) where
-  imageSize a = Expr (Apply "imageSize" [Star "image1D" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "int" (Apply "imageSize" [Expr (Tuple "image1D" (unsafeCoerce a))]))
 
 instance imageSizeInstance31 :: ImageSize (Expr IimageBuffer) (Expr Int) where
-  imageSize a = Expr (Apply "imageSize" [Star "iimageBuffer" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "int" (Apply "imageSize" [Expr (Tuple "iimageBuffer" (unsafeCoerce a))]))
 
 instance imageSizeInstance32 :: ImageSize (Expr Iimage1D) (Expr Int) where
-  imageSize a = Expr (Apply "imageSize" [Star "iimage1D" (unsafeCoerce a)])
+  imageSize a = Expr (Tuple "int" (Apply "imageSize" [Expr (Tuple "iimage1D" (unsafeCoerce a))]))
 
 class IntBitsToFloat a b | a -> b where
   intBitsToFloat :: a -> b
 
 instance intBitsToFloatInstance0 :: IntBitsToFloat (Expr Ivec4) (Expr Vec4) where
-  intBitsToFloat a = Expr (Apply "intBitsToFloat" [Star "ivec4" (unsafeCoerce a)])
+  intBitsToFloat a = Expr (Tuple "vec4" (Apply "intBitsToFloat" [Expr (Tuple "ivec4" (unsafeCoerce a))]))
 
 instance intBitsToFloatInstance1 :: IntBitsToFloat (Expr Ivec3) (Expr Vec3) where
-  intBitsToFloat a = Expr (Apply "intBitsToFloat" [Star "ivec3" (unsafeCoerce a)])
+  intBitsToFloat a = Expr (Tuple "vec3" (Apply "intBitsToFloat" [Expr (Tuple "ivec3" (unsafeCoerce a))]))
 
 instance intBitsToFloatInstance2 :: IntBitsToFloat (Expr Ivec2) (Expr Vec2) where
-  intBitsToFloat a = Expr (Apply "intBitsToFloat" [Star "ivec2" (unsafeCoerce a)])
+  intBitsToFloat a = Expr (Tuple "vec2" (Apply "intBitsToFloat" [Expr (Tuple "ivec2" (unsafeCoerce a))]))
 
 instance intBitsToFloatInstance3 :: IntBitsToFloat (Expr Int) (Expr Float) where
-  intBitsToFloat a = Expr (Apply "intBitsToFloat" [Star "int" (unsafeCoerce a)])
+  intBitsToFloat a = Expr (Tuple "float" (Apply "intBitsToFloat" [Expr (Tuple "int" (unsafeCoerce a))]))
 
 class InterpolateAtCentroid a b | a -> b where
   interpolateAtCentroid :: a -> b
 
 instance interpolateAtCentroidInstance0 :: InterpolateAtCentroid (Expr Vec4) (Expr Vec4) where
-  interpolateAtCentroid a = Expr (Apply "interpolateAtCentroid" [Star "vec4" (unsafeCoerce a)])
+  interpolateAtCentroid a = Expr (Tuple "vec4" (Apply "interpolateAtCentroid" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance interpolateAtCentroidInstance1 :: InterpolateAtCentroid (Expr Vec3) (Expr Vec3) where
-  interpolateAtCentroid a = Expr (Apply "interpolateAtCentroid" [Star "vec3" (unsafeCoerce a)])
+  interpolateAtCentroid a = Expr (Tuple "vec3" (Apply "interpolateAtCentroid" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance interpolateAtCentroidInstance2 :: InterpolateAtCentroid (Expr Vec2) (Expr Vec2) where
-  interpolateAtCentroid a = Expr (Apply "interpolateAtCentroid" [Star "vec2" (unsafeCoerce a)])
+  interpolateAtCentroid a = Expr (Tuple "vec2" (Apply "interpolateAtCentroid" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance interpolateAtCentroidInstance3 :: InterpolateAtCentroid (Expr Float) (Expr Float) where
-  interpolateAtCentroid a = Expr (Apply "interpolateAtCentroid" [Star "float" (unsafeCoerce a)])
+  interpolateAtCentroid a = Expr (Tuple "float" (Apply "interpolateAtCentroid" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class InterpolateAtOffset a b c | a b -> c where
   interpolateAtOffset :: a -> b -> c
 
 instance interpolateAtOffsetInstance0 :: InterpolateAtOffset (Expr Vec4) (Expr Vec2) (Expr Vec4) where
-  interpolateAtOffset a b = Expr (Apply "interpolateAtOffset" [Star "vec4" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  interpolateAtOffset a b = Expr (Tuple "vec4" (Apply "interpolateAtOffset" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance interpolateAtOffsetInstance1 :: InterpolateAtOffset (Expr Vec3) (Expr Vec2) (Expr Vec3) where
-  interpolateAtOffset a b = Expr (Apply "interpolateAtOffset" [Star "vec3" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  interpolateAtOffset a b = Expr (Tuple "vec3" (Apply "interpolateAtOffset" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance interpolateAtOffsetInstance2 :: InterpolateAtOffset (Expr Vec2) (Expr Vec2) (Expr Vec2) where
-  interpolateAtOffset a b = Expr (Apply "interpolateAtOffset" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  interpolateAtOffset a b = Expr (Tuple "vec2" (Apply "interpolateAtOffset" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance interpolateAtOffsetInstance3 :: InterpolateAtOffset (Expr Float) (Expr Vec2) (Expr Float) where
-  interpolateAtOffset a b = Expr (Apply "interpolateAtOffset" [Star "float" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  interpolateAtOffset a b = Expr (Tuple "float" (Apply "interpolateAtOffset" [Expr (Tuple "float" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 class InterpolateAtSample a b c | a b -> c where
   interpolateAtSample :: a -> b -> c
 
 instance interpolateAtSampleInstance0 :: InterpolateAtSample (Expr Vec4) (Expr Int) (Expr Vec4) where
-  interpolateAtSample a b = Expr (Apply "interpolateAtSample" [Star "vec4" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  interpolateAtSample a b = Expr (Tuple "vec4" (Apply "interpolateAtSample" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance interpolateAtSampleInstance1 :: InterpolateAtSample (Expr Vec3) (Expr Int) (Expr Vec3) where
-  interpolateAtSample a b = Expr (Apply "interpolateAtSample" [Star "vec3" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  interpolateAtSample a b = Expr (Tuple "vec3" (Apply "interpolateAtSample" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance interpolateAtSampleInstance2 :: InterpolateAtSample (Expr Vec2) (Expr Int) (Expr Vec2) where
-  interpolateAtSample a b = Expr (Apply "interpolateAtSample" [Star "vec2" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  interpolateAtSample a b = Expr (Tuple "vec2" (Apply "interpolateAtSample" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance interpolateAtSampleInstance3 :: InterpolateAtSample (Expr Float) (Expr Int) (Expr Float) where
-  interpolateAtSample a b = Expr (Apply "interpolateAtSample" [Star "float" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  interpolateAtSample a b = Expr (Tuple "float" (Apply "interpolateAtSample" [Expr (Tuple "float" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 class Inverse a b | a -> b where
   inverse :: a -> b
 
 instance inverseInstance0 :: Inverse (Expr Mat4) (Expr Mat4) where
-  inverse a = Expr (Apply "inverse" [Star "mat4" (unsafeCoerce a)])
+  inverse a = Expr (Tuple "mat4" (Apply "inverse" [Expr (Tuple "mat4" (unsafeCoerce a))]))
 
 instance inverseInstance1 :: Inverse (Expr Mat3) (Expr Mat3) where
-  inverse a = Expr (Apply "inverse" [Star "mat3" (unsafeCoerce a)])
+  inverse a = Expr (Tuple "mat3" (Apply "inverse" [Expr (Tuple "mat3" (unsafeCoerce a))]))
 
 instance inverseInstance2 :: Inverse (Expr Mat2) (Expr Mat2) where
-  inverse a = Expr (Apply "inverse" [Star "mat2" (unsafeCoerce a)])
+  inverse a = Expr (Tuple "mat2" (Apply "inverse" [Expr (Tuple "mat2" (unsafeCoerce a))]))
 
 instance inverseInstance3 :: Inverse (Expr Dmat4) (Expr Dmat4) where
-  inverse a = Expr (Apply "inverse" [Star "dmat4" (unsafeCoerce a)])
+  inverse a = Expr (Tuple "dmat4" (Apply "inverse" [Expr (Tuple "dmat4" (unsafeCoerce a))]))
 
 instance inverseInstance4 :: Inverse (Expr Dmat3) (Expr Dmat3) where
-  inverse a = Expr (Apply "inverse" [Star "dmat3" (unsafeCoerce a)])
+  inverse a = Expr (Tuple "dmat3" (Apply "inverse" [Expr (Tuple "dmat3" (unsafeCoerce a))]))
 
 instance inverseInstance5 :: Inverse (Expr Dmat2) (Expr Dmat2) where
-  inverse a = Expr (Apply "inverse" [Star "dmat2" (unsafeCoerce a)])
+  inverse a = Expr (Tuple "dmat2" (Apply "inverse" [Expr (Tuple "dmat2" (unsafeCoerce a))]))
 
 class Inversesqrt a b | a -> b where
   inversesqrt :: a -> b
 
 instance inversesqrtInstance0 :: Inversesqrt (Expr Vec4) (Expr Vec4) where
-  inversesqrt a = Expr (Apply "inversesqrt" [Star "vec4" (unsafeCoerce a)])
+  inversesqrt a = Expr (Tuple "vec4" (Apply "inversesqrt" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance inversesqrtInstance1 :: Inversesqrt (Expr Vec3) (Expr Vec3) where
-  inversesqrt a = Expr (Apply "inversesqrt" [Star "vec3" (unsafeCoerce a)])
+  inversesqrt a = Expr (Tuple "vec3" (Apply "inversesqrt" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance inversesqrtInstance2 :: Inversesqrt (Expr Vec2) (Expr Vec2) where
-  inversesqrt a = Expr (Apply "inversesqrt" [Star "vec2" (unsafeCoerce a)])
+  inversesqrt a = Expr (Tuple "vec2" (Apply "inversesqrt" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance inversesqrtInstance3 :: Inversesqrt (Expr Float) (Expr Float) where
-  inversesqrt a = Expr (Apply "inversesqrt" [Star "float" (unsafeCoerce a)])
+  inversesqrt a = Expr (Tuple "float" (Apply "inversesqrt" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 instance inversesqrtInstance4 :: Inversesqrt (Expr Dvec4) (Expr Dvec4) where
-  inversesqrt a = Expr (Apply "inversesqrt" [Star "dvec4" (unsafeCoerce a)])
+  inversesqrt a = Expr (Tuple "dvec4" (Apply "inversesqrt" [Expr (Tuple "dvec4" (unsafeCoerce a))]))
 
 instance inversesqrtInstance5 :: Inversesqrt (Expr Dvec3) (Expr Dvec3) where
-  inversesqrt a = Expr (Apply "inversesqrt" [Star "dvec3" (unsafeCoerce a)])
+  inversesqrt a = Expr (Tuple "dvec3" (Apply "inversesqrt" [Expr (Tuple "dvec3" (unsafeCoerce a))]))
 
 instance inversesqrtInstance6 :: Inversesqrt (Expr Dvec2) (Expr Dvec2) where
-  inversesqrt a = Expr (Apply "inversesqrt" [Star "dvec2" (unsafeCoerce a)])
+  inversesqrt a = Expr (Tuple "dvec2" (Apply "inversesqrt" [Expr (Tuple "dvec2" (unsafeCoerce a))]))
 
 instance inversesqrtInstance7 :: Inversesqrt (Expr Double) (Expr Double) where
-  inversesqrt a = Expr (Apply "inversesqrt" [Star "double" (unsafeCoerce a)])
+  inversesqrt a = Expr (Tuple "double" (Apply "inversesqrt" [Expr (Tuple "double" (unsafeCoerce a))]))
 
 class Isinf a b | a -> b where
   isinf :: a -> b
 
 instance isinfInstance0 :: Isinf (Expr Vec4) (Expr Bvec4) where
-  isinf a = Expr (Apply "isinf" [Star "vec4" (unsafeCoerce a)])
+  isinf a = Expr (Tuple "bvec4" (Apply "isinf" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance isinfInstance1 :: Isinf (Expr Dvec4) (Expr Bvec4) where
-  isinf a = Expr (Apply "isinf" [Star "dvec4" (unsafeCoerce a)])
+  isinf a = Expr (Tuple "bvec4" (Apply "isinf" [Expr (Tuple "dvec4" (unsafeCoerce a))]))
 
 instance isinfInstance2 :: Isinf (Expr Vec3) (Expr Bvec3) where
-  isinf a = Expr (Apply "isinf" [Star "vec3" (unsafeCoerce a)])
+  isinf a = Expr (Tuple "bvec3" (Apply "isinf" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance isinfInstance3 :: Isinf (Expr Dvec3) (Expr Bvec3) where
-  isinf a = Expr (Apply "isinf" [Star "dvec3" (unsafeCoerce a)])
+  isinf a = Expr (Tuple "bvec3" (Apply "isinf" [Expr (Tuple "dvec3" (unsafeCoerce a))]))
 
 instance isinfInstance4 :: Isinf (Expr Vec2) (Expr Bvec2) where
-  isinf a = Expr (Apply "isinf" [Star "vec2" (unsafeCoerce a)])
+  isinf a = Expr (Tuple "bvec2" (Apply "isinf" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance isinfInstance5 :: Isinf (Expr Dvec2) (Expr Bvec2) where
-  isinf a = Expr (Apply "isinf" [Star "dvec2" (unsafeCoerce a)])
+  isinf a = Expr (Tuple "bvec2" (Apply "isinf" [Expr (Tuple "dvec2" (unsafeCoerce a))]))
 
 instance isinfInstance6 :: Isinf (Expr Float) (Expr Bool) where
-  isinf a = Expr (Apply "isinf" [Star "float" (unsafeCoerce a)])
+  isinf a = Expr (Tuple "bool" (Apply "isinf" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 instance isinfInstance7 :: Isinf (Expr Double) (Expr Bool) where
-  isinf a = Expr (Apply "isinf" [Star "double" (unsafeCoerce a)])
+  isinf a = Expr (Tuple "bool" (Apply "isinf" [Expr (Tuple "double" (unsafeCoerce a))]))
 
 class Isnan a b | a -> b where
   isnan :: a -> b
 
 instance isnanInstance0 :: Isnan (Expr Vec4) (Expr Bvec4) where
-  isnan a = Expr (Apply "isnan" [Star "vec4" (unsafeCoerce a)])
+  isnan a = Expr (Tuple "bvec4" (Apply "isnan" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance isnanInstance1 :: Isnan (Expr Dvec4) (Expr Bvec4) where
-  isnan a = Expr (Apply "isnan" [Star "dvec4" (unsafeCoerce a)])
+  isnan a = Expr (Tuple "bvec4" (Apply "isnan" [Expr (Tuple "dvec4" (unsafeCoerce a))]))
 
 instance isnanInstance2 :: Isnan (Expr Vec3) (Expr Bvec3) where
-  isnan a = Expr (Apply "isnan" [Star "vec3" (unsafeCoerce a)])
+  isnan a = Expr (Tuple "bvec3" (Apply "isnan" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance isnanInstance3 :: Isnan (Expr Dvec3) (Expr Bvec3) where
-  isnan a = Expr (Apply "isnan" [Star "dvec3" (unsafeCoerce a)])
+  isnan a = Expr (Tuple "bvec3" (Apply "isnan" [Expr (Tuple "dvec3" (unsafeCoerce a))]))
 
 instance isnanInstance4 :: Isnan (Expr Vec2) (Expr Bvec2) where
-  isnan a = Expr (Apply "isnan" [Star "vec2" (unsafeCoerce a)])
+  isnan a = Expr (Tuple "bvec2" (Apply "isnan" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance isnanInstance5 :: Isnan (Expr Dvec2) (Expr Bvec2) where
-  isnan a = Expr (Apply "isnan" [Star "dvec2" (unsafeCoerce a)])
+  isnan a = Expr (Tuple "bvec2" (Apply "isnan" [Expr (Tuple "dvec2" (unsafeCoerce a))]))
 
 instance isnanInstance6 :: Isnan (Expr Float) (Expr Bool) where
-  isnan a = Expr (Apply "isnan" [Star "float" (unsafeCoerce a)])
+  isnan a = Expr (Tuple "bool" (Apply "isnan" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 instance isnanInstance7 :: Isnan (Expr Double) (Expr Bool) where
-  isnan a = Expr (Apply "isnan" [Star "double" (unsafeCoerce a)])
+  isnan a = Expr (Tuple "bool" (Apply "isnan" [Expr (Tuple "double" (unsafeCoerce a))]))
 
 class Ldexp a b c | a b -> c where
   ldexp :: a -> b -> c
 
 instance ldexpInstance0 :: Ldexp (Expr Vec4) (Expr Ivec4) (Expr Vec4) where
-  ldexp a b = Expr (Apply "ldexp" [Star "vec4" (unsafeCoerce a), Star "ivec4" (unsafeCoerce b)])
+  ldexp a b = Expr (Tuple "vec4" (Apply "ldexp" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "ivec4" (unsafeCoerce b))]))
 
 instance ldexpInstance1 :: Ldexp (Expr Vec3) (Expr Ivec3) (Expr Vec3) where
-  ldexp a b = Expr (Apply "ldexp" [Star "vec3" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  ldexp a b = Expr (Tuple "vec3" (Apply "ldexp" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance ldexpInstance2 :: Ldexp (Expr Vec2) (Expr Ivec2) (Expr Vec2) where
-  ldexp a b = Expr (Apply "ldexp" [Star "vec2" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  ldexp a b = Expr (Tuple "vec2" (Apply "ldexp" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 instance ldexpInstance3 :: Ldexp (Expr Float) (Expr Int) (Expr Float) where
-  ldexp a b = Expr (Apply "ldexp" [Star "float" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  ldexp a b = Expr (Tuple "float" (Apply "ldexp" [Expr (Tuple "float" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance ldexpInstance4 :: Ldexp (Expr Dvec4) (Expr Ivec4) (Expr Dvec4) where
-  ldexp a b = Expr (Apply "ldexp" [Star "dvec4" (unsafeCoerce a), Star "ivec4" (unsafeCoerce b)])
+  ldexp a b = Expr (Tuple "dvec4" (Apply "ldexp" [Expr (Tuple "dvec4" (unsafeCoerce a)), Expr (Tuple "ivec4" (unsafeCoerce b))]))
 
 instance ldexpInstance5 :: Ldexp (Expr Dvec3) (Expr Ivec3) (Expr Dvec3) where
-  ldexp a b = Expr (Apply "ldexp" [Star "dvec3" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  ldexp a b = Expr (Tuple "dvec3" (Apply "ldexp" [Expr (Tuple "dvec3" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance ldexpInstance6 :: Ldexp (Expr Dvec2) (Expr Ivec2) (Expr Dvec2) where
-  ldexp a b = Expr (Apply "ldexp" [Star "dvec2" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  ldexp a b = Expr (Tuple "dvec2" (Apply "ldexp" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 instance ldexpInstance7 :: Ldexp (Expr Double) (Expr Int) (Expr Double) where
-  ldexp a b = Expr (Apply "ldexp" [Star "double" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  ldexp a b = Expr (Tuple "double" (Apply "ldexp" [Expr (Tuple "double" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 class Length a b | a -> b where
   length :: a -> b
 
 instance lengthInstance0 :: Length (Expr Vec4) (Expr Float) where
-  length a = Expr (Apply "length" [Star "vec4" (unsafeCoerce a)])
+  length a = Expr (Tuple "float" (Apply "length" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance lengthInstance1 :: Length (Expr Vec3) (Expr Float) where
-  length a = Expr (Apply "length" [Star "vec3" (unsafeCoerce a)])
+  length a = Expr (Tuple "float" (Apply "length" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance lengthInstance2 :: Length (Expr Vec2) (Expr Float) where
-  length a = Expr (Apply "length" [Star "vec2" (unsafeCoerce a)])
+  length a = Expr (Tuple "float" (Apply "length" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance lengthInstance3 :: Length (Expr Float) (Expr Float) where
-  length a = Expr (Apply "length" [Star "float" (unsafeCoerce a)])
+  length a = Expr (Tuple "float" (Apply "length" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 instance lengthInstance4 :: Length (Expr Dvec2) (Expr Double) where
-  length a = Expr (Apply "length" [Star "dvec2" (unsafeCoerce a)])
+  length a = Expr (Tuple "double" (Apply "length" [Expr (Tuple "dvec2" (unsafeCoerce a))]))
 
 instance lengthInstance5 :: Length (Expr Double) (Expr Double) where
-  length a = Expr (Apply "length" [Star "double" (unsafeCoerce a)])
+  length a = Expr (Tuple "double" (Apply "length" [Expr (Tuple "double" (unsafeCoerce a))]))
 
 class LessThan a b c | a b -> c where
   lessThan :: a -> b -> c
 
 instance lessThanInstance0 :: LessThan (Expr Vec4) (Expr Vec4) (Expr Bvec4) where
-  lessThan a b = Expr (Apply "lessThan" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  lessThan a b = Expr (Tuple "bvec4" (Apply "lessThan" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance lessThanInstance1 :: LessThan (Expr Uvec4) (Expr Uvec4) (Expr Bvec4) where
-  lessThan a b = Expr (Apply "lessThan" [Star "uvec4" (unsafeCoerce a), Star "uvec4" (unsafeCoerce b)])
+  lessThan a b = Expr (Tuple "bvec4" (Apply "lessThan" [Expr (Tuple "uvec4" (unsafeCoerce a)), Expr (Tuple "uvec4" (unsafeCoerce b))]))
 
 instance lessThanInstance2 :: LessThan (Expr Ivec4) (Expr Ivec4) (Expr Bvec4) where
-  lessThan a b = Expr (Apply "lessThan" [Star "ivec4" (unsafeCoerce a), Star "ivec4" (unsafeCoerce b)])
+  lessThan a b = Expr (Tuple "bvec4" (Apply "lessThan" [Expr (Tuple "ivec4" (unsafeCoerce a)), Expr (Tuple "ivec4" (unsafeCoerce b))]))
 
 instance lessThanInstance3 :: LessThan (Expr Vec3) (Expr Vec3) (Expr Bvec3) where
-  lessThan a b = Expr (Apply "lessThan" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  lessThan a b = Expr (Tuple "bvec3" (Apply "lessThan" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance lessThanInstance4 :: LessThan (Expr Uvec3) (Expr Uvec3) (Expr Bvec3) where
-  lessThan a b = Expr (Apply "lessThan" [Star "uvec3" (unsafeCoerce a), Star "uvec3" (unsafeCoerce b)])
+  lessThan a b = Expr (Tuple "bvec3" (Apply "lessThan" [Expr (Tuple "uvec3" (unsafeCoerce a)), Expr (Tuple "uvec3" (unsafeCoerce b))]))
 
 instance lessThanInstance5 :: LessThan (Expr Ivec3) (Expr Ivec3) (Expr Bvec3) where
-  lessThan a b = Expr (Apply "lessThan" [Star "ivec3" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  lessThan a b = Expr (Tuple "bvec3" (Apply "lessThan" [Expr (Tuple "ivec3" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance lessThanInstance6 :: LessThan (Expr Vec2) (Expr Vec2) (Expr Bvec2) where
-  lessThan a b = Expr (Apply "lessThan" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  lessThan a b = Expr (Tuple "bvec2" (Apply "lessThan" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance lessThanInstance7 :: LessThan (Expr Uvec2) (Expr Uvec2) (Expr Bvec2) where
-  lessThan a b = Expr (Apply "lessThan" [Star "uvec2" (unsafeCoerce a), Star "uvec2" (unsafeCoerce b)])
+  lessThan a b = Expr (Tuple "bvec2" (Apply "lessThan" [Expr (Tuple "uvec2" (unsafeCoerce a)), Expr (Tuple "uvec2" (unsafeCoerce b))]))
 
 instance lessThanInstance8 :: LessThan (Expr Ivec2) (Expr Ivec2) (Expr Bvec2) where
-  lessThan a b = Expr (Apply "lessThan" [Star "ivec2" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  lessThan a b = Expr (Tuple "bvec2" (Apply "lessThan" [Expr (Tuple "ivec2" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 class LessThanEqual a b c | a b -> c where
   lessThanEqual :: a -> b -> c
 
 instance lessThanEqualInstance0 :: LessThanEqual (Expr Vec4) (Expr Vec4) (Expr Bvec4) where
-  lessThanEqual a b = Expr (Apply "lessThanEqual" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  lessThanEqual a b = Expr (Tuple "bvec4" (Apply "lessThanEqual" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance lessThanEqualInstance1 :: LessThanEqual (Expr Uvec4) (Expr Uvec4) (Expr Bvec4) where
-  lessThanEqual a b = Expr (Apply "lessThanEqual" [Star "uvec4" (unsafeCoerce a), Star "uvec4" (unsafeCoerce b)])
+  lessThanEqual a b = Expr (Tuple "bvec4" (Apply "lessThanEqual" [Expr (Tuple "uvec4" (unsafeCoerce a)), Expr (Tuple "uvec4" (unsafeCoerce b))]))
 
 instance lessThanEqualInstance2 :: LessThanEqual (Expr Ivec4) (Expr Ivec4) (Expr Bvec4) where
-  lessThanEqual a b = Expr (Apply "lessThanEqual" [Star "ivec4" (unsafeCoerce a), Star "ivec4" (unsafeCoerce b)])
+  lessThanEqual a b = Expr (Tuple "bvec4" (Apply "lessThanEqual" [Expr (Tuple "ivec4" (unsafeCoerce a)), Expr (Tuple "ivec4" (unsafeCoerce b))]))
 
 instance lessThanEqualInstance3 :: LessThanEqual (Expr Vec3) (Expr Vec3) (Expr Bvec3) where
-  lessThanEqual a b = Expr (Apply "lessThanEqual" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  lessThanEqual a b = Expr (Tuple "bvec3" (Apply "lessThanEqual" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance lessThanEqualInstance4 :: LessThanEqual (Expr Uvec3) (Expr Uvec3) (Expr Bvec3) where
-  lessThanEqual a b = Expr (Apply "lessThanEqual" [Star "uvec3" (unsafeCoerce a), Star "uvec3" (unsafeCoerce b)])
+  lessThanEqual a b = Expr (Tuple "bvec3" (Apply "lessThanEqual" [Expr (Tuple "uvec3" (unsafeCoerce a)), Expr (Tuple "uvec3" (unsafeCoerce b))]))
 
 instance lessThanEqualInstance5 :: LessThanEqual (Expr Ivec3) (Expr Ivec3) (Expr Bvec3) where
-  lessThanEqual a b = Expr (Apply "lessThanEqual" [Star "ivec3" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  lessThanEqual a b = Expr (Tuple "bvec3" (Apply "lessThanEqual" [Expr (Tuple "ivec3" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance lessThanEqualInstance6 :: LessThanEqual (Expr Vec2) (Expr Vec2) (Expr Bvec2) where
-  lessThanEqual a b = Expr (Apply "lessThanEqual" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  lessThanEqual a b = Expr (Tuple "bvec2" (Apply "lessThanEqual" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance lessThanEqualInstance7 :: LessThanEqual (Expr Uvec2) (Expr Uvec2) (Expr Bvec2) where
-  lessThanEqual a b = Expr (Apply "lessThanEqual" [Star "uvec2" (unsafeCoerce a), Star "uvec2" (unsafeCoerce b)])
+  lessThanEqual a b = Expr (Tuple "bvec2" (Apply "lessThanEqual" [Expr (Tuple "uvec2" (unsafeCoerce a)), Expr (Tuple "uvec2" (unsafeCoerce b))]))
 
 instance lessThanEqualInstance8 :: LessThanEqual (Expr Ivec2) (Expr Ivec2) (Expr Bvec2) where
-  lessThanEqual a b = Expr (Apply "lessThanEqual" [Star "ivec2" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  lessThanEqual a b = Expr (Tuple "bvec2" (Apply "lessThanEqual" [Expr (Tuple "ivec2" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 class Log a b | a -> b where
   log :: a -> b
 
 instance logInstance0 :: Log (Expr Vec4) (Expr Vec4) where
-  log a = Expr (Apply "log" [Star "vec4" (unsafeCoerce a)])
+  log a = Expr (Tuple "vec4" (Apply "log" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance logInstance1 :: Log (Expr Vec3) (Expr Vec3) where
-  log a = Expr (Apply "log" [Star "vec3" (unsafeCoerce a)])
+  log a = Expr (Tuple "vec3" (Apply "log" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance logInstance2 :: Log (Expr Vec2) (Expr Vec2) where
-  log a = Expr (Apply "log" [Star "vec2" (unsafeCoerce a)])
+  log a = Expr (Tuple "vec2" (Apply "log" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance logInstance3 :: Log (Expr Float) (Expr Float) where
-  log a = Expr (Apply "log" [Star "float" (unsafeCoerce a)])
+  log a = Expr (Tuple "float" (Apply "log" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Log2 a b | a -> b where
   log2 :: a -> b
 
 instance log2Instance0 :: Log2 (Expr Vec4) (Expr Vec4) where
-  log2 a = Expr (Apply "log2" [Star "vec4" (unsafeCoerce a)])
+  log2 a = Expr (Tuple "vec4" (Apply "log2" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance log2Instance1 :: Log2 (Expr Vec3) (Expr Vec3) where
-  log2 a = Expr (Apply "log2" [Star "vec3" (unsafeCoerce a)])
+  log2 a = Expr (Tuple "vec3" (Apply "log2" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance log2Instance2 :: Log2 (Expr Vec2) (Expr Vec2) where
-  log2 a = Expr (Apply "log2" [Star "vec2" (unsafeCoerce a)])
+  log2 a = Expr (Tuple "vec2" (Apply "log2" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance log2Instance3 :: Log2 (Expr Float) (Expr Float) where
-  log2 a = Expr (Apply "log2" [Star "float" (unsafeCoerce a)])
+  log2 a = Expr (Tuple "float" (Apply "log2" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class MatrixCompMult a b c | a b -> c where
   matrixCompMult :: a -> b -> c
 
 instance matrixCompMultInstance0 :: MatrixCompMult (Expr Dmat4x4) (Expr Dmat4x4) (Expr Dmat4x4) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "dmat4x4" (unsafeCoerce a), Star "dmat4x4" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "dmat4x4" (Apply "matrixCompMult" [Expr (Tuple "dmat4x4" (unsafeCoerce a)), Expr (Tuple "dmat4x4" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance1 :: MatrixCompMult (Expr Mat4x4) (Expr Mat4x4) (Expr Mat4x4) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "mat4x4" (unsafeCoerce a), Star "mat4x4" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "mat4x4" (Apply "matrixCompMult" [Expr (Tuple "mat4x4" (unsafeCoerce a)), Expr (Tuple "mat4x4" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance2 :: MatrixCompMult (Expr Dmat4x3) (Expr Dmat4x3) (Expr Dmat4x3) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "dmat4x3" (unsafeCoerce a), Star "dmat4x3" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "dmat4x3" (Apply "matrixCompMult" [Expr (Tuple "dmat4x3" (unsafeCoerce a)), Expr (Tuple "dmat4x3" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance3 :: MatrixCompMult (Expr Mat4x3) (Expr Mat4x3) (Expr Mat4x3) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "mat4x3" (unsafeCoerce a), Star "mat4x3" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "mat4x3" (Apply "matrixCompMult" [Expr (Tuple "mat4x3" (unsafeCoerce a)), Expr (Tuple "mat4x3" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance4 :: MatrixCompMult (Expr Dmat4x2) (Expr Dmat4x2) (Expr Dmat4x2) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "dmat4x2" (unsafeCoerce a), Star "dmat4x2" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "dmat4x2" (Apply "matrixCompMult" [Expr (Tuple "dmat4x2" (unsafeCoerce a)), Expr (Tuple "dmat4x2" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance5 :: MatrixCompMult (Expr Mat4x2) (Expr Mat4x2) (Expr Mat4x2) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "mat4x2" (unsafeCoerce a), Star "mat4x2" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "mat4x2" (Apply "matrixCompMult" [Expr (Tuple "mat4x2" (unsafeCoerce a)), Expr (Tuple "mat4x2" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance6 :: MatrixCompMult (Expr Dmat4) (Expr Dmat4) (Expr Dmat4) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "dmat4" (unsafeCoerce a), Star "dmat4" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "dmat4" (Apply "matrixCompMult" [Expr (Tuple "dmat4" (unsafeCoerce a)), Expr (Tuple "dmat4" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance7 :: MatrixCompMult (Expr Mat4) (Expr Mat4) (Expr Mat4) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "mat4" (unsafeCoerce a), Star "mat4" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "mat4" (Apply "matrixCompMult" [Expr (Tuple "mat4" (unsafeCoerce a)), Expr (Tuple "mat4" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance8 :: MatrixCompMult (Expr Dmat3x4) (Expr Dmat3x4) (Expr Dmat3x4) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "dmat3x4" (unsafeCoerce a), Star "dmat3x4" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "dmat3x4" (Apply "matrixCompMult" [Expr (Tuple "dmat3x4" (unsafeCoerce a)), Expr (Tuple "dmat3x4" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance9 :: MatrixCompMult (Expr Mat3x4) (Expr Mat3x4) (Expr Mat3x4) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "mat3x4" (unsafeCoerce a), Star "mat3x4" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "mat3x4" (Apply "matrixCompMult" [Expr (Tuple "mat3x4" (unsafeCoerce a)), Expr (Tuple "mat3x4" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance10 :: MatrixCompMult (Expr Dmat3x3) (Expr Dmat3x3) (Expr Dmat3x3) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "dmat3x3" (unsafeCoerce a), Star "dmat3x3" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "dmat3x3" (Apply "matrixCompMult" [Expr (Tuple "dmat3x3" (unsafeCoerce a)), Expr (Tuple "dmat3x3" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance11 :: MatrixCompMult (Expr Mat3x3) (Expr Mat3x3) (Expr Mat3x3) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "mat3x3" (unsafeCoerce a), Star "mat3x3" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "mat3x3" (Apply "matrixCompMult" [Expr (Tuple "mat3x3" (unsafeCoerce a)), Expr (Tuple "mat3x3" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance12 :: MatrixCompMult (Expr Dmat3x2) (Expr Dmat3x2) (Expr Dmat3x2) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "dmat3x2" (unsafeCoerce a), Star "dmat3x2" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "dmat3x2" (Apply "matrixCompMult" [Expr (Tuple "dmat3x2" (unsafeCoerce a)), Expr (Tuple "dmat3x2" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance13 :: MatrixCompMult (Expr Mat3x2) (Expr Mat3x2) (Expr Mat3x2) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "mat3x2" (unsafeCoerce a), Star "mat3x2" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "mat3x2" (Apply "matrixCompMult" [Expr (Tuple "mat3x2" (unsafeCoerce a)), Expr (Tuple "mat3x2" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance14 :: MatrixCompMult (Expr Dmat3) (Expr Dmat3) (Expr Dmat3) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "dmat3" (unsafeCoerce a), Star "dmat3" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "dmat3" (Apply "matrixCompMult" [Expr (Tuple "dmat3" (unsafeCoerce a)), Expr (Tuple "dmat3" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance15 :: MatrixCompMult (Expr Mat3) (Expr Mat3) (Expr Mat3) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "mat3" (unsafeCoerce a), Star "mat3" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "mat3" (Apply "matrixCompMult" [Expr (Tuple "mat3" (unsafeCoerce a)), Expr (Tuple "mat3" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance16 :: MatrixCompMult (Expr Dmat2x4) (Expr Dmat2x4) (Expr Dmat2x4) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "dmat2x4" (unsafeCoerce a), Star "dmat2x4" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "dmat2x4" (Apply "matrixCompMult" [Expr (Tuple "dmat2x4" (unsafeCoerce a)), Expr (Tuple "dmat2x4" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance17 :: MatrixCompMult (Expr Mat2x4) (Expr Mat2x4) (Expr Mat2x4) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "mat2x4" (unsafeCoerce a), Star "mat2x4" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "mat2x4" (Apply "matrixCompMult" [Expr (Tuple "mat2x4" (unsafeCoerce a)), Expr (Tuple "mat2x4" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance18 :: MatrixCompMult (Expr Dmat2x3) (Expr Dmat2x3) (Expr Dmat2x3) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "dmat2x3" (unsafeCoerce a), Star "dmat2x3" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "dmat2x3" (Apply "matrixCompMult" [Expr (Tuple "dmat2x3" (unsafeCoerce a)), Expr (Tuple "dmat2x3" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance19 :: MatrixCompMult (Expr Mat2x3) (Expr Mat2x3) (Expr Mat2x3) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "mat2x3" (unsafeCoerce a), Star "mat2x3" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "mat2x3" (Apply "matrixCompMult" [Expr (Tuple "mat2x3" (unsafeCoerce a)), Expr (Tuple "mat2x3" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance20 :: MatrixCompMult (Expr Dmat2x2) (Expr Dmat2x2) (Expr Dmat2x2) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "dmat2x2" (unsafeCoerce a), Star "dmat2x2" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "dmat2x2" (Apply "matrixCompMult" [Expr (Tuple "dmat2x2" (unsafeCoerce a)), Expr (Tuple "dmat2x2" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance21 :: MatrixCompMult (Expr Mat2x2) (Expr Mat2x2) (Expr Mat2x2) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "mat2x2" (unsafeCoerce a), Star "mat2x2" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "mat2x2" (Apply "matrixCompMult" [Expr (Tuple "mat2x2" (unsafeCoerce a)), Expr (Tuple "mat2x2" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance22 :: MatrixCompMult (Expr Dmat2) (Expr Dmat2) (Expr Dmat2) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "dmat2" (unsafeCoerce a), Star "dmat2" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "dmat2" (Apply "matrixCompMult" [Expr (Tuple "dmat2" (unsafeCoerce a)), Expr (Tuple "dmat2" (unsafeCoerce b))]))
 
 instance matrixCompMultInstance23 :: MatrixCompMult (Expr Mat2) (Expr Mat2) (Expr Mat2) where
-  matrixCompMult a b = Expr (Apply "matrixCompMult" [Star "mat2" (unsafeCoerce a), Star "mat2" (unsafeCoerce b)])
+  matrixCompMult a b = Expr (Tuple "mat2" (Apply "matrixCompMult" [Expr (Tuple "mat2" (unsafeCoerce a)), Expr (Tuple "mat2" (unsafeCoerce b))]))
 
 class Max a b c | a b -> c where
   max :: a -> b -> c
 
 instance maxInstance0 :: Max (Expr Vec4) (Expr Vec4) (Expr Vec4) where
-  max a b = Expr (Apply "max" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  max a b = Expr (Tuple "vec4" (Apply "max" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance maxInstance1 :: Max (Expr Vec4) (Expr Float) (Expr Vec4) where
-  max a b = Expr (Apply "max" [Star "vec4" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  max a b = Expr (Tuple "vec4" (Apply "max" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance maxInstance2 :: Max (Expr Vec3) (Expr Vec3) (Expr Vec3) where
-  max a b = Expr (Apply "max" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  max a b = Expr (Tuple "vec3" (Apply "max" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance maxInstance3 :: Max (Expr Vec3) (Expr Float) (Expr Vec3) where
-  max a b = Expr (Apply "max" [Star "vec3" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  max a b = Expr (Tuple "vec3" (Apply "max" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance maxInstance4 :: Max (Expr Vec2) (Expr Vec2) (Expr Vec2) where
-  max a b = Expr (Apply "max" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  max a b = Expr (Tuple "vec2" (Apply "max" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance maxInstance5 :: Max (Expr Vec2) (Expr Float) (Expr Vec2) where
-  max a b = Expr (Apply "max" [Star "vec2" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  max a b = Expr (Tuple "vec2" (Apply "max" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance maxInstance6 :: Max (Expr Uvec4) (Expr Uvec4) (Expr Uvec4) where
-  max a b = Expr (Apply "max" [Star "uvec4" (unsafeCoerce a), Star "uvec4" (unsafeCoerce b)])
+  max a b = Expr (Tuple "uvec4" (Apply "max" [Expr (Tuple "uvec4" (unsafeCoerce a)), Expr (Tuple "uvec4" (unsafeCoerce b))]))
 
 instance maxInstance7 :: Max (Expr Uvec4) (Expr Uint) (Expr Uvec4) where
-  max a b = Expr (Apply "max" [Star "uvec4" (unsafeCoerce a), Star "uint" (unsafeCoerce b)])
+  max a b = Expr (Tuple "uvec4" (Apply "max" [Expr (Tuple "uvec4" (unsafeCoerce a)), Expr (Tuple "uint" (unsafeCoerce b))]))
 
 instance maxInstance8 :: Max (Expr Uvec3) (Expr Uvec3) (Expr Uvec3) where
-  max a b = Expr (Apply "max" [Star "uvec3" (unsafeCoerce a), Star "uvec3" (unsafeCoerce b)])
+  max a b = Expr (Tuple "uvec3" (Apply "max" [Expr (Tuple "uvec3" (unsafeCoerce a)), Expr (Tuple "uvec3" (unsafeCoerce b))]))
 
 instance maxInstance9 :: Max (Expr Uvec3) (Expr Uint) (Expr Uvec3) where
-  max a b = Expr (Apply "max" [Star "uvec3" (unsafeCoerce a), Star "uint" (unsafeCoerce b)])
+  max a b = Expr (Tuple "uvec3" (Apply "max" [Expr (Tuple "uvec3" (unsafeCoerce a)), Expr (Tuple "uint" (unsafeCoerce b))]))
 
 instance maxInstance10 :: Max (Expr Uvec2) (Expr Uvec2) (Expr Uvec2) where
-  max a b = Expr (Apply "max" [Star "uvec2" (unsafeCoerce a), Star "uvec2" (unsafeCoerce b)])
+  max a b = Expr (Tuple "uvec2" (Apply "max" [Expr (Tuple "uvec2" (unsafeCoerce a)), Expr (Tuple "uvec2" (unsafeCoerce b))]))
 
 instance maxInstance11 :: Max (Expr Uvec2) (Expr Uint) (Expr Uvec2) where
-  max a b = Expr (Apply "max" [Star "uvec2" (unsafeCoerce a), Star "uint" (unsafeCoerce b)])
+  max a b = Expr (Tuple "uvec2" (Apply "max" [Expr (Tuple "uvec2" (unsafeCoerce a)), Expr (Tuple "uint" (unsafeCoerce b))]))
 
 instance maxInstance12 :: Max (Expr Uint) (Expr Uint) (Expr Uint) where
-  max a b = Expr (Apply "max" [Star "uint" (unsafeCoerce a), Star "uint" (unsafeCoerce b)])
+  max a b = Expr (Tuple "uint" (Apply "max" [Expr (Tuple "uint" (unsafeCoerce a)), Expr (Tuple "uint" (unsafeCoerce b))]))
 
 instance maxInstance13 :: Max (Expr Ivec4) (Expr Ivec4) (Expr Ivec4) where
-  max a b = Expr (Apply "max" [Star "ivec4" (unsafeCoerce a), Star "ivec4" (unsafeCoerce b)])
+  max a b = Expr (Tuple "ivec4" (Apply "max" [Expr (Tuple "ivec4" (unsafeCoerce a)), Expr (Tuple "ivec4" (unsafeCoerce b))]))
 
 instance maxInstance14 :: Max (Expr Ivec4) (Expr Int) (Expr Ivec4) where
-  max a b = Expr (Apply "max" [Star "ivec4" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  max a b = Expr (Tuple "ivec4" (Apply "max" [Expr (Tuple "ivec4" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance maxInstance15 :: Max (Expr Ivec3) (Expr Ivec3) (Expr Ivec3) where
-  max a b = Expr (Apply "max" [Star "ivec3" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  max a b = Expr (Tuple "ivec3" (Apply "max" [Expr (Tuple "ivec3" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance maxInstance16 :: Max (Expr Ivec3) (Expr Int) (Expr Ivec3) where
-  max a b = Expr (Apply "max" [Star "ivec3" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  max a b = Expr (Tuple "ivec3" (Apply "max" [Expr (Tuple "ivec3" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance maxInstance17 :: Max (Expr Ivec2) (Expr Ivec2) (Expr Ivec2) where
-  max a b = Expr (Apply "max" [Star "ivec2" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  max a b = Expr (Tuple "ivec2" (Apply "max" [Expr (Tuple "ivec2" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 instance maxInstance18 :: Max (Expr Ivec2) (Expr Int) (Expr Ivec2) where
-  max a b = Expr (Apply "max" [Star "ivec2" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  max a b = Expr (Tuple "ivec2" (Apply "max" [Expr (Tuple "ivec2" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance maxInstance19 :: Max (Expr Int) (Expr Int) (Expr Int) where
-  max a b = Expr (Apply "max" [Star "int" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  max a b = Expr (Tuple "int" (Apply "max" [Expr (Tuple "int" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance maxInstance20 :: Max (Expr Float) (Expr Float) (Expr Float) where
-  max a b = Expr (Apply "max" [Star "float" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  max a b = Expr (Tuple "float" (Apply "max" [Expr (Tuple "float" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance maxInstance21 :: Max (Expr Dvec4) (Expr Dvec4) (Expr Dvec4) where
-  max a b = Expr (Apply "max" [Star "dvec4" (unsafeCoerce a), Star "dvec4" (unsafeCoerce b)])
+  max a b = Expr (Tuple "dvec4" (Apply "max" [Expr (Tuple "dvec4" (unsafeCoerce a)), Expr (Tuple "dvec4" (unsafeCoerce b))]))
 
 instance maxInstance22 :: Max (Expr Dvec4) (Expr Double) (Expr Dvec4) where
-  max a b = Expr (Apply "max" [Star "dvec4" (unsafeCoerce a), Star "double" (unsafeCoerce b)])
+  max a b = Expr (Tuple "dvec4" (Apply "max" [Expr (Tuple "dvec4" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b))]))
 
 instance maxInstance23 :: Max (Expr Dvec3) (Expr Dvec3) (Expr Dvec3) where
-  max a b = Expr (Apply "max" [Star "dvec3" (unsafeCoerce a), Star "dvec3" (unsafeCoerce b)])
+  max a b = Expr (Tuple "dvec3" (Apply "max" [Expr (Tuple "dvec3" (unsafeCoerce a)), Expr (Tuple "dvec3" (unsafeCoerce b))]))
 
 instance maxInstance24 :: Max (Expr Dvec3) (Expr Double) (Expr Dvec3) where
-  max a b = Expr (Apply "max" [Star "dvec3" (unsafeCoerce a), Star "double" (unsafeCoerce b)])
+  max a b = Expr (Tuple "dvec3" (Apply "max" [Expr (Tuple "dvec3" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b))]))
 
 instance maxInstance25 :: Max (Expr Dvec2) (Expr Dvec2) (Expr Dvec2) where
-  max a b = Expr (Apply "max" [Star "dvec2" (unsafeCoerce a), Star "dvec2" (unsafeCoerce b)])
+  max a b = Expr (Tuple "dvec2" (Apply "max" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "dvec2" (unsafeCoerce b))]))
 
 instance maxInstance26 :: Max (Expr Dvec2) (Expr Double) (Expr Dvec2) where
-  max a b = Expr (Apply "max" [Star "dvec2" (unsafeCoerce a), Star "double" (unsafeCoerce b)])
+  max a b = Expr (Tuple "dvec2" (Apply "max" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b))]))
 
 instance maxInstance27 :: Max (Expr Double) (Expr Double) (Expr Double) where
-  max a b = Expr (Apply "max" [Star "double" (unsafeCoerce a), Star "double" (unsafeCoerce b)])
+  max a b = Expr (Tuple "double" (Apply "max" [Expr (Tuple "double" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b))]))
 
 class Min a b c | a b -> c where
   min :: a -> b -> c
 
 instance minInstance0 :: Min (Expr Vec4) (Expr Vec4) (Expr Vec4) where
-  min a b = Expr (Apply "min" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  min a b = Expr (Tuple "vec4" (Apply "min" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance minInstance1 :: Min (Expr Vec4) (Expr Float) (Expr Vec4) where
-  min a b = Expr (Apply "min" [Star "vec4" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  min a b = Expr (Tuple "vec4" (Apply "min" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance minInstance2 :: Min (Expr Vec3) (Expr Vec3) (Expr Vec3) where
-  min a b = Expr (Apply "min" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  min a b = Expr (Tuple "vec3" (Apply "min" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance minInstance3 :: Min (Expr Vec3) (Expr Float) (Expr Vec3) where
-  min a b = Expr (Apply "min" [Star "vec3" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  min a b = Expr (Tuple "vec3" (Apply "min" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance minInstance4 :: Min (Expr Vec2) (Expr Vec2) (Expr Vec2) where
-  min a b = Expr (Apply "min" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  min a b = Expr (Tuple "vec2" (Apply "min" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance minInstance5 :: Min (Expr Vec2) (Expr Float) (Expr Vec2) where
-  min a b = Expr (Apply "min" [Star "vec2" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  min a b = Expr (Tuple "vec2" (Apply "min" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance minInstance6 :: Min (Expr Uvec4) (Expr Uvec4) (Expr Uvec4) where
-  min a b = Expr (Apply "min" [Star "uvec4" (unsafeCoerce a), Star "uvec4" (unsafeCoerce b)])
+  min a b = Expr (Tuple "uvec4" (Apply "min" [Expr (Tuple "uvec4" (unsafeCoerce a)), Expr (Tuple "uvec4" (unsafeCoerce b))]))
 
 instance minInstance7 :: Min (Expr Uvec4) (Expr Uint) (Expr Uvec4) where
-  min a b = Expr (Apply "min" [Star "uvec4" (unsafeCoerce a), Star "uint" (unsafeCoerce b)])
+  min a b = Expr (Tuple "uvec4" (Apply "min" [Expr (Tuple "uvec4" (unsafeCoerce a)), Expr (Tuple "uint" (unsafeCoerce b))]))
 
 instance minInstance8 :: Min (Expr Uvec3) (Expr Uvec3) (Expr Uvec3) where
-  min a b = Expr (Apply "min" [Star "uvec3" (unsafeCoerce a), Star "uvec3" (unsafeCoerce b)])
+  min a b = Expr (Tuple "uvec3" (Apply "min" [Expr (Tuple "uvec3" (unsafeCoerce a)), Expr (Tuple "uvec3" (unsafeCoerce b))]))
 
 instance minInstance9 :: Min (Expr Uvec3) (Expr Uint) (Expr Uvec3) where
-  min a b = Expr (Apply "min" [Star "uvec3" (unsafeCoerce a), Star "uint" (unsafeCoerce b)])
+  min a b = Expr (Tuple "uvec3" (Apply "min" [Expr (Tuple "uvec3" (unsafeCoerce a)), Expr (Tuple "uint" (unsafeCoerce b))]))
 
 instance minInstance10 :: Min (Expr Uvec2) (Expr Uvec2) (Expr Uvec2) where
-  min a b = Expr (Apply "min" [Star "uvec2" (unsafeCoerce a), Star "uvec2" (unsafeCoerce b)])
+  min a b = Expr (Tuple "uvec2" (Apply "min" [Expr (Tuple "uvec2" (unsafeCoerce a)), Expr (Tuple "uvec2" (unsafeCoerce b))]))
 
 instance minInstance11 :: Min (Expr Uvec2) (Expr Uint) (Expr Uvec2) where
-  min a b = Expr (Apply "min" [Star "uvec2" (unsafeCoerce a), Star "uint" (unsafeCoerce b)])
+  min a b = Expr (Tuple "uvec2" (Apply "min" [Expr (Tuple "uvec2" (unsafeCoerce a)), Expr (Tuple "uint" (unsafeCoerce b))]))
 
 instance minInstance12 :: Min (Expr Uint) (Expr Uint) (Expr Uint) where
-  min a b = Expr (Apply "min" [Star "uint" (unsafeCoerce a), Star "uint" (unsafeCoerce b)])
+  min a b = Expr (Tuple "uint" (Apply "min" [Expr (Tuple "uint" (unsafeCoerce a)), Expr (Tuple "uint" (unsafeCoerce b))]))
 
 instance minInstance13 :: Min (Expr Ivec4) (Expr Ivec4) (Expr Ivec4) where
-  min a b = Expr (Apply "min" [Star "ivec4" (unsafeCoerce a), Star "ivec4" (unsafeCoerce b)])
+  min a b = Expr (Tuple "ivec4" (Apply "min" [Expr (Tuple "ivec4" (unsafeCoerce a)), Expr (Tuple "ivec4" (unsafeCoerce b))]))
 
 instance minInstance14 :: Min (Expr Ivec4) (Expr Int) (Expr Ivec4) where
-  min a b = Expr (Apply "min" [Star "ivec4" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  min a b = Expr (Tuple "ivec4" (Apply "min" [Expr (Tuple "ivec4" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance minInstance15 :: Min (Expr Ivec3) (Expr Ivec3) (Expr Ivec3) where
-  min a b = Expr (Apply "min" [Star "ivec3" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  min a b = Expr (Tuple "ivec3" (Apply "min" [Expr (Tuple "ivec3" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance minInstance16 :: Min (Expr Ivec3) (Expr Int) (Expr Ivec3) where
-  min a b = Expr (Apply "min" [Star "ivec3" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  min a b = Expr (Tuple "ivec3" (Apply "min" [Expr (Tuple "ivec3" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance minInstance17 :: Min (Expr Ivec2) (Expr Ivec2) (Expr Ivec2) where
-  min a b = Expr (Apply "min" [Star "ivec2" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  min a b = Expr (Tuple "ivec2" (Apply "min" [Expr (Tuple "ivec2" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 instance minInstance18 :: Min (Expr Ivec2) (Expr Int) (Expr Ivec2) where
-  min a b = Expr (Apply "min" [Star "ivec2" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  min a b = Expr (Tuple "ivec2" (Apply "min" [Expr (Tuple "ivec2" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance minInstance19 :: Min (Expr Int) (Expr Int) (Expr Int) where
-  min a b = Expr (Apply "min" [Star "int" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  min a b = Expr (Tuple "int" (Apply "min" [Expr (Tuple "int" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance minInstance20 :: Min (Expr Float) (Expr Float) (Expr Float) where
-  min a b = Expr (Apply "min" [Star "float" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  min a b = Expr (Tuple "float" (Apply "min" [Expr (Tuple "float" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance minInstance21 :: Min (Expr Dvec4) (Expr Dvec4) (Expr Dvec4) where
-  min a b = Expr (Apply "min" [Star "dvec4" (unsafeCoerce a), Star "dvec4" (unsafeCoerce b)])
+  min a b = Expr (Tuple "dvec4" (Apply "min" [Expr (Tuple "dvec4" (unsafeCoerce a)), Expr (Tuple "dvec4" (unsafeCoerce b))]))
 
 instance minInstance22 :: Min (Expr Dvec4) (Expr Double) (Expr Dvec4) where
-  min a b = Expr (Apply "min" [Star "dvec4" (unsafeCoerce a), Star "double" (unsafeCoerce b)])
+  min a b = Expr (Tuple "dvec4" (Apply "min" [Expr (Tuple "dvec4" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b))]))
 
 instance minInstance23 :: Min (Expr Dvec3) (Expr Dvec3) (Expr Dvec3) where
-  min a b = Expr (Apply "min" [Star "dvec3" (unsafeCoerce a), Star "dvec3" (unsafeCoerce b)])
+  min a b = Expr (Tuple "dvec3" (Apply "min" [Expr (Tuple "dvec3" (unsafeCoerce a)), Expr (Tuple "dvec3" (unsafeCoerce b))]))
 
 instance minInstance24 :: Min (Expr Dvec3) (Expr Double) (Expr Dvec3) where
-  min a b = Expr (Apply "min" [Star "dvec3" (unsafeCoerce a), Star "double" (unsafeCoerce b)])
+  min a b = Expr (Tuple "dvec3" (Apply "min" [Expr (Tuple "dvec3" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b))]))
 
 instance minInstance25 :: Min (Expr Dvec2) (Expr Dvec2) (Expr Dvec2) where
-  min a b = Expr (Apply "min" [Star "dvec2" (unsafeCoerce a), Star "dvec2" (unsafeCoerce b)])
+  min a b = Expr (Tuple "dvec2" (Apply "min" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "dvec2" (unsafeCoerce b))]))
 
 instance minInstance26 :: Min (Expr Dvec2) (Expr Double) (Expr Dvec2) where
-  min a b = Expr (Apply "min" [Star "dvec2" (unsafeCoerce a), Star "double" (unsafeCoerce b)])
+  min a b = Expr (Tuple "dvec2" (Apply "min" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b))]))
 
 instance minInstance27 :: Min (Expr Double) (Expr Double) (Expr Double) where
-  min a b = Expr (Apply "min" [Star "double" (unsafeCoerce a), Star "double" (unsafeCoerce b)])
+  min a b = Expr (Tuple "double" (Apply "min" [Expr (Tuple "double" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b))]))
 
 class Mix a b c d | a b c -> d where
   mix :: a -> b -> c -> d
 
 instance mixInstance0 :: Mix (Expr Vec4) (Expr Vec4) (Expr Vec4) (Expr Vec4) where
-  mix a b c = Expr (Apply "mix" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec4" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "vec4" (Apply "mix" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec4" (unsafeCoerce c))]))
 
 instance mixInstance1 :: Mix (Expr Vec4) (Expr Vec4) (Expr Float) (Expr Vec4) where
-  mix a b c = Expr (Apply "mix" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "vec4" (Apply "mix" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance mixInstance2 :: Mix (Expr Vec3) (Expr Vec3) (Expr Vec3) (Expr Vec3) where
-  mix a b c = Expr (Apply "mix" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec3" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "vec3" (Apply "mix" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c))]))
 
 instance mixInstance3 :: Mix (Expr Vec3) (Expr Vec3) (Expr Float) (Expr Vec3) where
-  mix a b c = Expr (Apply "mix" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "vec3" (Apply "mix" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance mixInstance4 :: Mix (Expr Vec2) (Expr Vec2) (Expr Vec2) (Expr Vec2) where
-  mix a b c = Expr (Apply "mix" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "vec2" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "vec2" (Apply "mix" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c))]))
 
 instance mixInstance5 :: Mix (Expr Vec2) (Expr Vec2) (Expr Float) (Expr Vec2) where
-  mix a b c = Expr (Apply "mix" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "vec2" (Apply "mix" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance mixInstance6 :: Mix (Expr Uvec4) (Expr Uvec4) (Expr Uvec4) (Expr Uvec4) where
-  mix a b c = Expr (Apply "mix" [Star "uvec4" (unsafeCoerce a), Star "uvec4" (unsafeCoerce b), Star "uvec4" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "uvec4" (Apply "mix" [Expr (Tuple "uvec4" (unsafeCoerce a)), Expr (Tuple "uvec4" (unsafeCoerce b)), Expr (Tuple "uvec4" (unsafeCoerce c))]))
 
 instance mixInstance7 :: Mix (Expr Uvec3) (Expr Uvec3) (Expr Uvec3) (Expr Uvec3) where
-  mix a b c = Expr (Apply "mix" [Star "uvec3" (unsafeCoerce a), Star "uvec3" (unsafeCoerce b), Star "uvec3" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "uvec3" (Apply "mix" [Expr (Tuple "uvec3" (unsafeCoerce a)), Expr (Tuple "uvec3" (unsafeCoerce b)), Expr (Tuple "uvec3" (unsafeCoerce c))]))
 
 instance mixInstance8 :: Mix (Expr Uvec2) (Expr Uvec2) (Expr Uvec2) (Expr Uvec2) where
-  mix a b c = Expr (Apply "mix" [Star "uvec2" (unsafeCoerce a), Star "uvec2" (unsafeCoerce b), Star "uvec2" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "uvec2" (Apply "mix" [Expr (Tuple "uvec2" (unsafeCoerce a)), Expr (Tuple "uvec2" (unsafeCoerce b)), Expr (Tuple "uvec2" (unsafeCoerce c))]))
 
 instance mixInstance9 :: Mix (Expr Uint) (Expr Uint) (Expr Uint) (Expr Uint) where
-  mix a b c = Expr (Apply "mix" [Star "uint" (unsafeCoerce a), Star "uint" (unsafeCoerce b), Star "uint" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "uint" (Apply "mix" [Expr (Tuple "uint" (unsafeCoerce a)), Expr (Tuple "uint" (unsafeCoerce b)), Expr (Tuple "uint" (unsafeCoerce c))]))
 
 instance mixInstance10 :: Mix (Expr Ivec4) (Expr Ivec4) (Expr Ivec4) (Expr Ivec4) where
-  mix a b c = Expr (Apply "mix" [Star "ivec4" (unsafeCoerce a), Star "ivec4" (unsafeCoerce b), Star "ivec4" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "ivec4" (Apply "mix" [Expr (Tuple "ivec4" (unsafeCoerce a)), Expr (Tuple "ivec4" (unsafeCoerce b)), Expr (Tuple "ivec4" (unsafeCoerce c))]))
 
 instance mixInstance11 :: Mix (Expr Ivec3) (Expr Ivec3) (Expr Ivec3) (Expr Ivec3) where
-  mix a b c = Expr (Apply "mix" [Star "ivec3" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b), Star "ivec3" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "ivec3" (Apply "mix" [Expr (Tuple "ivec3" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b)), Expr (Tuple "ivec3" (unsafeCoerce c))]))
 
 instance mixInstance12 :: Mix (Expr Ivec2) (Expr Ivec2) (Expr Ivec2) (Expr Ivec2) where
-  mix a b c = Expr (Apply "mix" [Star "ivec2" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "ivec2" (Apply "mix" [Expr (Tuple "ivec2" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance mixInstance13 :: Mix (Expr Int) (Expr Int) (Expr Int) (Expr Int) where
-  mix a b c = Expr (Apply "mix" [Star "int" (unsafeCoerce a), Star "int" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "int" (Apply "mix" [Expr (Tuple "int" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance mixInstance14 :: Mix (Expr Float) (Expr Float) (Expr Float) (Expr Float) where
-  mix a b c = Expr (Apply "mix" [Star "float" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "float" (Apply "mix" [Expr (Tuple "float" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance mixInstance15 :: Mix (Expr Dvec4) (Expr Dvec4) (Expr Dvec4) (Expr Dvec4) where
-  mix a b c = Expr (Apply "mix" [Star "dvec4" (unsafeCoerce a), Star "dvec4" (unsafeCoerce b), Star "dvec4" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "dvec4" (Apply "mix" [Expr (Tuple "dvec4" (unsafeCoerce a)), Expr (Tuple "dvec4" (unsafeCoerce b)), Expr (Tuple "dvec4" (unsafeCoerce c))]))
 
 instance mixInstance16 :: Mix (Expr Dvec4) (Expr Dvec4) (Expr Double) (Expr Dvec4) where
-  mix a b c = Expr (Apply "mix" [Star "dvec4" (unsafeCoerce a), Star "dvec4" (unsafeCoerce b), Star "double" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "dvec4" (Apply "mix" [Expr (Tuple "dvec4" (unsafeCoerce a)), Expr (Tuple "dvec4" (unsafeCoerce b)), Expr (Tuple "double" (unsafeCoerce c))]))
 
 instance mixInstance17 :: Mix (Expr Dvec3) (Expr Dvec3) (Expr Dvec3) (Expr Dvec3) where
-  mix a b c = Expr (Apply "mix" [Star "dvec3" (unsafeCoerce a), Star "dvec3" (unsafeCoerce b), Star "dvec3" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "dvec3" (Apply "mix" [Expr (Tuple "dvec3" (unsafeCoerce a)), Expr (Tuple "dvec3" (unsafeCoerce b)), Expr (Tuple "dvec3" (unsafeCoerce c))]))
 
 instance mixInstance18 :: Mix (Expr Dvec3) (Expr Dvec3) (Expr Double) (Expr Dvec3) where
-  mix a b c = Expr (Apply "mix" [Star "dvec3" (unsafeCoerce a), Star "dvec3" (unsafeCoerce b), Star "double" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "dvec3" (Apply "mix" [Expr (Tuple "dvec3" (unsafeCoerce a)), Expr (Tuple "dvec3" (unsafeCoerce b)), Expr (Tuple "double" (unsafeCoerce c))]))
 
 instance mixInstance19 :: Mix (Expr Dvec2) (Expr Dvec2) (Expr Dvec2) (Expr Dvec2) where
-  mix a b c = Expr (Apply "mix" [Star "dvec2" (unsafeCoerce a), Star "dvec2" (unsafeCoerce b), Star "dvec2" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "dvec2" (Apply "mix" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "dvec2" (unsafeCoerce b)), Expr (Tuple "dvec2" (unsafeCoerce c))]))
 
 instance mixInstance20 :: Mix (Expr Dvec2) (Expr Dvec2) (Expr Double) (Expr Dvec2) where
-  mix a b c = Expr (Apply "mix" [Star "dvec2" (unsafeCoerce a), Star "dvec2" (unsafeCoerce b), Star "double" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "dvec2" (Apply "mix" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "dvec2" (unsafeCoerce b)), Expr (Tuple "double" (unsafeCoerce c))]))
 
 instance mixInstance21 :: Mix (Expr Double) (Expr Double) (Expr Double) (Expr Double) where
-  mix a b c = Expr (Apply "mix" [Star "double" (unsafeCoerce a), Star "double" (unsafeCoerce b), Star "double" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "double" (Apply "mix" [Expr (Tuple "double" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b)), Expr (Tuple "double" (unsafeCoerce c))]))
 
 instance mixInstance22 :: Mix (Expr Bvec4) (Expr Bvec4) (Expr Bvec4) (Expr Bvec4) where
-  mix a b c = Expr (Apply "mix" [Star "bvec4" (unsafeCoerce a), Star "bvec4" (unsafeCoerce b), Star "bvec4" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "bvec4" (Apply "mix" [Expr (Tuple "bvec4" (unsafeCoerce a)), Expr (Tuple "bvec4" (unsafeCoerce b)), Expr (Tuple "bvec4" (unsafeCoerce c))]))
 
 instance mixInstance23 :: Mix (Expr Bvec3) (Expr Bvec3) (Expr Bvec3) (Expr Bvec3) where
-  mix a b c = Expr (Apply "mix" [Star "bvec3" (unsafeCoerce a), Star "bvec3" (unsafeCoerce b), Star "bvec3" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "bvec3" (Apply "mix" [Expr (Tuple "bvec3" (unsafeCoerce a)), Expr (Tuple "bvec3" (unsafeCoerce b)), Expr (Tuple "bvec3" (unsafeCoerce c))]))
 
 instance mixInstance24 :: Mix (Expr Bvec2) (Expr Bvec2) (Expr Bvec2) (Expr Bvec2) where
-  mix a b c = Expr (Apply "mix" [Star "bvec2" (unsafeCoerce a), Star "bvec2" (unsafeCoerce b), Star "bvec2" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "bvec2" (Apply "mix" [Expr (Tuple "bvec2" (unsafeCoerce a)), Expr (Tuple "bvec2" (unsafeCoerce b)), Expr (Tuple "bvec2" (unsafeCoerce c))]))
 
 instance mixInstance25 :: Mix (Expr Bool) (Expr Bool) (Expr Bool) (Expr Bool) where
-  mix a b c = Expr (Apply "mix" [Star "bool" (unsafeCoerce a), Star "bool" (unsafeCoerce b), Star "bool" (unsafeCoerce c)])
+  mix a b c = Expr (Tuple "bool" (Apply "mix" [Expr (Tuple "bool" (unsafeCoerce a)), Expr (Tuple "bool" (unsafeCoerce b)), Expr (Tuple "bool" (unsafeCoerce c))]))
 
 class Mod a b c | a b -> c where
   mod :: a -> b -> c
 
 instance modInstance0 :: Mod (Expr Vec4) (Expr Float) (Expr Vec4) where
-  mod a b = Expr (Apply "mod" [Star "vec4" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  mod a b = Expr (Tuple "vec4" (Apply "mod" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance modInstance1 :: Mod (Expr Vec3) (Expr Float) (Expr Vec3) where
-  mod a b = Expr (Apply "mod" [Star "vec3" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  mod a b = Expr (Tuple "vec3" (Apply "mod" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance modInstance2 :: Mod (Expr Vec2) (Expr Float) (Expr Vec2) where
-  mod a b = Expr (Apply "mod" [Star "vec2" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  mod a b = Expr (Tuple "vec2" (Apply "mod" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance modInstance3 :: Mod (Expr Float) (Expr Float) (Expr Float) where
-  mod a b = Expr (Apply "mod" [Star "float" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  mod a b = Expr (Tuple "float" (Apply "mod" [Expr (Tuple "float" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance modInstance4 :: Mod (Expr Dvec4) (Expr Double) (Expr Dvec4) where
-  mod a b = Expr (Apply "mod" [Star "dvec4" (unsafeCoerce a), Star "double" (unsafeCoerce b)])
+  mod a b = Expr (Tuple "dvec4" (Apply "mod" [Expr (Tuple "dvec4" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b))]))
 
 instance modInstance5 :: Mod (Expr Dvec3) (Expr Double) (Expr Dvec3) where
-  mod a b = Expr (Apply "mod" [Star "dvec3" (unsafeCoerce a), Star "double" (unsafeCoerce b)])
+  mod a b = Expr (Tuple "dvec3" (Apply "mod" [Expr (Tuple "dvec3" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b))]))
 
 instance modInstance6 :: Mod (Expr Dvec2) (Expr Double) (Expr Dvec2) where
-  mod a b = Expr (Apply "mod" [Star "dvec2" (unsafeCoerce a), Star "double" (unsafeCoerce b)])
+  mod a b = Expr (Tuple "dvec2" (Apply "mod" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b))]))
 
 instance modInstance7 :: Mod (Expr Double) (Expr Double) (Expr Double) where
-  mod a b = Expr (Apply "mod" [Star "double" (unsafeCoerce a), Star "double" (unsafeCoerce b)])
+  mod a b = Expr (Tuple "double" (Apply "mod" [Expr (Tuple "double" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b))]))
 
 class Modf a b c | a b -> c where
   modf :: a -> b -> c
 
 instance modfInstance0 :: Modf (Expr Vec4) (Expr Vec4) (Expr Vec4) where
-  modf a b = Expr (Apply "modf" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  modf a b = Expr (Tuple "vec4" (Apply "modf" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance modfInstance1 :: Modf (Expr Vec3) (Expr Vec3) (Expr Vec3) where
-  modf a b = Expr (Apply "modf" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  modf a b = Expr (Tuple "vec3" (Apply "modf" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance modfInstance2 :: Modf (Expr Vec2) (Expr Vec2) (Expr Vec2) where
-  modf a b = Expr (Apply "modf" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  modf a b = Expr (Tuple "vec2" (Apply "modf" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance modfInstance3 :: Modf (Expr Float) (Expr Float) (Expr Float) where
-  modf a b = Expr (Apply "modf" [Star "float" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  modf a b = Expr (Tuple "float" (Apply "modf" [Expr (Tuple "float" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance modfInstance4 :: Modf (Expr Dvec4) (Expr Dvec4) (Expr Dvec4) where
-  modf a b = Expr (Apply "modf" [Star "dvec4" (unsafeCoerce a), Star "dvec4" (unsafeCoerce b)])
+  modf a b = Expr (Tuple "dvec4" (Apply "modf" [Expr (Tuple "dvec4" (unsafeCoerce a)), Expr (Tuple "dvec4" (unsafeCoerce b))]))
 
 instance modfInstance5 :: Modf (Expr Dvec3) (Expr Dvec3) (Expr Dvec3) where
-  modf a b = Expr (Apply "modf" [Star "dvec3" (unsafeCoerce a), Star "dvec3" (unsafeCoerce b)])
+  modf a b = Expr (Tuple "dvec3" (Apply "modf" [Expr (Tuple "dvec3" (unsafeCoerce a)), Expr (Tuple "dvec3" (unsafeCoerce b))]))
 
 instance modfInstance6 :: Modf (Expr Dvec2) (Expr Dvec2) (Expr Dvec2) where
-  modf a b = Expr (Apply "modf" [Star "dvec2" (unsafeCoerce a), Star "dvec2" (unsafeCoerce b)])
+  modf a b = Expr (Tuple "dvec2" (Apply "modf" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "dvec2" (unsafeCoerce b))]))
 
 instance modfInstance7 :: Modf (Expr Double) (Expr Double) (Expr Double) where
-  modf a b = Expr (Apply "modf" [Star "double" (unsafeCoerce a), Star "double" (unsafeCoerce b)])
+  modf a b = Expr (Tuple "double" (Apply "modf" [Expr (Tuple "double" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b))]))
 
 class Noise1 a b | a -> b where
   noise1 :: a -> b
 
 instance noise1Instance0 :: Noise1 (Expr Vec4) (Expr Float) where
-  noise1 a = Expr (Apply "noise1" [Star "vec4" (unsafeCoerce a)])
+  noise1 a = Expr (Tuple "float" (Apply "noise1" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance noise1Instance1 :: Noise1 (Expr Vec3) (Expr Float) where
-  noise1 a = Expr (Apply "noise1" [Star "vec3" (unsafeCoerce a)])
+  noise1 a = Expr (Tuple "float" (Apply "noise1" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance noise1Instance2 :: Noise1 (Expr Vec2) (Expr Float) where
-  noise1 a = Expr (Apply "noise1" [Star "vec2" (unsafeCoerce a)])
+  noise1 a = Expr (Tuple "float" (Apply "noise1" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance noise1Instance3 :: Noise1 (Expr Float) (Expr Float) where
-  noise1 a = Expr (Apply "noise1" [Star "float" (unsafeCoerce a)])
+  noise1 a = Expr (Tuple "float" (Apply "noise1" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Noise2 a b | a -> b where
   noise2 :: a -> b
 
 instance noise2Instance0 :: Noise2 (Expr Vec4) (Expr Vec2) where
-  noise2 a = Expr (Apply "noise2" [Star "vec4" (unsafeCoerce a)])
+  noise2 a = Expr (Tuple "vec2" (Apply "noise2" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance noise2Instance1 :: Noise2 (Expr Vec3) (Expr Vec2) where
-  noise2 a = Expr (Apply "noise2" [Star "vec3" (unsafeCoerce a)])
+  noise2 a = Expr (Tuple "vec2" (Apply "noise2" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance noise2Instance2 :: Noise2 (Expr Vec2) (Expr Vec2) where
-  noise2 a = Expr (Apply "noise2" [Star "vec2" (unsafeCoerce a)])
+  noise2 a = Expr (Tuple "vec2" (Apply "noise2" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance noise2Instance3 :: Noise2 (Expr Float) (Expr Vec2) where
-  noise2 a = Expr (Apply "noise2" [Star "float" (unsafeCoerce a)])
+  noise2 a = Expr (Tuple "vec2" (Apply "noise2" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Noise3 a b | a -> b where
   noise3 :: a -> b
 
 instance noise3Instance0 :: Noise3 (Expr Vec4) (Expr Vec3) where
-  noise3 a = Expr (Apply "noise3" [Star "vec4" (unsafeCoerce a)])
+  noise3 a = Expr (Tuple "vec3" (Apply "noise3" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance noise3Instance1 :: Noise3 (Expr Vec3) (Expr Vec3) where
-  noise3 a = Expr (Apply "noise3" [Star "vec3" (unsafeCoerce a)])
+  noise3 a = Expr (Tuple "vec3" (Apply "noise3" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance noise3Instance2 :: Noise3 (Expr Vec2) (Expr Vec3) where
-  noise3 a = Expr (Apply "noise3" [Star "vec2" (unsafeCoerce a)])
+  noise3 a = Expr (Tuple "vec3" (Apply "noise3" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance noise3Instance3 :: Noise3 (Expr Float) (Expr Vec3) where
-  noise3 a = Expr (Apply "noise3" [Star "float" (unsafeCoerce a)])
+  noise3 a = Expr (Tuple "vec3" (Apply "noise3" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Noise4 a b | a -> b where
   noise4 :: a -> b
 
 instance noise4Instance0 :: Noise4 (Expr Vec4) (Expr Vec4) where
-  noise4 a = Expr (Apply "noise4" [Star "vec4" (unsafeCoerce a)])
+  noise4 a = Expr (Tuple "vec4" (Apply "noise4" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance noise4Instance1 :: Noise4 (Expr Vec3) (Expr Vec4) where
-  noise4 a = Expr (Apply "noise4" [Star "vec3" (unsafeCoerce a)])
+  noise4 a = Expr (Tuple "vec4" (Apply "noise4" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance noise4Instance2 :: Noise4 (Expr Vec2) (Expr Vec4) where
-  noise4 a = Expr (Apply "noise4" [Star "vec2" (unsafeCoerce a)])
+  noise4 a = Expr (Tuple "vec4" (Apply "noise4" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance noise4Instance3 :: Noise4 (Expr Float) (Expr Vec4) where
-  noise4 a = Expr (Apply "noise4" [Star "float" (unsafeCoerce a)])
+  noise4 a = Expr (Tuple "vec4" (Apply "noise4" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Normalize a b | a -> b where
   normalize :: a -> b
 
 instance normalizeInstance0 :: Normalize (Expr Vec4) (Expr Vec4) where
-  normalize a = Expr (Apply "normalize" [Star "vec4" (unsafeCoerce a)])
+  normalize a = Expr (Tuple "vec4" (Apply "normalize" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance normalizeInstance1 :: Normalize (Expr Vec3) (Expr Vec3) where
-  normalize a = Expr (Apply "normalize" [Star "vec3" (unsafeCoerce a)])
+  normalize a = Expr (Tuple "vec3" (Apply "normalize" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance normalizeInstance2 :: Normalize (Expr Vec2) (Expr Vec2) where
-  normalize a = Expr (Apply "normalize" [Star "vec2" (unsafeCoerce a)])
+  normalize a = Expr (Tuple "vec2" (Apply "normalize" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance normalizeInstance3 :: Normalize (Expr Float) (Expr Float) where
-  normalize a = Expr (Apply "normalize" [Star "float" (unsafeCoerce a)])
+  normalize a = Expr (Tuple "float" (Apply "normalize" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 instance normalizeInstance4 :: Normalize (Expr Dvec2) (Expr Dvec2) where
-  normalize a = Expr (Apply "normalize" [Star "dvec2" (unsafeCoerce a)])
+  normalize a = Expr (Tuple "dvec2" (Apply "normalize" [Expr (Tuple "dvec2" (unsafeCoerce a))]))
 
 instance normalizeInstance5 :: Normalize (Expr Double) (Expr Double) where
-  normalize a = Expr (Apply "normalize" [Star "double" (unsafeCoerce a)])
+  normalize a = Expr (Tuple "double" (Apply "normalize" [Expr (Tuple "double" (unsafeCoerce a))]))
 
 class Not a b | a -> b where
   not :: a -> b
 
 instance notInstance0 :: Not (Expr Bvec4) (Expr Bvec4) where
-  not a = Expr (Apply "not" [Star "bvec4" (unsafeCoerce a)])
+  not a = Expr (Tuple "bvec4" (Apply "not" [Expr (Tuple "bvec4" (unsafeCoerce a))]))
 
 instance notInstance1 :: Not (Expr Bvec3) (Expr Bvec3) where
-  not a = Expr (Apply "not" [Star "bvec3" (unsafeCoerce a)])
+  not a = Expr (Tuple "bvec3" (Apply "not" [Expr (Tuple "bvec3" (unsafeCoerce a))]))
 
 instance notInstance2 :: Not (Expr Bvec2) (Expr Bvec2) where
-  not a = Expr (Apply "not" [Star "bvec2" (unsafeCoerce a)])
+  not a = Expr (Tuple "bvec2" (Apply "not" [Expr (Tuple "bvec2" (unsafeCoerce a))]))
 
 class NotEqual a b c | a b -> c where
   notEqual :: a -> b -> c
 
 instance notEqualInstance0 :: NotEqual (Expr Vec4) (Expr Vec4) (Expr Bvec4) where
-  notEqual a b = Expr (Apply "notEqual" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  notEqual a b = Expr (Tuple "bvec4" (Apply "notEqual" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance notEqualInstance1 :: NotEqual (Expr Uvec4) (Expr Uvec4) (Expr Bvec4) where
-  notEqual a b = Expr (Apply "notEqual" [Star "uvec4" (unsafeCoerce a), Star "uvec4" (unsafeCoerce b)])
+  notEqual a b = Expr (Tuple "bvec4" (Apply "notEqual" [Expr (Tuple "uvec4" (unsafeCoerce a)), Expr (Tuple "uvec4" (unsafeCoerce b))]))
 
 instance notEqualInstance2 :: NotEqual (Expr Ivec4) (Expr Ivec4) (Expr Bvec4) where
-  notEqual a b = Expr (Apply "notEqual" [Star "ivec4" (unsafeCoerce a), Star "ivec4" (unsafeCoerce b)])
+  notEqual a b = Expr (Tuple "bvec4" (Apply "notEqual" [Expr (Tuple "ivec4" (unsafeCoerce a)), Expr (Tuple "ivec4" (unsafeCoerce b))]))
 
 instance notEqualInstance3 :: NotEqual (Expr Vec3) (Expr Vec3) (Expr Bvec3) where
-  notEqual a b = Expr (Apply "notEqual" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  notEqual a b = Expr (Tuple "bvec3" (Apply "notEqual" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance notEqualInstance4 :: NotEqual (Expr Uvec3) (Expr Uvec3) (Expr Bvec3) where
-  notEqual a b = Expr (Apply "notEqual" [Star "uvec3" (unsafeCoerce a), Star "uvec3" (unsafeCoerce b)])
+  notEqual a b = Expr (Tuple "bvec3" (Apply "notEqual" [Expr (Tuple "uvec3" (unsafeCoerce a)), Expr (Tuple "uvec3" (unsafeCoerce b))]))
 
 instance notEqualInstance5 :: NotEqual (Expr Ivec3) (Expr Ivec3) (Expr Bvec3) where
-  notEqual a b = Expr (Apply "notEqual" [Star "ivec3" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b)])
+  notEqual a b = Expr (Tuple "bvec3" (Apply "notEqual" [Expr (Tuple "ivec3" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b))]))
 
 instance notEqualInstance6 :: NotEqual (Expr Vec2) (Expr Vec2) (Expr Bvec2) where
-  notEqual a b = Expr (Apply "notEqual" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  notEqual a b = Expr (Tuple "bvec2" (Apply "notEqual" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance notEqualInstance7 :: NotEqual (Expr Uvec2) (Expr Uvec2) (Expr Bvec2) where
-  notEqual a b = Expr (Apply "notEqual" [Star "uvec2" (unsafeCoerce a), Star "uvec2" (unsafeCoerce b)])
+  notEqual a b = Expr (Tuple "bvec2" (Apply "notEqual" [Expr (Tuple "uvec2" (unsafeCoerce a)), Expr (Tuple "uvec2" (unsafeCoerce b))]))
 
 instance notEqualInstance8 :: NotEqual (Expr Ivec2) (Expr Ivec2) (Expr Bvec2) where
-  notEqual a b = Expr (Apply "notEqual" [Star "ivec2" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  notEqual a b = Expr (Tuple "bvec2" (Apply "notEqual" [Expr (Tuple "ivec2" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 class OuterProduct a b c | a b -> c where
   outerProduct :: a -> b -> c
 
 instance outerProductInstance0 :: OuterProduct (Expr Vec3) (Expr Vec4) (Expr Mat4x3) where
-  outerProduct a b = Expr (Apply "outerProduct" [Star "vec3" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  outerProduct a b = Expr (Tuple "mat4x3" (Apply "outerProduct" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance outerProductInstance1 :: OuterProduct (Expr Vec2) (Expr Vec4) (Expr Mat4x2) where
-  outerProduct a b = Expr (Apply "outerProduct" [Star "vec2" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  outerProduct a b = Expr (Tuple "mat4x2" (Apply "outerProduct" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance outerProductInstance2 :: OuterProduct (Expr Vec4) (Expr Vec4) (Expr Mat4) where
-  outerProduct a b = Expr (Apply "outerProduct" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  outerProduct a b = Expr (Tuple "mat4" (Apply "outerProduct" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance outerProductInstance3 :: OuterProduct (Expr Vec4) (Expr Vec3) (Expr Mat3x4) where
-  outerProduct a b = Expr (Apply "outerProduct" [Star "vec4" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  outerProduct a b = Expr (Tuple "mat3x4" (Apply "outerProduct" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance outerProductInstance4 :: OuterProduct (Expr Vec2) (Expr Vec3) (Expr Mat3x2) where
-  outerProduct a b = Expr (Apply "outerProduct" [Star "vec2" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  outerProduct a b = Expr (Tuple "mat3x2" (Apply "outerProduct" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance outerProductInstance5 :: OuterProduct (Expr Vec3) (Expr Vec3) (Expr Mat3) where
-  outerProduct a b = Expr (Apply "outerProduct" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  outerProduct a b = Expr (Tuple "mat3" (Apply "outerProduct" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance outerProductInstance6 :: OuterProduct (Expr Vec4) (Expr Vec2) (Expr Mat2x4) where
-  outerProduct a b = Expr (Apply "outerProduct" [Star "vec4" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  outerProduct a b = Expr (Tuple "mat2x4" (Apply "outerProduct" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance outerProductInstance7 :: OuterProduct (Expr Vec3) (Expr Vec2) (Expr Mat2x3) where
-  outerProduct a b = Expr (Apply "outerProduct" [Star "vec3" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  outerProduct a b = Expr (Tuple "mat2x3" (Apply "outerProduct" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance outerProductInstance8 :: OuterProduct (Expr Vec2) (Expr Vec2) (Expr Mat2) where
-  outerProduct a b = Expr (Apply "outerProduct" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  outerProduct a b = Expr (Tuple "mat2" (Apply "outerProduct" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance outerProductInstance9 :: OuterProduct (Expr Dvec3) (Expr Dvec4) (Expr Dmat4x3) where
-  outerProduct a b = Expr (Apply "outerProduct" [Star "dvec3" (unsafeCoerce a), Star "dvec4" (unsafeCoerce b)])
+  outerProduct a b = Expr (Tuple "dmat4x3" (Apply "outerProduct" [Expr (Tuple "dvec3" (unsafeCoerce a)), Expr (Tuple "dvec4" (unsafeCoerce b))]))
 
 instance outerProductInstance10 :: OuterProduct (Expr Dvec2) (Expr Dvec4) (Expr Dmat4x2) where
-  outerProduct a b = Expr (Apply "outerProduct" [Star "dvec2" (unsafeCoerce a), Star "dvec4" (unsafeCoerce b)])
+  outerProduct a b = Expr (Tuple "dmat4x2" (Apply "outerProduct" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "dvec4" (unsafeCoerce b))]))
 
 instance outerProductInstance11 :: OuterProduct (Expr Dvec4) (Expr Dvec4) (Expr Dmat4) where
-  outerProduct a b = Expr (Apply "outerProduct" [Star "dvec4" (unsafeCoerce a), Star "dvec4" (unsafeCoerce b)])
+  outerProduct a b = Expr (Tuple "dmat4" (Apply "outerProduct" [Expr (Tuple "dvec4" (unsafeCoerce a)), Expr (Tuple "dvec4" (unsafeCoerce b))]))
 
 instance outerProductInstance12 :: OuterProduct (Expr Dvec4) (Expr Dvec3) (Expr Dmat3x4) where
-  outerProduct a b = Expr (Apply "outerProduct" [Star "dvec4" (unsafeCoerce a), Star "dvec3" (unsafeCoerce b)])
+  outerProduct a b = Expr (Tuple "dmat3x4" (Apply "outerProduct" [Expr (Tuple "dvec4" (unsafeCoerce a)), Expr (Tuple "dvec3" (unsafeCoerce b))]))
 
 instance outerProductInstance13 :: OuterProduct (Expr Dvec2) (Expr Dvec3) (Expr Dmat3x2) where
-  outerProduct a b = Expr (Apply "outerProduct" [Star "dvec2" (unsafeCoerce a), Star "dvec3" (unsafeCoerce b)])
+  outerProduct a b = Expr (Tuple "dmat3x2" (Apply "outerProduct" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "dvec3" (unsafeCoerce b))]))
 
 instance outerProductInstance14 :: OuterProduct (Expr Dvec3) (Expr Dvec3) (Expr Dmat3) where
-  outerProduct a b = Expr (Apply "outerProduct" [Star "dvec3" (unsafeCoerce a), Star "dvec3" (unsafeCoerce b)])
+  outerProduct a b = Expr (Tuple "dmat3" (Apply "outerProduct" [Expr (Tuple "dvec3" (unsafeCoerce a)), Expr (Tuple "dvec3" (unsafeCoerce b))]))
 
 instance outerProductInstance15 :: OuterProduct (Expr Dvec4) (Expr Dvec2) (Expr Dmat2x4) where
-  outerProduct a b = Expr (Apply "outerProduct" [Star "dvec4" (unsafeCoerce a), Star "dvec2" (unsafeCoerce b)])
+  outerProduct a b = Expr (Tuple "dmat2x4" (Apply "outerProduct" [Expr (Tuple "dvec4" (unsafeCoerce a)), Expr (Tuple "dvec2" (unsafeCoerce b))]))
 
 instance outerProductInstance16 :: OuterProduct (Expr Dvec3) (Expr Dvec2) (Expr Dmat2x3) where
-  outerProduct a b = Expr (Apply "outerProduct" [Star "dvec3" (unsafeCoerce a), Star "dvec2" (unsafeCoerce b)])
+  outerProduct a b = Expr (Tuple "dmat2x3" (Apply "outerProduct" [Expr (Tuple "dvec3" (unsafeCoerce a)), Expr (Tuple "dvec2" (unsafeCoerce b))]))
 
 instance outerProductInstance17 :: OuterProduct (Expr Dvec2) (Expr Dvec2) (Expr Dmat2) where
-  outerProduct a b = Expr (Apply "outerProduct" [Star "dvec2" (unsafeCoerce a), Star "dvec2" (unsafeCoerce b)])
+  outerProduct a b = Expr (Tuple "dmat2" (Apply "outerProduct" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "dvec2" (unsafeCoerce b))]))
 
 class PackDouble2x32 a b | a -> b where
   packDouble2x32 :: a -> b
 
 instance packDouble2x32Instance0 :: PackDouble2x32 (Expr Uvec2) (Expr Double) where
-  packDouble2x32 a = Expr (Apply "packDouble2x32" [Star "uvec2" (unsafeCoerce a)])
+  packDouble2x32 a = Expr (Tuple "double" (Apply "packDouble2x32" [Expr (Tuple "uvec2" (unsafeCoerce a))]))
 
 class PackHalf2x16 a b | a -> b where
   packHalf2x16 :: a -> b
 
 instance packHalf2x16Instance0 :: PackHalf2x16 (Expr Vec2) (Expr Uint) where
-  packHalf2x16 a = Expr (Apply "packHalf2x16" [Star "vec2" (unsafeCoerce a)])
+  packHalf2x16 a = Expr (Tuple "uint" (Apply "packHalf2x16" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 class PackSnorm2x16 a b | a -> b where
   packSnorm2x16 :: a -> b
 
 instance packSnorm2x16Instance0 :: PackSnorm2x16 (Expr Vec2) (Expr Uint) where
-  packSnorm2x16 a = Expr (Apply "packSnorm2x16" [Star "vec2" (unsafeCoerce a)])
+  packSnorm2x16 a = Expr (Tuple "uint" (Apply "packSnorm2x16" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 class PackSnorm4x8 a b | a -> b where
   packSnorm4x8 :: a -> b
 
 instance packSnorm4x8Instance0 :: PackSnorm4x8 (Expr Vec4) (Expr Uint) where
-  packSnorm4x8 a = Expr (Apply "packSnorm4x8" [Star "vec4" (unsafeCoerce a)])
+  packSnorm4x8 a = Expr (Tuple "uint" (Apply "packSnorm4x8" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 class PackUnorm2x16 a b | a -> b where
   packUnorm2x16 :: a -> b
 
 instance packUnorm2x16Instance0 :: PackUnorm2x16 (Expr Vec2) (Expr Uint) where
-  packUnorm2x16 a = Expr (Apply "packUnorm2x16" [Star "vec2" (unsafeCoerce a)])
+  packUnorm2x16 a = Expr (Tuple "uint" (Apply "packUnorm2x16" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 class PackUnorm4x8 a b | a -> b where
   packUnorm4x8 :: a -> b
 
 instance packUnorm4x8Instance0 :: PackUnorm4x8 (Expr Vec4) (Expr Uint) where
-  packUnorm4x8 a = Expr (Apply "packUnorm4x8" [Star "vec4" (unsafeCoerce a)])
+  packUnorm4x8 a = Expr (Tuple "uint" (Apply "packUnorm4x8" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 class Pow a b c | a b -> c where
   pow :: a -> b -> c
 
 instance powInstance0 :: Pow (Expr Vec4) (Expr Vec4) (Expr Vec4) where
-  pow a b = Expr (Apply "pow" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  pow a b = Expr (Tuple "vec4" (Apply "pow" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance powInstance1 :: Pow (Expr Vec3) (Expr Vec3) (Expr Vec3) where
-  pow a b = Expr (Apply "pow" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  pow a b = Expr (Tuple "vec3" (Apply "pow" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance powInstance2 :: Pow (Expr Vec2) (Expr Vec2) (Expr Vec2) where
-  pow a b = Expr (Apply "pow" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  pow a b = Expr (Tuple "vec2" (Apply "pow" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance powInstance3 :: Pow (Expr Float) (Expr Float) (Expr Float) where
-  pow a b = Expr (Apply "pow" [Star "float" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  pow a b = Expr (Tuple "float" (Apply "pow" [Expr (Tuple "float" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 class Radians a b | a -> b where
   radians :: a -> b
 
 instance radiansInstance0 :: Radians (Expr Vec4) (Expr Vec4) where
-  radians a = Expr (Apply "radians" [Star "vec4" (unsafeCoerce a)])
+  radians a = Expr (Tuple "vec4" (Apply "radians" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance radiansInstance1 :: Radians (Expr Vec3) (Expr Vec3) where
-  radians a = Expr (Apply "radians" [Star "vec3" (unsafeCoerce a)])
+  radians a = Expr (Tuple "vec3" (Apply "radians" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance radiansInstance2 :: Radians (Expr Vec2) (Expr Vec2) where
-  radians a = Expr (Apply "radians" [Star "vec2" (unsafeCoerce a)])
+  radians a = Expr (Tuple "vec2" (Apply "radians" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance radiansInstance3 :: Radians (Expr Float) (Expr Float) where
-  radians a = Expr (Apply "radians" [Star "float" (unsafeCoerce a)])
+  radians a = Expr (Tuple "float" (Apply "radians" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Reflect a b c | a b -> c where
   reflect :: a -> b -> c
 
 instance reflectInstance0 :: Reflect (Expr Vec4) (Expr Vec4) (Expr Vec4) where
-  reflect a b = Expr (Apply "reflect" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  reflect a b = Expr (Tuple "vec4" (Apply "reflect" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance reflectInstance1 :: Reflect (Expr Vec3) (Expr Vec3) (Expr Vec3) where
-  reflect a b = Expr (Apply "reflect" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  reflect a b = Expr (Tuple "vec3" (Apply "reflect" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance reflectInstance2 :: Reflect (Expr Vec2) (Expr Vec2) (Expr Vec2) where
-  reflect a b = Expr (Apply "reflect" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  reflect a b = Expr (Tuple "vec2" (Apply "reflect" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance reflectInstance3 :: Reflect (Expr Float) (Expr Float) (Expr Float) where
-  reflect a b = Expr (Apply "reflect" [Star "float" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  reflect a b = Expr (Tuple "float" (Apply "reflect" [Expr (Tuple "float" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance reflectInstance4 :: Reflect (Expr Dvec2) (Expr Dvec2) (Expr Dvec2) where
-  reflect a b = Expr (Apply "reflect" [Star "dvec2" (unsafeCoerce a), Star "dvec2" (unsafeCoerce b)])
+  reflect a b = Expr (Tuple "dvec2" (Apply "reflect" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "dvec2" (unsafeCoerce b))]))
 
 instance reflectInstance5 :: Reflect (Expr Double) (Expr Double) (Expr Double) where
-  reflect a b = Expr (Apply "reflect" [Star "double" (unsafeCoerce a), Star "double" (unsafeCoerce b)])
+  reflect a b = Expr (Tuple "double" (Apply "reflect" [Expr (Tuple "double" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b))]))
 
 class Refract a b c d | a b c -> d where
   refract :: a -> b -> c -> d
 
 instance refractInstance0 :: Refract (Expr Vec4) (Expr Vec4) (Expr Float) (Expr Vec4) where
-  refract a b c = Expr (Apply "refract" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  refract a b c = Expr (Tuple "vec4" (Apply "refract" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance refractInstance1 :: Refract (Expr Vec3) (Expr Vec3) (Expr Float) (Expr Vec3) where
-  refract a b c = Expr (Apply "refract" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  refract a b c = Expr (Tuple "vec3" (Apply "refract" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance refractInstance2 :: Refract (Expr Vec2) (Expr Vec2) (Expr Float) (Expr Vec2) where
-  refract a b c = Expr (Apply "refract" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  refract a b c = Expr (Tuple "vec2" (Apply "refract" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance refractInstance3 :: Refract (Expr Float) (Expr Float) (Expr Float) (Expr Float) where
-  refract a b c = Expr (Apply "refract" [Star "float" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  refract a b c = Expr (Tuple "float" (Apply "refract" [Expr (Tuple "float" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance refractInstance4 :: Refract (Expr Dvec2) (Expr Dvec2) (Expr Float) (Expr Dvec2) where
-  refract a b c = Expr (Apply "refract" [Star "dvec2" (unsafeCoerce a), Star "dvec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  refract a b c = Expr (Tuple "dvec2" (Apply "refract" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "dvec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance refractInstance5 :: Refract (Expr Double) (Expr Double) (Expr Float) (Expr Double) where
-  refract a b c = Expr (Apply "refract" [Star "double" (unsafeCoerce a), Star "double" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  refract a b c = Expr (Tuple "double" (Apply "refract" [Expr (Tuple "double" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 class Round a b | a -> b where
   round :: a -> b
 
 instance roundInstance0 :: Round (Expr Vec4) (Expr Vec4) where
-  round a = Expr (Apply "round" [Star "vec4" (unsafeCoerce a)])
+  round a = Expr (Tuple "vec4" (Apply "round" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance roundInstance1 :: Round (Expr Vec3) (Expr Vec3) where
-  round a = Expr (Apply "round" [Star "vec3" (unsafeCoerce a)])
+  round a = Expr (Tuple "vec3" (Apply "round" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance roundInstance2 :: Round (Expr Vec2) (Expr Vec2) where
-  round a = Expr (Apply "round" [Star "vec2" (unsafeCoerce a)])
+  round a = Expr (Tuple "vec2" (Apply "round" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance roundInstance3 :: Round (Expr Float) (Expr Float) where
-  round a = Expr (Apply "round" [Star "float" (unsafeCoerce a)])
+  round a = Expr (Tuple "float" (Apply "round" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 instance roundInstance4 :: Round (Expr Dvec2) (Expr Dvec2) where
-  round a = Expr (Apply "round" [Star "dvec2" (unsafeCoerce a)])
+  round a = Expr (Tuple "dvec2" (Apply "round" [Expr (Tuple "dvec2" (unsafeCoerce a))]))
 
 instance roundInstance5 :: Round (Expr Double) (Expr Double) where
-  round a = Expr (Apply "round" [Star "double" (unsafeCoerce a)])
+  round a = Expr (Tuple "double" (Apply "round" [Expr (Tuple "double" (unsafeCoerce a))]))
 
 class RoundEven a b | a -> b where
   roundEven :: a -> b
 
 instance roundEvenInstance0 :: RoundEven (Expr Vec4) (Expr Vec4) where
-  roundEven a = Expr (Apply "roundEven" [Star "vec4" (unsafeCoerce a)])
+  roundEven a = Expr (Tuple "vec4" (Apply "roundEven" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance roundEvenInstance1 :: RoundEven (Expr Vec3) (Expr Vec3) where
-  roundEven a = Expr (Apply "roundEven" [Star "vec3" (unsafeCoerce a)])
+  roundEven a = Expr (Tuple "vec3" (Apply "roundEven" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance roundEvenInstance2 :: RoundEven (Expr Vec2) (Expr Vec2) where
-  roundEven a = Expr (Apply "roundEven" [Star "vec2" (unsafeCoerce a)])
+  roundEven a = Expr (Tuple "vec2" (Apply "roundEven" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance roundEvenInstance3 :: RoundEven (Expr Float) (Expr Float) where
-  roundEven a = Expr (Apply "roundEven" [Star "float" (unsafeCoerce a)])
+  roundEven a = Expr (Tuple "float" (Apply "roundEven" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 instance roundEvenInstance4 :: RoundEven (Expr Dvec2) (Expr Dvec2) where
-  roundEven a = Expr (Apply "roundEven" [Star "dvec2" (unsafeCoerce a)])
+  roundEven a = Expr (Tuple "dvec2" (Apply "roundEven" [Expr (Tuple "dvec2" (unsafeCoerce a))]))
 
 instance roundEvenInstance5 :: RoundEven (Expr Double) (Expr Double) where
-  roundEven a = Expr (Apply "roundEven" [Star "double" (unsafeCoerce a)])
+  roundEven a = Expr (Tuple "double" (Apply "roundEven" [Expr (Tuple "double" (unsafeCoerce a))]))
 
 class Sign a b | a -> b where
   sign :: a -> b
 
 instance signInstance0 :: Sign (Expr Vec4) (Expr Vec4) where
-  sign a = Expr (Apply "sign" [Star "vec4" (unsafeCoerce a)])
+  sign a = Expr (Tuple "vec4" (Apply "sign" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance signInstance1 :: Sign (Expr Vec3) (Expr Vec3) where
-  sign a = Expr (Apply "sign" [Star "vec3" (unsafeCoerce a)])
+  sign a = Expr (Tuple "vec3" (Apply "sign" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance signInstance2 :: Sign (Expr Vec2) (Expr Vec2) where
-  sign a = Expr (Apply "sign" [Star "vec2" (unsafeCoerce a)])
+  sign a = Expr (Tuple "vec2" (Apply "sign" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance signInstance3 :: Sign (Expr Ivec4) (Expr Ivec4) where
-  sign a = Expr (Apply "sign" [Star "ivec4" (unsafeCoerce a)])
+  sign a = Expr (Tuple "ivec4" (Apply "sign" [Expr (Tuple "ivec4" (unsafeCoerce a))]))
 
 instance signInstance4 :: Sign (Expr Ivec3) (Expr Ivec3) where
-  sign a = Expr (Apply "sign" [Star "ivec3" (unsafeCoerce a)])
+  sign a = Expr (Tuple "ivec3" (Apply "sign" [Expr (Tuple "ivec3" (unsafeCoerce a))]))
 
 instance signInstance5 :: Sign (Expr Ivec2) (Expr Ivec2) where
-  sign a = Expr (Apply "sign" [Star "ivec2" (unsafeCoerce a)])
+  sign a = Expr (Tuple "ivec2" (Apply "sign" [Expr (Tuple "ivec2" (unsafeCoerce a))]))
 
 instance signInstance6 :: Sign (Expr Int) (Expr Int) where
-  sign a = Expr (Apply "sign" [Star "int" (unsafeCoerce a)])
+  sign a = Expr (Tuple "int" (Apply "sign" [Expr (Tuple "int" (unsafeCoerce a))]))
 
 instance signInstance7 :: Sign (Expr Float) (Expr Float) where
-  sign a = Expr (Apply "sign" [Star "float" (unsafeCoerce a)])
+  sign a = Expr (Tuple "float" (Apply "sign" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 instance signInstance8 :: Sign (Expr Dvec2) (Expr Dvec2) where
-  sign a = Expr (Apply "sign" [Star "dvec2" (unsafeCoerce a)])
+  sign a = Expr (Tuple "dvec2" (Apply "sign" [Expr (Tuple "dvec2" (unsafeCoerce a))]))
 
 instance signInstance9 :: Sign (Expr Double) (Expr Double) where
-  sign a = Expr (Apply "sign" [Star "double" (unsafeCoerce a)])
+  sign a = Expr (Tuple "double" (Apply "sign" [Expr (Tuple "double" (unsafeCoerce a))]))
 
 class Sin a b | a -> b where
   sin :: a -> b
 
 instance sinInstance0 :: Sin (Expr Vec4) (Expr Vec4) where
-  sin a = Expr (Apply "sin" [Star "vec4" (unsafeCoerce a)])
+  sin a = Expr (Tuple "vec4" (Apply "sin" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance sinInstance1 :: Sin (Expr Vec3) (Expr Vec3) where
-  sin a = Expr (Apply "sin" [Star "vec3" (unsafeCoerce a)])
+  sin a = Expr (Tuple "vec3" (Apply "sin" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance sinInstance2 :: Sin (Expr Vec2) (Expr Vec2) where
-  sin a = Expr (Apply "sin" [Star "vec2" (unsafeCoerce a)])
+  sin a = Expr (Tuple "vec2" (Apply "sin" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance sinInstance3 :: Sin (Expr Float) (Expr Float) where
-  sin a = Expr (Apply "sin" [Star "float" (unsafeCoerce a)])
+  sin a = Expr (Tuple "float" (Apply "sin" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Sinh a b | a -> b where
   sinh :: a -> b
 
 instance sinhInstance0 :: Sinh (Expr Vec4) (Expr Vec4) where
-  sinh a = Expr (Apply "sinh" [Star "vec4" (unsafeCoerce a)])
+  sinh a = Expr (Tuple "vec4" (Apply "sinh" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance sinhInstance1 :: Sinh (Expr Vec3) (Expr Vec3) where
-  sinh a = Expr (Apply "sinh" [Star "vec3" (unsafeCoerce a)])
+  sinh a = Expr (Tuple "vec3" (Apply "sinh" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance sinhInstance2 :: Sinh (Expr Vec2) (Expr Vec2) where
-  sinh a = Expr (Apply "sinh" [Star "vec2" (unsafeCoerce a)])
+  sinh a = Expr (Tuple "vec2" (Apply "sinh" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance sinhInstance3 :: Sinh (Expr Float) (Expr Float) where
-  sinh a = Expr (Apply "sinh" [Star "float" (unsafeCoerce a)])
+  sinh a = Expr (Tuple "float" (Apply "sinh" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Smoothstep a b c d | a b c -> d where
   smoothstep :: a -> b -> c -> d
 
 instance smoothstepInstance0 :: Smoothstep (Expr Vec4) (Expr Vec4) (Expr Vec4) (Expr Vec4) where
-  smoothstep a b c = Expr (Apply "smoothstep" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec4" (unsafeCoerce c)])
+  smoothstep a b c = Expr (Tuple "vec4" (Apply "smoothstep" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec4" (unsafeCoerce c))]))
 
 instance smoothstepInstance1 :: Smoothstep (Expr Vec3) (Expr Vec3) (Expr Vec3) (Expr Vec3) where
-  smoothstep a b c = Expr (Apply "smoothstep" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec3" (unsafeCoerce c)])
+  smoothstep a b c = Expr (Tuple "vec3" (Apply "smoothstep" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c))]))
 
 instance smoothstepInstance2 :: Smoothstep (Expr Vec2) (Expr Vec2) (Expr Vec2) (Expr Vec2) where
-  smoothstep a b c = Expr (Apply "smoothstep" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "vec2" (unsafeCoerce c)])
+  smoothstep a b c = Expr (Tuple "vec2" (Apply "smoothstep" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c))]))
 
 instance smoothstepInstance3 :: Smoothstep (Expr Float) (Expr Float) (Expr Float) (Expr Float) where
-  smoothstep a b c = Expr (Apply "smoothstep" [Star "float" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  smoothstep a b c = Expr (Tuple "float" (Apply "smoothstep" [Expr (Tuple "float" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance smoothstepInstance4 :: Smoothstep (Expr Dvec2) (Expr Dvec2) (Expr Dvec2) (Expr Dvec2) where
-  smoothstep a b c = Expr (Apply "smoothstep" [Star "dvec2" (unsafeCoerce a), Star "dvec2" (unsafeCoerce b), Star "dvec2" (unsafeCoerce c)])
+  smoothstep a b c = Expr (Tuple "dvec2" (Apply "smoothstep" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "dvec2" (unsafeCoerce b)), Expr (Tuple "dvec2" (unsafeCoerce c))]))
 
 instance smoothstepInstance5 :: Smoothstep (Expr Double) (Expr Double) (Expr Double) (Expr Double) where
-  smoothstep a b c = Expr (Apply "smoothstep" [Star "double" (unsafeCoerce a), Star "double" (unsafeCoerce b), Star "double" (unsafeCoerce c)])
+  smoothstep a b c = Expr (Tuple "double" (Apply "smoothstep" [Expr (Tuple "double" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b)), Expr (Tuple "double" (unsafeCoerce c))]))
 
 class Sqrt a b | a -> b where
   sqrt :: a -> b
 
 instance sqrtInstance0 :: Sqrt (Expr Vec4) (Expr Vec4) where
-  sqrt a = Expr (Apply "sqrt" [Star "vec4" (unsafeCoerce a)])
+  sqrt a = Expr (Tuple "vec4" (Apply "sqrt" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance sqrtInstance1 :: Sqrt (Expr Vec3) (Expr Vec3) where
-  sqrt a = Expr (Apply "sqrt" [Star "vec3" (unsafeCoerce a)])
+  sqrt a = Expr (Tuple "vec3" (Apply "sqrt" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance sqrtInstance2 :: Sqrt (Expr Vec2) (Expr Vec2) where
-  sqrt a = Expr (Apply "sqrt" [Star "vec2" (unsafeCoerce a)])
+  sqrt a = Expr (Tuple "vec2" (Apply "sqrt" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance sqrtInstance3 :: Sqrt (Expr Float) (Expr Float) where
-  sqrt a = Expr (Apply "sqrt" [Star "float" (unsafeCoerce a)])
+  sqrt a = Expr (Tuple "float" (Apply "sqrt" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 instance sqrtInstance4 :: Sqrt (Expr Dvec2) (Expr Dvec2) where
-  sqrt a = Expr (Apply "sqrt" [Star "dvec2" (unsafeCoerce a)])
+  sqrt a = Expr (Tuple "dvec2" (Apply "sqrt" [Expr (Tuple "dvec2" (unsafeCoerce a))]))
 
 instance sqrtInstance5 :: Sqrt (Expr Double) (Expr Double) where
-  sqrt a = Expr (Apply "sqrt" [Star "double" (unsafeCoerce a)])
+  sqrt a = Expr (Tuple "double" (Apply "sqrt" [Expr (Tuple "double" (unsafeCoerce a))]))
 
 class Step a b c | a b -> c where
   step :: a -> b -> c
 
 instance stepInstance0 :: Step (Expr Vec4) (Expr Vec4) (Expr Vec4) where
-  step a b = Expr (Apply "step" [Star "vec4" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  step a b = Expr (Tuple "vec4" (Apply "step" [Expr (Tuple "vec4" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance stepInstance1 :: Step (Expr Vec3) (Expr Vec3) (Expr Vec3) where
-  step a b = Expr (Apply "step" [Star "vec3" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  step a b = Expr (Tuple "vec3" (Apply "step" [Expr (Tuple "vec3" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance stepInstance2 :: Step (Expr Vec2) (Expr Vec2) (Expr Vec2) where
-  step a b = Expr (Apply "step" [Star "vec2" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  step a b = Expr (Tuple "vec2" (Apply "step" [Expr (Tuple "vec2" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance stepInstance3 :: Step (Expr Float) (Expr Float) (Expr Float) where
-  step a b = Expr (Apply "step" [Star "float" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  step a b = Expr (Tuple "float" (Apply "step" [Expr (Tuple "float" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance stepInstance4 :: Step (Expr Dvec2) (Expr Dvec2) (Expr Dvec2) where
-  step a b = Expr (Apply "step" [Star "dvec2" (unsafeCoerce a), Star "dvec2" (unsafeCoerce b)])
+  step a b = Expr (Tuple "dvec2" (Apply "step" [Expr (Tuple "dvec2" (unsafeCoerce a)), Expr (Tuple "dvec2" (unsafeCoerce b))]))
 
 instance stepInstance5 :: Step (Expr Double) (Expr Double) (Expr Double) where
-  step a b = Expr (Apply "step" [Star "double" (unsafeCoerce a), Star "double" (unsafeCoerce b)])
+  step a b = Expr (Tuple "double" (Apply "step" [Expr (Tuple "double" (unsafeCoerce a)), Expr (Tuple "double" (unsafeCoerce b))]))
 
 class Tan a b | a -> b where
   tan :: a -> b
 
 instance tanInstance0 :: Tan (Expr Vec4) (Expr Vec4) where
-  tan a = Expr (Apply "tan" [Star "vec4" (unsafeCoerce a)])
+  tan a = Expr (Tuple "vec4" (Apply "tan" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance tanInstance1 :: Tan (Expr Vec3) (Expr Vec3) where
-  tan a = Expr (Apply "tan" [Star "vec3" (unsafeCoerce a)])
+  tan a = Expr (Tuple "vec3" (Apply "tan" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance tanInstance2 :: Tan (Expr Vec2) (Expr Vec2) where
-  tan a = Expr (Apply "tan" [Star "vec2" (unsafeCoerce a)])
+  tan a = Expr (Tuple "vec2" (Apply "tan" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance tanInstance3 :: Tan (Expr Float) (Expr Float) where
-  tan a = Expr (Apply "tan" [Star "float" (unsafeCoerce a)])
+  tan a = Expr (Tuple "float" (Apply "tan" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class Tanh a b | a -> b where
   tanh :: a -> b
 
 instance tanhInstance0 :: Tanh (Expr Vec4) (Expr Vec4) where
-  tanh a = Expr (Apply "tanh" [Star "vec4" (unsafeCoerce a)])
+  tanh a = Expr (Tuple "vec4" (Apply "tanh" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance tanhInstance1 :: Tanh (Expr Vec3) (Expr Vec3) where
-  tanh a = Expr (Apply "tanh" [Star "vec3" (unsafeCoerce a)])
+  tanh a = Expr (Tuple "vec3" (Apply "tanh" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance tanhInstance2 :: Tanh (Expr Vec2) (Expr Vec2) where
-  tanh a = Expr (Apply "tanh" [Star "vec2" (unsafeCoerce a)])
+  tanh a = Expr (Tuple "vec2" (Apply "tanh" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance tanhInstance3 :: Tanh (Expr Float) (Expr Float) where
-  tanh a = Expr (Apply "tanh" [Star "float" (unsafeCoerce a)])
+  tanh a = Expr (Tuple "float" (Apply "tanh" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 class TexelFetch a b c | a b -> c where
   texelFetch :: a -> b -> c
 
 instance texelFetchInstance0 :: TexelFetch (Expr SamplerBuffer) (Expr Int) (Expr Vec4) where
-  texelFetch a b = Expr (Apply "texelFetch" [Star "samplerBuffer" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  texelFetch a b = Expr (Tuple "vec4" (Apply "texelFetch" [Expr (Tuple "samplerBuffer" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance texelFetchInstance1 :: TexelFetch (Expr Sampler2DRect) (Expr Ivec2) (Expr Vec4) where
-  texelFetch a b = Expr (Apply "texelFetch" [Star "sampler2DRect" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  texelFetch a b = Expr (Tuple "vec4" (Apply "texelFetch" [Expr (Tuple "sampler2DRect" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 instance texelFetchInstance2 :: TexelFetch (Expr UsamplerBuffer) (Expr Int) (Expr Uvec4) where
-  texelFetch a b = Expr (Apply "texelFetch" [Star "usamplerBuffer" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  texelFetch a b = Expr (Tuple "uvec4" (Apply "texelFetch" [Expr (Tuple "usamplerBuffer" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance texelFetchInstance3 :: TexelFetch (Expr Usampler2DRect) (Expr Ivec2) (Expr Uvec4) where
-  texelFetch a b = Expr (Apply "texelFetch" [Star "usampler2DRect" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  texelFetch a b = Expr (Tuple "uvec4" (Apply "texelFetch" [Expr (Tuple "usampler2DRect" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 instance texelFetchInstance4 :: TexelFetch (Expr IsamplerBuffer) (Expr Int) (Expr Ivec4) where
-  texelFetch a b = Expr (Apply "texelFetch" [Star "isamplerBuffer" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  texelFetch a b = Expr (Tuple "ivec4" (Apply "texelFetch" [Expr (Tuple "isamplerBuffer" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance texelFetchInstance5 :: TexelFetch (Expr Isampler2DRect) (Expr Ivec2) (Expr Ivec4) where
-  texelFetch a b = Expr (Apply "texelFetch" [Star "isampler2DRect" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b)])
+  texelFetch a b = Expr (Tuple "ivec4" (Apply "texelFetch" [Expr (Tuple "isampler2DRect" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b))]))
 
 class TexelFetch2 a b c d | a b c -> d where
   texelFetch2 :: a -> b -> c -> d
 
 instance texelFetch2Instance0 :: TexelFetch2 (Expr Sampler3D) (Expr Ivec3) (Expr Int) (Expr Vec4) where
-  texelFetch2 a b c = Expr (Apply "texelFetch" [Star "sampler3D" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetch2 a b c = Expr (Tuple "vec4" (Apply "texelFetch" [Expr (Tuple "sampler3D" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance texelFetch2Instance1 :: TexelFetch2 (Expr Sampler2DMSArray) (Expr Ivec3) (Expr Int) (Expr Vec4) where
-  texelFetch2 a b c = Expr (Apply "texelFetch" [Star "sampler2DMSArray" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetch2 a b c = Expr (Tuple "vec4" (Apply "texelFetch" [Expr (Tuple "sampler2DMSArray" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance texelFetch2Instance2 :: TexelFetch2 (Expr Sampler2DMS) (Expr Ivec2) (Expr Int) (Expr Vec4) where
-  texelFetch2 a b c = Expr (Apply "texelFetch" [Star "sampler2DMS" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetch2 a b c = Expr (Tuple "vec4" (Apply "texelFetch" [Expr (Tuple "sampler2DMS" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance texelFetch2Instance3 :: TexelFetch2 (Expr Sampler2DArray) (Expr Ivec3) (Expr Int) (Expr Vec4) where
-  texelFetch2 a b c = Expr (Apply "texelFetch" [Star "sampler2DArray" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetch2 a b c = Expr (Tuple "vec4" (Apply "texelFetch" [Expr (Tuple "sampler2DArray" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance texelFetch2Instance4 :: TexelFetch2 (Expr Sampler2D) (Expr Ivec2) (Expr Int) (Expr Vec4) where
-  texelFetch2 a b c = Expr (Apply "texelFetch" [Star "sampler2D" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetch2 a b c = Expr (Tuple "vec4" (Apply "texelFetch" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance texelFetch2Instance5 :: TexelFetch2 (Expr Sampler1DArray) (Expr Ivec2) (Expr Int) (Expr Vec4) where
-  texelFetch2 a b c = Expr (Apply "texelFetch" [Star "sampler1DArray" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetch2 a b c = Expr (Tuple "vec4" (Apply "texelFetch" [Expr (Tuple "sampler1DArray" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance texelFetch2Instance6 :: TexelFetch2 (Expr Sampler1D) (Expr Int) (Expr Int) (Expr Vec4) where
-  texelFetch2 a b c = Expr (Apply "texelFetch" [Star "sampler1D" (unsafeCoerce a), Star "int" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetch2 a b c = Expr (Tuple "vec4" (Apply "texelFetch" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance texelFetch2Instance7 :: TexelFetch2 (Expr Usampler3D) (Expr Ivec3) (Expr Int) (Expr Uvec4) where
-  texelFetch2 a b c = Expr (Apply "texelFetch" [Star "usampler3D" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetch2 a b c = Expr (Tuple "uvec4" (Apply "texelFetch" [Expr (Tuple "usampler3D" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance texelFetch2Instance8 :: TexelFetch2 (Expr Usampler2DMS) (Expr Ivec2) (Expr Int) (Expr Uvec4) where
-  texelFetch2 a b c = Expr (Apply "texelFetch" [Star "usampler2DMS" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetch2 a b c = Expr (Tuple "uvec4" (Apply "texelFetch" [Expr (Tuple "usampler2DMS" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance texelFetch2Instance9 :: TexelFetch2 (Expr Usampler2DArray) (Expr Ivec3) (Expr Int) (Expr Uvec4) where
-  texelFetch2 a b c = Expr (Apply "texelFetch" [Star "usampler2DArray" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetch2 a b c = Expr (Tuple "uvec4" (Apply "texelFetch" [Expr (Tuple "usampler2DArray" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance texelFetch2Instance10 :: TexelFetch2 (Expr Usampler2D) (Expr Ivec2) (Expr Int) (Expr Uvec4) where
-  texelFetch2 a b c = Expr (Apply "texelFetch" [Star "usampler2D" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetch2 a b c = Expr (Tuple "uvec4" (Apply "texelFetch" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance texelFetch2Instance11 :: TexelFetch2 (Expr Usampler1DArray) (Expr Ivec2) (Expr Int) (Expr Uvec4) where
-  texelFetch2 a b c = Expr (Apply "texelFetch" [Star "usampler1DArray" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetch2 a b c = Expr (Tuple "uvec4" (Apply "texelFetch" [Expr (Tuple "usampler1DArray" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance texelFetch2Instance12 :: TexelFetch2 (Expr Usampler1D) (Expr Int) (Expr Int) (Expr Uvec4) where
-  texelFetch2 a b c = Expr (Apply "texelFetch" [Star "usampler1D" (unsafeCoerce a), Star "int" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetch2 a b c = Expr (Tuple "uvec4" (Apply "texelFetch" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance texelFetch2Instance13 :: TexelFetch2 (Expr Isampler3D) (Expr Ivec3) (Expr Int) (Expr Ivec4) where
-  texelFetch2 a b c = Expr (Apply "texelFetch" [Star "isampler3D" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetch2 a b c = Expr (Tuple "ivec4" (Apply "texelFetch" [Expr (Tuple "isampler3D" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance texelFetch2Instance14 :: TexelFetch2 (Expr Isampler2DMS) (Expr Ivec2) (Expr Int) (Expr Ivec4) where
-  texelFetch2 a b c = Expr (Apply "texelFetch" [Star "isampler2DMS" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetch2 a b c = Expr (Tuple "ivec4" (Apply "texelFetch" [Expr (Tuple "isampler2DMS" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance texelFetch2Instance15 :: TexelFetch2 (Expr Isampler2DArray) (Expr Ivec3) (Expr Int) (Expr Ivec4) where
-  texelFetch2 a b c = Expr (Apply "texelFetch" [Star "isampler2DArray" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetch2 a b c = Expr (Tuple "ivec4" (Apply "texelFetch" [Expr (Tuple "isampler2DArray" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance texelFetch2Instance16 :: TexelFetch2 (Expr Isampler2D) (Expr Ivec2) (Expr Int) (Expr Ivec4) where
-  texelFetch2 a b c = Expr (Apply "texelFetch" [Star "isampler2D" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetch2 a b c = Expr (Tuple "ivec4" (Apply "texelFetch" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance texelFetch2Instance17 :: TexelFetch2 (Expr Isampler1DArray) (Expr Ivec2) (Expr Int) (Expr Ivec4) where
-  texelFetch2 a b c = Expr (Apply "texelFetch" [Star "isampler1DArray" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetch2 a b c = Expr (Tuple "ivec4" (Apply "texelFetch" [Expr (Tuple "isampler1DArray" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance texelFetch2Instance18 :: TexelFetch2 (Expr Isampler1D) (Expr Int) (Expr Int) (Expr Ivec4) where
-  texelFetch2 a b c = Expr (Apply "texelFetch" [Star "isampler1D" (unsafeCoerce a), Star "int" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetch2 a b c = Expr (Tuple "ivec4" (Apply "texelFetch" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 class TexelFetchOffset a b c d | a b c -> d where
   texelFetchOffset :: a -> b -> c -> d
 
 instance texelFetchOffsetInstance0 :: TexelFetchOffset (Expr Sampler2DRect) (Expr Ivec2) (Expr Int) (Expr Vec4) where
-  texelFetchOffset a b c = Expr (Apply "texelFetchOffset" [Star "sampler2DRect" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetchOffset a b c = Expr (Tuple "vec4" (Apply "texelFetchOffset" [Expr (Tuple "sampler2DRect" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance texelFetchOffsetInstance1 :: TexelFetchOffset (Expr Usampler2DRect) (Expr Ivec2) (Expr Int) (Expr Uvec4) where
-  texelFetchOffset a b c = Expr (Apply "texelFetchOffset" [Star "usampler2DRect" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetchOffset a b c = Expr (Tuple "uvec4" (Apply "texelFetchOffset" [Expr (Tuple "usampler2DRect" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance texelFetchOffsetInstance2 :: TexelFetchOffset (Expr Isampler2DRect) (Expr Ivec2) (Expr Int) (Expr Ivec4) where
-  texelFetchOffset a b c = Expr (Apply "texelFetchOffset" [Star "isampler2DRect" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  texelFetchOffset a b c = Expr (Tuple "ivec4" (Apply "texelFetchOffset" [Expr (Tuple "isampler2DRect" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 class TexelFetchOffset2 a b c d e | a b c d -> e where
   texelFetchOffset2 :: a -> b -> c -> d -> e
 
 instance texelFetchOffset2Instance0 :: TexelFetchOffset2 (Expr Sampler3D) (Expr Ivec3) (Expr Int) (Expr Int) (Expr Vec4) where
-  texelFetchOffset2 a b c d = Expr (Apply "texelFetchOffset" [Star "sampler3D" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  texelFetchOffset2 a b c d = Expr (Tuple "vec4" (Apply "texelFetchOffset" [Expr (Tuple "sampler3D" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance texelFetchOffset2Instance1 :: TexelFetchOffset2 (Expr Sampler2DArray) (Expr Ivec3) (Expr Int) (Expr Int) (Expr Vec4) where
-  texelFetchOffset2 a b c d = Expr (Apply "texelFetchOffset" [Star "sampler2DArray" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  texelFetchOffset2 a b c d = Expr (Tuple "vec4" (Apply "texelFetchOffset" [Expr (Tuple "sampler2DArray" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance texelFetchOffset2Instance2 :: TexelFetchOffset2 (Expr Sampler2D) (Expr Ivec2) (Expr Int) (Expr Int) (Expr Vec4) where
-  texelFetchOffset2 a b c d = Expr (Apply "texelFetchOffset" [Star "sampler2D" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  texelFetchOffset2 a b c d = Expr (Tuple "vec4" (Apply "texelFetchOffset" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance texelFetchOffset2Instance3 :: TexelFetchOffset2 (Expr Sampler1DArray) (Expr Ivec2) (Expr Int) (Expr Int) (Expr Vec4) where
-  texelFetchOffset2 a b c d = Expr (Apply "texelFetchOffset" [Star "sampler1DArray" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  texelFetchOffset2 a b c d = Expr (Tuple "vec4" (Apply "texelFetchOffset" [Expr (Tuple "sampler1DArray" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance texelFetchOffset2Instance4 :: TexelFetchOffset2 (Expr Sampler1D) (Expr Int) (Expr Int) (Expr Int) (Expr Vec4) where
-  texelFetchOffset2 a b c d = Expr (Apply "texelFetchOffset" [Star "sampler1D" (unsafeCoerce a), Star "int" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  texelFetchOffset2 a b c d = Expr (Tuple "vec4" (Apply "texelFetchOffset" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance texelFetchOffset2Instance5 :: TexelFetchOffset2 (Expr Usampler3D) (Expr Ivec3) (Expr Int) (Expr Int) (Expr Uvec4) where
-  texelFetchOffset2 a b c d = Expr (Apply "texelFetchOffset" [Star "usampler3D" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  texelFetchOffset2 a b c d = Expr (Tuple "uvec4" (Apply "texelFetchOffset" [Expr (Tuple "usampler3D" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance texelFetchOffset2Instance6 :: TexelFetchOffset2 (Expr Usampler2DArray) (Expr Ivec3) (Expr Int) (Expr Int) (Expr Uvec4) where
-  texelFetchOffset2 a b c d = Expr (Apply "texelFetchOffset" [Star "usampler2DArray" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  texelFetchOffset2 a b c d = Expr (Tuple "uvec4" (Apply "texelFetchOffset" [Expr (Tuple "usampler2DArray" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance texelFetchOffset2Instance7 :: TexelFetchOffset2 (Expr Usampler2D) (Expr Ivec2) (Expr Int) (Expr Int) (Expr Uvec4) where
-  texelFetchOffset2 a b c d = Expr (Apply "texelFetchOffset" [Star "usampler2D" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  texelFetchOffset2 a b c d = Expr (Tuple "uvec4" (Apply "texelFetchOffset" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance texelFetchOffset2Instance8 :: TexelFetchOffset2 (Expr Usampler1DArray) (Expr Ivec2) (Expr Int) (Expr Int) (Expr Uvec4) where
-  texelFetchOffset2 a b c d = Expr (Apply "texelFetchOffset" [Star "usampler1DArray" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  texelFetchOffset2 a b c d = Expr (Tuple "uvec4" (Apply "texelFetchOffset" [Expr (Tuple "usampler1DArray" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance texelFetchOffset2Instance9 :: TexelFetchOffset2 (Expr Usampler1D) (Expr Int) (Expr Int) (Expr Int) (Expr Uvec4) where
-  texelFetchOffset2 a b c d = Expr (Apply "texelFetchOffset" [Star "usampler1D" (unsafeCoerce a), Star "int" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  texelFetchOffset2 a b c d = Expr (Tuple "uvec4" (Apply "texelFetchOffset" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance texelFetchOffset2Instance10 :: TexelFetchOffset2 (Expr Isampler3D) (Expr Ivec3) (Expr Int) (Expr Int) (Expr Ivec4) where
-  texelFetchOffset2 a b c d = Expr (Apply "texelFetchOffset" [Star "isampler3D" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  texelFetchOffset2 a b c d = Expr (Tuple "ivec4" (Apply "texelFetchOffset" [Expr (Tuple "isampler3D" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance texelFetchOffset2Instance11 :: TexelFetchOffset2 (Expr Isampler2DArray) (Expr Ivec3) (Expr Int) (Expr Int) (Expr Ivec4) where
-  texelFetchOffset2 a b c d = Expr (Apply "texelFetchOffset" [Star "isampler2DArray" (unsafeCoerce a), Star "ivec3" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  texelFetchOffset2 a b c d = Expr (Tuple "ivec4" (Apply "texelFetchOffset" [Expr (Tuple "isampler2DArray" (unsafeCoerce a)), Expr (Tuple "ivec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance texelFetchOffset2Instance12 :: TexelFetchOffset2 (Expr Isampler2D) (Expr Ivec2) (Expr Int) (Expr Int) (Expr Ivec4) where
-  texelFetchOffset2 a b c d = Expr (Apply "texelFetchOffset" [Star "isampler2D" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  texelFetchOffset2 a b c d = Expr (Tuple "ivec4" (Apply "texelFetchOffset" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance texelFetchOffset2Instance13 :: TexelFetchOffset2 (Expr Isampler1DArray) (Expr Ivec2) (Expr Int) (Expr Int) (Expr Ivec4) where
-  texelFetchOffset2 a b c d = Expr (Apply "texelFetchOffset" [Star "isampler1DArray" (unsafeCoerce a), Star "ivec2" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  texelFetchOffset2 a b c d = Expr (Tuple "ivec4" (Apply "texelFetchOffset" [Expr (Tuple "isampler1DArray" (unsafeCoerce a)), Expr (Tuple "ivec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance texelFetchOffset2Instance14 :: TexelFetchOffset2 (Expr Isampler1D) (Expr Int) (Expr Int) (Expr Int) (Expr Ivec4) where
-  texelFetchOffset2 a b c d = Expr (Apply "texelFetchOffset" [Star "isampler1D" (unsafeCoerce a), Star "int" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  texelFetchOffset2 a b c d = Expr (Tuple "ivec4" (Apply "texelFetchOffset" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 class Texture a b c | a b -> c where
   texture :: a -> b -> c
 
 instance textureInstance0 :: Texture (Expr SamplerCubeArray) (Expr Vec4) (Expr Vec4) where
-  texture a b = Expr (Apply "texture" [Star "samplerCubeArray" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "vec4" (Apply "texture" [Expr (Tuple "samplerCubeArray" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance textureInstance1 :: Texture (Expr SamplerCube) (Expr Vec3) (Expr Vec4) where
-  texture a b = Expr (Apply "texture" [Star "samplerCube" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "vec4" (Apply "texture" [Expr (Tuple "samplerCube" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureInstance2 :: Texture (Expr Sampler3D) (Expr Vec3) (Expr Vec4) where
-  texture a b = Expr (Apply "texture" [Star "sampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "vec4" (Apply "texture" [Expr (Tuple "sampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureInstance3 :: Texture (Expr Sampler2DRect) (Expr Vec2) (Expr Vec4) where
-  texture a b = Expr (Apply "texture" [Star "sampler2DRect" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "vec4" (Apply "texture" [Expr (Tuple "sampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureInstance4 :: Texture (Expr Sampler2DArray) (Expr Vec3) (Expr Vec4) where
-  texture a b = Expr (Apply "texture" [Star "sampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "vec4" (Apply "texture" [Expr (Tuple "sampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureInstance5 :: Texture (Expr Sampler2D) (Expr Vec2) (Expr Vec4) where
-  texture a b = Expr (Apply "texture" [Star "sampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "vec4" (Apply "texture" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureInstance6 :: Texture (Expr Sampler1DArray) (Expr Vec2) (Expr Vec4) where
-  texture a b = Expr (Apply "texture" [Star "sampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "vec4" (Apply "texture" [Expr (Tuple "sampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureInstance7 :: Texture (Expr Sampler1D) (Expr Float) (Expr Vec4) where
-  texture a b = Expr (Apply "texture" [Star "sampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "vec4" (Apply "texture" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance textureInstance8 :: Texture (Expr UsamplerCubeArray) (Expr Vec4) (Expr Uvec4) where
-  texture a b = Expr (Apply "texture" [Star "usamplerCubeArray" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "uvec4" (Apply "texture" [Expr (Tuple "usamplerCubeArray" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance textureInstance9 :: Texture (Expr UsamplerCube) (Expr Vec3) (Expr Uvec4) where
-  texture a b = Expr (Apply "texture" [Star "usamplerCube" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "uvec4" (Apply "texture" [Expr (Tuple "usamplerCube" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureInstance10 :: Texture (Expr Usampler3D) (Expr Vec3) (Expr Uvec4) where
-  texture a b = Expr (Apply "texture" [Star "usampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "uvec4" (Apply "texture" [Expr (Tuple "usampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureInstance11 :: Texture (Expr Usampler2DRect) (Expr Vec2) (Expr Uvec4) where
-  texture a b = Expr (Apply "texture" [Star "usampler2DRect" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "uvec4" (Apply "texture" [Expr (Tuple "usampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureInstance12 :: Texture (Expr Usampler2DArray) (Expr Vec3) (Expr Uvec4) where
-  texture a b = Expr (Apply "texture" [Star "usampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "uvec4" (Apply "texture" [Expr (Tuple "usampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureInstance13 :: Texture (Expr Usampler2D) (Expr Vec2) (Expr Uvec4) where
-  texture a b = Expr (Apply "texture" [Star "usampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "uvec4" (Apply "texture" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureInstance14 :: Texture (Expr Usampler1DArray) (Expr Vec2) (Expr Uvec4) where
-  texture a b = Expr (Apply "texture" [Star "usampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "uvec4" (Apply "texture" [Expr (Tuple "usampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureInstance15 :: Texture (Expr Usampler1D) (Expr Float) (Expr Uvec4) where
-  texture a b = Expr (Apply "texture" [Star "usampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "uvec4" (Apply "texture" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance textureInstance16 :: Texture (Expr IsamplerCubeArray) (Expr Vec4) (Expr Ivec4) where
-  texture a b = Expr (Apply "texture" [Star "isamplerCubeArray" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "ivec4" (Apply "texture" [Expr (Tuple "isamplerCubeArray" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance textureInstance17 :: Texture (Expr IsamplerCube) (Expr Vec3) (Expr Ivec4) where
-  texture a b = Expr (Apply "texture" [Star "isamplerCube" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "ivec4" (Apply "texture" [Expr (Tuple "isamplerCube" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureInstance18 :: Texture (Expr Isampler3D) (Expr Vec3) (Expr Ivec4) where
-  texture a b = Expr (Apply "texture" [Star "isampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "ivec4" (Apply "texture" [Expr (Tuple "isampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureInstance19 :: Texture (Expr Isampler2DRect) (Expr Vec2) (Expr Ivec4) where
-  texture a b = Expr (Apply "texture" [Star "isampler2DRect" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "ivec4" (Apply "texture" [Expr (Tuple "isampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureInstance20 :: Texture (Expr Isampler2DArray) (Expr Vec3) (Expr Ivec4) where
-  texture a b = Expr (Apply "texture" [Star "isampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "ivec4" (Apply "texture" [Expr (Tuple "isampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureInstance21 :: Texture (Expr Isampler2D) (Expr Vec2) (Expr Ivec4) where
-  texture a b = Expr (Apply "texture" [Star "isampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "ivec4" (Apply "texture" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureInstance22 :: Texture (Expr Isampler1DArray) (Expr Vec2) (Expr Ivec4) where
-  texture a b = Expr (Apply "texture" [Star "isampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "ivec4" (Apply "texture" [Expr (Tuple "isampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureInstance23 :: Texture (Expr Isampler1D) (Expr Float) (Expr Ivec4) where
-  texture a b = Expr (Apply "texture" [Star "isampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "ivec4" (Apply "texture" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance textureInstance24 :: Texture (Expr SamplerCubeShadow) (Expr Vec3) (Expr Float) where
-  texture a b = Expr (Apply "texture" [Star "samplerCubeShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "float" (Apply "texture" [Expr (Tuple "samplerCubeShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureInstance25 :: Texture (Expr Sampler2DShadow) (Expr Vec3) (Expr Float) where
-  texture a b = Expr (Apply "texture" [Star "sampler2DShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "float" (Apply "texture" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureInstance26 :: Texture (Expr Sampler2DRectShadow) (Expr Vec3) (Expr Float) where
-  texture a b = Expr (Apply "texture" [Star "sampler2DRectShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "float" (Apply "texture" [Expr (Tuple "sampler2DRectShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureInstance27 :: Texture (Expr Sampler2DArrayShadow) (Expr Vec4) (Expr Float) where
-  texture a b = Expr (Apply "texture" [Star "sampler2DArrayShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "float" (Apply "texture" [Expr (Tuple "sampler2DArrayShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance textureInstance28 :: Texture (Expr Sampler1DShadow) (Expr Vec3) (Expr Float) where
-  texture a b = Expr (Apply "texture" [Star "sampler1DShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "float" (Apply "texture" [Expr (Tuple "sampler1DShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureInstance29 :: Texture (Expr Sampler1DArrayShadow) (Expr Vec3) (Expr Float) where
-  texture a b = Expr (Apply "texture" [Star "sampler1DArrayShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  texture a b = Expr (Tuple "float" (Apply "texture" [Expr (Tuple "sampler1DArrayShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 class Texture2 a b c d | a b c -> d where
   texture2 :: a -> b -> c -> d
 
 instance texture2Instance0 :: Texture2 (Expr SamplerCubeArray) (Expr Vec4) (Expr Float) (Expr Vec4) where
-  texture2 a b c = Expr (Apply "texture" [Star "samplerCubeArray" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "vec4" (Apply "texture" [Expr (Tuple "samplerCubeArray" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance1 :: Texture2 (Expr SamplerCube) (Expr Vec3) (Expr Float) (Expr Vec4) where
-  texture2 a b c = Expr (Apply "texture" [Star "samplerCube" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "vec4" (Apply "texture" [Expr (Tuple "samplerCube" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance2 :: Texture2 (Expr Sampler3D) (Expr Vec3) (Expr Float) (Expr Vec4) where
-  texture2 a b c = Expr (Apply "texture" [Star "sampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "vec4" (Apply "texture" [Expr (Tuple "sampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance3 :: Texture2 (Expr Sampler2DArray) (Expr Vec3) (Expr Float) (Expr Vec4) where
-  texture2 a b c = Expr (Apply "texture" [Star "sampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "vec4" (Apply "texture" [Expr (Tuple "sampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance4 :: Texture2 (Expr Sampler2D) (Expr Vec2) (Expr Float) (Expr Vec4) where
-  texture2 a b c = Expr (Apply "texture" [Star "sampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "vec4" (Apply "texture" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance5 :: Texture2 (Expr Sampler1DArray) (Expr Vec2) (Expr Float) (Expr Vec4) where
-  texture2 a b c = Expr (Apply "texture" [Star "sampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "vec4" (Apply "texture" [Expr (Tuple "sampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance6 :: Texture2 (Expr Sampler1D) (Expr Float) (Expr Float) (Expr Vec4) where
-  texture2 a b c = Expr (Apply "texture" [Star "sampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "vec4" (Apply "texture" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance7 :: Texture2 (Expr UsamplerCubeArray) (Expr Vec4) (Expr Float) (Expr Uvec4) where
-  texture2 a b c = Expr (Apply "texture" [Star "usamplerCubeArray" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "uvec4" (Apply "texture" [Expr (Tuple "usamplerCubeArray" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance8 :: Texture2 (Expr UsamplerCube) (Expr Vec3) (Expr Float) (Expr Uvec4) where
-  texture2 a b c = Expr (Apply "texture" [Star "usamplerCube" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "uvec4" (Apply "texture" [Expr (Tuple "usamplerCube" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance9 :: Texture2 (Expr Usampler3D) (Expr Vec3) (Expr Float) (Expr Uvec4) where
-  texture2 a b c = Expr (Apply "texture" [Star "usampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "uvec4" (Apply "texture" [Expr (Tuple "usampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance10 :: Texture2 (Expr Usampler2DArray) (Expr Vec3) (Expr Float) (Expr Uvec4) where
-  texture2 a b c = Expr (Apply "texture" [Star "usampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "uvec4" (Apply "texture" [Expr (Tuple "usampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance11 :: Texture2 (Expr Usampler2D) (Expr Vec2) (Expr Float) (Expr Uvec4) where
-  texture2 a b c = Expr (Apply "texture" [Star "usampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "uvec4" (Apply "texture" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance12 :: Texture2 (Expr Usampler1DArray) (Expr Vec2) (Expr Float) (Expr Uvec4) where
-  texture2 a b c = Expr (Apply "texture" [Star "usampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "uvec4" (Apply "texture" [Expr (Tuple "usampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance13 :: Texture2 (Expr Usampler1D) (Expr Float) (Expr Float) (Expr Uvec4) where
-  texture2 a b c = Expr (Apply "texture" [Star "usampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "uvec4" (Apply "texture" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance14 :: Texture2 (Expr IsamplerCubeArray) (Expr Vec4) (Expr Float) (Expr Ivec4) where
-  texture2 a b c = Expr (Apply "texture" [Star "isamplerCubeArray" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "ivec4" (Apply "texture" [Expr (Tuple "isamplerCubeArray" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance15 :: Texture2 (Expr IsamplerCube) (Expr Vec3) (Expr Float) (Expr Ivec4) where
-  texture2 a b c = Expr (Apply "texture" [Star "isamplerCube" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "ivec4" (Apply "texture" [Expr (Tuple "isamplerCube" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance16 :: Texture2 (Expr Isampler3D) (Expr Vec3) (Expr Float) (Expr Ivec4) where
-  texture2 a b c = Expr (Apply "texture" [Star "isampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "ivec4" (Apply "texture" [Expr (Tuple "isampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance17 :: Texture2 (Expr Isampler2DArray) (Expr Vec3) (Expr Float) (Expr Ivec4) where
-  texture2 a b c = Expr (Apply "texture" [Star "isampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "ivec4" (Apply "texture" [Expr (Tuple "isampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance18 :: Texture2 (Expr Isampler2D) (Expr Vec2) (Expr Float) (Expr Ivec4) where
-  texture2 a b c = Expr (Apply "texture" [Star "isampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "ivec4" (Apply "texture" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance19 :: Texture2 (Expr Isampler1DArray) (Expr Vec2) (Expr Float) (Expr Ivec4) where
-  texture2 a b c = Expr (Apply "texture" [Star "isampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "ivec4" (Apply "texture" [Expr (Tuple "isampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance20 :: Texture2 (Expr Isampler1D) (Expr Float) (Expr Float) (Expr Ivec4) where
-  texture2 a b c = Expr (Apply "texture" [Star "isampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "ivec4" (Apply "texture" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance21 :: Texture2 (Expr SamplerCubeShadow) (Expr Vec3) (Expr Float) (Expr Float) where
-  texture2 a b c = Expr (Apply "texture" [Star "samplerCubeShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "float" (Apply "texture" [Expr (Tuple "samplerCubeShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance22 :: Texture2 (Expr SamplerCubeArrayShadow) (Expr Vec4) (Expr Float) (Expr Float) where
-  texture2 a b c = Expr (Apply "texture" [Star "samplerCubeArrayShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "float" (Apply "texture" [Expr (Tuple "samplerCubeArrayShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance23 :: Texture2 (Expr Sampler2DShadow) (Expr Vec3) (Expr Float) (Expr Float) where
-  texture2 a b c = Expr (Apply "texture" [Star "sampler2DShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "float" (Apply "texture" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance24 :: Texture2 (Expr Sampler2DArrayShadow) (Expr Vec4) (Expr Float) (Expr Float) where
-  texture2 a b c = Expr (Apply "texture" [Star "sampler2DArrayShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "float" (Apply "texture" [Expr (Tuple "sampler2DArrayShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance25 :: Texture2 (Expr Sampler1DShadow) (Expr Vec3) (Expr Float) (Expr Float) where
-  texture2 a b c = Expr (Apply "texture" [Star "sampler1DShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "float" (Apply "texture" [Expr (Tuple "sampler1DShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance texture2Instance26 :: Texture2 (Expr Sampler1DArrayShadow) (Expr Vec3) (Expr Float) (Expr Float) where
-  texture2 a b c = Expr (Apply "texture" [Star "sampler1DArrayShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  texture2 a b c = Expr (Tuple "float" (Apply "texture" [Expr (Tuple "sampler1DArrayShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 class TextureGather a b c | a b -> c where
   textureGather :: a -> b -> c
 
 instance textureGatherInstance0 :: TextureGather (Expr SamplerCubeArray) (Expr Vec4) (Expr Vec4) where
-  textureGather a b = Expr (Apply "textureGather" [Star "samplerCubeArray" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  textureGather a b = Expr (Tuple "vec4" (Apply "textureGather" [Expr (Tuple "samplerCubeArray" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance textureGatherInstance1 :: TextureGather (Expr SamplerCube) (Expr Vec3) (Expr Vec4) where
-  textureGather a b = Expr (Apply "textureGather" [Star "samplerCube" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureGather a b = Expr (Tuple "vec4" (Apply "textureGather" [Expr (Tuple "samplerCube" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureGatherInstance2 :: TextureGather (Expr Sampler2DRect) (Expr Vec3) (Expr Vec4) where
-  textureGather a b = Expr (Apply "textureGather" [Star "sampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureGather a b = Expr (Tuple "vec4" (Apply "textureGather" [Expr (Tuple "sampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureGatherInstance3 :: TextureGather (Expr Sampler2DArray) (Expr Vec3) (Expr Vec4) where
-  textureGather a b = Expr (Apply "textureGather" [Star "sampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureGather a b = Expr (Tuple "vec4" (Apply "textureGather" [Expr (Tuple "sampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureGatherInstance4 :: TextureGather (Expr Sampler2D) (Expr Vec2) (Expr Vec4) where
-  textureGather a b = Expr (Apply "textureGather" [Star "sampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  textureGather a b = Expr (Tuple "vec4" (Apply "textureGather" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureGatherInstance5 :: TextureGather (Expr UsamplerCubeArray) (Expr Vec4) (Expr Uvec4) where
-  textureGather a b = Expr (Apply "textureGather" [Star "usamplerCubeArray" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  textureGather a b = Expr (Tuple "uvec4" (Apply "textureGather" [Expr (Tuple "usamplerCubeArray" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance textureGatherInstance6 :: TextureGather (Expr UsamplerCube) (Expr Vec3) (Expr Uvec4) where
-  textureGather a b = Expr (Apply "textureGather" [Star "usamplerCube" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureGather a b = Expr (Tuple "uvec4" (Apply "textureGather" [Expr (Tuple "usamplerCube" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureGatherInstance7 :: TextureGather (Expr Usampler2DRect) (Expr Vec3) (Expr Uvec4) where
-  textureGather a b = Expr (Apply "textureGather" [Star "usampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureGather a b = Expr (Tuple "uvec4" (Apply "textureGather" [Expr (Tuple "usampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureGatherInstance8 :: TextureGather (Expr Usampler2DArray) (Expr Vec3) (Expr Uvec4) where
-  textureGather a b = Expr (Apply "textureGather" [Star "usampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureGather a b = Expr (Tuple "uvec4" (Apply "textureGather" [Expr (Tuple "usampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureGatherInstance9 :: TextureGather (Expr Usampler2D) (Expr Vec2) (Expr Uvec4) where
-  textureGather a b = Expr (Apply "textureGather" [Star "usampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  textureGather a b = Expr (Tuple "uvec4" (Apply "textureGather" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureGatherInstance10 :: TextureGather (Expr IsamplerCubeArray) (Expr Vec4) (Expr Ivec4) where
-  textureGather a b = Expr (Apply "textureGather" [Star "isamplerCubeArray" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  textureGather a b = Expr (Tuple "ivec4" (Apply "textureGather" [Expr (Tuple "isamplerCubeArray" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance textureGatherInstance11 :: TextureGather (Expr IsamplerCube) (Expr Vec3) (Expr Ivec4) where
-  textureGather a b = Expr (Apply "textureGather" [Star "isamplerCube" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureGather a b = Expr (Tuple "ivec4" (Apply "textureGather" [Expr (Tuple "isamplerCube" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureGatherInstance12 :: TextureGather (Expr Isampler2DRect) (Expr Vec3) (Expr Ivec4) where
-  textureGather a b = Expr (Apply "textureGather" [Star "isampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureGather a b = Expr (Tuple "ivec4" (Apply "textureGather" [Expr (Tuple "isampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureGatherInstance13 :: TextureGather (Expr Isampler2DArray) (Expr Vec3) (Expr Ivec4) where
-  textureGather a b = Expr (Apply "textureGather" [Star "isampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureGather a b = Expr (Tuple "ivec4" (Apply "textureGather" [Expr (Tuple "isampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureGatherInstance14 :: TextureGather (Expr Isampler2D) (Expr Vec2) (Expr Ivec4) where
-  textureGather a b = Expr (Apply "textureGather" [Star "isampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  textureGather a b = Expr (Tuple "ivec4" (Apply "textureGather" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 class TextureGather2 a b c d | a b c -> d where
   textureGather2 :: a -> b -> c -> d
 
 instance textureGather2Instance0 :: TextureGather2 (Expr SamplerCubeShadow) (Expr Vec3) (Expr Float) (Expr Vec4) where
-  textureGather2 a b c = Expr (Apply "textureGather" [Star "samplerCubeShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureGather2 a b c = Expr (Tuple "vec4" (Apply "textureGather" [Expr (Tuple "samplerCubeShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureGather2Instance1 :: TextureGather2 (Expr SamplerCubeArrayShadow) (Expr Vec4) (Expr Float) (Expr Vec4) where
-  textureGather2 a b c = Expr (Apply "textureGather" [Star "samplerCubeArrayShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureGather2 a b c = Expr (Tuple "vec4" (Apply "textureGather" [Expr (Tuple "samplerCubeArrayShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureGather2Instance2 :: TextureGather2 (Expr SamplerCubeArray) (Expr Vec4) (Expr Int) (Expr Vec4) where
-  textureGather2 a b c = Expr (Apply "textureGather" [Star "samplerCubeArray" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureGather2 a b c = Expr (Tuple "vec4" (Apply "textureGather" [Expr (Tuple "samplerCubeArray" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureGather2Instance3 :: TextureGather2 (Expr SamplerCube) (Expr Vec3) (Expr Int) (Expr Vec4) where
-  textureGather2 a b c = Expr (Apply "textureGather" [Star "samplerCube" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureGather2 a b c = Expr (Tuple "vec4" (Apply "textureGather" [Expr (Tuple "samplerCube" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureGather2Instance4 :: TextureGather2 (Expr Sampler2DShadow) (Expr Vec2) (Expr Float) (Expr Vec4) where
-  textureGather2 a b c = Expr (Apply "textureGather" [Star "sampler2DShadow" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureGather2 a b c = Expr (Tuple "vec4" (Apply "textureGather" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureGather2Instance5 :: TextureGather2 (Expr Sampler2DRectShadow) (Expr Vec3) (Expr Float) (Expr Vec4) where
-  textureGather2 a b c = Expr (Apply "textureGather" [Star "sampler2DRectShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureGather2 a b c = Expr (Tuple "vec4" (Apply "textureGather" [Expr (Tuple "sampler2DRectShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureGather2Instance6 :: TextureGather2 (Expr Sampler2DRect) (Expr Vec3) (Expr Int) (Expr Vec4) where
-  textureGather2 a b c = Expr (Apply "textureGather" [Star "sampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureGather2 a b c = Expr (Tuple "vec4" (Apply "textureGather" [Expr (Tuple "sampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureGather2Instance7 :: TextureGather2 (Expr Sampler2DArrayShadow) (Expr Vec3) (Expr Float) (Expr Vec4) where
-  textureGather2 a b c = Expr (Apply "textureGather" [Star "sampler2DArrayShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureGather2 a b c = Expr (Tuple "vec4" (Apply "textureGather" [Expr (Tuple "sampler2DArrayShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureGather2Instance8 :: TextureGather2 (Expr Sampler2DArray) (Expr Vec3) (Expr Int) (Expr Vec4) where
-  textureGather2 a b c = Expr (Apply "textureGather" [Star "sampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureGather2 a b c = Expr (Tuple "vec4" (Apply "textureGather" [Expr (Tuple "sampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureGather2Instance9 :: TextureGather2 (Expr Sampler2D) (Expr Vec2) (Expr Int) (Expr Vec4) where
-  textureGather2 a b c = Expr (Apply "textureGather" [Star "sampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureGather2 a b c = Expr (Tuple "vec4" (Apply "textureGather" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureGather2Instance10 :: TextureGather2 (Expr UsamplerCubeArray) (Expr Vec4) (Expr Int) (Expr Uvec4) where
-  textureGather2 a b c = Expr (Apply "textureGather" [Star "usamplerCubeArray" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureGather2 a b c = Expr (Tuple "uvec4" (Apply "textureGather" [Expr (Tuple "usamplerCubeArray" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureGather2Instance11 :: TextureGather2 (Expr UsamplerCube) (Expr Vec3) (Expr Int) (Expr Uvec4) where
-  textureGather2 a b c = Expr (Apply "textureGather" [Star "usamplerCube" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureGather2 a b c = Expr (Tuple "uvec4" (Apply "textureGather" [Expr (Tuple "usamplerCube" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureGather2Instance12 :: TextureGather2 (Expr Usampler2DRect) (Expr Vec3) (Expr Int) (Expr Uvec4) where
-  textureGather2 a b c = Expr (Apply "textureGather" [Star "usampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureGather2 a b c = Expr (Tuple "uvec4" (Apply "textureGather" [Expr (Tuple "usampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureGather2Instance13 :: TextureGather2 (Expr Usampler2DArray) (Expr Vec3) (Expr Int) (Expr Uvec4) where
-  textureGather2 a b c = Expr (Apply "textureGather" [Star "usampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureGather2 a b c = Expr (Tuple "uvec4" (Apply "textureGather" [Expr (Tuple "usampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureGather2Instance14 :: TextureGather2 (Expr Usampler2D) (Expr Vec2) (Expr Int) (Expr Uvec4) where
-  textureGather2 a b c = Expr (Apply "textureGather" [Star "usampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureGather2 a b c = Expr (Tuple "uvec4" (Apply "textureGather" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureGather2Instance15 :: TextureGather2 (Expr IsamplerCubeArray) (Expr Vec4) (Expr Int) (Expr Ivec4) where
-  textureGather2 a b c = Expr (Apply "textureGather" [Star "isamplerCubeArray" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureGather2 a b c = Expr (Tuple "ivec4" (Apply "textureGather" [Expr (Tuple "isamplerCubeArray" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureGather2Instance16 :: TextureGather2 (Expr IsamplerCube) (Expr Vec3) (Expr Int) (Expr Ivec4) where
-  textureGather2 a b c = Expr (Apply "textureGather" [Star "isamplerCube" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureGather2 a b c = Expr (Tuple "ivec4" (Apply "textureGather" [Expr (Tuple "isamplerCube" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureGather2Instance17 :: TextureGather2 (Expr Isampler2DRect) (Expr Vec3) (Expr Int) (Expr Ivec4) where
-  textureGather2 a b c = Expr (Apply "textureGather" [Star "isampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureGather2 a b c = Expr (Tuple "ivec4" (Apply "textureGather" [Expr (Tuple "isampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureGather2Instance18 :: TextureGather2 (Expr Isampler2DArray) (Expr Vec3) (Expr Int) (Expr Ivec4) where
-  textureGather2 a b c = Expr (Apply "textureGather" [Star "isampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureGather2 a b c = Expr (Tuple "ivec4" (Apply "textureGather" [Expr (Tuple "isampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureGather2Instance19 :: TextureGather2 (Expr Isampler2D) (Expr Vec2) (Expr Int) (Expr Ivec4) where
-  textureGather2 a b c = Expr (Apply "textureGather" [Star "isampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureGather2 a b c = Expr (Tuple "ivec4" (Apply "textureGather" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 class TextureGatherOffset a b c d | a b c -> d where
   textureGatherOffset :: a -> b -> c -> d
 
 instance textureGatherOffsetInstance0 :: TextureGatherOffset (Expr Sampler2DRect) (Expr Vec3) (Expr Ivec2) (Expr Vec4) where
-  textureGatherOffset a b c = Expr (Apply "textureGatherOffset" [Star "sampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureGatherOffset a b c = Expr (Tuple "vec4" (Apply "textureGatherOffset" [Expr (Tuple "sampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureGatherOffsetInstance1 :: TextureGatherOffset (Expr Sampler2DArray) (Expr Vec3) (Expr Ivec2) (Expr Vec4) where
-  textureGatherOffset a b c = Expr (Apply "textureGatherOffset" [Star "sampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureGatherOffset a b c = Expr (Tuple "vec4" (Apply "textureGatherOffset" [Expr (Tuple "sampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureGatherOffsetInstance2 :: TextureGatherOffset (Expr Sampler2D) (Expr Vec2) (Expr Ivec2) (Expr Vec4) where
-  textureGatherOffset a b c = Expr (Apply "textureGatherOffset" [Star "sampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureGatherOffset a b c = Expr (Tuple "vec4" (Apply "textureGatherOffset" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureGatherOffsetInstance3 :: TextureGatherOffset (Expr Usampler2DRect) (Expr Vec3) (Expr Ivec2) (Expr Uvec4) where
-  textureGatherOffset a b c = Expr (Apply "textureGatherOffset" [Star "usampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureGatherOffset a b c = Expr (Tuple "uvec4" (Apply "textureGatherOffset" [Expr (Tuple "usampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureGatherOffsetInstance4 :: TextureGatherOffset (Expr Usampler2DArray) (Expr Vec3) (Expr Ivec2) (Expr Uvec4) where
-  textureGatherOffset a b c = Expr (Apply "textureGatherOffset" [Star "usampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureGatherOffset a b c = Expr (Tuple "uvec4" (Apply "textureGatherOffset" [Expr (Tuple "usampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureGatherOffsetInstance5 :: TextureGatherOffset (Expr Usampler2D) (Expr Vec2) (Expr Ivec2) (Expr Uvec4) where
-  textureGatherOffset a b c = Expr (Apply "textureGatherOffset" [Star "usampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureGatherOffset a b c = Expr (Tuple "uvec4" (Apply "textureGatherOffset" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureGatherOffsetInstance6 :: TextureGatherOffset (Expr Isampler2DRect) (Expr Vec3) (Expr Ivec2) (Expr Ivec4) where
-  textureGatherOffset a b c = Expr (Apply "textureGatherOffset" [Star "isampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureGatherOffset a b c = Expr (Tuple "ivec4" (Apply "textureGatherOffset" [Expr (Tuple "isampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureGatherOffsetInstance7 :: TextureGatherOffset (Expr Isampler2DArray) (Expr Vec3) (Expr Ivec2) (Expr Ivec4) where
-  textureGatherOffset a b c = Expr (Apply "textureGatherOffset" [Star "isampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureGatherOffset a b c = Expr (Tuple "ivec4" (Apply "textureGatherOffset" [Expr (Tuple "isampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureGatherOffsetInstance8 :: TextureGatherOffset (Expr Isampler2D) (Expr Vec2) (Expr Ivec2) (Expr Ivec4) where
-  textureGatherOffset a b c = Expr (Apply "textureGatherOffset" [Star "isampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureGatherOffset a b c = Expr (Tuple "ivec4" (Apply "textureGatherOffset" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 class TextureGatherOffset2 a b c d e | a b c d -> e where
   textureGatherOffset2 :: a -> b -> c -> d -> e
 
 instance textureGatherOffset2Instance0 :: TextureGatherOffset2 (Expr Sampler2DShadow) (Expr Vec2) (Expr Float) (Expr Ivec2) (Expr Vec4) where
-  textureGatherOffset2 a b c d = Expr (Apply "textureGatherOffset" [Star "sampler2DShadow" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec2" (unsafeCoerce d)])
+  textureGatherOffset2 a b c d = Expr (Tuple "vec4" (Apply "textureGatherOffset" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec2" (unsafeCoerce d))]))
 
 instance textureGatherOffset2Instance1 :: TextureGatherOffset2 (Expr Sampler2DRectShadow) (Expr Vec3) (Expr Float) (Expr Ivec2) (Expr Vec4) where
-  textureGatherOffset2 a b c d = Expr (Apply "textureGatherOffset" [Star "sampler2DRectShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec2" (unsafeCoerce d)])
+  textureGatherOffset2 a b c d = Expr (Tuple "vec4" (Apply "textureGatherOffset" [Expr (Tuple "sampler2DRectShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec2" (unsafeCoerce d))]))
 
 instance textureGatherOffset2Instance2 :: TextureGatherOffset2 (Expr Sampler2DRect) (Expr Vec3) (Expr Ivec2) (Expr Int) (Expr Vec4) where
-  textureGatherOffset2 a b c d = Expr (Apply "textureGatherOffset" [Star "sampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureGatherOffset2 a b c d = Expr (Tuple "vec4" (Apply "textureGatherOffset" [Expr (Tuple "sampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureGatherOffset2Instance3 :: TextureGatherOffset2 (Expr Sampler2DArrayShadow) (Expr Vec3) (Expr Float) (Expr Ivec2) (Expr Vec4) where
-  textureGatherOffset2 a b c d = Expr (Apply "textureGatherOffset" [Star "sampler2DArrayShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec2" (unsafeCoerce d)])
+  textureGatherOffset2 a b c d = Expr (Tuple "vec4" (Apply "textureGatherOffset" [Expr (Tuple "sampler2DArrayShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec2" (unsafeCoerce d))]))
 
 instance textureGatherOffset2Instance4 :: TextureGatherOffset2 (Expr Sampler2DArray) (Expr Vec3) (Expr Ivec2) (Expr Int) (Expr Vec4) where
-  textureGatherOffset2 a b c d = Expr (Apply "textureGatherOffset" [Star "sampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureGatherOffset2 a b c d = Expr (Tuple "vec4" (Apply "textureGatherOffset" [Expr (Tuple "sampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureGatherOffset2Instance5 :: TextureGatherOffset2 (Expr Sampler2D) (Expr Vec2) (Expr Ivec2) (Expr Int) (Expr Vec4) where
-  textureGatherOffset2 a b c d = Expr (Apply "textureGatherOffset" [Star "sampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureGatherOffset2 a b c d = Expr (Tuple "vec4" (Apply "textureGatherOffset" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureGatherOffset2Instance6 :: TextureGatherOffset2 (Expr Usampler2DRect) (Expr Vec3) (Expr Ivec2) (Expr Int) (Expr Uvec4) where
-  textureGatherOffset2 a b c d = Expr (Apply "textureGatherOffset" [Star "usampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureGatherOffset2 a b c d = Expr (Tuple "uvec4" (Apply "textureGatherOffset" [Expr (Tuple "usampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureGatherOffset2Instance7 :: TextureGatherOffset2 (Expr Usampler2DArray) (Expr Vec3) (Expr Ivec2) (Expr Int) (Expr Uvec4) where
-  textureGatherOffset2 a b c d = Expr (Apply "textureGatherOffset" [Star "usampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureGatherOffset2 a b c d = Expr (Tuple "uvec4" (Apply "textureGatherOffset" [Expr (Tuple "usampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureGatherOffset2Instance8 :: TextureGatherOffset2 (Expr Usampler2D) (Expr Vec2) (Expr Ivec2) (Expr Int) (Expr Uvec4) where
-  textureGatherOffset2 a b c d = Expr (Apply "textureGatherOffset" [Star "usampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureGatherOffset2 a b c d = Expr (Tuple "uvec4" (Apply "textureGatherOffset" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureGatherOffset2Instance9 :: TextureGatherOffset2 (Expr Isampler2DRect) (Expr Vec3) (Expr Ivec2) (Expr Int) (Expr Ivec4) where
-  textureGatherOffset2 a b c d = Expr (Apply "textureGatherOffset" [Star "isampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureGatherOffset2 a b c d = Expr (Tuple "ivec4" (Apply "textureGatherOffset" [Expr (Tuple "isampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureGatherOffset2Instance10 :: TextureGatherOffset2 (Expr Isampler2DArray) (Expr Vec3) (Expr Ivec2) (Expr Int) (Expr Ivec4) where
-  textureGatherOffset2 a b c d = Expr (Apply "textureGatherOffset" [Star "isampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureGatherOffset2 a b c d = Expr (Tuple "ivec4" (Apply "textureGatherOffset" [Expr (Tuple "isampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureGatherOffset2Instance11 :: TextureGatherOffset2 (Expr Isampler2D) (Expr Vec2) (Expr Ivec2) (Expr Int) (Expr Ivec4) where
-  textureGatherOffset2 a b c d = Expr (Apply "textureGatherOffset" [Star "isampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureGatherOffset2 a b c d = Expr (Tuple "ivec4" (Apply "textureGatherOffset" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 class TextureGatherOffsets a b c d | a b c -> d where
   textureGatherOffsets :: a -> b -> c -> d
 
 instance textureGatherOffsetsInstance0 :: TextureGatherOffsets (Expr Sampler2DRect) (Expr Vec3) (Expr Ivec2) (Expr Vec4) where
-  textureGatherOffsets a b c = Expr (Apply "textureGatherOffsets" [Star "sampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureGatherOffsets a b c = Expr (Tuple "vec4" (Apply "textureGatherOffsets" [Expr (Tuple "sampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureGatherOffsetsInstance1 :: TextureGatherOffsets (Expr Sampler2DArray) (Expr Vec3) (Expr Ivec2) (Expr Vec4) where
-  textureGatherOffsets a b c = Expr (Apply "textureGatherOffsets" [Star "sampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureGatherOffsets a b c = Expr (Tuple "vec4" (Apply "textureGatherOffsets" [Expr (Tuple "sampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureGatherOffsetsInstance2 :: TextureGatherOffsets (Expr Sampler2D) (Expr Vec2) (Expr Ivec2) (Expr Vec4) where
-  textureGatherOffsets a b c = Expr (Apply "textureGatherOffsets" [Star "sampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureGatherOffsets a b c = Expr (Tuple "vec4" (Apply "textureGatherOffsets" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureGatherOffsetsInstance3 :: TextureGatherOffsets (Expr Usampler2DRect) (Expr Vec3) (Expr Ivec2) (Expr Uvec4) where
-  textureGatherOffsets a b c = Expr (Apply "textureGatherOffsets" [Star "usampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureGatherOffsets a b c = Expr (Tuple "uvec4" (Apply "textureGatherOffsets" [Expr (Tuple "usampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureGatherOffsetsInstance4 :: TextureGatherOffsets (Expr Usampler2DArray) (Expr Vec3) (Expr Ivec2) (Expr Uvec4) where
-  textureGatherOffsets a b c = Expr (Apply "textureGatherOffsets" [Star "usampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureGatherOffsets a b c = Expr (Tuple "uvec4" (Apply "textureGatherOffsets" [Expr (Tuple "usampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureGatherOffsetsInstance5 :: TextureGatherOffsets (Expr Usampler2D) (Expr Vec2) (Expr Ivec2) (Expr Uvec4) where
-  textureGatherOffsets a b c = Expr (Apply "textureGatherOffsets" [Star "usampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureGatherOffsets a b c = Expr (Tuple "uvec4" (Apply "textureGatherOffsets" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureGatherOffsetsInstance6 :: TextureGatherOffsets (Expr Isampler2DRect) (Expr Vec3) (Expr Ivec2) (Expr Ivec4) where
-  textureGatherOffsets a b c = Expr (Apply "textureGatherOffsets" [Star "isampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureGatherOffsets a b c = Expr (Tuple "ivec4" (Apply "textureGatherOffsets" [Expr (Tuple "isampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureGatherOffsetsInstance7 :: TextureGatherOffsets (Expr Isampler2DArray) (Expr Vec3) (Expr Ivec2) (Expr Ivec4) where
-  textureGatherOffsets a b c = Expr (Apply "textureGatherOffsets" [Star "isampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureGatherOffsets a b c = Expr (Tuple "ivec4" (Apply "textureGatherOffsets" [Expr (Tuple "isampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureGatherOffsetsInstance8 :: TextureGatherOffsets (Expr Isampler2D) (Expr Vec2) (Expr Ivec2) (Expr Ivec4) where
-  textureGatherOffsets a b c = Expr (Apply "textureGatherOffsets" [Star "isampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureGatherOffsets a b c = Expr (Tuple "ivec4" (Apply "textureGatherOffsets" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 class TextureGatherOffsets2 a b c d e | a b c d -> e where
   textureGatherOffsets2 :: a -> b -> c -> d -> e
 
 instance textureGatherOffsets2Instance0 :: TextureGatherOffsets2 (Expr Sampler2DShadow) (Expr Vec2) (Expr Float) (Expr Ivec2) (Expr Vec4) where
-  textureGatherOffsets2 a b c d = Expr (Apply "textureGatherOffsets" [Star "sampler2DShadow" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec2" (unsafeCoerce d)])
+  textureGatherOffsets2 a b c d = Expr (Tuple "vec4" (Apply "textureGatherOffsets" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec2" (unsafeCoerce d))]))
 
 instance textureGatherOffsets2Instance1 :: TextureGatherOffsets2 (Expr Sampler2DRectShadow) (Expr Vec3) (Expr Float) (Expr Ivec2) (Expr Vec4) where
-  textureGatherOffsets2 a b c d = Expr (Apply "textureGatherOffsets" [Star "sampler2DRectShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec2" (unsafeCoerce d)])
+  textureGatherOffsets2 a b c d = Expr (Tuple "vec4" (Apply "textureGatherOffsets" [Expr (Tuple "sampler2DRectShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec2" (unsafeCoerce d))]))
 
 instance textureGatherOffsets2Instance2 :: TextureGatherOffsets2 (Expr Sampler2DRect) (Expr Vec3) (Expr Ivec2) (Expr Int) (Expr Vec4) where
-  textureGatherOffsets2 a b c d = Expr (Apply "textureGatherOffsets" [Star "sampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureGatherOffsets2 a b c d = Expr (Tuple "vec4" (Apply "textureGatherOffsets" [Expr (Tuple "sampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureGatherOffsets2Instance3 :: TextureGatherOffsets2 (Expr Sampler2DArrayShadow) (Expr Vec3) (Expr Float) (Expr Ivec2) (Expr Vec4) where
-  textureGatherOffsets2 a b c d = Expr (Apply "textureGatherOffsets" [Star "sampler2DArrayShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec2" (unsafeCoerce d)])
+  textureGatherOffsets2 a b c d = Expr (Tuple "vec4" (Apply "textureGatherOffsets" [Expr (Tuple "sampler2DArrayShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec2" (unsafeCoerce d))]))
 
 instance textureGatherOffsets2Instance4 :: TextureGatherOffsets2 (Expr Sampler2DArray) (Expr Vec3) (Expr Ivec2) (Expr Int) (Expr Vec4) where
-  textureGatherOffsets2 a b c d = Expr (Apply "textureGatherOffsets" [Star "sampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureGatherOffsets2 a b c d = Expr (Tuple "vec4" (Apply "textureGatherOffsets" [Expr (Tuple "sampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureGatherOffsets2Instance5 :: TextureGatherOffsets2 (Expr Sampler2D) (Expr Vec2) (Expr Ivec2) (Expr Int) (Expr Vec4) where
-  textureGatherOffsets2 a b c d = Expr (Apply "textureGatherOffsets" [Star "sampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureGatherOffsets2 a b c d = Expr (Tuple "vec4" (Apply "textureGatherOffsets" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureGatherOffsets2Instance6 :: TextureGatherOffsets2 (Expr Usampler2DRect) (Expr Vec3) (Expr Ivec2) (Expr Int) (Expr Uvec4) where
-  textureGatherOffsets2 a b c d = Expr (Apply "textureGatherOffsets" [Star "usampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureGatherOffsets2 a b c d = Expr (Tuple "uvec4" (Apply "textureGatherOffsets" [Expr (Tuple "usampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureGatherOffsets2Instance7 :: TextureGatherOffsets2 (Expr Usampler2DArray) (Expr Vec3) (Expr Ivec2) (Expr Int) (Expr Uvec4) where
-  textureGatherOffsets2 a b c d = Expr (Apply "textureGatherOffsets" [Star "usampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureGatherOffsets2 a b c d = Expr (Tuple "uvec4" (Apply "textureGatherOffsets" [Expr (Tuple "usampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureGatherOffsets2Instance8 :: TextureGatherOffsets2 (Expr Usampler2D) (Expr Vec2) (Expr Ivec2) (Expr Int) (Expr Uvec4) where
-  textureGatherOffsets2 a b c d = Expr (Apply "textureGatherOffsets" [Star "usampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureGatherOffsets2 a b c d = Expr (Tuple "uvec4" (Apply "textureGatherOffsets" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureGatherOffsets2Instance9 :: TextureGatherOffsets2 (Expr Isampler2DRect) (Expr Vec3) (Expr Ivec2) (Expr Int) (Expr Ivec4) where
-  textureGatherOffsets2 a b c d = Expr (Apply "textureGatherOffsets" [Star "isampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureGatherOffsets2 a b c d = Expr (Tuple "ivec4" (Apply "textureGatherOffsets" [Expr (Tuple "isampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureGatherOffsets2Instance10 :: TextureGatherOffsets2 (Expr Isampler2DArray) (Expr Vec3) (Expr Ivec2) (Expr Int) (Expr Ivec4) where
-  textureGatherOffsets2 a b c d = Expr (Apply "textureGatherOffsets" [Star "isampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureGatherOffsets2 a b c d = Expr (Tuple "ivec4" (Apply "textureGatherOffsets" [Expr (Tuple "isampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureGatherOffsets2Instance11 :: TextureGatherOffsets2 (Expr Isampler2D) (Expr Vec2) (Expr Ivec2) (Expr Int) (Expr Ivec4) where
-  textureGatherOffsets2 a b c d = Expr (Apply "textureGatherOffsets" [Star "isampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureGatherOffsets2 a b c d = Expr (Tuple "ivec4" (Apply "textureGatherOffsets" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 class TextureGrad a b c d e | a b c d -> e where
   textureGrad :: a -> b -> c -> d -> e
 
 instance textureGradInstance0 :: TextureGrad (Expr SamplerCubeArray) (Expr Vec4) (Expr Vec3) (Expr Vec3) (Expr Vec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "samplerCubeArray" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec3" (unsafeCoerce c), Star "vec3" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "vec4" (Apply "textureGrad" [Expr (Tuple "samplerCubeArray" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c)), Expr (Tuple "vec3" (unsafeCoerce d))]))
 
 instance textureGradInstance1 :: TextureGrad (Expr SamplerCube) (Expr Vec3) (Expr Vec3) (Expr Vec3) (Expr Vec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "samplerCube" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec3" (unsafeCoerce c), Star "vec3" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "vec4" (Apply "textureGrad" [Expr (Tuple "samplerCube" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c)), Expr (Tuple "vec3" (unsafeCoerce d))]))
 
 instance textureGradInstance2 :: TextureGrad (Expr Sampler3D) (Expr Vec3) (Expr Vec3) (Expr Vec3) (Expr Vec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "sampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec3" (unsafeCoerce c), Star "vec3" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "vec4" (Apply "textureGrad" [Expr (Tuple "sampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c)), Expr (Tuple "vec3" (unsafeCoerce d))]))
 
 instance textureGradInstance3 :: TextureGrad (Expr Sampler2DRect) (Expr Vec2) (Expr Vec2) (Expr Vec2) (Expr Vec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "sampler2DRect" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "vec4" (Apply "textureGrad" [Expr (Tuple "sampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureGradInstance4 :: TextureGrad (Expr Sampler2DArray) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Vec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "sampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "vec4" (Apply "textureGrad" [Expr (Tuple "sampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureGradInstance5 :: TextureGrad (Expr Sampler2D) (Expr Vec2) (Expr Vec2) (Expr Vec2) (Expr Vec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "sampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "vec4" (Apply "textureGrad" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureGradInstance6 :: TextureGrad (Expr Sampler1DArray) (Expr Vec2) (Expr Float) (Expr Float) (Expr Vec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "sampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "vec4" (Apply "textureGrad" [Expr (Tuple "sampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureGradInstance7 :: TextureGrad (Expr Sampler1D) (Expr Float) (Expr Float) (Expr Float) (Expr Vec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "sampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "vec4" (Apply "textureGrad" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureGradInstance8 :: TextureGrad (Expr UsamplerCubeArray) (Expr Vec4) (Expr Vec3) (Expr Vec3) (Expr Uvec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "usamplerCubeArray" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec3" (unsafeCoerce c), Star "vec3" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "uvec4" (Apply "textureGrad" [Expr (Tuple "usamplerCubeArray" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c)), Expr (Tuple "vec3" (unsafeCoerce d))]))
 
 instance textureGradInstance9 :: TextureGrad (Expr UsamplerCube) (Expr Vec3) (Expr Vec3) (Expr Vec3) (Expr Uvec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "usamplerCube" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec3" (unsafeCoerce c), Star "vec3" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "uvec4" (Apply "textureGrad" [Expr (Tuple "usamplerCube" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c)), Expr (Tuple "vec3" (unsafeCoerce d))]))
 
 instance textureGradInstance10 :: TextureGrad (Expr Usampler3D) (Expr Vec3) (Expr Vec3) (Expr Vec3) (Expr Uvec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "usampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec3" (unsafeCoerce c), Star "vec3" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "uvec4" (Apply "textureGrad" [Expr (Tuple "usampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c)), Expr (Tuple "vec3" (unsafeCoerce d))]))
 
 instance textureGradInstance11 :: TextureGrad (Expr Usampler2DRect) (Expr Vec2) (Expr Vec2) (Expr Vec2) (Expr Uvec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "usampler2DRect" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "uvec4" (Apply "textureGrad" [Expr (Tuple "usampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureGradInstance12 :: TextureGrad (Expr Usampler2DArray) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Uvec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "usampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "uvec4" (Apply "textureGrad" [Expr (Tuple "usampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureGradInstance13 :: TextureGrad (Expr Usampler2D) (Expr Vec2) (Expr Vec2) (Expr Vec2) (Expr Uvec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "usampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "uvec4" (Apply "textureGrad" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureGradInstance14 :: TextureGrad (Expr Usampler1DArray) (Expr Vec2) (Expr Float) (Expr Float) (Expr Uvec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "usampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "uvec4" (Apply "textureGrad" [Expr (Tuple "usampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureGradInstance15 :: TextureGrad (Expr Usampler1D) (Expr Float) (Expr Float) (Expr Float) (Expr Uvec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "usampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "uvec4" (Apply "textureGrad" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureGradInstance16 :: TextureGrad (Expr IsamplerCubeArray) (Expr Vec4) (Expr Vec3) (Expr Vec3) (Expr Ivec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "isamplerCubeArray" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec3" (unsafeCoerce c), Star "vec3" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "ivec4" (Apply "textureGrad" [Expr (Tuple "isamplerCubeArray" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c)), Expr (Tuple "vec3" (unsafeCoerce d))]))
 
 instance textureGradInstance17 :: TextureGrad (Expr IsamplerCube) (Expr Vec3) (Expr Vec3) (Expr Vec3) (Expr Ivec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "isamplerCube" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec3" (unsafeCoerce c), Star "vec3" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "ivec4" (Apply "textureGrad" [Expr (Tuple "isamplerCube" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c)), Expr (Tuple "vec3" (unsafeCoerce d))]))
 
 instance textureGradInstance18 :: TextureGrad (Expr Isampler3D) (Expr Vec3) (Expr Vec3) (Expr Vec3) (Expr Ivec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "isampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec3" (unsafeCoerce c), Star "vec3" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "ivec4" (Apply "textureGrad" [Expr (Tuple "isampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c)), Expr (Tuple "vec3" (unsafeCoerce d))]))
 
 instance textureGradInstance19 :: TextureGrad (Expr Isampler2DRect) (Expr Vec2) (Expr Vec2) (Expr Vec2) (Expr Ivec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "isampler2DRect" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "ivec4" (Apply "textureGrad" [Expr (Tuple "isampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureGradInstance20 :: TextureGrad (Expr Isampler2DArray) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Ivec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "isampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "ivec4" (Apply "textureGrad" [Expr (Tuple "isampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureGradInstance21 :: TextureGrad (Expr Isampler2D) (Expr Vec2) (Expr Vec2) (Expr Vec2) (Expr Ivec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "isampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "ivec4" (Apply "textureGrad" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureGradInstance22 :: TextureGrad (Expr Isampler1DArray) (Expr Vec2) (Expr Float) (Expr Float) (Expr Ivec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "isampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "ivec4" (Apply "textureGrad" [Expr (Tuple "isampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureGradInstance23 :: TextureGrad (Expr Isampler1D) (Expr Float) (Expr Float) (Expr Float) (Expr Ivec4) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "isampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "ivec4" (Apply "textureGrad" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureGradInstance24 :: TextureGrad (Expr Sampler2DShadow) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Float) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "sampler2DShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "float" (Apply "textureGrad" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureGradInstance25 :: TextureGrad (Expr Sampler2DRectShadow) (Expr Vec2) (Expr Vec2) (Expr Vec2) (Expr Float) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "sampler2DRectShadow" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "float" (Apply "textureGrad" [Expr (Tuple "sampler2DRectShadow" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureGradInstance26 :: TextureGrad (Expr Sampler1DShadow) (Expr Vec3) (Expr Float) (Expr Float) (Expr Float) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "sampler1DShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "float" (Apply "textureGrad" [Expr (Tuple "sampler1DShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureGradInstance27 :: TextureGrad (Expr Sampler1DArrayShadow) (Expr Vec3) (Expr Float) (Expr Float) (Expr Float) where
-  textureGrad a b c d = Expr (Apply "textureGrad" [Star "sampler1DArrayShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureGrad a b c d = Expr (Tuple "float" (Apply "textureGrad" [Expr (Tuple "sampler1DArrayShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 class TextureGradOffset a b c d e f | a b c d e -> f where
   textureGradOffset :: a -> b -> c -> d -> e -> f
 
 instance textureGradOffsetInstance0 :: TextureGradOffset (Expr Sampler3D) (Expr Vec3) (Expr Vec3) (Expr Vec3) (Expr Ivec3) (Expr Vec4) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "sampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec3" (unsafeCoerce c), Star "vec3" (unsafeCoerce d), Star "ivec3" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "vec4" (Apply "textureGradOffset" [Expr (Tuple "sampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c)), Expr (Tuple "vec3" (unsafeCoerce d)), Expr (Tuple "ivec3" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance1 :: TextureGradOffset (Expr Sampler2DRect) (Expr Vec2) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Vec4) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "sampler2DRect" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "vec4" (Apply "textureGradOffset" [Expr (Tuple "sampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance2 :: TextureGradOffset (Expr Sampler2DArray) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Vec4) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "sampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "vec4" (Apply "textureGradOffset" [Expr (Tuple "sampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance3 :: TextureGradOffset (Expr Sampler2D) (Expr Vec2) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Vec4) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "sampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "vec4" (Apply "textureGradOffset" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance4 :: TextureGradOffset (Expr Sampler1DArray) (Expr Vec2) (Expr Float) (Expr Float) (Expr Int) (Expr Vec4) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "sampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d), Star "int" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "vec4" (Apply "textureGradOffset" [Expr (Tuple "sampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d)), Expr (Tuple "int" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance5 :: TextureGradOffset (Expr Sampler1D) (Expr Float) (Expr Float) (Expr Float) (Expr Int) (Expr Vec4) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "sampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d), Star "int" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "vec4" (Apply "textureGradOffset" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d)), Expr (Tuple "int" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance6 :: TextureGradOffset (Expr Usampler3D) (Expr Vec3) (Expr Vec3) (Expr Vec3) (Expr Ivec3) (Expr Uvec4) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "usampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec3" (unsafeCoerce c), Star "vec3" (unsafeCoerce d), Star "ivec3" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "uvec4" (Apply "textureGradOffset" [Expr (Tuple "usampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c)), Expr (Tuple "vec3" (unsafeCoerce d)), Expr (Tuple "ivec3" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance7 :: TextureGradOffset (Expr Usampler2DRect) (Expr Vec2) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Uvec4) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "usampler2DRect" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "uvec4" (Apply "textureGradOffset" [Expr (Tuple "usampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance8 :: TextureGradOffset (Expr Usampler2DArray) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Uvec4) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "usampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "uvec4" (Apply "textureGradOffset" [Expr (Tuple "usampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance9 :: TextureGradOffset (Expr Usampler2D) (Expr Vec2) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Uvec4) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "usampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "uvec4" (Apply "textureGradOffset" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance10 :: TextureGradOffset (Expr Usampler1DArray) (Expr Vec2) (Expr Float) (Expr Float) (Expr Int) (Expr Uvec4) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "usampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d), Star "int" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "uvec4" (Apply "textureGradOffset" [Expr (Tuple "usampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d)), Expr (Tuple "int" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance11 :: TextureGradOffset (Expr Usampler1D) (Expr Float) (Expr Float) (Expr Float) (Expr Int) (Expr Uvec4) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "usampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d), Star "int" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "uvec4" (Apply "textureGradOffset" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d)), Expr (Tuple "int" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance12 :: TextureGradOffset (Expr Isampler3D) (Expr Vec3) (Expr Vec3) (Expr Vec3) (Expr Ivec3) (Expr Ivec4) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "isampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec3" (unsafeCoerce c), Star "vec3" (unsafeCoerce d), Star "ivec3" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "ivec4" (Apply "textureGradOffset" [Expr (Tuple "isampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c)), Expr (Tuple "vec3" (unsafeCoerce d)), Expr (Tuple "ivec3" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance13 :: TextureGradOffset (Expr Isampler2DRect) (Expr Vec2) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Ivec4) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "isampler2DRect" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "ivec4" (Apply "textureGradOffset" [Expr (Tuple "isampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance14 :: TextureGradOffset (Expr Isampler2DArray) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Ivec4) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "isampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "ivec4" (Apply "textureGradOffset" [Expr (Tuple "isampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance15 :: TextureGradOffset (Expr Isampler2D) (Expr Vec2) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Ivec4) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "isampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "ivec4" (Apply "textureGradOffset" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance16 :: TextureGradOffset (Expr Isampler1DArray) (Expr Vec2) (Expr Float) (Expr Float) (Expr Int) (Expr Ivec4) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "isampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d), Star "int" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "ivec4" (Apply "textureGradOffset" [Expr (Tuple "isampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d)), Expr (Tuple "int" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance17 :: TextureGradOffset (Expr Isampler1D) (Expr Float) (Expr Float) (Expr Float) (Expr Int) (Expr Ivec4) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "isampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d), Star "int" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "ivec4" (Apply "textureGradOffset" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d)), Expr (Tuple "int" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance18 :: TextureGradOffset (Expr Sampler2DShadow) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Float) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "sampler2DShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "float" (Apply "textureGradOffset" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance19 :: TextureGradOffset (Expr Sampler2DRectShadow) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Float) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "sampler2DRectShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "float" (Apply "textureGradOffset" [Expr (Tuple "sampler2DRectShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance20 :: TextureGradOffset (Expr Sampler2DArrayShadow) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Float) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "sampler2DArrayShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "float" (Apply "textureGradOffset" [Expr (Tuple "sampler2DArrayShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance21 :: TextureGradOffset (Expr Sampler1DShadow) (Expr Vec3) (Expr Float) (Expr Float) (Expr Int) (Expr Float) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "sampler1DShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d), Star "int" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "float" (Apply "textureGradOffset" [Expr (Tuple "sampler1DShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d)), Expr (Tuple "int" (unsafeCoerce e))]))
 
 instance textureGradOffsetInstance22 :: TextureGradOffset (Expr Sampler1DArrayShadow) (Expr Vec3) (Expr Float) (Expr Float) (Expr Int) (Expr Float) where
-  textureGradOffset a b c d e = Expr (Apply "textureGradOffset" [Star "sampler1DArrayShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d), Star "int" (unsafeCoerce e)])
+  textureGradOffset a b c d e = Expr (Tuple "float" (Apply "textureGradOffset" [Expr (Tuple "sampler1DArrayShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d)), Expr (Tuple "int" (unsafeCoerce e))]))
 
 class TextureLod a b c d | a b c -> d where
   textureLod :: a -> b -> c -> d
 
 instance textureLodInstance0 :: TextureLod (Expr SamplerCubeArray) (Expr Vec4) (Expr Float) (Expr Vec4) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "samplerCubeArray" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "vec4" (Apply "textureLod" [Expr (Tuple "samplerCubeArray" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance1 :: TextureLod (Expr SamplerCube) (Expr Vec3) (Expr Float) (Expr Vec4) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "samplerCube" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "vec4" (Apply "textureLod" [Expr (Tuple "samplerCube" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance2 :: TextureLod (Expr Sampler3D) (Expr Vec3) (Expr Float) (Expr Vec4) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "sampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "vec4" (Apply "textureLod" [Expr (Tuple "sampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance3 :: TextureLod (Expr Sampler2DArray) (Expr Vec3) (Expr Float) (Expr Vec4) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "sampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "vec4" (Apply "textureLod" [Expr (Tuple "sampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance4 :: TextureLod (Expr Sampler2D) (Expr Vec2) (Expr Float) (Expr Vec4) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "sampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "vec4" (Apply "textureLod" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance5 :: TextureLod (Expr Sampler1DArray) (Expr Vec2) (Expr Float) (Expr Vec4) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "sampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "vec4" (Apply "textureLod" [Expr (Tuple "sampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance6 :: TextureLod (Expr Sampler1D) (Expr Float) (Expr Float) (Expr Vec4) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "sampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "vec4" (Apply "textureLod" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance7 :: TextureLod (Expr UsamplerCubeArray) (Expr Vec4) (Expr Float) (Expr Uvec4) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "usamplerCubeArray" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "uvec4" (Apply "textureLod" [Expr (Tuple "usamplerCubeArray" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance8 :: TextureLod (Expr UsamplerCube) (Expr Vec3) (Expr Float) (Expr Uvec4) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "usamplerCube" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "uvec4" (Apply "textureLod" [Expr (Tuple "usamplerCube" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance9 :: TextureLod (Expr Usampler3D) (Expr Vec3) (Expr Float) (Expr Uvec4) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "usampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "uvec4" (Apply "textureLod" [Expr (Tuple "usampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance10 :: TextureLod (Expr Usampler2DArray) (Expr Vec3) (Expr Float) (Expr Uvec4) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "usampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "uvec4" (Apply "textureLod" [Expr (Tuple "usampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance11 :: TextureLod (Expr Usampler2D) (Expr Vec2) (Expr Float) (Expr Uvec4) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "usampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "uvec4" (Apply "textureLod" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance12 :: TextureLod (Expr Usampler1DArray) (Expr Vec2) (Expr Float) (Expr Uvec4) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "usampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "uvec4" (Apply "textureLod" [Expr (Tuple "usampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance13 :: TextureLod (Expr Usampler1D) (Expr Float) (Expr Float) (Expr Uvec4) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "usampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "uvec4" (Apply "textureLod" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance14 :: TextureLod (Expr IsamplerCubeArray) (Expr Vec4) (Expr Float) (Expr Ivec4) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "isamplerCubeArray" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "ivec4" (Apply "textureLod" [Expr (Tuple "isamplerCubeArray" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance15 :: TextureLod (Expr IsamplerCube) (Expr Vec3) (Expr Float) (Expr Ivec4) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "isamplerCube" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "ivec4" (Apply "textureLod" [Expr (Tuple "isamplerCube" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance16 :: TextureLod (Expr Isampler3D) (Expr Vec3) (Expr Float) (Expr Ivec4) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "isampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "ivec4" (Apply "textureLod" [Expr (Tuple "isampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance17 :: TextureLod (Expr Isampler2DArray) (Expr Vec3) (Expr Float) (Expr Ivec4) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "isampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "ivec4" (Apply "textureLod" [Expr (Tuple "isampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance18 :: TextureLod (Expr Isampler2D) (Expr Vec2) (Expr Float) (Expr Ivec4) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "isampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "ivec4" (Apply "textureLod" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance19 :: TextureLod (Expr Isampler1DArray) (Expr Vec2) (Expr Float) (Expr Ivec4) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "isampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "ivec4" (Apply "textureLod" [Expr (Tuple "isampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance20 :: TextureLod (Expr Isampler1D) (Expr Float) (Expr Float) (Expr Ivec4) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "isampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "ivec4" (Apply "textureLod" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance21 :: TextureLod (Expr Sampler2DShadow) (Expr Vec4) (Expr Float) (Expr Float) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "sampler2DShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "float" (Apply "textureLod" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance22 :: TextureLod (Expr Sampler1DShadow) (Expr Vec3) (Expr Float) (Expr Float) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "sampler1DShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "float" (Apply "textureLod" [Expr (Tuple "sampler1DShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureLodInstance23 :: TextureLod (Expr Sampler1DArrayShadow) (Expr Vec3) (Expr Float) (Expr Float) where
-  textureLod a b c = Expr (Apply "textureLod" [Star "sampler1DArrayShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureLod a b c = Expr (Tuple "float" (Apply "textureLod" [Expr (Tuple "sampler1DArrayShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 class TextureLodOffset a b c d e | a b c d -> e where
   textureLodOffset :: a -> b -> c -> d -> e
 
 instance textureLodOffsetInstance0 :: TextureLodOffset (Expr Sampler3D) (Expr Vec3) (Expr Float) (Expr Ivec3) (Expr Vec4) where
-  textureLodOffset a b c d = Expr (Apply "textureLodOffset" [Star "sampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec3" (unsafeCoerce d)])
+  textureLodOffset a b c d = Expr (Tuple "vec4" (Apply "textureLodOffset" [Expr (Tuple "sampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec3" (unsafeCoerce d))]))
 
 instance textureLodOffsetInstance1 :: TextureLodOffset (Expr Sampler2DArray) (Expr Vec3) (Expr Float) (Expr Ivec2) (Expr Vec4) where
-  textureLodOffset a b c d = Expr (Apply "textureLodOffset" [Star "sampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec2" (unsafeCoerce d)])
+  textureLodOffset a b c d = Expr (Tuple "vec4" (Apply "textureLodOffset" [Expr (Tuple "sampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec2" (unsafeCoerce d))]))
 
 instance textureLodOffsetInstance2 :: TextureLodOffset (Expr Sampler2D) (Expr Vec2) (Expr Float) (Expr Ivec2) (Expr Vec4) where
-  textureLodOffset a b c d = Expr (Apply "textureLodOffset" [Star "sampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec2" (unsafeCoerce d)])
+  textureLodOffset a b c d = Expr (Tuple "vec4" (Apply "textureLodOffset" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec2" (unsafeCoerce d))]))
 
 instance textureLodOffsetInstance3 :: TextureLodOffset (Expr Sampler1DArray) (Expr Vec2) (Expr Float) (Expr Int) (Expr Vec4) where
-  textureLodOffset a b c d = Expr (Apply "textureLodOffset" [Star "sampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureLodOffset a b c d = Expr (Tuple "vec4" (Apply "textureLodOffset" [Expr (Tuple "sampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureLodOffsetInstance4 :: TextureLodOffset (Expr Sampler1D) (Expr Float) (Expr Float) (Expr Int) (Expr Vec4) where
-  textureLodOffset a b c d = Expr (Apply "textureLodOffset" [Star "sampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureLodOffset a b c d = Expr (Tuple "vec4" (Apply "textureLodOffset" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureLodOffsetInstance5 :: TextureLodOffset (Expr Usampler3D) (Expr Vec3) (Expr Float) (Expr Ivec3) (Expr Uvec4) where
-  textureLodOffset a b c d = Expr (Apply "textureLodOffset" [Star "usampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec3" (unsafeCoerce d)])
+  textureLodOffset a b c d = Expr (Tuple "uvec4" (Apply "textureLodOffset" [Expr (Tuple "usampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec3" (unsafeCoerce d))]))
 
 instance textureLodOffsetInstance6 :: TextureLodOffset (Expr Usampler2DArray) (Expr Vec3) (Expr Float) (Expr Ivec2) (Expr Uvec4) where
-  textureLodOffset a b c d = Expr (Apply "textureLodOffset" [Star "usampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec2" (unsafeCoerce d)])
+  textureLodOffset a b c d = Expr (Tuple "uvec4" (Apply "textureLodOffset" [Expr (Tuple "usampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec2" (unsafeCoerce d))]))
 
 instance textureLodOffsetInstance7 :: TextureLodOffset (Expr Usampler2D) (Expr Vec2) (Expr Float) (Expr Ivec2) (Expr Uvec4) where
-  textureLodOffset a b c d = Expr (Apply "textureLodOffset" [Star "usampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec2" (unsafeCoerce d)])
+  textureLodOffset a b c d = Expr (Tuple "uvec4" (Apply "textureLodOffset" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec2" (unsafeCoerce d))]))
 
 instance textureLodOffsetInstance8 :: TextureLodOffset (Expr Usampler1DArray) (Expr Vec2) (Expr Float) (Expr Int) (Expr Uvec4) where
-  textureLodOffset a b c d = Expr (Apply "textureLodOffset" [Star "usampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureLodOffset a b c d = Expr (Tuple "uvec4" (Apply "textureLodOffset" [Expr (Tuple "usampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureLodOffsetInstance9 :: TextureLodOffset (Expr Usampler1D) (Expr Float) (Expr Float) (Expr Int) (Expr Uvec4) where
-  textureLodOffset a b c d = Expr (Apply "textureLodOffset" [Star "usampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureLodOffset a b c d = Expr (Tuple "uvec4" (Apply "textureLodOffset" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureLodOffsetInstance10 :: TextureLodOffset (Expr Isampler3D) (Expr Vec3) (Expr Float) (Expr Ivec3) (Expr Ivec4) where
-  textureLodOffset a b c d = Expr (Apply "textureLodOffset" [Star "isampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec3" (unsafeCoerce d)])
+  textureLodOffset a b c d = Expr (Tuple "ivec4" (Apply "textureLodOffset" [Expr (Tuple "isampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec3" (unsafeCoerce d))]))
 
 instance textureLodOffsetInstance11 :: TextureLodOffset (Expr Isampler2DArray) (Expr Vec3) (Expr Float) (Expr Ivec2) (Expr Ivec4) where
-  textureLodOffset a b c d = Expr (Apply "textureLodOffset" [Star "isampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec2" (unsafeCoerce d)])
+  textureLodOffset a b c d = Expr (Tuple "ivec4" (Apply "textureLodOffset" [Expr (Tuple "isampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec2" (unsafeCoerce d))]))
 
 instance textureLodOffsetInstance12 :: TextureLodOffset (Expr Isampler2D) (Expr Vec2) (Expr Float) (Expr Ivec2) (Expr Ivec4) where
-  textureLodOffset a b c d = Expr (Apply "textureLodOffset" [Star "isampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec2" (unsafeCoerce d)])
+  textureLodOffset a b c d = Expr (Tuple "ivec4" (Apply "textureLodOffset" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec2" (unsafeCoerce d))]))
 
 instance textureLodOffsetInstance13 :: TextureLodOffset (Expr Isampler1DArray) (Expr Vec2) (Expr Float) (Expr Int) (Expr Ivec4) where
-  textureLodOffset a b c d = Expr (Apply "textureLodOffset" [Star "isampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureLodOffset a b c d = Expr (Tuple "ivec4" (Apply "textureLodOffset" [Expr (Tuple "isampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureLodOffsetInstance14 :: TextureLodOffset (Expr Isampler1D) (Expr Float) (Expr Float) (Expr Int) (Expr Ivec4) where
-  textureLodOffset a b c d = Expr (Apply "textureLodOffset" [Star "isampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureLodOffset a b c d = Expr (Tuple "ivec4" (Apply "textureLodOffset" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureLodOffsetInstance15 :: TextureLodOffset (Expr Sampler2DShadow) (Expr Vec4) (Expr Float) (Expr Ivec2) (Expr Float) where
-  textureLodOffset a b c d = Expr (Apply "textureLodOffset" [Star "sampler2DShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec2" (unsafeCoerce d)])
+  textureLodOffset a b c d = Expr (Tuple "float" (Apply "textureLodOffset" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec2" (unsafeCoerce d))]))
 
 instance textureLodOffsetInstance16 :: TextureLodOffset (Expr Sampler1DShadow) (Expr Vec3) (Expr Float) (Expr Int) (Expr Float) where
-  textureLodOffset a b c d = Expr (Apply "textureLodOffset" [Star "sampler1DShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureLodOffset a b c d = Expr (Tuple "float" (Apply "textureLodOffset" [Expr (Tuple "sampler1DShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureLodOffsetInstance17 :: TextureLodOffset (Expr Sampler1DArrayShadow) (Expr Vec3) (Expr Float) (Expr Int) (Expr Float) where
-  textureLodOffset a b c d = Expr (Apply "textureLodOffset" [Star "sampler1DArrayShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureLodOffset a b c d = Expr (Tuple "float" (Apply "textureLodOffset" [Expr (Tuple "sampler1DArrayShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 class TextureOffset a b c d | a b c -> d where
   textureOffset :: a -> b -> c -> d
 
 instance textureOffsetInstance0 :: TextureOffset (Expr Sampler3D) (Expr Vec3) (Expr Ivec3) (Expr Vec4) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "sampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec3" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "vec4" (Apply "textureOffset" [Expr (Tuple "sampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec3" (unsafeCoerce c))]))
 
 instance textureOffsetInstance1 :: TextureOffset (Expr Sampler2DRect) (Expr Vec2) (Expr Ivec2) (Expr Vec4) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "sampler2DRect" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "vec4" (Apply "textureOffset" [Expr (Tuple "sampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureOffsetInstance2 :: TextureOffset (Expr Sampler2DArray) (Expr Vec3) (Expr Ivec2) (Expr Vec4) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "sampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "vec4" (Apply "textureOffset" [Expr (Tuple "sampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureOffsetInstance3 :: TextureOffset (Expr Sampler2D) (Expr Vec2) (Expr Ivec2) (Expr Vec4) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "sampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "vec4" (Apply "textureOffset" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureOffsetInstance4 :: TextureOffset (Expr Sampler1DArray) (Expr Vec2) (Expr Int) (Expr Vec4) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "sampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "vec4" (Apply "textureOffset" [Expr (Tuple "sampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureOffsetInstance5 :: TextureOffset (Expr Sampler1D) (Expr Float) (Expr Int) (Expr Vec4) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "sampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "vec4" (Apply "textureOffset" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureOffsetInstance6 :: TextureOffset (Expr Usampler3D) (Expr Vec3) (Expr Ivec3) (Expr Uvec4) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "usampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec3" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "uvec4" (Apply "textureOffset" [Expr (Tuple "usampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec3" (unsafeCoerce c))]))
 
 instance textureOffsetInstance7 :: TextureOffset (Expr Usampler2DRect) (Expr Vec2) (Expr Ivec2) (Expr Uvec4) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "usampler2DRect" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "uvec4" (Apply "textureOffset" [Expr (Tuple "usampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureOffsetInstance8 :: TextureOffset (Expr Usampler2DArray) (Expr Vec3) (Expr Ivec2) (Expr Uvec4) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "usampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "uvec4" (Apply "textureOffset" [Expr (Tuple "usampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureOffsetInstance9 :: TextureOffset (Expr Usampler2D) (Expr Vec2) (Expr Ivec2) (Expr Uvec4) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "usampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "uvec4" (Apply "textureOffset" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureOffsetInstance10 :: TextureOffset (Expr Usampler1DArray) (Expr Vec2) (Expr Int) (Expr Uvec4) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "usampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "uvec4" (Apply "textureOffset" [Expr (Tuple "usampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureOffsetInstance11 :: TextureOffset (Expr Usampler1D) (Expr Float) (Expr Int) (Expr Uvec4) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "usampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "uvec4" (Apply "textureOffset" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureOffsetInstance12 :: TextureOffset (Expr Isampler3D) (Expr Vec3) (Expr Ivec3) (Expr Ivec4) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "isampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec3" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "ivec4" (Apply "textureOffset" [Expr (Tuple "isampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec3" (unsafeCoerce c))]))
 
 instance textureOffsetInstance13 :: TextureOffset (Expr Isampler2DRect) (Expr Vec2) (Expr Ivec2) (Expr Ivec4) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "isampler2DRect" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "ivec4" (Apply "textureOffset" [Expr (Tuple "isampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureOffsetInstance14 :: TextureOffset (Expr Isampler2DArray) (Expr Vec3) (Expr Ivec2) (Expr Ivec4) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "isampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "ivec4" (Apply "textureOffset" [Expr (Tuple "isampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureOffsetInstance15 :: TextureOffset (Expr Isampler2D) (Expr Vec2) (Expr Ivec2) (Expr Ivec4) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "isampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "ivec4" (Apply "textureOffset" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureOffsetInstance16 :: TextureOffset (Expr Isampler1DArray) (Expr Vec2) (Expr Int) (Expr Ivec4) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "isampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "ivec4" (Apply "textureOffset" [Expr (Tuple "isampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureOffsetInstance17 :: TextureOffset (Expr Isampler1D) (Expr Float) (Expr Int) (Expr Ivec4) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "isampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "ivec4" (Apply "textureOffset" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureOffsetInstance18 :: TextureOffset (Expr Sampler2DShadow) (Expr Vec4) (Expr Ivec2) (Expr Float) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "sampler2DShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "float" (Apply "textureOffset" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureOffsetInstance19 :: TextureOffset (Expr Sampler2DRectShadow) (Expr Vec3) (Expr Ivec2) (Expr Float) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "sampler2DRectShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "float" (Apply "textureOffset" [Expr (Tuple "sampler2DRectShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureOffsetInstance20 :: TextureOffset (Expr Sampler2DArrayShadow) (Expr Vec4) (Expr Vec2) (Expr Float) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "sampler2DArrayShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec2" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "float" (Apply "textureOffset" [Expr (Tuple "sampler2DArrayShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c))]))
 
 instance textureOffsetInstance21 :: TextureOffset (Expr Sampler1DShadow) (Expr Vec3) (Expr Int) (Expr Float) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "sampler1DShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "float" (Apply "textureOffset" [Expr (Tuple "sampler1DShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureOffsetInstance22 :: TextureOffset (Expr Sampler1DArrayShadow) (Expr Vec3) (Expr Int) (Expr Float) where
-  textureOffset a b c = Expr (Apply "textureOffset" [Star "sampler1DArrayShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureOffset a b c = Expr (Tuple "float" (Apply "textureOffset" [Expr (Tuple "sampler1DArrayShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 class TextureOffset2 a b c d e | a b c d -> e where
   textureOffset2 :: a -> b -> c -> d -> e
 
 instance textureOffset2Instance0 :: TextureOffset2 (Expr Sampler3D) (Expr Vec3) (Expr Ivec3) (Expr Float) (Expr Vec4) where
-  textureOffset2 a b c d = Expr (Apply "textureOffset" [Star "sampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec3" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureOffset2 a b c d = Expr (Tuple "vec4" (Apply "textureOffset" [Expr (Tuple "sampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec3" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureOffset2Instance1 :: TextureOffset2 (Expr Sampler2DArray) (Expr Vec3) (Expr Ivec2) (Expr Float) (Expr Vec4) where
-  textureOffset2 a b c d = Expr (Apply "textureOffset" [Star "sampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureOffset2 a b c d = Expr (Tuple "vec4" (Apply "textureOffset" [Expr (Tuple "sampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureOffset2Instance2 :: TextureOffset2 (Expr Sampler2D) (Expr Vec2) (Expr Ivec2) (Expr Float) (Expr Vec4) where
-  textureOffset2 a b c d = Expr (Apply "textureOffset" [Star "sampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureOffset2 a b c d = Expr (Tuple "vec4" (Apply "textureOffset" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureOffset2Instance3 :: TextureOffset2 (Expr Sampler1DArray) (Expr Vec2) (Expr Int) (Expr Float) (Expr Vec4) where
-  textureOffset2 a b c d = Expr (Apply "textureOffset" [Star "sampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureOffset2 a b c d = Expr (Tuple "vec4" (Apply "textureOffset" [Expr (Tuple "sampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureOffset2Instance4 :: TextureOffset2 (Expr Sampler1D) (Expr Float) (Expr Int) (Expr Float) (Expr Vec4) where
-  textureOffset2 a b c d = Expr (Apply "textureOffset" [Star "sampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureOffset2 a b c d = Expr (Tuple "vec4" (Apply "textureOffset" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureOffset2Instance5 :: TextureOffset2 (Expr Usampler3D) (Expr Vec3) (Expr Ivec3) (Expr Float) (Expr Uvec4) where
-  textureOffset2 a b c d = Expr (Apply "textureOffset" [Star "usampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec3" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureOffset2 a b c d = Expr (Tuple "uvec4" (Apply "textureOffset" [Expr (Tuple "usampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec3" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureOffset2Instance6 :: TextureOffset2 (Expr Usampler2DArray) (Expr Vec3) (Expr Ivec2) (Expr Float) (Expr Uvec4) where
-  textureOffset2 a b c d = Expr (Apply "textureOffset" [Star "usampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureOffset2 a b c d = Expr (Tuple "uvec4" (Apply "textureOffset" [Expr (Tuple "usampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureOffset2Instance7 :: TextureOffset2 (Expr Usampler2D) (Expr Vec2) (Expr Ivec2) (Expr Float) (Expr Uvec4) where
-  textureOffset2 a b c d = Expr (Apply "textureOffset" [Star "usampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureOffset2 a b c d = Expr (Tuple "uvec4" (Apply "textureOffset" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureOffset2Instance8 :: TextureOffset2 (Expr Usampler1DArray) (Expr Vec2) (Expr Int) (Expr Float) (Expr Uvec4) where
-  textureOffset2 a b c d = Expr (Apply "textureOffset" [Star "usampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureOffset2 a b c d = Expr (Tuple "uvec4" (Apply "textureOffset" [Expr (Tuple "usampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureOffset2Instance9 :: TextureOffset2 (Expr Usampler1D) (Expr Float) (Expr Int) (Expr Float) (Expr Uvec4) where
-  textureOffset2 a b c d = Expr (Apply "textureOffset" [Star "usampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureOffset2 a b c d = Expr (Tuple "uvec4" (Apply "textureOffset" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureOffset2Instance10 :: TextureOffset2 (Expr Isampler3D) (Expr Vec3) (Expr Ivec3) (Expr Float) (Expr Ivec4) where
-  textureOffset2 a b c d = Expr (Apply "textureOffset" [Star "isampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec3" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureOffset2 a b c d = Expr (Tuple "ivec4" (Apply "textureOffset" [Expr (Tuple "isampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec3" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureOffset2Instance11 :: TextureOffset2 (Expr Isampler2DArray) (Expr Vec3) (Expr Ivec2) (Expr Float) (Expr Ivec4) where
-  textureOffset2 a b c d = Expr (Apply "textureOffset" [Star "isampler2DArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureOffset2 a b c d = Expr (Tuple "ivec4" (Apply "textureOffset" [Expr (Tuple "isampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureOffset2Instance12 :: TextureOffset2 (Expr Isampler2D) (Expr Vec2) (Expr Ivec2) (Expr Float) (Expr Ivec4) where
-  textureOffset2 a b c d = Expr (Apply "textureOffset" [Star "isampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureOffset2 a b c d = Expr (Tuple "ivec4" (Apply "textureOffset" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureOffset2Instance13 :: TextureOffset2 (Expr Isampler1DArray) (Expr Vec2) (Expr Int) (Expr Float) (Expr Ivec4) where
-  textureOffset2 a b c d = Expr (Apply "textureOffset" [Star "isampler1DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureOffset2 a b c d = Expr (Tuple "ivec4" (Apply "textureOffset" [Expr (Tuple "isampler1DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureOffset2Instance14 :: TextureOffset2 (Expr Isampler1D) (Expr Float) (Expr Int) (Expr Float) (Expr Ivec4) where
-  textureOffset2 a b c d = Expr (Apply "textureOffset" [Star "isampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureOffset2 a b c d = Expr (Tuple "ivec4" (Apply "textureOffset" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureOffset2Instance15 :: TextureOffset2 (Expr Sampler2DShadow) (Expr Vec4) (Expr Ivec2) (Expr Float) (Expr Float) where
-  textureOffset2 a b c d = Expr (Apply "textureOffset" [Star "sampler2DShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureOffset2 a b c d = Expr (Tuple "float" (Apply "textureOffset" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureOffset2Instance16 :: TextureOffset2 (Expr Sampler1DShadow) (Expr Vec3) (Expr Int) (Expr Float) (Expr Float) where
-  textureOffset2 a b c d = Expr (Apply "textureOffset" [Star "sampler1DShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureOffset2 a b c d = Expr (Tuple "float" (Apply "textureOffset" [Expr (Tuple "sampler1DShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 class TextureProj a b c | a b -> c where
   textureProj :: a -> b -> c
 
 instance textureProjInstance0 :: TextureProj (Expr Sampler3D) (Expr Vec4) (Expr Vec4) where
-  textureProj a b = Expr (Apply "textureProj" [Star "sampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "vec4" (Apply "textureProj" [Expr (Tuple "sampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance textureProjInstance1 :: TextureProj (Expr Sampler2DRect) (Expr Vec4) (Expr Vec4) where
-  textureProj a b = Expr (Apply "textureProj" [Star "sampler2DRect" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "vec4" (Apply "textureProj" [Expr (Tuple "sampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance textureProjInstance2 :: TextureProj (Expr Sampler2DRect) (Expr Vec3) (Expr Vec4) where
-  textureProj a b = Expr (Apply "textureProj" [Star "sampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "vec4" (Apply "textureProj" [Expr (Tuple "sampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureProjInstance3 :: TextureProj (Expr Sampler2D) (Expr Vec4) (Expr Vec4) where
-  textureProj a b = Expr (Apply "textureProj" [Star "sampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "vec4" (Apply "textureProj" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance textureProjInstance4 :: TextureProj (Expr Sampler2D) (Expr Vec3) (Expr Vec4) where
-  textureProj a b = Expr (Apply "textureProj" [Star "sampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "vec4" (Apply "textureProj" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureProjInstance5 :: TextureProj (Expr Sampler1D) (Expr Vec4) (Expr Vec4) where
-  textureProj a b = Expr (Apply "textureProj" [Star "sampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "vec4" (Apply "textureProj" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance textureProjInstance6 :: TextureProj (Expr Sampler1D) (Expr Vec2) (Expr Vec4) where
-  textureProj a b = Expr (Apply "textureProj" [Star "sampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "vec4" (Apply "textureProj" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureProjInstance7 :: TextureProj (Expr Usampler3D) (Expr Vec4) (Expr Uvec4) where
-  textureProj a b = Expr (Apply "textureProj" [Star "usampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "uvec4" (Apply "textureProj" [Expr (Tuple "usampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance textureProjInstance8 :: TextureProj (Expr Usampler2DRect) (Expr Vec4) (Expr Uvec4) where
-  textureProj a b = Expr (Apply "textureProj" [Star "usampler2DRect" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "uvec4" (Apply "textureProj" [Expr (Tuple "usampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance textureProjInstance9 :: TextureProj (Expr Usampler2DRect) (Expr Vec3) (Expr Uvec4) where
-  textureProj a b = Expr (Apply "textureProj" [Star "usampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "uvec4" (Apply "textureProj" [Expr (Tuple "usampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureProjInstance10 :: TextureProj (Expr Usampler2D) (Expr Vec4) (Expr Uvec4) where
-  textureProj a b = Expr (Apply "textureProj" [Star "usampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "uvec4" (Apply "textureProj" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance textureProjInstance11 :: TextureProj (Expr Usampler2D) (Expr Vec3) (Expr Uvec4) where
-  textureProj a b = Expr (Apply "textureProj" [Star "usampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "uvec4" (Apply "textureProj" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureProjInstance12 :: TextureProj (Expr Usampler1D) (Expr Vec4) (Expr Uvec4) where
-  textureProj a b = Expr (Apply "textureProj" [Star "usampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "uvec4" (Apply "textureProj" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance textureProjInstance13 :: TextureProj (Expr Usampler1D) (Expr Vec2) (Expr Uvec4) where
-  textureProj a b = Expr (Apply "textureProj" [Star "usampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "uvec4" (Apply "textureProj" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureProjInstance14 :: TextureProj (Expr Isampler3D) (Expr Vec4) (Expr Ivec4) where
-  textureProj a b = Expr (Apply "textureProj" [Star "isampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "ivec4" (Apply "textureProj" [Expr (Tuple "isampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance textureProjInstance15 :: TextureProj (Expr Isampler2DRect) (Expr Vec4) (Expr Ivec4) where
-  textureProj a b = Expr (Apply "textureProj" [Star "isampler2DRect" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "ivec4" (Apply "textureProj" [Expr (Tuple "isampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance textureProjInstance16 :: TextureProj (Expr Isampler2DRect) (Expr Vec3) (Expr Ivec4) where
-  textureProj a b = Expr (Apply "textureProj" [Star "isampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "ivec4" (Apply "textureProj" [Expr (Tuple "isampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureProjInstance17 :: TextureProj (Expr Isampler2D) (Expr Vec4) (Expr Ivec4) where
-  textureProj a b = Expr (Apply "textureProj" [Star "isampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "ivec4" (Apply "textureProj" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance textureProjInstance18 :: TextureProj (Expr Isampler2D) (Expr Vec3) (Expr Ivec4) where
-  textureProj a b = Expr (Apply "textureProj" [Star "isampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "ivec4" (Apply "textureProj" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureProjInstance19 :: TextureProj (Expr Isampler1D) (Expr Vec4) (Expr Ivec4) where
-  textureProj a b = Expr (Apply "textureProj" [Star "isampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "ivec4" (Apply "textureProj" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance textureProjInstance20 :: TextureProj (Expr Isampler1D) (Expr Vec2) (Expr Ivec4) where
-  textureProj a b = Expr (Apply "textureProj" [Star "isampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "ivec4" (Apply "textureProj" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureProjInstance21 :: TextureProj (Expr Sampler2DShadow) (Expr Vec4) (Expr Float) where
-  textureProj a b = Expr (Apply "textureProj" [Star "sampler2DShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "float" (Apply "textureProj" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance textureProjInstance22 :: TextureProj (Expr Sampler2DRectShadow) (Expr Vec4) (Expr Float) where
-  textureProj a b = Expr (Apply "textureProj" [Star "sampler2DRectShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "float" (Apply "textureProj" [Expr (Tuple "sampler2DRectShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 instance textureProjInstance23 :: TextureProj (Expr Sampler1DShadow) (Expr Vec4) (Expr Float) where
-  textureProj a b = Expr (Apply "textureProj" [Star "sampler1DShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b)])
+  textureProj a b = Expr (Tuple "float" (Apply "textureProj" [Expr (Tuple "sampler1DShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b))]))
 
 class TextureProj2 a b c d | a b c -> d where
   textureProj2 :: a -> b -> c -> d
 
 instance textureProj2Instance0 :: TextureProj2 (Expr Sampler3D) (Expr Vec4) (Expr Float) (Expr Vec4) where
-  textureProj2 a b c = Expr (Apply "textureProj" [Star "sampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProj2 a b c = Expr (Tuple "vec4" (Apply "textureProj" [Expr (Tuple "sampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProj2Instance1 :: TextureProj2 (Expr Sampler2D) (Expr Vec4) (Expr Float) (Expr Vec4) where
-  textureProj2 a b c = Expr (Apply "textureProj" [Star "sampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProj2 a b c = Expr (Tuple "vec4" (Apply "textureProj" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProj2Instance2 :: TextureProj2 (Expr Sampler2D) (Expr Vec3) (Expr Float) (Expr Vec4) where
-  textureProj2 a b c = Expr (Apply "textureProj" [Star "sampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProj2 a b c = Expr (Tuple "vec4" (Apply "textureProj" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProj2Instance3 :: TextureProj2 (Expr Sampler1D) (Expr Vec4) (Expr Float) (Expr Vec4) where
-  textureProj2 a b c = Expr (Apply "textureProj" [Star "sampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProj2 a b c = Expr (Tuple "vec4" (Apply "textureProj" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProj2Instance4 :: TextureProj2 (Expr Sampler1D) (Expr Vec2) (Expr Float) (Expr Vec4) where
-  textureProj2 a b c = Expr (Apply "textureProj" [Star "sampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProj2 a b c = Expr (Tuple "vec4" (Apply "textureProj" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProj2Instance5 :: TextureProj2 (Expr Usampler3D) (Expr Vec4) (Expr Float) (Expr Uvec4) where
-  textureProj2 a b c = Expr (Apply "textureProj" [Star "usampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProj2 a b c = Expr (Tuple "uvec4" (Apply "textureProj" [Expr (Tuple "usampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProj2Instance6 :: TextureProj2 (Expr Usampler2D) (Expr Vec4) (Expr Float) (Expr Uvec4) where
-  textureProj2 a b c = Expr (Apply "textureProj" [Star "usampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProj2 a b c = Expr (Tuple "uvec4" (Apply "textureProj" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProj2Instance7 :: TextureProj2 (Expr Usampler2D) (Expr Vec3) (Expr Float) (Expr Uvec4) where
-  textureProj2 a b c = Expr (Apply "textureProj" [Star "usampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProj2 a b c = Expr (Tuple "uvec4" (Apply "textureProj" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProj2Instance8 :: TextureProj2 (Expr Usampler1D) (Expr Vec4) (Expr Float) (Expr Uvec4) where
-  textureProj2 a b c = Expr (Apply "textureProj" [Star "usampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProj2 a b c = Expr (Tuple "uvec4" (Apply "textureProj" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProj2Instance9 :: TextureProj2 (Expr Usampler1D) (Expr Vec2) (Expr Float) (Expr Uvec4) where
-  textureProj2 a b c = Expr (Apply "textureProj" [Star "usampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProj2 a b c = Expr (Tuple "uvec4" (Apply "textureProj" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProj2Instance10 :: TextureProj2 (Expr Isampler3D) (Expr Vec4) (Expr Float) (Expr Ivec4) where
-  textureProj2 a b c = Expr (Apply "textureProj" [Star "isampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProj2 a b c = Expr (Tuple "ivec4" (Apply "textureProj" [Expr (Tuple "isampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProj2Instance11 :: TextureProj2 (Expr Isampler2D) (Expr Vec4) (Expr Float) (Expr Ivec4) where
-  textureProj2 a b c = Expr (Apply "textureProj" [Star "isampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProj2 a b c = Expr (Tuple "ivec4" (Apply "textureProj" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProj2Instance12 :: TextureProj2 (Expr Isampler2D) (Expr Vec3) (Expr Float) (Expr Ivec4) where
-  textureProj2 a b c = Expr (Apply "textureProj" [Star "isampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProj2 a b c = Expr (Tuple "ivec4" (Apply "textureProj" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProj2Instance13 :: TextureProj2 (Expr Isampler1D) (Expr Vec4) (Expr Float) (Expr Ivec4) where
-  textureProj2 a b c = Expr (Apply "textureProj" [Star "isampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProj2 a b c = Expr (Tuple "ivec4" (Apply "textureProj" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProj2Instance14 :: TextureProj2 (Expr Isampler1D) (Expr Vec2) (Expr Float) (Expr Ivec4) where
-  textureProj2 a b c = Expr (Apply "textureProj" [Star "isampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProj2 a b c = Expr (Tuple "ivec4" (Apply "textureProj" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProj2Instance15 :: TextureProj2 (Expr Sampler2DShadow) (Expr Vec4) (Expr Float) (Expr Float) where
-  textureProj2 a b c = Expr (Apply "textureProj" [Star "sampler2DShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProj2 a b c = Expr (Tuple "float" (Apply "textureProj" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProj2Instance16 :: TextureProj2 (Expr Sampler1DShadow) (Expr Vec4) (Expr Float) (Expr Float) where
-  textureProj2 a b c = Expr (Apply "textureProj" [Star "sampler1DShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProj2 a b c = Expr (Tuple "float" (Apply "textureProj" [Expr (Tuple "sampler1DShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 class TextureProjGrad a b c d e | a b c d -> e where
   textureProjGrad :: a -> b -> c -> d -> e
 
 instance textureProjGradInstance0 :: TextureProjGrad (Expr Sampler3D) (Expr Vec4) (Expr Vec3) (Expr Vec3) (Expr Vec4) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "sampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec3" (unsafeCoerce c), Star "vec3" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "vec4" (Apply "textureProjGrad" [Expr (Tuple "sampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c)), Expr (Tuple "vec3" (unsafeCoerce d))]))
 
 instance textureProjGradInstance1 :: TextureProjGrad (Expr Sampler2DRect) (Expr Vec4) (Expr Vec2) (Expr Vec2) (Expr Vec4) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "sampler2DRect" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "vec4" (Apply "textureProjGrad" [Expr (Tuple "sampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureProjGradInstance2 :: TextureProjGrad (Expr Sampler2DRect) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Vec4) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "sampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "vec4" (Apply "textureProjGrad" [Expr (Tuple "sampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureProjGradInstance3 :: TextureProjGrad (Expr Sampler2D) (Expr Vec4) (Expr Vec2) (Expr Vec2) (Expr Vec4) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "sampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "vec4" (Apply "textureProjGrad" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureProjGradInstance4 :: TextureProjGrad (Expr Sampler2D) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Vec4) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "sampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "vec4" (Apply "textureProjGrad" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureProjGradInstance5 :: TextureProjGrad (Expr Sampler1D) (Expr Vec4) (Expr Float) (Expr Float) (Expr Vec4) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "sampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "vec4" (Apply "textureProjGrad" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjGradInstance6 :: TextureProjGrad (Expr Sampler1D) (Expr Vec2) (Expr Float) (Expr Float) (Expr Vec4) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "sampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "vec4" (Apply "textureProjGrad" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjGradInstance7 :: TextureProjGrad (Expr Usampler3D) (Expr Vec4) (Expr Vec3) (Expr Vec3) (Expr Uvec4) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "usampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec3" (unsafeCoerce c), Star "vec3" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "uvec4" (Apply "textureProjGrad" [Expr (Tuple "usampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c)), Expr (Tuple "vec3" (unsafeCoerce d))]))
 
 instance textureProjGradInstance8 :: TextureProjGrad (Expr Usampler2DRect) (Expr Vec4) (Expr Vec2) (Expr Vec2) (Expr Uvec4) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "usampler2DRect" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "uvec4" (Apply "textureProjGrad" [Expr (Tuple "usampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureProjGradInstance9 :: TextureProjGrad (Expr Usampler2DRect) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Uvec4) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "usampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "uvec4" (Apply "textureProjGrad" [Expr (Tuple "usampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureProjGradInstance10 :: TextureProjGrad (Expr Usampler2D) (Expr Vec4) (Expr Vec2) (Expr Vec2) (Expr Uvec4) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "usampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "uvec4" (Apply "textureProjGrad" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureProjGradInstance11 :: TextureProjGrad (Expr Usampler2D) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Uvec4) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "usampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "uvec4" (Apply "textureProjGrad" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureProjGradInstance12 :: TextureProjGrad (Expr Usampler1D) (Expr Vec4) (Expr Float) (Expr Float) (Expr Uvec4) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "usampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "uvec4" (Apply "textureProjGrad" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjGradInstance13 :: TextureProjGrad (Expr Usampler1D) (Expr Vec2) (Expr Float) (Expr Float) (Expr Uvec4) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "usampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "uvec4" (Apply "textureProjGrad" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjGradInstance14 :: TextureProjGrad (Expr Isampler3D) (Expr Vec4) (Expr Vec3) (Expr Vec3) (Expr Ivec4) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "isampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec3" (unsafeCoerce c), Star "vec3" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "ivec4" (Apply "textureProjGrad" [Expr (Tuple "isampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c)), Expr (Tuple "vec3" (unsafeCoerce d))]))
 
 instance textureProjGradInstance15 :: TextureProjGrad (Expr Isampler2DRect) (Expr Vec4) (Expr Vec2) (Expr Vec2) (Expr Ivec4) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "isampler2DRect" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "ivec4" (Apply "textureProjGrad" [Expr (Tuple "isampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureProjGradInstance16 :: TextureProjGrad (Expr Isampler2DRect) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Ivec4) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "isampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "ivec4" (Apply "textureProjGrad" [Expr (Tuple "isampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureProjGradInstance17 :: TextureProjGrad (Expr Isampler2D) (Expr Vec4) (Expr Vec2) (Expr Vec2) (Expr Ivec4) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "isampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "ivec4" (Apply "textureProjGrad" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureProjGradInstance18 :: TextureProjGrad (Expr Isampler2D) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Ivec4) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "isampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "ivec4" (Apply "textureProjGrad" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureProjGradInstance19 :: TextureProjGrad (Expr Isampler1D) (Expr Vec4) (Expr Float) (Expr Float) (Expr Ivec4) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "isampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "ivec4" (Apply "textureProjGrad" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjGradInstance20 :: TextureProjGrad (Expr Isampler1D) (Expr Vec2) (Expr Float) (Expr Float) (Expr Ivec4) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "isampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "ivec4" (Apply "textureProjGrad" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjGradInstance21 :: TextureProjGrad (Expr Sampler2DShadow) (Expr Vec4) (Expr Vec2) (Expr Vec2) (Expr Float) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "sampler2DShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "float" (Apply "textureProjGrad" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureProjGradInstance22 :: TextureProjGrad (Expr Sampler2DRectShadow) (Expr Vec4) (Expr Vec2) (Expr Vec2) (Expr Float) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "sampler2DRectShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "float" (Apply "textureProjGrad" [Expr (Tuple "sampler2DRectShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d))]))
 
 instance textureProjGradInstance23 :: TextureProjGrad (Expr Sampler1DShadow) (Expr Vec4) (Expr Float) (Expr Float) (Expr Float) where
-  textureProjGrad a b c d = Expr (Apply "textureProjGrad" [Star "sampler1DShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjGrad a b c d = Expr (Tuple "float" (Apply "textureProjGrad" [Expr (Tuple "sampler1DShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 class TextureProjGradOffset a b c d e f | a b c d e -> f where
   textureProjGradOffset :: a -> b -> c -> d -> e -> f
 
 instance textureProjGradOffsetInstance0 :: TextureProjGradOffset (Expr Sampler3D) (Expr Vec4) (Expr Vec3) (Expr Vec3) (Expr Ivec3) (Expr Vec4) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "sampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec3" (unsafeCoerce c), Star "vec3" (unsafeCoerce d), Star "ivec3" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "vec4" (Apply "textureProjGradOffset" [Expr (Tuple "sampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c)), Expr (Tuple "vec3" (unsafeCoerce d)), Expr (Tuple "ivec3" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance1 :: TextureProjGradOffset (Expr Sampler2DRect) (Expr Vec4) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Vec4) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "sampler2DRect" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "vec4" (Apply "textureProjGradOffset" [Expr (Tuple "sampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance2 :: TextureProjGradOffset (Expr Sampler2DRect) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Vec4) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "sampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "vec4" (Apply "textureProjGradOffset" [Expr (Tuple "sampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance3 :: TextureProjGradOffset (Expr Sampler2D) (Expr Vec4) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Vec4) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "sampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "vec4" (Apply "textureProjGradOffset" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance4 :: TextureProjGradOffset (Expr Sampler2D) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Vec4) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "sampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "vec4" (Apply "textureProjGradOffset" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance5 :: TextureProjGradOffset (Expr Sampler1D) (Expr Vec4) (Expr Float) (Expr Float) (Expr Int) (Expr Vec4) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "sampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d), Star "int" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "vec4" (Apply "textureProjGradOffset" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d)), Expr (Tuple "int" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance6 :: TextureProjGradOffset (Expr Sampler1D) (Expr Vec2) (Expr Float) (Expr Float) (Expr Int) (Expr Vec4) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "sampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d), Star "int" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "vec4" (Apply "textureProjGradOffset" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d)), Expr (Tuple "int" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance7 :: TextureProjGradOffset (Expr Usampler3D) (Expr Vec4) (Expr Vec3) (Expr Vec3) (Expr Ivec3) (Expr Uvec4) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "usampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec3" (unsafeCoerce c), Star "vec3" (unsafeCoerce d), Star "ivec3" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "uvec4" (Apply "textureProjGradOffset" [Expr (Tuple "usampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c)), Expr (Tuple "vec3" (unsafeCoerce d)), Expr (Tuple "ivec3" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance8 :: TextureProjGradOffset (Expr Usampler2DRect) (Expr Vec4) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Uvec4) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "usampler2DRect" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "uvec4" (Apply "textureProjGradOffset" [Expr (Tuple "usampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance9 :: TextureProjGradOffset (Expr Usampler2DRect) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Uvec4) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "usampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "uvec4" (Apply "textureProjGradOffset" [Expr (Tuple "usampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance10 :: TextureProjGradOffset (Expr Usampler2D) (Expr Vec4) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Uvec4) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "usampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "uvec4" (Apply "textureProjGradOffset" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance11 :: TextureProjGradOffset (Expr Usampler2D) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Uvec4) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "usampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "uvec4" (Apply "textureProjGradOffset" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance12 :: TextureProjGradOffset (Expr Usampler1D) (Expr Vec4) (Expr Float) (Expr Float) (Expr Int) (Expr Uvec4) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "usampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d), Star "int" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "uvec4" (Apply "textureProjGradOffset" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d)), Expr (Tuple "int" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance13 :: TextureProjGradOffset (Expr Usampler1D) (Expr Vec2) (Expr Float) (Expr Float) (Expr Int) (Expr Uvec4) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "usampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d), Star "int" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "uvec4" (Apply "textureProjGradOffset" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d)), Expr (Tuple "int" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance14 :: TextureProjGradOffset (Expr Isampler3D) (Expr Vec4) (Expr Vec3) (Expr Vec3) (Expr Ivec3) (Expr Ivec4) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "isampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec3" (unsafeCoerce c), Star "vec3" (unsafeCoerce d), Star "ivec3" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "ivec4" (Apply "textureProjGradOffset" [Expr (Tuple "isampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec3" (unsafeCoerce c)), Expr (Tuple "vec3" (unsafeCoerce d)), Expr (Tuple "ivec3" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance15 :: TextureProjGradOffset (Expr Isampler2DRect) (Expr Vec4) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Ivec4) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "isampler2DRect" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "ivec4" (Apply "textureProjGradOffset" [Expr (Tuple "isampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance16 :: TextureProjGradOffset (Expr Isampler2DRect) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Ivec4) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "isampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "ivec4" (Apply "textureProjGradOffset" [Expr (Tuple "isampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance17 :: TextureProjGradOffset (Expr Isampler2D) (Expr Vec4) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Ivec4) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "isampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "ivec4" (Apply "textureProjGradOffset" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance18 :: TextureProjGradOffset (Expr Isampler2D) (Expr Vec3) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Ivec4) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "isampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "ivec4" (Apply "textureProjGradOffset" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance19 :: TextureProjGradOffset (Expr Isampler1D) (Expr Vec4) (Expr Float) (Expr Float) (Expr Int) (Expr Ivec4) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "isampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d), Star "int" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "ivec4" (Apply "textureProjGradOffset" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d)), Expr (Tuple "int" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance20 :: TextureProjGradOffset (Expr Isampler1D) (Expr Vec2) (Expr Float) (Expr Float) (Expr Int) (Expr Ivec4) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "isampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d), Star "int" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "ivec4" (Apply "textureProjGradOffset" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d)), Expr (Tuple "int" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance21 :: TextureProjGradOffset (Expr Sampler2DShadow) (Expr Vec4) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Float) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "sampler2DShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "float" (Apply "textureProjGradOffset" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance22 :: TextureProjGradOffset (Expr Sampler2DRectShadow) (Expr Vec4) (Expr Vec2) (Expr Vec2) (Expr Ivec2) (Expr Float) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "sampler2DRectShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "vec2" (unsafeCoerce c), Star "vec2" (unsafeCoerce d), Star "ivec2" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "float" (Apply "textureProjGradOffset" [Expr (Tuple "sampler2DRectShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "vec2" (unsafeCoerce c)), Expr (Tuple "vec2" (unsafeCoerce d)), Expr (Tuple "ivec2" (unsafeCoerce e))]))
 
 instance textureProjGradOffsetInstance23 :: TextureProjGradOffset (Expr Sampler1DShadow) (Expr Vec4) (Expr Float) (Expr Float) (Expr Int) (Expr Float) where
-  textureProjGradOffset a b c d e = Expr (Apply "textureProjGradOffset" [Star "sampler1DShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "float" (unsafeCoerce d), Star "int" (unsafeCoerce e)])
+  textureProjGradOffset a b c d e = Expr (Tuple "float" (Apply "textureProjGradOffset" [Expr (Tuple "sampler1DShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d)), Expr (Tuple "int" (unsafeCoerce e))]))
 
 class TextureProjLod a b c d | a b c -> d where
   textureProjLod :: a -> b -> c -> d
 
 instance textureProjLodInstance0 :: TextureProjLod (Expr Sampler3D) (Expr Vec4) (Expr Float) (Expr Vec4) where
-  textureProjLod a b c = Expr (Apply "textureProjLod" [Star "sampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProjLod a b c = Expr (Tuple "vec4" (Apply "textureProjLod" [Expr (Tuple "sampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProjLodInstance1 :: TextureProjLod (Expr Sampler2D) (Expr Vec4) (Expr Float) (Expr Vec4) where
-  textureProjLod a b c = Expr (Apply "textureProjLod" [Star "sampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProjLod a b c = Expr (Tuple "vec4" (Apply "textureProjLod" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProjLodInstance2 :: TextureProjLod (Expr Sampler2D) (Expr Vec3) (Expr Float) (Expr Vec4) where
-  textureProjLod a b c = Expr (Apply "textureProjLod" [Star "sampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProjLod a b c = Expr (Tuple "vec4" (Apply "textureProjLod" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProjLodInstance3 :: TextureProjLod (Expr Sampler1D) (Expr Vec4) (Expr Float) (Expr Vec4) where
-  textureProjLod a b c = Expr (Apply "textureProjLod" [Star "sampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProjLod a b c = Expr (Tuple "vec4" (Apply "textureProjLod" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProjLodInstance4 :: TextureProjLod (Expr Sampler1D) (Expr Vec2) (Expr Float) (Expr Vec4) where
-  textureProjLod a b c = Expr (Apply "textureProjLod" [Star "sampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProjLod a b c = Expr (Tuple "vec4" (Apply "textureProjLod" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProjLodInstance5 :: TextureProjLod (Expr Usampler3D) (Expr Vec4) (Expr Float) (Expr Uvec4) where
-  textureProjLod a b c = Expr (Apply "textureProjLod" [Star "usampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProjLod a b c = Expr (Tuple "uvec4" (Apply "textureProjLod" [Expr (Tuple "usampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProjLodInstance6 :: TextureProjLod (Expr Usampler2D) (Expr Vec4) (Expr Float) (Expr Uvec4) where
-  textureProjLod a b c = Expr (Apply "textureProjLod" [Star "usampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProjLod a b c = Expr (Tuple "uvec4" (Apply "textureProjLod" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProjLodInstance7 :: TextureProjLod (Expr Usampler2D) (Expr Vec3) (Expr Float) (Expr Uvec4) where
-  textureProjLod a b c = Expr (Apply "textureProjLod" [Star "usampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProjLod a b c = Expr (Tuple "uvec4" (Apply "textureProjLod" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProjLodInstance8 :: TextureProjLod (Expr Usampler1D) (Expr Vec4) (Expr Float) (Expr Uvec4) where
-  textureProjLod a b c = Expr (Apply "textureProjLod" [Star "usampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProjLod a b c = Expr (Tuple "uvec4" (Apply "textureProjLod" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProjLodInstance9 :: TextureProjLod (Expr Usampler1D) (Expr Vec2) (Expr Float) (Expr Uvec4) where
-  textureProjLod a b c = Expr (Apply "textureProjLod" [Star "usampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProjLod a b c = Expr (Tuple "uvec4" (Apply "textureProjLod" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProjLodInstance10 :: TextureProjLod (Expr Isampler3D) (Expr Vec4) (Expr Float) (Expr Ivec4) where
-  textureProjLod a b c = Expr (Apply "textureProjLod" [Star "isampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProjLod a b c = Expr (Tuple "ivec4" (Apply "textureProjLod" [Expr (Tuple "isampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProjLodInstance11 :: TextureProjLod (Expr Isampler2D) (Expr Vec4) (Expr Float) (Expr Ivec4) where
-  textureProjLod a b c = Expr (Apply "textureProjLod" [Star "isampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProjLod a b c = Expr (Tuple "ivec4" (Apply "textureProjLod" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProjLodInstance12 :: TextureProjLod (Expr Isampler2D) (Expr Vec3) (Expr Float) (Expr Ivec4) where
-  textureProjLod a b c = Expr (Apply "textureProjLod" [Star "isampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProjLod a b c = Expr (Tuple "ivec4" (Apply "textureProjLod" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProjLodInstance13 :: TextureProjLod (Expr Isampler1D) (Expr Vec4) (Expr Float) (Expr Ivec4) where
-  textureProjLod a b c = Expr (Apply "textureProjLod" [Star "isampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProjLod a b c = Expr (Tuple "ivec4" (Apply "textureProjLod" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProjLodInstance14 :: TextureProjLod (Expr Isampler1D) (Expr Vec2) (Expr Float) (Expr Ivec4) where
-  textureProjLod a b c = Expr (Apply "textureProjLod" [Star "isampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProjLod a b c = Expr (Tuple "ivec4" (Apply "textureProjLod" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProjLodInstance15 :: TextureProjLod (Expr Sampler2DShadow) (Expr Vec4) (Expr Float) (Expr Float) where
-  textureProjLod a b c = Expr (Apply "textureProjLod" [Star "sampler2DShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProjLod a b c = Expr (Tuple "float" (Apply "textureProjLod" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 instance textureProjLodInstance16 :: TextureProjLod (Expr Sampler1DShadow) (Expr Vec4) (Expr Float) (Expr Float) where
-  textureProjLod a b c = Expr (Apply "textureProjLod" [Star "sampler1DShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c)])
+  textureProjLod a b c = Expr (Tuple "float" (Apply "textureProjLod" [Expr (Tuple "sampler1DShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c))]))
 
 class TextureProjLodOffset a b c d e | a b c d -> e where
   textureProjLodOffset :: a -> b -> c -> d -> e
 
 instance textureProjLodOffsetInstance0 :: TextureProjLodOffset (Expr Sampler3D) (Expr Vec4) (Expr Float) (Expr Ivec3) (Expr Vec4) where
-  textureProjLodOffset a b c d = Expr (Apply "textureProjLodOffset" [Star "sampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec3" (unsafeCoerce d)])
+  textureProjLodOffset a b c d = Expr (Tuple "vec4" (Apply "textureProjLodOffset" [Expr (Tuple "sampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec3" (unsafeCoerce d))]))
 
 instance textureProjLodOffsetInstance1 :: TextureProjLodOffset (Expr Sampler2D) (Expr Vec4) (Expr Float) (Expr Ivec2) (Expr Vec4) where
-  textureProjLodOffset a b c d = Expr (Apply "textureProjLodOffset" [Star "sampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec2" (unsafeCoerce d)])
+  textureProjLodOffset a b c d = Expr (Tuple "vec4" (Apply "textureProjLodOffset" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec2" (unsafeCoerce d))]))
 
 instance textureProjLodOffsetInstance2 :: TextureProjLodOffset (Expr Sampler2D) (Expr Vec3) (Expr Float) (Expr Ivec2) (Expr Vec4) where
-  textureProjLodOffset a b c d = Expr (Apply "textureProjLodOffset" [Star "sampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec2" (unsafeCoerce d)])
+  textureProjLodOffset a b c d = Expr (Tuple "vec4" (Apply "textureProjLodOffset" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec2" (unsafeCoerce d))]))
 
 instance textureProjLodOffsetInstance3 :: TextureProjLodOffset (Expr Sampler1D) (Expr Vec4) (Expr Float) (Expr Int) (Expr Vec4) where
-  textureProjLodOffset a b c d = Expr (Apply "textureProjLodOffset" [Star "sampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureProjLodOffset a b c d = Expr (Tuple "vec4" (Apply "textureProjLodOffset" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureProjLodOffsetInstance4 :: TextureProjLodOffset (Expr Sampler1D) (Expr Vec2) (Expr Float) (Expr Int) (Expr Vec4) where
-  textureProjLodOffset a b c d = Expr (Apply "textureProjLodOffset" [Star "sampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureProjLodOffset a b c d = Expr (Tuple "vec4" (Apply "textureProjLodOffset" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureProjLodOffsetInstance5 :: TextureProjLodOffset (Expr Usampler3D) (Expr Vec4) (Expr Float) (Expr Ivec3) (Expr Uvec4) where
-  textureProjLodOffset a b c d = Expr (Apply "textureProjLodOffset" [Star "usampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec3" (unsafeCoerce d)])
+  textureProjLodOffset a b c d = Expr (Tuple "uvec4" (Apply "textureProjLodOffset" [Expr (Tuple "usampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec3" (unsafeCoerce d))]))
 
 instance textureProjLodOffsetInstance6 :: TextureProjLodOffset (Expr Usampler2D) (Expr Vec4) (Expr Float) (Expr Ivec2) (Expr Uvec4) where
-  textureProjLodOffset a b c d = Expr (Apply "textureProjLodOffset" [Star "usampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec2" (unsafeCoerce d)])
+  textureProjLodOffset a b c d = Expr (Tuple "uvec4" (Apply "textureProjLodOffset" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec2" (unsafeCoerce d))]))
 
 instance textureProjLodOffsetInstance7 :: TextureProjLodOffset (Expr Usampler2D) (Expr Vec3) (Expr Float) (Expr Ivec2) (Expr Uvec4) where
-  textureProjLodOffset a b c d = Expr (Apply "textureProjLodOffset" [Star "usampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec2" (unsafeCoerce d)])
+  textureProjLodOffset a b c d = Expr (Tuple "uvec4" (Apply "textureProjLodOffset" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec2" (unsafeCoerce d))]))
 
 instance textureProjLodOffsetInstance8 :: TextureProjLodOffset (Expr Usampler1D) (Expr Vec4) (Expr Float) (Expr Int) (Expr Uvec4) where
-  textureProjLodOffset a b c d = Expr (Apply "textureProjLodOffset" [Star "usampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureProjLodOffset a b c d = Expr (Tuple "uvec4" (Apply "textureProjLodOffset" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureProjLodOffsetInstance9 :: TextureProjLodOffset (Expr Usampler1D) (Expr Vec2) (Expr Float) (Expr Int) (Expr Uvec4) where
-  textureProjLodOffset a b c d = Expr (Apply "textureProjLodOffset" [Star "usampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureProjLodOffset a b c d = Expr (Tuple "uvec4" (Apply "textureProjLodOffset" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureProjLodOffsetInstance10 :: TextureProjLodOffset (Expr Isampler3D) (Expr Vec4) (Expr Float) (Expr Ivec3) (Expr Ivec4) where
-  textureProjLodOffset a b c d = Expr (Apply "textureProjLodOffset" [Star "isampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec3" (unsafeCoerce d)])
+  textureProjLodOffset a b c d = Expr (Tuple "ivec4" (Apply "textureProjLodOffset" [Expr (Tuple "isampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec3" (unsafeCoerce d))]))
 
 instance textureProjLodOffsetInstance11 :: TextureProjLodOffset (Expr Isampler2D) (Expr Vec4) (Expr Float) (Expr Ivec2) (Expr Ivec4) where
-  textureProjLodOffset a b c d = Expr (Apply "textureProjLodOffset" [Star "isampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec2" (unsafeCoerce d)])
+  textureProjLodOffset a b c d = Expr (Tuple "ivec4" (Apply "textureProjLodOffset" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec2" (unsafeCoerce d))]))
 
 instance textureProjLodOffsetInstance12 :: TextureProjLodOffset (Expr Isampler2D) (Expr Vec3) (Expr Float) (Expr Ivec2) (Expr Ivec4) where
-  textureProjLodOffset a b c d = Expr (Apply "textureProjLodOffset" [Star "isampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec2" (unsafeCoerce d)])
+  textureProjLodOffset a b c d = Expr (Tuple "ivec4" (Apply "textureProjLodOffset" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec2" (unsafeCoerce d))]))
 
 instance textureProjLodOffsetInstance13 :: TextureProjLodOffset (Expr Isampler1D) (Expr Vec4) (Expr Float) (Expr Int) (Expr Ivec4) where
-  textureProjLodOffset a b c d = Expr (Apply "textureProjLodOffset" [Star "isampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureProjLodOffset a b c d = Expr (Tuple "ivec4" (Apply "textureProjLodOffset" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureProjLodOffsetInstance14 :: TextureProjLodOffset (Expr Isampler1D) (Expr Vec2) (Expr Float) (Expr Int) (Expr Ivec4) where
-  textureProjLodOffset a b c d = Expr (Apply "textureProjLodOffset" [Star "isampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureProjLodOffset a b c d = Expr (Tuple "ivec4" (Apply "textureProjLodOffset" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 instance textureProjLodOffsetInstance15 :: TextureProjLodOffset (Expr Sampler2DShadow) (Expr Vec4) (Expr Float) (Expr Ivec2) (Expr Float) where
-  textureProjLodOffset a b c d = Expr (Apply "textureProjLodOffset" [Star "sampler2DShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "ivec2" (unsafeCoerce d)])
+  textureProjLodOffset a b c d = Expr (Tuple "float" (Apply "textureProjLodOffset" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "ivec2" (unsafeCoerce d))]))
 
 instance textureProjLodOffsetInstance16 :: TextureProjLodOffset (Expr Sampler1DShadow) (Expr Vec4) (Expr Float) (Expr Int) (Expr Float) where
-  textureProjLodOffset a b c d = Expr (Apply "textureProjLodOffset" [Star "sampler1DShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "float" (unsafeCoerce c), Star "int" (unsafeCoerce d)])
+  textureProjLodOffset a b c d = Expr (Tuple "float" (Apply "textureProjLodOffset" [Expr (Tuple "sampler1DShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "float" (unsafeCoerce c)), Expr (Tuple "int" (unsafeCoerce d))]))
 
 class TextureProjOffset a b c d | a b c -> d where
   textureProjOffset :: a -> b -> c -> d
 
 instance textureProjOffsetInstance0 :: TextureProjOffset (Expr Sampler3D) (Expr Vec4) (Expr Ivec3) (Expr Vec4) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "sampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "ivec3" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "vec4" (Apply "textureProjOffset" [Expr (Tuple "sampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "ivec3" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance1 :: TextureProjOffset (Expr Sampler2DRect) (Expr Vec4) (Expr Ivec2) (Expr Vec4) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "sampler2DRect" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "vec4" (Apply "textureProjOffset" [Expr (Tuple "sampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance2 :: TextureProjOffset (Expr Sampler2DRect) (Expr Vec3) (Expr Ivec2) (Expr Vec4) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "sampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "vec4" (Apply "textureProjOffset" [Expr (Tuple "sampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance3 :: TextureProjOffset (Expr Sampler2D) (Expr Vec4) (Expr Ivec2) (Expr Vec4) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "sampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "vec4" (Apply "textureProjOffset" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance4 :: TextureProjOffset (Expr Sampler2D) (Expr Vec3) (Expr Ivec2) (Expr Vec4) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "sampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "vec4" (Apply "textureProjOffset" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance5 :: TextureProjOffset (Expr Sampler1D) (Expr Vec4) (Expr Int) (Expr Vec4) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "sampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "vec4" (Apply "textureProjOffset" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance6 :: TextureProjOffset (Expr Sampler1D) (Expr Vec2) (Expr Int) (Expr Vec4) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "sampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "vec4" (Apply "textureProjOffset" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance7 :: TextureProjOffset (Expr Usampler3D) (Expr Vec4) (Expr Ivec3) (Expr Uvec4) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "usampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "ivec3" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "uvec4" (Apply "textureProjOffset" [Expr (Tuple "usampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "ivec3" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance8 :: TextureProjOffset (Expr Usampler2DRect) (Expr Vec4) (Expr Ivec2) (Expr Uvec4) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "usampler2DRect" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "uvec4" (Apply "textureProjOffset" [Expr (Tuple "usampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance9 :: TextureProjOffset (Expr Usampler2DRect) (Expr Vec3) (Expr Ivec2) (Expr Uvec4) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "usampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "uvec4" (Apply "textureProjOffset" [Expr (Tuple "usampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance10 :: TextureProjOffset (Expr Usampler2D) (Expr Vec4) (Expr Ivec2) (Expr Uvec4) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "usampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "uvec4" (Apply "textureProjOffset" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance11 :: TextureProjOffset (Expr Usampler2D) (Expr Vec3) (Expr Ivec2) (Expr Uvec4) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "usampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "uvec4" (Apply "textureProjOffset" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance12 :: TextureProjOffset (Expr Usampler1D) (Expr Vec4) (Expr Int) (Expr Uvec4) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "usampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "uvec4" (Apply "textureProjOffset" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance13 :: TextureProjOffset (Expr Usampler1D) (Expr Vec2) (Expr Int) (Expr Uvec4) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "usampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "uvec4" (Apply "textureProjOffset" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance14 :: TextureProjOffset (Expr Isampler3D) (Expr Vec4) (Expr Ivec3) (Expr Ivec4) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "isampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "ivec3" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "ivec4" (Apply "textureProjOffset" [Expr (Tuple "isampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "ivec3" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance15 :: TextureProjOffset (Expr Isampler2DRect) (Expr Vec4) (Expr Ivec2) (Expr Ivec4) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "isampler2DRect" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "ivec4" (Apply "textureProjOffset" [Expr (Tuple "isampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance16 :: TextureProjOffset (Expr Isampler2DRect) (Expr Vec3) (Expr Ivec2) (Expr Ivec4) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "isampler2DRect" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "ivec4" (Apply "textureProjOffset" [Expr (Tuple "isampler2DRect" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance17 :: TextureProjOffset (Expr Isampler2D) (Expr Vec4) (Expr Ivec2) (Expr Ivec4) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "isampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "ivec4" (Apply "textureProjOffset" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance18 :: TextureProjOffset (Expr Isampler2D) (Expr Vec3) (Expr Ivec2) (Expr Ivec4) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "isampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "ivec4" (Apply "textureProjOffset" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance19 :: TextureProjOffset (Expr Isampler1D) (Expr Vec4) (Expr Int) (Expr Ivec4) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "isampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "ivec4" (Apply "textureProjOffset" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance20 :: TextureProjOffset (Expr Isampler1D) (Expr Vec2) (Expr Int) (Expr Ivec4) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "isampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "ivec4" (Apply "textureProjOffset" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance21 :: TextureProjOffset (Expr Sampler2DShadow) (Expr Vec4) (Expr Ivec2) (Expr Float) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "sampler2DShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "float" (Apply "textureProjOffset" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance22 :: TextureProjOffset (Expr Sampler2DRectShadow) (Expr Vec4) (Expr Ivec2) (Expr Float) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "sampler2DRectShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "float" (Apply "textureProjOffset" [Expr (Tuple "sampler2DRectShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c))]))
 
 instance textureProjOffsetInstance23 :: TextureProjOffset (Expr Sampler1DShadow) (Expr Vec4) (Expr Int) (Expr Float) where
-  textureProjOffset a b c = Expr (Apply "textureProjOffset" [Star "sampler1DShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "int" (unsafeCoerce c)])
+  textureProjOffset a b c = Expr (Tuple "float" (Apply "textureProjOffset" [Expr (Tuple "sampler1DShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c))]))
 
 class TextureProjOffset2 a b c d e | a b c d -> e where
   textureProjOffset2 :: a -> b -> c -> d -> e
 
 instance textureProjOffset2Instance0 :: TextureProjOffset2 (Expr Sampler3D) (Expr Vec4) (Expr Ivec3) (Expr Float) (Expr Vec4) where
-  textureProjOffset2 a b c d = Expr (Apply "textureProjOffset" [Star "sampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "ivec3" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjOffset2 a b c d = Expr (Tuple "vec4" (Apply "textureProjOffset" [Expr (Tuple "sampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "ivec3" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjOffset2Instance1 :: TextureProjOffset2 (Expr Sampler2D) (Expr Vec4) (Expr Ivec2) (Expr Float) (Expr Vec4) where
-  textureProjOffset2 a b c d = Expr (Apply "textureProjOffset" [Star "sampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjOffset2 a b c d = Expr (Tuple "vec4" (Apply "textureProjOffset" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjOffset2Instance2 :: TextureProjOffset2 (Expr Sampler2D) (Expr Vec3) (Expr Ivec2) (Expr Float) (Expr Vec4) where
-  textureProjOffset2 a b c d = Expr (Apply "textureProjOffset" [Star "sampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjOffset2 a b c d = Expr (Tuple "vec4" (Apply "textureProjOffset" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjOffset2Instance3 :: TextureProjOffset2 (Expr Sampler1D) (Expr Vec4) (Expr Int) (Expr Float) (Expr Vec4) where
-  textureProjOffset2 a b c d = Expr (Apply "textureProjOffset" [Star "sampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjOffset2 a b c d = Expr (Tuple "vec4" (Apply "textureProjOffset" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjOffset2Instance4 :: TextureProjOffset2 (Expr Sampler1D) (Expr Vec2) (Expr Int) (Expr Float) (Expr Vec4) where
-  textureProjOffset2 a b c d = Expr (Apply "textureProjOffset" [Star "sampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjOffset2 a b c d = Expr (Tuple "vec4" (Apply "textureProjOffset" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjOffset2Instance5 :: TextureProjOffset2 (Expr Usampler3D) (Expr Vec4) (Expr Ivec3) (Expr Float) (Expr Uvec4) where
-  textureProjOffset2 a b c d = Expr (Apply "textureProjOffset" [Star "usampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "ivec3" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjOffset2 a b c d = Expr (Tuple "uvec4" (Apply "textureProjOffset" [Expr (Tuple "usampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "ivec3" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjOffset2Instance6 :: TextureProjOffset2 (Expr Usampler2D) (Expr Vec4) (Expr Ivec2) (Expr Float) (Expr Uvec4) where
-  textureProjOffset2 a b c d = Expr (Apply "textureProjOffset" [Star "usampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjOffset2 a b c d = Expr (Tuple "uvec4" (Apply "textureProjOffset" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjOffset2Instance7 :: TextureProjOffset2 (Expr Usampler2D) (Expr Vec3) (Expr Ivec2) (Expr Float) (Expr Uvec4) where
-  textureProjOffset2 a b c d = Expr (Apply "textureProjOffset" [Star "usampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjOffset2 a b c d = Expr (Tuple "uvec4" (Apply "textureProjOffset" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjOffset2Instance8 :: TextureProjOffset2 (Expr Usampler1D) (Expr Vec4) (Expr Int) (Expr Float) (Expr Uvec4) where
-  textureProjOffset2 a b c d = Expr (Apply "textureProjOffset" [Star "usampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjOffset2 a b c d = Expr (Tuple "uvec4" (Apply "textureProjOffset" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjOffset2Instance9 :: TextureProjOffset2 (Expr Usampler1D) (Expr Vec2) (Expr Int) (Expr Float) (Expr Uvec4) where
-  textureProjOffset2 a b c d = Expr (Apply "textureProjOffset" [Star "usampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjOffset2 a b c d = Expr (Tuple "uvec4" (Apply "textureProjOffset" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjOffset2Instance10 :: TextureProjOffset2 (Expr Isampler3D) (Expr Vec4) (Expr Ivec3) (Expr Float) (Expr Ivec4) where
-  textureProjOffset2 a b c d = Expr (Apply "textureProjOffset" [Star "isampler3D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "ivec3" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjOffset2 a b c d = Expr (Tuple "ivec4" (Apply "textureProjOffset" [Expr (Tuple "isampler3D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "ivec3" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjOffset2Instance11 :: TextureProjOffset2 (Expr Isampler2D) (Expr Vec4) (Expr Ivec2) (Expr Float) (Expr Ivec4) where
-  textureProjOffset2 a b c d = Expr (Apply "textureProjOffset" [Star "isampler2D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjOffset2 a b c d = Expr (Tuple "ivec4" (Apply "textureProjOffset" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjOffset2Instance12 :: TextureProjOffset2 (Expr Isampler2D) (Expr Vec3) (Expr Ivec2) (Expr Float) (Expr Ivec4) where
-  textureProjOffset2 a b c d = Expr (Apply "textureProjOffset" [Star "isampler2D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjOffset2 a b c d = Expr (Tuple "ivec4" (Apply "textureProjOffset" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjOffset2Instance13 :: TextureProjOffset2 (Expr Isampler1D) (Expr Vec4) (Expr Int) (Expr Float) (Expr Ivec4) where
-  textureProjOffset2 a b c d = Expr (Apply "textureProjOffset" [Star "isampler1D" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjOffset2 a b c d = Expr (Tuple "ivec4" (Apply "textureProjOffset" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjOffset2Instance14 :: TextureProjOffset2 (Expr Isampler1D) (Expr Vec2) (Expr Int) (Expr Float) (Expr Ivec4) where
-  textureProjOffset2 a b c d = Expr (Apply "textureProjOffset" [Star "isampler1D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjOffset2 a b c d = Expr (Tuple "ivec4" (Apply "textureProjOffset" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjOffset2Instance15 :: TextureProjOffset2 (Expr Sampler2DShadow) (Expr Vec4) (Expr Ivec2) (Expr Float) (Expr Float) where
-  textureProjOffset2 a b c d = Expr (Apply "textureProjOffset" [Star "sampler2DShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "ivec2" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjOffset2 a b c d = Expr (Tuple "float" (Apply "textureProjOffset" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "ivec2" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 instance textureProjOffset2Instance16 :: TextureProjOffset2 (Expr Sampler1DShadow) (Expr Vec4) (Expr Int) (Expr Float) (Expr Float) where
-  textureProjOffset2 a b c d = Expr (Apply "textureProjOffset" [Star "sampler1DShadow" (unsafeCoerce a), Star "vec4" (unsafeCoerce b), Star "int" (unsafeCoerce c), Star "float" (unsafeCoerce d)])
+  textureProjOffset2 a b c d = Expr (Tuple "float" (Apply "textureProjOffset" [Expr (Tuple "sampler1DShadow" (unsafeCoerce a)), Expr (Tuple "vec4" (unsafeCoerce b)), Expr (Tuple "int" (unsafeCoerce c)), Expr (Tuple "float" (unsafeCoerce d))]))
 
 class TextureQueryLevels a b | a -> b where
   textureQueryLevels :: a -> b
 
 instance textureQueryLevelsInstance0 :: TextureQueryLevels (Expr UsamplerCubeArray) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "usamplerCubeArray" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "usamplerCubeArray" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance1 :: TextureQueryLevels (Expr UsamplerCube) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "usamplerCube" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "usamplerCube" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance2 :: TextureQueryLevels (Expr Usampler3D) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "usampler3D" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "usampler3D" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance3 :: TextureQueryLevels (Expr Usampler2DArray) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "usampler2DArray" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "usampler2DArray" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance4 :: TextureQueryLevels (Expr Usampler2D) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "usampler2D" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "usampler2D" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance5 :: TextureQueryLevels (Expr Usampler1DArray) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "usampler1DArray" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "usampler1DArray" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance6 :: TextureQueryLevels (Expr Usampler1D) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "usampler1D" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "usampler1D" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance7 :: TextureQueryLevels (Expr SamplerCubeShadow) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "samplerCubeShadow" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "samplerCubeShadow" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance8 :: TextureQueryLevels (Expr SamplerCubeArrayShadow) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "samplerCubeArrayShadow" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "samplerCubeArrayShadow" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance9 :: TextureQueryLevels (Expr SamplerCubeArray) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "samplerCubeArray" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "samplerCubeArray" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance10 :: TextureQueryLevels (Expr SamplerCube) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "samplerCube" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "samplerCube" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance11 :: TextureQueryLevels (Expr Sampler3D) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "sampler3D" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "sampler3D" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance12 :: TextureQueryLevels (Expr Sampler2DShadow) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "sampler2DShadow" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance13 :: TextureQueryLevels (Expr Sampler2DArrayShadow) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "sampler2DArrayShadow" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "sampler2DArrayShadow" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance14 :: TextureQueryLevels (Expr Sampler2DArray) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "sampler2DArray" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "sampler2DArray" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance15 :: TextureQueryLevels (Expr Sampler2D) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "sampler2D" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "sampler2D" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance16 :: TextureQueryLevels (Expr Sampler1DShadow) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "sampler1DShadow" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "sampler1DShadow" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance17 :: TextureQueryLevels (Expr Sampler1DArrayShadow) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "sampler1DArrayShadow" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "sampler1DArrayShadow" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance18 :: TextureQueryLevels (Expr Sampler1DArray) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "sampler1DArray" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "sampler1DArray" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance19 :: TextureQueryLevels (Expr Sampler1D) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "sampler1D" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "sampler1D" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance20 :: TextureQueryLevels (Expr IsamplerCubeArray) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "isamplerCubeArray" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "isamplerCubeArray" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance21 :: TextureQueryLevels (Expr IsamplerCube) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "isamplerCube" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "isamplerCube" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance22 :: TextureQueryLevels (Expr Isampler3D) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "isampler3D" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "isampler3D" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance23 :: TextureQueryLevels (Expr Isampler2DArray) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "isampler2DArray" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "isampler2DArray" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance24 :: TextureQueryLevels (Expr Isampler2D) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "isampler2D" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "isampler2D" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance25 :: TextureQueryLevels (Expr Isampler1DArray) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "isampler1DArray" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "isampler1DArray" (unsafeCoerce a))]))
 
 instance textureQueryLevelsInstance26 :: TextureQueryLevels (Expr Isampler1D) (Expr Int) where
-  textureQueryLevels a = Expr (Apply "textureQueryLevels" [Star "isampler1D" (unsafeCoerce a)])
+  textureQueryLevels a = Expr (Tuple "int" (Apply "textureQueryLevels" [Expr (Tuple "isampler1D" (unsafeCoerce a))]))
 
 class TextureQueryLod a b c | a b -> c where
   textureQueryLod :: a -> b -> c
 
 instance textureQueryLodInstance0 :: TextureQueryLod (Expr UsamplerCubeArray) (Expr Vec3) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "usamplerCubeArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "usamplerCubeArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance1 :: TextureQueryLod (Expr UsamplerCube) (Expr Vec3) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "usamplerCube" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "usamplerCube" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance2 :: TextureQueryLod (Expr Usampler3D) (Expr Vec3) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "usampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "usampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance3 :: TextureQueryLod (Expr Usampler2DArray) (Expr Vec2) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "usampler2DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "usampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance4 :: TextureQueryLod (Expr Usampler2D) (Expr Vec2) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "usampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance5 :: TextureQueryLod (Expr Usampler1DArray) (Expr Float) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "usampler1DArray" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "usampler1DArray" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance6 :: TextureQueryLod (Expr Usampler1D) (Expr Float) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "usampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance7 :: TextureQueryLod (Expr SamplerCubeShadow) (Expr Vec3) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "samplerCubeShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "samplerCubeShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance8 :: TextureQueryLod (Expr SamplerCubeArrayShadow) (Expr Vec3) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "samplerCubeArrayShadow" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "samplerCubeArrayShadow" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance9 :: TextureQueryLod (Expr SamplerCubeArray) (Expr Vec3) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "samplerCubeArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "samplerCubeArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance10 :: TextureQueryLod (Expr SamplerCube) (Expr Vec3) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "samplerCube" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "samplerCube" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance11 :: TextureQueryLod (Expr Sampler3D) (Expr Vec3) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "sampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "sampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance12 :: TextureQueryLod (Expr Sampler2DShadow) (Expr Vec2) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "sampler2DShadow" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance13 :: TextureQueryLod (Expr Sampler2DArrayShadow) (Expr Vec2) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "sampler2DArrayShadow" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "sampler2DArrayShadow" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance14 :: TextureQueryLod (Expr Sampler2DArray) (Expr Vec2) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "sampler2DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "sampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance15 :: TextureQueryLod (Expr Sampler2D) (Expr Vec2) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "sampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance16 :: TextureQueryLod (Expr Sampler1DShadow) (Expr Float) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "sampler1DShadow" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "sampler1DShadow" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance17 :: TextureQueryLod (Expr Sampler1DArrayShadow) (Expr Float) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "sampler1DArrayShadow" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "sampler1DArrayShadow" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance18 :: TextureQueryLod (Expr Sampler1DArray) (Expr Float) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "sampler1DArray" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "sampler1DArray" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance19 :: TextureQueryLod (Expr Sampler1D) (Expr Float) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "sampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance20 :: TextureQueryLod (Expr IsamplerCubeArray) (Expr Vec3) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "isamplerCubeArray" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "isamplerCubeArray" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance21 :: TextureQueryLod (Expr IsamplerCube) (Expr Vec3) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "isamplerCube" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "isamplerCube" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance22 :: TextureQueryLod (Expr Isampler3D) (Expr Vec3) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "isampler3D" (unsafeCoerce a), Star "vec3" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "isampler3D" (unsafeCoerce a)), Expr (Tuple "vec3" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance23 :: TextureQueryLod (Expr Isampler2DArray) (Expr Vec2) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "isampler2DArray" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "isampler2DArray" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance24 :: TextureQueryLod (Expr Isampler2D) (Expr Vec2) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "isampler2D" (unsafeCoerce a), Star "vec2" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "vec2" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance25 :: TextureQueryLod (Expr Isampler1DArray) (Expr Float) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "isampler1DArray" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "isampler1DArray" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 instance textureQueryLodInstance26 :: TextureQueryLod (Expr Isampler1D) (Expr Float) (Expr Vec2) where
-  textureQueryLod a b = Expr (Apply "textureQueryLod" [Star "isampler1D" (unsafeCoerce a), Star "float" (unsafeCoerce b)])
+  textureQueryLod a b = Expr (Tuple "vec2" (Apply "textureQueryLod" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "float" (unsafeCoerce b))]))
 
 class TextureSamples a b | a -> b where
   textureSamples :: a -> b
 
 instance textureSamplesInstance0 :: TextureSamples (Expr Usampler2DMS) (Expr Int) where
-  textureSamples a = Expr (Apply "textureSamples" [Star "usampler2DMS" (unsafeCoerce a)])
+  textureSamples a = Expr (Tuple "int" (Apply "textureSamples" [Expr (Tuple "usampler2DMS" (unsafeCoerce a))]))
 
 instance textureSamplesInstance1 :: TextureSamples (Expr Sampler2DMSArray) (Expr Int) where
-  textureSamples a = Expr (Apply "textureSamples" [Star "sampler2DMSArray" (unsafeCoerce a)])
+  textureSamples a = Expr (Tuple "int" (Apply "textureSamples" [Expr (Tuple "sampler2DMSArray" (unsafeCoerce a))]))
 
 instance textureSamplesInstance2 :: TextureSamples (Expr Sampler2DMS) (Expr Int) where
-  textureSamples a = Expr (Apply "textureSamples" [Star "sampler2DMS" (unsafeCoerce a)])
+  textureSamples a = Expr (Tuple "int" (Apply "textureSamples" [Expr (Tuple "sampler2DMS" (unsafeCoerce a))]))
 
 instance textureSamplesInstance3 :: TextureSamples (Expr Isampler2DMS) (Expr Int) where
-  textureSamples a = Expr (Apply "textureSamples" [Star "isampler2DMS" (unsafeCoerce a)])
+  textureSamples a = Expr (Tuple "int" (Apply "textureSamples" [Expr (Tuple "isampler2DMS" (unsafeCoerce a))]))
 
 class TextureSize a b | a -> b where
   textureSize :: a -> b
 
 instance textureSizeInstance0 :: TextureSize (Expr Sampler2DMSArray) (Expr Ivec3) where
-  textureSize a = Expr (Apply "textureSize" [Star "sampler2DMSArray" (unsafeCoerce a)])
+  textureSize a = Expr (Tuple "ivec3" (Apply "textureSize" [Expr (Tuple "sampler2DMSArray" (unsafeCoerce a))]))
 
 instance textureSizeInstance1 :: TextureSize (Expr UsamplerRect) (Expr Ivec2) where
-  textureSize a = Expr (Apply "textureSize" [Star "usamplerRect" (unsafeCoerce a)])
+  textureSize a = Expr (Tuple "ivec2" (Apply "textureSize" [Expr (Tuple "usamplerRect" (unsafeCoerce a))]))
 
 instance textureSizeInstance2 :: TextureSize (Expr Usampler2DMS) (Expr Ivec2) where
-  textureSize a = Expr (Apply "textureSize" [Star "usampler2DMS" (unsafeCoerce a)])
+  textureSize a = Expr (Tuple "ivec2" (Apply "textureSize" [Expr (Tuple "usampler2DMS" (unsafeCoerce a))]))
 
 instance textureSizeInstance3 :: TextureSize (Expr SamplerRect) (Expr Ivec2) where
-  textureSize a = Expr (Apply "textureSize" [Star "samplerRect" (unsafeCoerce a)])
+  textureSize a = Expr (Tuple "ivec2" (Apply "textureSize" [Expr (Tuple "samplerRect" (unsafeCoerce a))]))
 
 instance textureSizeInstance4 :: TextureSize (Expr Sampler2DRectShadow) (Expr Ivec2) where
-  textureSize a = Expr (Apply "textureSize" [Star "sampler2DRectShadow" (unsafeCoerce a)])
+  textureSize a = Expr (Tuple "ivec2" (Apply "textureSize" [Expr (Tuple "sampler2DRectShadow" (unsafeCoerce a))]))
 
 instance textureSizeInstance5 :: TextureSize (Expr Sampler2DMS) (Expr Ivec2) where
-  textureSize a = Expr (Apply "textureSize" [Star "sampler2DMS" (unsafeCoerce a)])
+  textureSize a = Expr (Tuple "ivec2" (Apply "textureSize" [Expr (Tuple "sampler2DMS" (unsafeCoerce a))]))
 
 instance textureSizeInstance6 :: TextureSize (Expr IsamplerRect) (Expr Ivec2) where
-  textureSize a = Expr (Apply "textureSize" [Star "isamplerRect" (unsafeCoerce a)])
+  textureSize a = Expr (Tuple "ivec2" (Apply "textureSize" [Expr (Tuple "isamplerRect" (unsafeCoerce a))]))
 
 instance textureSizeInstance7 :: TextureSize (Expr Isampler2DMS) (Expr Ivec2) where
-  textureSize a = Expr (Apply "textureSize" [Star "isampler2DMS" (unsafeCoerce a)])
+  textureSize a = Expr (Tuple "ivec2" (Apply "textureSize" [Expr (Tuple "isampler2DMS" (unsafeCoerce a))]))
 
 instance textureSizeInstance8 :: TextureSize (Expr UsamplerBuffer) (Expr Int) where
-  textureSize a = Expr (Apply "textureSize" [Star "usamplerBuffer" (unsafeCoerce a)])
+  textureSize a = Expr (Tuple "int" (Apply "textureSize" [Expr (Tuple "usamplerBuffer" (unsafeCoerce a))]))
 
 instance textureSizeInstance9 :: TextureSize (Expr SamplerBuffer) (Expr Int) where
-  textureSize a = Expr (Apply "textureSize" [Star "samplerBuffer" (unsafeCoerce a)])
+  textureSize a = Expr (Tuple "int" (Apply "textureSize" [Expr (Tuple "samplerBuffer" (unsafeCoerce a))]))
 
 instance textureSizeInstance10 :: TextureSize (Expr IsamplerBuffer) (Expr Int) where
-  textureSize a = Expr (Apply "textureSize" [Star "isamplerBuffer" (unsafeCoerce a)])
+  textureSize a = Expr (Tuple "int" (Apply "textureSize" [Expr (Tuple "isamplerBuffer" (unsafeCoerce a))]))
 
 class TextureSize2 a b c | a b -> c where
   textureSize2 :: a -> b -> c
 
 instance textureSize2Instance0 :: TextureSize2 (Expr Usampler3D) (Expr Int) (Expr Ivec3) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "usampler3D" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "ivec3" (Apply "textureSize" [Expr (Tuple "usampler3D" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance1 :: TextureSize2 (Expr Usampler2DArray) (Expr Int) (Expr Ivec3) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "usampler2DArray" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "ivec3" (Apply "textureSize" [Expr (Tuple "usampler2DArray" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance2 :: TextureSize2 (Expr SamplerCubeArrayShadow) (Expr Int) (Expr Ivec3) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "samplerCubeArrayShadow" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "ivec3" (Apply "textureSize" [Expr (Tuple "samplerCubeArrayShadow" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance3 :: TextureSize2 (Expr SamplerCubeArray) (Expr Int) (Expr Ivec3) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "samplerCubeArray" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "ivec3" (Apply "textureSize" [Expr (Tuple "samplerCubeArray" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance4 :: TextureSize2 (Expr Sampler3D) (Expr Int) (Expr Ivec3) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "sampler3D" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "ivec3" (Apply "textureSize" [Expr (Tuple "sampler3D" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance5 :: TextureSize2 (Expr Sampler2DArrayShadow) (Expr Int) (Expr Ivec3) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "sampler2DArrayShadow" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "ivec3" (Apply "textureSize" [Expr (Tuple "sampler2DArrayShadow" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance6 :: TextureSize2 (Expr Sampler2DArray) (Expr Int) (Expr Ivec3) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "sampler2DArray" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "ivec3" (Apply "textureSize" [Expr (Tuple "sampler2DArray" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance7 :: TextureSize2 (Expr Isampler3D) (Expr Int) (Expr Ivec3) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "isampler3D" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "ivec3" (Apply "textureSize" [Expr (Tuple "isampler3D" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance8 :: TextureSize2 (Expr Isampler2DArray) (Expr Int) (Expr Ivec3) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "isampler2DArray" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "ivec3" (Apply "textureSize" [Expr (Tuple "isampler2DArray" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance9 :: TextureSize2 (Expr UsamplerCube) (Expr Int) (Expr Ivec2) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "usamplerCube" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "ivec2" (Apply "textureSize" [Expr (Tuple "usamplerCube" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance10 :: TextureSize2 (Expr Usampler2D) (Expr Int) (Expr Ivec2) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "usampler2D" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "ivec2" (Apply "textureSize" [Expr (Tuple "usampler2D" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance11 :: TextureSize2 (Expr Usampler1DArray) (Expr Int) (Expr Ivec2) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "usampler1DArray" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "ivec2" (Apply "textureSize" [Expr (Tuple "usampler1DArray" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance12 :: TextureSize2 (Expr SamplerCubeShadow) (Expr Int) (Expr Ivec2) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "samplerCubeShadow" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "ivec2" (Apply "textureSize" [Expr (Tuple "samplerCubeShadow" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance13 :: TextureSize2 (Expr SamplerCube) (Expr Int) (Expr Ivec2) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "samplerCube" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "ivec2" (Apply "textureSize" [Expr (Tuple "samplerCube" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance14 :: TextureSize2 (Expr Sampler2DShadow) (Expr Int) (Expr Ivec2) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "sampler2DShadow" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "ivec2" (Apply "textureSize" [Expr (Tuple "sampler2DShadow" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance15 :: TextureSize2 (Expr Sampler2D) (Expr Int) (Expr Ivec2) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "sampler2D" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "ivec2" (Apply "textureSize" [Expr (Tuple "sampler2D" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance16 :: TextureSize2 (Expr Sampler1DArrayShadow) (Expr Int) (Expr Ivec2) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "sampler1DArrayShadow" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "ivec2" (Apply "textureSize" [Expr (Tuple "sampler1DArrayShadow" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance17 :: TextureSize2 (Expr Sampler1DArray) (Expr Int) (Expr Ivec2) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "sampler1DArray" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "ivec2" (Apply "textureSize" [Expr (Tuple "sampler1DArray" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance18 :: TextureSize2 (Expr IsamplerCube) (Expr Int) (Expr Ivec2) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "isamplerCube" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "ivec2" (Apply "textureSize" [Expr (Tuple "isamplerCube" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance19 :: TextureSize2 (Expr Isampler2D) (Expr Int) (Expr Ivec2) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "isampler2D" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "ivec2" (Apply "textureSize" [Expr (Tuple "isampler2D" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance20 :: TextureSize2 (Expr Isampler1DArray) (Expr Int) (Expr Ivec2) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "isampler1DArray" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "ivec2" (Apply "textureSize" [Expr (Tuple "isampler1DArray" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance21 :: TextureSize2 (Expr Usampler1D) (Expr Int) (Expr Int) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "usampler1D" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "int" (Apply "textureSize" [Expr (Tuple "usampler1D" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance22 :: TextureSize2 (Expr Sampler1DShadow) (Expr Int) (Expr Int) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "sampler1DShadow" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "int" (Apply "textureSize" [Expr (Tuple "sampler1DShadow" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance23 :: TextureSize2 (Expr Sampler1D) (Expr Int) (Expr Int) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "sampler1D" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "int" (Apply "textureSize" [Expr (Tuple "sampler1D" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 instance textureSize2Instance24 :: TextureSize2 (Expr Isampler1D) (Expr Int) (Expr Int) where
-  textureSize2 a b = Expr (Apply "textureSize" [Star "isampler1D" (unsafeCoerce a), Star "int" (unsafeCoerce b)])
+  textureSize2 a b = Expr (Tuple "int" (Apply "textureSize" [Expr (Tuple "isampler1D" (unsafeCoerce a)), Expr (Tuple "int" (unsafeCoerce b))]))
 
 class Transpose a b | a -> b where
   transpose :: a -> b
 
 instance transposeInstance0 :: Transpose (Expr Mat3x4) (Expr Mat4x3) where
-  transpose a = Expr (Apply "transpose" [Star "mat3x4" (unsafeCoerce a)])
+  transpose a = Expr (Tuple "mat4x3" (Apply "transpose" [Expr (Tuple "mat3x4" (unsafeCoerce a))]))
 
 instance transposeInstance1 :: Transpose (Expr Mat2x4) (Expr Mat4x2) where
-  transpose a = Expr (Apply "transpose" [Star "mat2x4" (unsafeCoerce a)])
+  transpose a = Expr (Tuple "mat4x2" (Apply "transpose" [Expr (Tuple "mat2x4" (unsafeCoerce a))]))
 
 instance transposeInstance2 :: Transpose (Expr Mat4) (Expr Mat4) where
-  transpose a = Expr (Apply "transpose" [Star "mat4" (unsafeCoerce a)])
+  transpose a = Expr (Tuple "mat4" (Apply "transpose" [Expr (Tuple "mat4" (unsafeCoerce a))]))
 
 instance transposeInstance3 :: Transpose (Expr Mat4x3) (Expr Mat3x4) where
-  transpose a = Expr (Apply "transpose" [Star "mat4x3" (unsafeCoerce a)])
+  transpose a = Expr (Tuple "mat3x4" (Apply "transpose" [Expr (Tuple "mat4x3" (unsafeCoerce a))]))
 
 instance transposeInstance4 :: Transpose (Expr Mat2x3) (Expr Mat3x2) where
-  transpose a = Expr (Apply "transpose" [Star "mat2x3" (unsafeCoerce a)])
+  transpose a = Expr (Tuple "mat3x2" (Apply "transpose" [Expr (Tuple "mat2x3" (unsafeCoerce a))]))
 
 instance transposeInstance5 :: Transpose (Expr Mat3) (Expr Mat3) where
-  transpose a = Expr (Apply "transpose" [Star "mat3" (unsafeCoerce a)])
+  transpose a = Expr (Tuple "mat3" (Apply "transpose" [Expr (Tuple "mat3" (unsafeCoerce a))]))
 
 instance transposeInstance6 :: Transpose (Expr Mat4x2) (Expr Mat2x4) where
-  transpose a = Expr (Apply "transpose" [Star "mat4x2" (unsafeCoerce a)])
+  transpose a = Expr (Tuple "mat2x4" (Apply "transpose" [Expr (Tuple "mat4x2" (unsafeCoerce a))]))
 
 instance transposeInstance7 :: Transpose (Expr Mat3x2) (Expr Mat2x3) where
-  transpose a = Expr (Apply "transpose" [Star "mat3x2" (unsafeCoerce a)])
+  transpose a = Expr (Tuple "mat2x3" (Apply "transpose" [Expr (Tuple "mat3x2" (unsafeCoerce a))]))
 
 instance transposeInstance8 :: Transpose (Expr Mat2) (Expr Mat2) where
-  transpose a = Expr (Apply "transpose" [Star "mat2" (unsafeCoerce a)])
+  transpose a = Expr (Tuple "mat2" (Apply "transpose" [Expr (Tuple "mat2" (unsafeCoerce a))]))
 
 instance transposeInstance9 :: Transpose (Expr Dmat3x4) (Expr Dmat4x3) where
-  transpose a = Expr (Apply "transpose" [Star "dmat3x4" (unsafeCoerce a)])
+  transpose a = Expr (Tuple "dmat4x3" (Apply "transpose" [Expr (Tuple "dmat3x4" (unsafeCoerce a))]))
 
 instance transposeInstance10 :: Transpose (Expr Dmat2x4) (Expr Dmat4x2) where
-  transpose a = Expr (Apply "transpose" [Star "dmat2x4" (unsafeCoerce a)])
+  transpose a = Expr (Tuple "dmat4x2" (Apply "transpose" [Expr (Tuple "dmat2x4" (unsafeCoerce a))]))
 
 instance transposeInstance11 :: Transpose (Expr Dmat4) (Expr Dmat4) where
-  transpose a = Expr (Apply "transpose" [Star "dmat4" (unsafeCoerce a)])
+  transpose a = Expr (Tuple "dmat4" (Apply "transpose" [Expr (Tuple "dmat4" (unsafeCoerce a))]))
 
 instance transposeInstance12 :: Transpose (Expr Dmat4x3) (Expr Dmat3x4) where
-  transpose a = Expr (Apply "transpose" [Star "dmat4x3" (unsafeCoerce a)])
+  transpose a = Expr (Tuple "dmat3x4" (Apply "transpose" [Expr (Tuple "dmat4x3" (unsafeCoerce a))]))
 
 instance transposeInstance13 :: Transpose (Expr Dmat2x3) (Expr Dmat3x2) where
-  transpose a = Expr (Apply "transpose" [Star "dmat2x3" (unsafeCoerce a)])
+  transpose a = Expr (Tuple "dmat3x2" (Apply "transpose" [Expr (Tuple "dmat2x3" (unsafeCoerce a))]))
 
 instance transposeInstance14 :: Transpose (Expr Dmat3) (Expr Dmat3) where
-  transpose a = Expr (Apply "transpose" [Star "dmat3" (unsafeCoerce a)])
+  transpose a = Expr (Tuple "dmat3" (Apply "transpose" [Expr (Tuple "dmat3" (unsafeCoerce a))]))
 
 instance transposeInstance15 :: Transpose (Expr Dmat4x2) (Expr Dmat2x4) where
-  transpose a = Expr (Apply "transpose" [Star "dmat4x2" (unsafeCoerce a)])
+  transpose a = Expr (Tuple "dmat2x4" (Apply "transpose" [Expr (Tuple "dmat4x2" (unsafeCoerce a))]))
 
 instance transposeInstance16 :: Transpose (Expr Dmat3x2) (Expr Dmat2x3) where
-  transpose a = Expr (Apply "transpose" [Star "dmat3x2" (unsafeCoerce a)])
+  transpose a = Expr (Tuple "dmat2x3" (Apply "transpose" [Expr (Tuple "dmat3x2" (unsafeCoerce a))]))
 
 instance transposeInstance17 :: Transpose (Expr Dmat2) (Expr Dmat2) where
-  transpose a = Expr (Apply "transpose" [Star "dmat2" (unsafeCoerce a)])
+  transpose a = Expr (Tuple "dmat2" (Apply "transpose" [Expr (Tuple "dmat2" (unsafeCoerce a))]))
 
 class Trunc a b | a -> b where
   trunc :: a -> b
 
 instance truncInstance0 :: Trunc (Expr Vec4) (Expr Vec4) where
-  trunc a = Expr (Apply "trunc" [Star "vec4" (unsafeCoerce a)])
+  trunc a = Expr (Tuple "vec4" (Apply "trunc" [Expr (Tuple "vec4" (unsafeCoerce a))]))
 
 instance truncInstance1 :: Trunc (Expr Vec3) (Expr Vec3) where
-  trunc a = Expr (Apply "trunc" [Star "vec3" (unsafeCoerce a)])
+  trunc a = Expr (Tuple "vec3" (Apply "trunc" [Expr (Tuple "vec3" (unsafeCoerce a))]))
 
 instance truncInstance2 :: Trunc (Expr Vec2) (Expr Vec2) where
-  trunc a = Expr (Apply "trunc" [Star "vec2" (unsafeCoerce a)])
+  trunc a = Expr (Tuple "vec2" (Apply "trunc" [Expr (Tuple "vec2" (unsafeCoerce a))]))
 
 instance truncInstance3 :: Trunc (Expr Float) (Expr Float) where
-  trunc a = Expr (Apply "trunc" [Star "float" (unsafeCoerce a)])
+  trunc a = Expr (Tuple "float" (Apply "trunc" [Expr (Tuple "float" (unsafeCoerce a))]))
 
 instance truncInstance4 :: Trunc (Expr Dvec4) (Expr Dvec4) where
-  trunc a = Expr (Apply "trunc" [Star "dvec4" (unsafeCoerce a)])
+  trunc a = Expr (Tuple "dvec4" (Apply "trunc" [Expr (Tuple "dvec4" (unsafeCoerce a))]))
 
 instance truncInstance5 :: Trunc (Expr Dvec3) (Expr Dvec3) where
-  trunc a = Expr (Apply "trunc" [Star "dvec3" (unsafeCoerce a)])
+  trunc a = Expr (Tuple "dvec3" (Apply "trunc" [Expr (Tuple "dvec3" (unsafeCoerce a))]))
 
 instance truncInstance6 :: Trunc (Expr Dvec2) (Expr Dvec2) where
-  trunc a = Expr (Apply "trunc" [Star "dvec2" (unsafeCoerce a)])
+  trunc a = Expr (Tuple "dvec2" (Apply "trunc" [Expr (Tuple "dvec2" (unsafeCoerce a))]))
 
 instance truncInstance7 :: Trunc (Expr Double) (Expr Double) where
-  trunc a = Expr (Apply "trunc" [Star "double" (unsafeCoerce a)])
+  trunc a = Expr (Tuple "double" (Apply "trunc" [Expr (Tuple "double" (unsafeCoerce a))]))
 
 class UaddCarry a b c d | a b c -> d where
   uaddCarry :: a -> b -> c -> d
 
 instance uaddCarryInstance0 :: UaddCarry (Expr Uvec4) (Expr Uvec4) (Expr Uvec4) (Expr Uvec4) where
-  uaddCarry a b c = Expr (Apply "uaddCarry" [Star "uvec4" (unsafeCoerce a), Star "uvec4" (unsafeCoerce b), Star "uvec4" (unsafeCoerce c)])
+  uaddCarry a b c = Expr (Tuple "uvec4" (Apply "uaddCarry" [Expr (Tuple "uvec4" (unsafeCoerce a)), Expr (Tuple "uvec4" (unsafeCoerce b)), Expr (Tuple "uvec4" (unsafeCoerce c))]))
 
 instance uaddCarryInstance1 :: UaddCarry (Expr Uvec3) (Expr Uvec3) (Expr Uvec3) (Expr Uvec3) where
-  uaddCarry a b c = Expr (Apply "uaddCarry" [Star "uvec3" (unsafeCoerce a), Star "uvec3" (unsafeCoerce b), Star "uvec3" (unsafeCoerce c)])
+  uaddCarry a b c = Expr (Tuple "uvec3" (Apply "uaddCarry" [Expr (Tuple "uvec3" (unsafeCoerce a)), Expr (Tuple "uvec3" (unsafeCoerce b)), Expr (Tuple "uvec3" (unsafeCoerce c))]))
 
 instance uaddCarryInstance2 :: UaddCarry (Expr Uvec2) (Expr Uvec2) (Expr Uvec2) (Expr Uvec2) where
-  uaddCarry a b c = Expr (Apply "uaddCarry" [Star "uvec2" (unsafeCoerce a), Star "uvec2" (unsafeCoerce b), Star "uvec2" (unsafeCoerce c)])
+  uaddCarry a b c = Expr (Tuple "uvec2" (Apply "uaddCarry" [Expr (Tuple "uvec2" (unsafeCoerce a)), Expr (Tuple "uvec2" (unsafeCoerce b)), Expr (Tuple "uvec2" (unsafeCoerce c))]))
 
 instance uaddCarryInstance3 :: UaddCarry (Expr Uint) (Expr Uint) (Expr Uint) (Expr Uint) where
-  uaddCarry a b c = Expr (Apply "uaddCarry" [Star "uint" (unsafeCoerce a), Star "uint" (unsafeCoerce b), Star "uint" (unsafeCoerce c)])
+  uaddCarry a b c = Expr (Tuple "uint" (Apply "uaddCarry" [Expr (Tuple "uint" (unsafeCoerce a)), Expr (Tuple "uint" (unsafeCoerce b)), Expr (Tuple "uint" (unsafeCoerce c))]))
 
 class UintBitsToFloat a b | a -> b where
   uintBitsToFloat :: a -> b
 
 instance uintBitsToFloatInstance0 :: UintBitsToFloat (Expr Uvec4) (Expr Vec4) where
-  uintBitsToFloat a = Expr (Apply "uintBitsToFloat" [Star "uvec4" (unsafeCoerce a)])
+  uintBitsToFloat a = Expr (Tuple "vec4" (Apply "uintBitsToFloat" [Expr (Tuple "uvec4" (unsafeCoerce a))]))
 
 instance uintBitsToFloatInstance1 :: UintBitsToFloat (Expr Uvec3) (Expr Vec3) where
-  uintBitsToFloat a = Expr (Apply "uintBitsToFloat" [Star "uvec3" (unsafeCoerce a)])
+  uintBitsToFloat a = Expr (Tuple "vec3" (Apply "uintBitsToFloat" [Expr (Tuple "uvec3" (unsafeCoerce a))]))
 
 instance uintBitsToFloatInstance2 :: UintBitsToFloat (Expr Uvec2) (Expr Vec2) where
-  uintBitsToFloat a = Expr (Apply "uintBitsToFloat" [Star "uvec2" (unsafeCoerce a)])
+  uintBitsToFloat a = Expr (Tuple "vec2" (Apply "uintBitsToFloat" [Expr (Tuple "uvec2" (unsafeCoerce a))]))
 
 instance uintBitsToFloatInstance3 :: UintBitsToFloat (Expr Uint) (Expr Float) where
-  uintBitsToFloat a = Expr (Apply "uintBitsToFloat" [Star "uint" (unsafeCoerce a)])
+  uintBitsToFloat a = Expr (Tuple "float" (Apply "uintBitsToFloat" [Expr (Tuple "uint" (unsafeCoerce a))]))
 
 class UnpackDouble2x32 a b | a -> b where
   unpackDouble2x32 :: a -> b
 
 instance unpackDouble2x32Instance0 :: UnpackDouble2x32 (Expr Double) (Expr Uvec2) where
-  unpackDouble2x32 a = Expr (Apply "unpackDouble2x32" [Star "double" (unsafeCoerce a)])
+  unpackDouble2x32 a = Expr (Tuple "uvec2" (Apply "unpackDouble2x32" [Expr (Tuple "double" (unsafeCoerce a))]))
 
 class UnpackHalf2x16 a b | a -> b where
   unpackHalf2x16 :: a -> b
 
 instance unpackHalf2x16Instance0 :: UnpackHalf2x16 (Expr Uint) (Expr Vec2) where
-  unpackHalf2x16 a = Expr (Apply "unpackHalf2x16" [Star "uint" (unsafeCoerce a)])
+  unpackHalf2x16 a = Expr (Tuple "vec2" (Apply "unpackHalf2x16" [Expr (Tuple "uint" (unsafeCoerce a))]))
 
 class UnpackSnorm2x16 a b | a -> b where
   unpackSnorm2x16 :: a -> b
 
 instance unpackSnorm2x16Instance0 :: UnpackSnorm2x16 (Expr Uint) (Expr Vec2) where
-  unpackSnorm2x16 a = Expr (Apply "unpackSnorm2x16" [Star "uint" (unsafeCoerce a)])
+  unpackSnorm2x16 a = Expr (Tuple "vec2" (Apply "unpackSnorm2x16" [Expr (Tuple "uint" (unsafeCoerce a))]))
 
 class UnpackSnorm4x8 a b | a -> b where
   unpackSnorm4x8 :: a -> b
 
 instance unpackSnorm4x8Instance0 :: UnpackSnorm4x8 (Expr Uint) (Expr Vec4) where
-  unpackSnorm4x8 a = Expr (Apply "unpackSnorm4x8" [Star "uint" (unsafeCoerce a)])
+  unpackSnorm4x8 a = Expr (Tuple "vec4" (Apply "unpackSnorm4x8" [Expr (Tuple "uint" (unsafeCoerce a))]))
 
 class UnpackUnorm2x16 a b | a -> b where
   unpackUnorm2x16 :: a -> b
 
 instance unpackUnorm2x16Instance0 :: UnpackUnorm2x16 (Expr Uint) (Expr Vec2) where
-  unpackUnorm2x16 a = Expr (Apply "unpackUnorm2x16" [Star "uint" (unsafeCoerce a)])
+  unpackUnorm2x16 a = Expr (Tuple "vec2" (Apply "unpackUnorm2x16" [Expr (Tuple "uint" (unsafeCoerce a))]))
 
 class UnpackUnorm4x8 a b | a -> b where
   unpackUnorm4x8 :: a -> b
 
 instance unpackUnorm4x8Instance0 :: UnpackUnorm4x8 (Expr Uint) (Expr Vec4) where
-  unpackUnorm4x8 a = Expr (Apply "unpackUnorm4x8" [Star "uint" (unsafeCoerce a)])
+  unpackUnorm4x8 a = Expr (Tuple "vec4" (Apply "unpackUnorm4x8" [Expr (Tuple "uint" (unsafeCoerce a))]))
 
 class UsubBorrow a b c d | a b c -> d where
   usubBorrow :: a -> b -> c -> d
 
 instance usubBorrowInstance0 :: UsubBorrow (Expr Uvec4) (Expr Uvec4) (Expr Uvec4) (Expr Uvec4) where
-  usubBorrow a b c = Expr (Apply "usubBorrow" [Star "uvec4" (unsafeCoerce a), Star "uvec4" (unsafeCoerce b), Star "uvec4" (unsafeCoerce c)])
+  usubBorrow a b c = Expr (Tuple "uvec4" (Apply "usubBorrow" [Expr (Tuple "uvec4" (unsafeCoerce a)), Expr (Tuple "uvec4" (unsafeCoerce b)), Expr (Tuple "uvec4" (unsafeCoerce c))]))
 
 instance usubBorrowInstance1 :: UsubBorrow (Expr Uvec3) (Expr Uvec3) (Expr Uvec3) (Expr Uvec3) where
-  usubBorrow a b c = Expr (Apply "usubBorrow" [Star "uvec3" (unsafeCoerce a), Star "uvec3" (unsafeCoerce b), Star "uvec3" (unsafeCoerce c)])
+  usubBorrow a b c = Expr (Tuple "uvec3" (Apply "usubBorrow" [Expr (Tuple "uvec3" (unsafeCoerce a)), Expr (Tuple "uvec3" (unsafeCoerce b)), Expr (Tuple "uvec3" (unsafeCoerce c))]))
 
 instance usubBorrowInstance2 :: UsubBorrow (Expr Uvec2) (Expr Uvec2) (Expr Uvec2) (Expr Uvec2) where
-  usubBorrow a b c = Expr (Apply "usubBorrow" [Star "uvec2" (unsafeCoerce a), Star "uvec2" (unsafeCoerce b), Star "uvec2" (unsafeCoerce c)])
+  usubBorrow a b c = Expr (Tuple "uvec2" (Apply "usubBorrow" [Expr (Tuple "uvec2" (unsafeCoerce a)), Expr (Tuple "uvec2" (unsafeCoerce b)), Expr (Tuple "uvec2" (unsafeCoerce c))]))
 
 instance usubBorrowInstance3 :: UsubBorrow (Expr Uint) (Expr Uint) (Expr Uint) (Expr Uint) where
-  usubBorrow a b c = Expr (Apply "usubBorrow" [Star "uint" (unsafeCoerce a), Star "uint" (unsafeCoerce b), Star "uint" (unsafeCoerce c)])
+  usubBorrow a b c = Expr (Tuple "uint" (Apply "usubBorrow" [Expr (Tuple "uint" (unsafeCoerce a)), Expr (Tuple "uint" (unsafeCoerce b)), Expr (Tuple "uint" (unsafeCoerce c))]))
 
