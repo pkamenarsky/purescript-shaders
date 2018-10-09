@@ -10,6 +10,8 @@ import Prelude
 import Type.Data.Symbol
 import Unsafe.Coerce
 
+import GLSL.Types as G
+
 import Data.String as S
 
 undefined :: ∀ a. a
@@ -50,7 +52,7 @@ data ExprF a f =
     MkBoolean Boolean
   | MkInt Int
   | MkFloat Number
-  | MkVec3 (f Number) (f Number) (f Number)
+  | MkVec3 (f G.Float) (f G.Float) (f G.Float)
   | Argument String
   -- | Index (f (Array "" a)) Int
   | Plus (f a) (f a)
@@ -173,8 +175,11 @@ render cm m (If e t f) = do
 boolean :: Boolean -> Expr Boolean
 boolean x = Expr ("bool" × MkBoolean x)
 
-float :: Number -> Expr Number
+float :: Number -> Expr G.Float
 float x = Expr ("float" × MkFloat x)
+
+vec3 :: Expr G.Float -> Expr G.Float -> Expr G.Float -> Expr G.Vec3
+vec3 x y z = Expr ("vec3" × MkVec3 x y z)
 
 -- index :: ∀ a n. Expr (Array n a) -> Expr Int -> Expr a
 -- index = undefined

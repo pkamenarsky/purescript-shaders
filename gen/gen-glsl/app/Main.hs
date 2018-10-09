@@ -70,7 +70,7 @@ genInstance spec variant index =
               <> " (Expr " <> capitalize (returnType spec) <> ") where" <> tr <>
   "  " <> name spec <> variant <> " " <> T.intercalate " " vars
        <> " = Expr (Tuple \"" <> returnType spec <> "\" (Apply" <> " \"" <> name spec <> "\" "
-       <> "[" <> T.intercalate ", " (map (\(Arg _ argType, v) -> "Expr (Tuple \"" <> argType <> "\" (unsafeCoerce " <> v <> "))") (zip (args spec) vars)) <> "]"
+       <> "[" <> T.intercalate ", " (map (\(Arg _ argType, v) -> "unsafeCoerce " <> v) (zip (args spec) vars)) <> "]"
        <> "))"
        <> tr <> tr
   where
@@ -113,14 +113,18 @@ main = do
   file <- B.readFile "../glsl-spec/functions.json"
   let Right specs = decodeSpecs file
 
-  T.writeFile "GLSL.purs" $ T.concat
+  T.writeFile "../../src/GLSL/Types.purs" $ T.concat
+   [ "module GLSL.Types where", tr, tr
+   , genTypes $ gatherTypes specs
+   ]
+
+  T.writeFile "../../src/GLSL.purs" $ T.concat
    [ "module GLSL where", tr, tr
+   , "import GLSL.Types", tr, tr
    , "import Data.Tuple (Tuple(Tuple))", tr, tr
    , "import Expr (Expr(Expr), ExprF(Apply))", tr, tr
    , "import Prim hiding (Int)", tr, tr
    , "import Unsafe.Coerce (unsafeCoerce)", tr, tr
-   , tr
-   , genTypes $ gatherTypes specs
    , tr
    , genSpecs $ groupByArgCount specs
    ]
