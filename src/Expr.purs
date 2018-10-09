@@ -46,26 +46,6 @@ data Proxy a = Proxy
 
 type TypeName = String
 
-class Typeable a where
-  typeOf :: Proxy a -> TypeName
-
-instance booleanT :: Typeable Boolean where
-  typeOf _ = "bool"
-
-instance intT :: Typeable Int where
-  typeOf _ = "int"
-
-instance numberT :: Typeable Number where
-  typeOf _ = "float"
-
-instance vec3T :: Typeable Vec3 where
-  typeOf _ = "vec3"
-
--- instance arrayT :: Typeable a => Typeable (Array n a) where
---   typeOf _ = typeOf (Proxy :: Proxy a) <> "[]"
-
-data Star = Star String (Expr Unit)
-
 data ExprF a f =
     MkBoolean Boolean
   | MkInt Int
@@ -74,8 +54,6 @@ data ExprF a f =
   | Argument String
   -- | Index (f (Array "" a)) Int
   | Plus (f a) (f a)
-  | Normalize (f Vec3)
-  | Dot3 (f Vec3) (f Vec3)
   | If (f Boolean) (f a) (f a)
   | Apply String (Array (f Unit))
 
@@ -138,15 +116,6 @@ cse em cm (Expr e@(t × Plus x y)) = do
   x' <- cse em cm x
   y' <- cse em cm y
   pure $ LExpr (Just h × t × Plus x' y')
-cse em cm (Expr e@(t × Normalize x)) = do
-  h <- hash e em cm
-  x' <- cse em cm x
-  pure $ LExpr (Just h × t × Normalize x')
-cse em cm (Expr e@(t × Dot3 x y)) = do
-  h <- hash e em cm
-  x' <- cse em cm x
-  y' <- cse em cm y
-  pure $ LExpr (Just h × t × Dot3 x' y')
 cse em cm (Expr e@(t × If e' t' f')) = do
   h <- hash e em cm
   e'' <- cse em cm e'
@@ -192,10 +161,14 @@ render cm m (Plus a b) = do
   a' <- elim cm m a
   b' <- elim cm m b
   pure $ "(" <> a' <> " + " <> b' <> ")"
-render cm m (Normalize a) = do
-  a' <- elim cm m a
-  pure $ "normalize(" <> a' <> ")"
-render _ _ _ = undefined
+render cm m (Apply f as) = do
+  as' <- traverse (elim cm m) as
+  pure $ f <> "(" <> intercalate ", " as' <> ")"
+render cm m (If e t f) = do
+  e' <- elim cm m e
+  t' <- elim cm m t
+  f' <- elim cm m f
+  pure $ "(" <> e' <> " ? " <> t' <> " : " <> f' <> ")"
 
 boolean :: Boolean -> Expr Boolean
 boolean x = Expr ("bool" × MkBoolean x)
@@ -208,12 +181,6 @@ float x = Expr ("float" × MkFloat x)
 
 increment :: Expr Int -> Expr Int
 increment = undefined
-
--- normalize :: Expr Vec3 -> Expr Vec3
--- normalize x = Expr $ Normalize x
--- 
--- dot3 :: Expr Vec3 -> Expr Vec3 -> Expr Number
--- dot3 x y = Expr $ Dot3 x y
 
 if_ :: ∀ a. Expr Boolean -> Expr a -> Expr a -> Expr a
 if_ e t@(Expr (typeName × _)) f = Expr (typeName × If e t f)
@@ -239,31 +206,3 @@ if_ e t@(Expr (typeName × _)) f = Expr (typeName × If e t f)
 --   LExpr (_ × expr') <- cse em cm expr
 --   expr'' <- render cm m expr'
 --   log expr''
-
-{-
-interpret :: ∀ a. Expr a -> String
-interpret (MkBoolean t) = if t then "true" else "false"
-interpret (MkFloat n) = show n
-interpret (MkInt n) = show n
-interpret (MkVec3 x y z) = "vec3(" <> interpret x <> ", " <> interpret y <> ", " <> interpret z <> ")"
-interpret (MkArray n _) = n
-interpret (Index v i) = interpret v <> "[" <> show i <> "]"
-interpret (Plus a b) = "(" <> interpret a <> " + " <> interpret b <> ")"
-interpret (Normalize v) = "normalize(" <> interpret v <> ")"
-interpret (Dot3 a b) = "dot3(" <> interpret a <> ", " <> interpret b <> ")"
-interpret (If c t e) = interpret c <> " ? (" <> interpret t <> ") : (" <> interpret e <> ")"
-
-main :: Effect Unit
-main = log $ interpret (if_ (boolean true) (dot3 test test) (dot3 test (test2 `plus` test2)))
--}
-
-class A a b c | a b -> c where
-  fnc :: a -> b -> c
-
-instance a1 :: A Int Int Int where
-  fnc a b = a + b
-
-main2 = do
-  log "asd"
-  where
-    a = fnc 4 5
